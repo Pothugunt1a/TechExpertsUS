@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
@@ -57,49 +58,42 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/">
-              <a className="flex items-center" data-testid="link-home">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center space-x-2 cursor-pointer"
-                >
-                  <img 
-                    src="/attached_assets/TechExperts_1760680720730.png" 
-                    alt="Tech Experts US Logo" 
-                    className="h-12 w-auto"
-                  />
-                </motion.div>
-              </a>
+            <Link href="/" data-testid="link-home">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center space-x-2 cursor-pointer"
+              >
+                <img 
+                  src="/attached_assets/TechExperts_1760680720730.png" 
+                  alt="Tech Experts US Logo" 
+                  className="h-12 w-auto"
+                />
+              </motion.div>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1">
+              <ThemeToggle />
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link href={item.path}>
-                    <a data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
-                      <Button
-                        variant="ghost"
-                        className={`relative ${
-                          location === item.path || location.startsWith(item.path + "/")
-                            ? "text-primary"
-                            : "text-foreground"
-                        }`}
-                        asChild
-                      >
-                        <span>
-                          {item.name}
-                          <motion.div
-                            className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-chart-2"
-                            initial={{ scaleX: 0 }}
-                            animate={{
-                              scaleX: location === item.path || location.startsWith(item.path + "/") ? 1 : 0,
-                            }}
-                            transition={{ duration: 0.3 }}
-                          />
-                        </span>
-                      </Button>
-                    </a>
+                  <Link href={item.path} data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
+                    <div
+                      className={`relative px-4 py-2 cursor-pointer transition-colors ${
+                        location === item.path || location.startsWith(item.path + "/")
+                          ? "text-primary"
+                          : "text-foreground hover:text-primary"
+                      }`}
+                    >
+                      {item.name}
+                      <motion.div
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-chart-2"
+                        initial={{ scaleX: 0 }}
+                        animate={{
+                          scaleX: location === item.path || location.startsWith(item.path + "/") ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </div>
                   </Link>
                   
                   {/* Dropdown Menu */}
@@ -110,16 +104,14 @@ export function Navigation() {
                       className="absolute top-full left-0 mt-2 w-56 bg-card/95 backdrop-blur-xl border border-primary/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
                     >
                       {item.subItems.map((subItem) => (
-                        <Link key={subItem.path} href={subItem.path}>
-                          <a data-testid={`link-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}>
-                            <Button
-                              variant="ghost"
-                              className="w-full justify-start text-left hover:bg-primary/10"
-                              asChild
-                            >
-                              <span>{subItem.name}</span>
-                            </Button>
-                          </a>
+                        <Link 
+                          key={subItem.path} 
+                          href={subItem.path}
+                          data-testid={`link-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
+                        >
+                          <div className="w-full px-4 py-2 text-left hover:bg-primary/10 cursor-pointer transition-colors">
+                            {subItem.name}
+                          </div>
                         </Link>
                       ))}
                     </motion.div>
@@ -128,16 +120,18 @@ export function Navigation() {
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="lg:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              data-testid="button-mobile-menu"
-            >
-              {isMobileMenuOpen ? <X /> : <Menu />}
-            </Button>
+            {/* Mobile Menu Button & Theme Toggle */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <ThemeToggle />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                data-testid="button-mobile-menu"
+              >
+                {isMobileMenuOpen ? <X /> : <Menu />}
+              </Button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -160,33 +154,29 @@ export function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link href={item.path}>
-                    <a data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
-                      <Button
-                        variant="ghost"
-                        className="w-full justify-start text-lg"
-                        onClick={() => !item.subItems && setIsMobileMenuOpen(false)}
-                        asChild
-                      >
-                        <span>{item.name}</span>
-                      </Button>
-                    </a>
+                  <Link href={item.path} data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
+                    <div
+                      className="w-full px-4 py-2 text-lg cursor-pointer hover:bg-primary/10 transition-colors"
+                      onClick={() => !item.subItems && setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </div>
                   </Link>
                   
                   {item.subItems && (
                     <div className="ml-4 mt-2 space-y-2">
                       {item.subItems.map((subItem) => (
-                        <Link key={subItem.path} href={subItem.path}>
-                          <a data-testid={`link-mobile-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}>
-                            <Button
-                              variant="ghost"
-                              className="w-full justify-start text-muted-foreground"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              asChild
-                            >
-                              <span>{subItem.name}</span>
-                            </Button>
-                          </a>
+                        <Link 
+                          key={subItem.path} 
+                          href={subItem.path}
+                          data-testid={`link-mobile-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
+                        >
+                          <div
+                            className="w-full px-4 py-2 text-muted-foreground cursor-pointer hover:bg-primary/10 transition-colors"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem.name}
+                          </div>
                         </Link>
                       ))}
                     </div>
