@@ -1,9 +1,10 @@
+
 import { motion } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import { ServiceCard } from "@/components/ui/service-card";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import { ClientLogo } from "@/components/ui/client-logo";
-import { Server, Network, ClipboardCheck, Cloud, Database, Shield, Cpu, Globe, BarChart } from "lucide-react";
+import { Server, Network, ClipboardCheck, Cloud, Database, Shield, Cpu, Globe, BarChart, Users, Zap, Target } from "lucide-react";
 
 const mainServices = [
   {
@@ -59,21 +60,44 @@ const serviceCategories = [
   },
 ];
 
+const whyChooseUs = [
+  {
+    icon: Target,
+    title: "Expert Team",
+    description: "Highly skilled professionals with years of industry experience",
+  },
+  {
+    icon: Zap,
+    title: "Fast Delivery",
+    description: "Quick turnaround time without compromising quality",
+  },
+  {
+    icon: Users,
+    title: "24/7 Support",
+    description: "Round-the-clock support for all your technical needs",
+  },
+  {
+    icon: Shield,
+    title: "Secure Solutions",
+    description: "Enterprise-grade security in all our implementations",
+  },
+];
+
 const testimonials = [
   {
     content: "Tech Expertsus has transformed our IT infrastructure with their innovative solutions. Their team's expertise and dedication are unmatched.",
     author: "John Doe",
-    role: "Customer",
+    role: "CTO, Fortune 500 Company",
   },
   {
     content: "Working with Tech Expertsus has been a game-changer for our business. They deliver exceptional results consistently.",
     author: "Jane Smith",
-    role: "Customer",
+    role: "IT Director, Global Enterprise",
   },
   {
     content: "The professionalism and technical excellence of Tech Expertsus team exceeded our expectations. Highly recommended!",
     author: "Mike Johnson",
-    role: "Customer",
+    role: "VP of Operations, Tech Startup",
   },
 ];
 
@@ -82,27 +106,65 @@ const clients = [
   "Oracle", "SAP", "Cisco", "Dell"
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <ParticleBackground />
         
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Services</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Our <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient">Services</span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl md:text-3xl text-muted-foreground max-w-3xl mx-auto font-semibold"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
               We Are Professional
-            </p>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="mt-8 w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
+            />
           </motion.div>
         </div>
       </section>
@@ -114,25 +176,104 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Welcome To Our <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Tech Expertsus Services</span>
+            </h2>
+            <motion.p 
+              className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              Tech Expertsus provides IT Infrastructure Managed Services to help design secure, Strategize, implement scalable and reliable communications and IT infrastructure. We are specialized in Application management services, Server Management and Storages services.
+            </motion.p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {mainServices.map((service, index) => (
+              <motion.div key={service.title} variants={itemVariants}>
+                <ServiceCard {...service} index={index} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Welcome To Our Tech Expertsus Services</h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              Tech Expertsus provides IT Infrastructure Managed Services to help design secure, Strategize, implement scalable and reliable communications and IT infrastructure. We are specialized in Application management services, Server Management and Storages services.
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Us</h2>
+            <p className="text-xl text-muted-foreground">Excellence in every aspect of our service</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {mainServices.map((service, index) => (
-              <ServiceCard key={service.title} {...service} index={index} />
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={item.title}
+                variants={itemVariants}
+                whileHover={{ y: -12, scale: 1.03 }}
+                className="group relative"
+              >
+                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 overflow-hidden">
+                  {/* Animated background gradient */}
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-br from-primary/10 via-chart-2/10 to-transparent opacity-0 group-hover:opacity-100"
+                    initial={false}
+                    animate={{
+                      backgroundPosition: ["0% 0%", "100% 100%"],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    }}
+                  />
+                  
+                  <div className="relative z-10">
+                    <motion.div
+                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary/30"
+                      whileHover={{ rotate: [0, -10, 10, -10, 0] }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <item.icon className="w-8 h-8 text-primary" />
+                    </motion.div>
+                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Service Categories */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,31 +286,55 @@ export default function Services() {
             <p className="text-xl text-muted-foreground">Comprehensive solutions for every need</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                variants={itemVariants}
+                whileHover={{ y: -10, rotateY: 5 }}
+                className="group relative"
                 data-testid={`category-${category.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6">
-                  <category.icon className="w-8 h-8 text-primary" />
+                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/20">
+                  {/* Animated corner accent */}
+                  <motion.div
+                    className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100"
+                    initial={false}
+                    whileHover={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 90, 0],
+                    }}
+                    transition={{ duration: 0.6 }}
+                  />
+                  
+                  <div className="relative z-10">
+                    <motion.div 
+                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                      <category.icon className="w-8 h-8 text-primary" />
+                    </motion.div>
+                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                      {category.title}
+                    </h3>
+                    <p className="text-muted-foreground">{category.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{category.title}</h3>
-                <p className="text-muted-foreground">{category.description}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -182,12 +347,19 @@ export default function Services() {
             <p className="text-xl text-muted-foreground">What our clients say about us</p>
           </motion.div>
 
-          <TestimonialCarousel testimonials={testimonials} />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <TestimonialCarousel testimonials={testimonials} />
+          </motion.div>
         </div>
       </section>
 
       {/* Our Clients */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -200,11 +372,19 @@ export default function Services() {
             <p className="text-xl text-muted-foreground">Trusted by industry leaders</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {clients.map((client, index) => (
-              <ClientLogo key={client} name={client} index={index} />
+              <motion.div key={client} variants={itemVariants}>
+                <ClientLogo name={client} index={index} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
