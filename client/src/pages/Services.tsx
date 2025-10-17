@@ -33,7 +33,7 @@ const mainServices = [
     description:
       "An intelligent Infrastructure consulting services enables a company to grow in digital business and yields high-end results.",
     link: "/services/ics",
-    image: "/attached_assets/InfrastructureConsulting_1760679602182.png",
+    image: "/assets/InfrastructureConsulting.png",
   },
   {
     icon: ClipboardCheck,
@@ -247,7 +247,8 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Welcome To Our <span className="text-primary">Tech Expertsus Services</span>
+              Welcome To Our{" "}
+              <span className="text-primary">Tech Expertsus Services</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
               Tech Expertsus provides IT Infrastructure Managed Services to help
