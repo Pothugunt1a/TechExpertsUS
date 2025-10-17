@@ -245,47 +245,24 @@ export default function Services() {
       {/* Services Overview */}
       <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Welcome To Our{" "}
-              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                Tech Expertsus Services
-              </span>
+              Welcome To Our <span className="text-primary">Tech Expertsus Services</span>
             </h2>
-            <motion.p
-              className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
               Tech Expertsus provides IT Infrastructure Managed Services to help
               design secure, Strategize, implement scalable and reliable
               communications and IT infrastructure. We are specialized in
               Application management services, Server Management and Storages
               services.
-            </motion.p>
-          </motion.div>
+            </p>
+          </div>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
-              <motion.div key={service.title} variants={itemVariants}>
-                <ServiceCard {...service} index={index} />
-              </motion.div>
+              <ServiceCard key={service.title} {...service} index={index} />
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
