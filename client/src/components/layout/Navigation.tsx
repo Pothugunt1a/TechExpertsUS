@@ -60,18 +60,14 @@ export function Navigation() {
             <Link href="/">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center space-x-2 cursor-pointer"
+                className="flex items-center cursor-pointer"
                 data-testid="link-home"
               >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center">
-                  <span className="text-xl font-bold text-white">TE</span>
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                    Tech Experts
-                  </h1>
-                  <p className="text-xs text-muted-foreground">US</p>
-                </div>
+                <img 
+                  src="/assets/tech-experts-logo.png" 
+                  alt="Tech Experts US" 
+                  className="h-12 w-auto object-contain"
+                />
               </motion.div>
             </Link>
 

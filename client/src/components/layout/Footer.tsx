@@ -44,16 +44,12 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center">
-                <span className="text-xl font-bold text-white">TE</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                  Tech Experts
-                </h3>
-                <p className="text-xs text-muted-foreground">US</p>
-              </div>
+            <div className="mb-4">
+              <img 
+                src="/assets/tech-experts-logo.png" 
+                alt="Tech Experts US" 
+                className="h-12 w-auto object-contain mb-4"
+              />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
               Technology expertise, Innovative solutions and long lasting partnership with customers since 2012.
