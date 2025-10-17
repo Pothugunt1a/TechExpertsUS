@@ -83,10 +83,12 @@ export function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.path}>
-                    <Link href={link.path}>
-                      <a className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200" data-testid={`link-footer-${link.name.toLowerCase().replace(/\s+/g, "-")}`}>
-                        {link.name}
-                      </a>
+                    <Link 
+                      href={link.path}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200" 
+                      data-testid={`link-footer-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      {link.name}
                     </Link>
                   </li>
                 ))}
