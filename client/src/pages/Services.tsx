@@ -34,32 +34,47 @@ const mainServices = [
 const serviceCategories = [
   {
     title: "Software as a Service (SaaS)",
-    description: "Applications, Runtime, Data, Middleware, OSes, Virtualization, Servers, Storage and networking.",
+    description: "Applications, Runtime, Data, Middleware, OSes, Virtualization, Servers, Storage and networking. For: Google Apps, Salesforce, Workday, Concur, Citrix, GoToMeeting, Cisco WebEX",
     icon: Cloud,
   },
   {
+    title: "Application Service Providers (ASP)",
+    description: "Consumer Acquisition, Appnext, Avazu Mobile DSP, StrikeAd by Sizmek, AppLift, Mobusi, Smaato, Liftoff, Trademob, PocketMath, Merchenta, Jampp, Splicky, MobFox DSP by Matomy, Fiksu",
+    icon: Server,
+  },
+  {
     title: "Virtualization",
-    description: "KVM, VMware Workstation, VMware Fusion, Hyper-V, Windows Virtual PC, Xen, VirtualBox, and more.",
+    description: "KVM, VMware Workstation, VMware Fusion, Hyper-V, Windows Virtual PC, Xen, VirtualBox, Parallels Workstation, QEMU, Adeos, Mac-on-Linux, Win4Lin Pro, Egenera vBlade",
     icon: Cpu,
   },
   {
     title: "Cloud Computing",
-    description: "AppFog, BitNami, Cloudify, Google AppEngine, Azure, Heroku, ScaleMatrix and comprehensive cloud solutions.",
+    description: "AppFog, BitNami, Cloudify, ConPaaS, ElasticBox, Gondor, Google AppEngine, Azure, Uhuru, PaaS, Stackato, Pydra, Oracle, EngineYard, Cumulogic, Heroku, ScaleMatrix",
     icon: Globe,
   },
   {
     title: "Enterprise Resource Planning (ERP)",
-    description: "WebERP, Openbravo, Odoo, Compiere, ERP5, FrontAccounting and enterprise management solutions.",
+    description: "WebERP, Openbravo, Postbooks, Tryton, SQL-Ledger, Odoo, Adaxa Suite, HeliumV, LedgerSMB, JFire, Kuali, ERPNEXT, Dolibarr, Compiere, ERP5, FrontAccounting, Scipio ERP",
     icon: Database,
   },
   {
+    title: "Customer Relations Management",
+    description: "ConnectWise PSA, Desk.com, Zoho CRM, Vtiger CRM, TeamWox, SuiteCRM, Base CRM, Dolibarr, Casengo, Dynamics CRM, SugarCRM, Streak, Salesforce.com, WORKetc, SuperOffice CRM",
+    icon: Users,
+  },
+  {
     title: "Infrastructure as a Service (IaaS)",
-    description: "Amazon Web Services, Windows Azure, Google Compute Engine, Rackspace, IBM SmartCloud.",
+    description: "Amazon Web Services, Windows Azure, Google Compute Engine, Rackspace, IBM SmartCloud, Enterprise, HP Enterprise Converged Infrastructure, Cisco Metapod",
     icon: Shield,
   },
   {
+    title: "Internet of Things (IoT)",
+    description: "XOBXOB, Lab of Things, Konekt, Temboo, Open Sensors, Smart Living, Google Cloud Platform, RTI, ThingWorx, Cisco, GE Predix, Verizon, ThingSpace, IBM BlueMix",
+    icon: Network,
+  },
+  {
     title: "Big Data",
-    description: "Apache Hadoop, Julia, SAS, Python, SQL, Scala, MATLAB, Kafka, Storm, Hive and analytics solutions.",
+    description: "Apache Hadoop, Julia, SAS, Python, SQL, Scala, MATLAB, HiveQL, Pig Latin, Go, Kafka, Storm, Hive, Octave, Java",
     icon: BarChart,
   },
 ];
@@ -275,8 +290,87 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Service Categories with Morphing Cards */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">Our Service Categories</h2>
+            <p className="text-2xl text-muted-foreground">Comprehensive solutions for every need</p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                variants={itemVariants}
+                whileHover={{ 
+                  y: -12, 
+                  rotateX: 5,
+                  rotateY: 5,
+                  scale: 1.02
+                }}
+                className="group relative"
+                style={{ transformStyle: "preserve-3d" }}
+                data-testid={`category-${category.title.toLowerCase().replace(/\s+/g, "-")}`}
+              >
+                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20">
+                  {/* Animated corner accents */}
+                  <motion.div
+                    className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/30 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100"
+                    initial={false}
+                    whileHover={{
+                      scale: [1, 1.3, 1],
+                      rotate: [0, 180, 0],
+                    }}
+                    transition={{ duration: 0.8 }}
+                  />
+                  <motion.div
+                    className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-chart-2/30 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100"
+                    initial={false}
+                    whileHover={{
+                      scale: [1, 1.3, 1],
+                      rotate: [0, -180, 0],
+                    }}
+                    transition={{ duration: 0.8 }}
+                  />
+                  
+                  <div className="relative z-10">
+                    <motion.div 
+                      className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
+                      whileHover={{ 
+                        scale: 1.15,
+                        rotate: 360
+                      }}
+                      transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                    >
+                      <category.icon className="w-10 h-10 text-primary" />
+                    </motion.div>
+                    <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                      {category.title}
+                    </h3>
+                    <p className="text-muted-foreground text-lg">{category.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why Choose Us with Magnetic Effect */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background overflow-hidden">
+      <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Animated background pattern */}
         <motion.div
           className="absolute inset-0 opacity-10"
@@ -357,85 +451,6 @@ export default function Services() {
                       {item.title}
                     </h3>
                     <p className="text-muted-foreground text-lg">{item.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Service Categories with Morphing Cards */}
-      <section className="relative py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">Our Service Categories</h2>
-            <p className="text-2xl text-muted-foreground">Comprehensive solutions for every need</p>
-          </motion.div>
-
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.title}
-                variants={itemVariants}
-                whileHover={{ 
-                  y: -12, 
-                  rotateX: 5,
-                  rotateY: 5,
-                  scale: 1.02
-                }}
-                className="group relative"
-                style={{ transformStyle: "preserve-3d" }}
-                data-testid={`category-${category.title.toLowerCase().replace(/\s+/g, "-")}`}
-              >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20">
-                  {/* Animated corner accents */}
-                  <motion.div
-                    className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/30 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100"
-                    initial={false}
-                    whileHover={{
-                      scale: [1, 1.3, 1],
-                      rotate: [0, 180, 0],
-                    }}
-                    transition={{ duration: 0.8 }}
-                  />
-                  <motion.div
-                    className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-chart-2/30 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100"
-                    initial={false}
-                    whileHover={{
-                      scale: [1, 1.3, 1],
-                      rotate: [0, -180, 0],
-                    }}
-                    transition={{ duration: 0.8 }}
-                  />
-                  
-                  <div className="relative z-10">
-                    <motion.div 
-                      className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
-                      whileHover={{ 
-                        scale: 1.15,
-                        rotate: 360
-                      }}
-                      transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                    >
-                      <category.icon className="w-10 h-10 text-primary" />
-                    </motion.div>
-                    <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
-                      {category.title}
-                    </h3>
-                    <p className="text-muted-foreground text-lg">{category.description}</p>
                   </div>
                 </div>
               </motion.div>
