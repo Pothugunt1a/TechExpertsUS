@@ -14,10 +14,8 @@ interface FloatingBannerProps {
 export function FloatingBanner({ message, link }: FloatingBannerProps) {
   const [isVisible, setIsVisible] = useState(true);
 
-  if (!isVisible) return null;
-
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {isVisible && (
         <motion.div
           initial={{ y: -100, opacity: 0 }}

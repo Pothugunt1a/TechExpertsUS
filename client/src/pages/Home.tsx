@@ -1,11 +1,12 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import { ServiceCard } from "@/components/ui/service-card";
 import { StatCounter } from "@/components/ui/stat-counter";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
-import { Server, Network, ClipboardCheck, Users, Code, Shield } from "lucide-react";
+import { Server, Network, ClipboardCheck, Users, Code, Shield, Cpu, Database, Cloud, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useRef } from "react";
 
 const services = [
   {
@@ -65,13 +66,69 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <ParticleBackground />
         
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+        
+        {/* Animated Tech Icons */}
+        <motion.div
+          style={{ opacity, scale }}
+          className="absolute inset-0 pointer-events-none"
+        >
+          <motion.div
+            className="absolute top-1/4 left-1/4"
+            animate={{ 
+              y: [0, -20, 0],
+              rotate: [0, 10, 0]
+            }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Cpu className="w-16 h-16 text-primary/20 dark:text-primary/30" />
+          </motion.div>
+          <motion.div
+            className="absolute top-1/3 right-1/4"
+            animate={{ 
+              y: [0, 20, 0],
+              rotate: [0, -10, 0]
+            }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          >
+            <Database className="w-20 h-20 text-chart-2/20 dark:text-chart-2/30" />
+          </motion.div>
+          <motion.div
+            className="absolute bottom-1/3 left-1/3"
+            animate={{ 
+              y: [0, -15, 0],
+              rotate: [0, 15, 0]
+            }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <Cloud className="w-24 h-24 text-primary/20 dark:text-primary/30" />
+          </motion.div>
+          <motion.div
+            className="absolute top-1/2 right-1/3"
+            animate={{ 
+              y: [0, 25, 0],
+              rotate: [0, -15, 0]
+            }}
+            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          >
+            <Zap className="w-14 h-14 text-chart-2/20 dark:text-chart-2/30" />
+          </motion.div>
+        </motion.div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
           <motion.div
@@ -184,20 +241,43 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative bg-gradient-to-br from-primary/20 to-chart-2/20 rounded-2xl p-8 backdrop-blur-sm border border-primary/20">
-                <h3 className="text-2xl font-semibold mb-6">Why Choose Us?</h3>
+              {/* Animated Background Glow */}
+              <motion.div
+                className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-chart-2/20 rounded-3xl blur-2xl"
+                animate={{
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [1, 1.05, 1]
+                }}
+                transition={{ duration: 4, repeat: Infinity }}
+              />
+              
+              <div className="relative bg-gradient-to-br from-card/90 to-card/60 dark:from-primary/20 dark:to-chart-2/20 rounded-2xl p-8 backdrop-blur-xl border border-primary/20 shadow-2xl">
+                <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  Why Choose Us?
+                </h3>
                 <ul className="space-y-4">
-                  {["Technology Expertise", "Innovative Solutions", "Long-lasting Partnerships", "Proven Track Record"].map((item, index) => (
+                  {[
+                    { text: "Technology Expertise", icon: Code },
+                    { text: "Innovative Solutions", icon: Zap },
+                    { text: "Long-lasting Partnerships", icon: Users },
+                    { text: "Proven Track Record", icon: Shield }
+                  ].map((item, index) => (
                     <motion.li
-                      key={item}
+                      key={item.text}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
-                      className="flex items-center space-x-3"
+                      whileHover={{ x: 10 }}
+                      className="flex items-center space-x-3 group cursor-pointer"
                     >
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-lg">{item}</span>
+                      <motion.div 
+                        className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                      >
+                        <item.icon className="w-5 h-5 text-primary" />
+                      </motion.div>
+                      <span className="text-lg">{item.text}</span>
                     </motion.li>
                   ))}
                 </ul>
