@@ -12,18 +12,21 @@ const mainServices = [
     title: "Data Center Management Services",
     description: "Data Center Management in general the 'Server Room' for all your business needs plays a key and vital capacity in reaching out the needs of your business.",
     link: "/services/dms",
+    image: "/data-center.png",
   },
   {
     icon: Network,
     title: "Infrastructure Consulting Services",
     description: "An intelligent Infrastructure consulting services enables a company to grow in digital business and yields high-end results.",
     link: "/services/ics",
+    image: "/infrastructure.png",
   },
   {
     icon: ClipboardCheck,
     title: "Project Management Solutions",
     description: "Tech Expertsus project management solutions help companies schedule resources and monitor performance to ensure both deadlines and project requirements are met.",
     link: "/services/pms",
+    image: "/project-management.png",
   },
 ];
 
