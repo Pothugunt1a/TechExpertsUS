@@ -1,10 +1,11 @@
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import { ServiceCard } from "@/components/ui/service-card";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import { ClientLogo } from "@/components/ui/client-logo";
 import { Server, Network, ClipboardCheck, Cloud, Database, Shield, Cpu, Globe, BarChart, Users, Zap, Target } from "lucide-react";
+import { useRef } from "react";
 
 const mainServices = [
   {
@@ -12,21 +13,21 @@ const mainServices = [
     title: "Data Center Management Services",
     description: "Data Center Management in general the 'Server Room' for all your business needs plays a key and vital capacity in reaching out the needs of your business.",
     link: "/services/dms",
-    image: "/data-center.png",
+    image: "/attached_assets/DataCenterManagement_1760669426009.png",
   },
   {
     icon: Network,
     title: "Infrastructure Consulting Services",
     description: "An intelligent Infrastructure consulting services enables a company to grow in digital business and yields high-end results.",
     link: "/services/ics",
-    image: "/infrastructure.png",
+    image: "/attached_assets/InfrastructureConsulting_1760669433441.png",
   },
   {
     icon: ClipboardCheck,
     title: "Project Management Solutions",
     description: "Tech Expertsus project management solutions help companies schedule resources and monitor performance to ensure both deadlines and project requirements are met.",
     link: "/services/pms",
-    image: "/project-management.png",
+    image: "/attached_assets/ProjectManagement_1760669441810.png",
   },
 ];
 
@@ -114,97 +115,159 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.12,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: "easeOut",
+      duration: 0.7,
+      ease: [0.25, 0.46, 0.45, 0.94],
     },
   },
 };
 
 export default function Services() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section with Parallax */}
+      <section ref={heroRef} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <ParticleBackground />
         
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background"
+          style={{ opacity }}
+        />
+
+        {/* Animated gradient orbs */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.5, 0.3],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1.3, 1, 1.3],
+            opacity: [0.5, 0.3, 0.5],
+            x: [0, -50, 0],
+            y: [0, 30, 0],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
+        <motion.div 
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center"
+          style={{ opacity, scale, y }}
+        >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-6xl md:text-8xl font-bold mb-6"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
+              transition={{ delay: 0.2, duration: 1 }}
             >
-              Our <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient">Services</span>
+              Our <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Services</span>
             </motion.h1>
             <motion.p 
-              className="text-xl md:text-3xl text-muted-foreground max-w-3xl mx-auto font-semibold"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-2xl md:text-4xl text-muted-foreground max-w-3xl mx-auto font-semibold"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
+              transition={{ delay: 0.4, duration: 1 }}
             >
               We Are Professional
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="mt-8 w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
+              transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100 }}
+              className="mt-8 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
             />
           </motion.div>
-        </div>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
+            <motion.div
+              className="w-1.5 h-1.5 bg-primary rounded-full mt-2"
+              animate={{ y: [0, 16, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            />
+          </div>
+        </motion.div>
       </section>
 
-      {/* Services Overview */}
+      {/* Services Overview with 3D Transform */}
       <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.9 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
               Welcome To Our <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Tech Expertsus Services</span>
             </h2>
             <motion.p 
-              className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed"
+              className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.8 }}
+              transition={{ delay: 0.3, duration: 0.9 }}
             >
               Tech Expertsus provides IT Infrastructure Managed Services to help design secure, Strategize, implement scalable and reliable communications and IT infrastructure. We are specialized in Application management services, Server Management and Storages services.
             </motion.p>
           </motion.div>
 
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-10"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             {mainServices.map((service, index) => (
-              <motion.div key={service.title} variants={itemVariants}>
+              <motion.div 
+                key={service.title} 
+                variants={itemVariants}
+                whileHover={{ 
+                  scale: 1.03,
+                  rotateY: 5,
+                  z: 50
+                }}
+                style={{ perspective: 1000 }}
+              >
                 <ServiceCard {...service} index={index} />
               </motion.div>
             ))}
@@ -212,18 +275,31 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Why Choose Us with Magnetic Effect */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background overflow-hidden">
+        {/* Animated background pattern */}
+        <motion.div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
+            backgroundSize: "40px 40px",
+          }}
+          animate={{
+            backgroundPosition: ["0px 0px", "40px 40px"],
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Us</h2>
-            <p className="text-xl text-muted-foreground">Excellence in every aspect of our service</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">Why Choose Us</h2>
+            <p className="text-2xl text-muted-foreground">Excellence in every aspect of our service</p>
           </motion.div>
 
           <motion.div 
@@ -237,36 +313,50 @@ export default function Services() {
               <motion.div
                 key={item.title}
                 variants={itemVariants}
-                whileHover={{ y: -12, scale: 1.03 }}
+                whileHover={{ 
+                  y: -15, 
+                  scale: 1.05,
+                  transition: { type: "spring", stiffness: 300, damping: 20 }
+                }}
                 className="group relative"
               >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 overflow-hidden">
+                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 overflow-hidden">
+                  {/* Animated shimmer effect */}
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "100%" }}
+                    transition={{ duration: 0.8 }}
+                  />
+                  
                   {/* Animated background gradient */}
                   <motion.div 
                     className="absolute inset-0 bg-gradient-to-br from-primary/10 via-chart-2/10 to-transparent opacity-0 group-hover:opacity-100"
-                    initial={false}
                     animate={{
-                      backgroundPosition: ["0% 0%", "100% 100%"],
+                      rotate: [0, 360],
                     }}
                     transition={{
-                      duration: 3,
+                      duration: 20,
                       repeat: Infinity,
-                      repeatType: "reverse",
+                      ease: "linear",
                     }}
                   />
                   
                   <div className="relative z-10">
                     <motion.div
-                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary/30"
-                      whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                      transition={{ duration: 0.5 }}
+                      className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6 group-hover:shadow-2xl group-hover:shadow-primary/40"
+                      whileHover={{ 
+                        rotate: [0, -10, 10, -10, 0],
+                        scale: 1.1
+                      }}
+                      transition={{ duration: 0.6 }}
                     >
-                      <item.icon className="w-8 h-8 text-primary" />
+                      <item.icon className="w-10 h-10 text-primary" />
                     </motion.div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <p className="text-muted-foreground text-lg">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -275,18 +365,18 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Service Categories */}
+      {/* Service Categories with Morphing Cards */}
       <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Service Categories</h2>
-            <p className="text-xl text-muted-foreground">Comprehensive solutions for every need</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">Our Service Categories</h2>
+            <p className="text-2xl text-muted-foreground">Comprehensive solutions for every need</p>
           </motion.div>
 
           <motion.div 
@@ -300,34 +390,52 @@ export default function Services() {
               <motion.div
                 key={category.title}
                 variants={itemVariants}
-                whileHover={{ y: -10, rotateY: 5 }}
+                whileHover={{ 
+                  y: -12, 
+                  rotateX: 5,
+                  rotateY: 5,
+                  scale: 1.02
+                }}
                 className="group relative"
+                style={{ transformStyle: "preserve-3d" }}
                 data-testid={`category-${category.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/20">
-                  {/* Animated corner accent */}
+                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20">
+                  {/* Animated corner accents */}
                   <motion.div
-                    className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/30 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100"
                     initial={false}
                     whileHover={{
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 90, 0],
+                      scale: [1, 1.3, 1],
+                      rotate: [0, 180, 0],
                     }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8 }}
+                  />
+                  <motion.div
+                    className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-chart-2/30 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100"
+                    initial={false}
+                    whileHover={{
+                      scale: [1, 1.3, 1],
+                      rotate: [0, -180, 0],
+                    }}
+                    transition={{ duration: 0.8 }}
                   />
                   
                   <div className="relative z-10">
                     <motion.div 
-                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
+                      whileHover={{ 
+                        scale: 1.15,
+                        rotate: 360
+                      }}
+                      transition={{ type: "spring", stiffness: 200, damping: 15 }}
                     >
-                      <category.icon className="w-8 h-8 text-primary" />
+                      <category.icon className="w-10 h-10 text-primary" />
                     </motion.div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
                       {category.title}
                     </h3>
-                    <p className="text-muted-foreground">{category.description}</p>
+                    <p className="text-muted-foreground text-lg">{category.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -340,21 +448,21 @@ export default function Services() {
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-xl text-muted-foreground">What our clients say about us</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">Client Testimonials</h2>
+            <p className="text-2xl text-muted-foreground">What our clients say about us</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <TestimonialCarousel testimonials={testimonials} />
           </motion.div>
@@ -365,14 +473,14 @@ export default function Services() {
       <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Clients</h2>
-            <p className="text-xl text-muted-foreground">Trusted by industry leaders</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">Our Clients</h2>
+            <p className="text-2xl text-muted-foreground">Trusted by industry leaders</p>
           </motion.div>
 
           <motion.div 
