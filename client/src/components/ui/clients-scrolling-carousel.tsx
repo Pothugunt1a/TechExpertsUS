@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect } from "react";
 
 interface Client {
   name: string;
@@ -18,6 +19,31 @@ const clients: Client[] = [
 
 export function ClientsScrollingCarousel() {
   const duplicatedClients = [...clients, ...clients, ...clients];
+  const controls = useAnimationControls();
+  const logoWidth = 170 + 32; // width + gap
+
+  useEffect(() => {
+    const animate = async () => {
+      while (true) {
+        for (let i = 0; i < clients.length; i++) {
+          // Move to next logo
+          await controls.start({
+            x: -i * logoWidth,
+            transition: { duration: 0.5, ease: "easeInOut" }
+          });
+          // Pause at logo
+          await new Promise(resolve => setTimeout(resolve, 1500));
+        }
+        // Reset to start
+        await controls.start({
+          x: 0,
+          transition: { duration: 0 }
+        });
+      }
+    };
+
+    animate();
+  }, [controls, logoWidth]);
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -30,16 +56,7 @@ export function ClientsScrollingCarousel() {
         {/* Scrolling container */}
         <motion.div
           className="flex gap-6 md:gap-8"
-          animate={{
-            x: [0, -1 * (clients.length * (170 + 32))],
-          }}
-          transition={{
-            x: {
-              duration: 30,
-              repeat: Infinity,
-              ease: "linear",
-            },
-          }}
+          animate={controls}
         >
           {duplicatedClients.map((client, index) => (
             <div
