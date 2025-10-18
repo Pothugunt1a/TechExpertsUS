@@ -323,11 +323,9 @@ export default function Services() {
                 key={service.title}
                 variants={itemVariants}
                 whileHover={{
-                  scale: 1.03,
-                  rotateY: 5,
-                  z: 50,
+                  scale: 1.02,
+                  y: -8,
                 }}
-                style={{ perspective: 1000 }}
               >
                 <ServiceCard {...service} index={index} />
               </motion.div>
