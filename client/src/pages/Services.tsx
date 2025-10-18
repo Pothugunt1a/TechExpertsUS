@@ -3,77 +3,102 @@ import { ParticleBackground } from "@/components/ui/particle-background";
 import { ServiceCard } from "@/components/ui/service-card";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import { ClientsScrollingCarousel } from "@/components/ui/clients-scrolling-carousel";
-import { Server, Network, ClipboardCheck, Cloud, Database, Shield, Cpu, Globe, BarChart, Users, Zap, Target } from "lucide-react";
+import {
+  Server,
+  Network,
+  ClipboardCheck,
+  Cloud,
+  Database,
+  Shield,
+  Cpu,
+  Globe,
+  BarChart,
+  Users,
+  Zap,
+  Target,
+} from "lucide-react";
 import { useRef } from "react";
 
 const mainServices = [
   {
     icon: Server,
     title: "Data Center Management Services",
-    description: "Data Center Management in general the 'Server Room' for all your business needs plays a key and vital capacity in reaching out the needs of your business.",
+    description:
+      "Data Center Management in general the 'Server Room' for all your business needs plays a key and vital capacity in reaching out the needs of your business.",
     link: "/services/dms",
-    image: "/attached_assets/DataCenterManagement_1760680662236.png",
+    image: "/assets/DataCenterManagement.png",
   },
   {
     icon: Network,
     title: "Infrastructure Consulting Services",
-    description: "An intelligent Infrastructure consulting services enables a company to grow in digital business and yields high-end results.",
+    description:
+      "An intelligent Infrastructure consulting services enables a company to grow in digital business and yields high-end results.",
     link: "/services/ics",
-    image: "/attached_assets/InfrastructureConsulting_1760680667042.png",
+    image: "/assets/InfrastructureConsulting.png",
   },
   {
     icon: ClipboardCheck,
     title: "Project Management Solutions",
-    description: "Tech Expertsus project management solutions help companies schedule resources and monitor performance to ensure both deadlines and project requirements are met.",
+    description:
+      "Tech Expertsus project management solutions help companies schedule resources and monitor performance to ensure both deadlines and project requirements are met.",
     link: "/services/pms",
-    image: "/attached_assets/ProjectManagement_1760680672108.png",
+    image: "/assets/ProjectManagement.png",
   },
 ];
 
 const serviceCategories = [
   {
     title: "Software as a Service (SaaS)",
-    description: "Applications, Runtime, Data, Middleware, OSes, Virtualization, Servers, Storage and networking. For: Google Apps, Salesforce, Workday, Concur, Citrix, GoToMeeting, Cisco WebEX",
+    description:
+      "Applications, Runtime, Data, Middleware, OSes, Virtualization, Servers, Storage and networking. For: Google Apps, Salesforce, Workday, Concur, Citrix, GoToMeeting, Cisco WebEX",
     icon: Cloud,
   },
   {
     title: "Application Service Providers (ASP)",
-    description: "Consumer Acquisition, Appnext, Avazu Mobile DSP, StrikeAd by Sizmek, AppLift, Mobusi, Smaato, Liftoff, Trademob, PocketMath, Merchenta, Jampp, Splicky, MobFox DSP by Matomy, Fiksu",
+    description:
+      "Consumer Acquisition, Appnext, Avazu Mobile DSP, StrikeAd by Sizmek, AppLift, Mobusi, Smaato, Liftoff, Trademob, PocketMath, Merchenta, Jampp, Splicky, MobFox DSP by Matomy, Fiksu",
     icon: Server,
   },
   {
     title: "Virtualization",
-    description: "KVM, VMware Workstation, VMware Fusion, Hyper-V, Windows Virtual PC, Xen, VirtualBox, Parallels Workstation, QEMU, Adeos, Mac-on-Linux, Win4Lin Pro, Egenera vBlade",
+    description:
+      "KVM, VMware Workstation, VMware Fusion, Hyper-V, Windows Virtual PC, Xen, VirtualBox, Parallels Workstation, QEMU, Adeos, Mac-on-Linux, Win4Lin Pro, Egenera vBlade",
     icon: Cpu,
   },
   {
     title: "Cloud Computing",
-    description: "AppFog, BitNami, Cloudify, ConPaaS, ElasticBox, Gondor, Google AppEngine, Azure, Uhuru, PaaS, Stackato, Pydra, Oracle, EngineYard, Cumulogic, Heroku, ScaleMatrix",
+    description:
+      "AppFog, BitNami, Cloudify, ConPaaS, ElasticBox, Gondor, Google AppEngine, Azure, Uhuru, PaaS, Stackato, Pydra, Oracle, EngineYard, Cumulogic, Heroku, ScaleMatrix",
     icon: Globe,
   },
   {
     title: "Enterprise Resource Planning (ERP)",
-    description: "WebERP, Openbravo, Postbooks, Tryton, SQL-Ledger, Odoo, Adaxa Suite, HeliumV, LedgerSMB, JFire, Kuali, ERPNEXT, Dolibarr, Compiere, ERP5, FrontAccounting, Scipio ERP",
+    description:
+      "WebERP, Openbravo, Postbooks, Tryton, SQL-Ledger, Odoo, Adaxa Suite, HeliumV, LedgerSMB, JFire, Kuali, ERPNEXT, Dolibarr, Compiere, ERP5, FrontAccounting, Scipio ERP",
     icon: Database,
   },
   {
     title: "Customer Relations Management",
-    description: "ConnectWise PSA, Desk.com, Zoho CRM, Vtiger CRM, TeamWox, SuiteCRM, Base CRM, Dolibarr, Casengo, Dynamics CRM, SugarCRM, Streak, Salesforce.com, WORKetc, SuperOffice CRM",
+    description:
+      "ConnectWise PSA, Desk.com, Zoho CRM, Vtiger CRM, TeamWox, SuiteCRM, Base CRM, Dolibarr, Casengo, Dynamics CRM, SugarCRM, Streak, Salesforce.com, WORKetc, SuperOffice CRM",
     icon: Users,
   },
   {
     title: "Infrastructure as a Service (IaaS)",
-    description: "Amazon Web Services, Windows Azure, Google Compute Engine, Rackspace, IBM SmartCloud, Enterprise, HP Enterprise Converged Infrastructure, Cisco Metapod",
+    description:
+      "Amazon Web Services, Windows Azure, Google Compute Engine, Rackspace, IBM SmartCloud, Enterprise, HP Enterprise Converged Infrastructure, Cisco Metapod",
     icon: Shield,
   },
   {
     title: "Internet of Things (IoT)",
-    description: "XOBXOB, Lab of Things, Konekt, Temboo, Open Sensors, Smart Living, Google Cloud Platform, RTI, ThingWorx, Cisco, GE Predix, Verizon, ThingSpace, IBM BlueMix",
+    description:
+      "XOBXOB, Lab of Things, Konekt, Temboo, Open Sensors, Smart Living, Google Cloud Platform, RTI, ThingWorx, Cisco, GE Predix, Verizon, ThingSpace, IBM BlueMix",
     icon: Network,
   },
   {
     title: "Big Data",
-    description: "Apache Hadoop, Julia, SAS, Python, SQL, Scala, MATLAB, HiveQL, Pig Latin, Go, Kafka, Storm, Hive, Octave, Java",
+    description:
+      "Apache Hadoop, Julia, SAS, Python, SQL, Scala, MATLAB, HiveQL, Pig Latin, Go, Kafka, Storm, Hive, Octave, Java",
     icon: BarChart,
   },
 ];
@@ -82,7 +107,8 @@ const whyChooseUs = [
   {
     icon: Target,
     title: "Expert Team",
-    description: "Highly skilled professionals with years of industry experience",
+    description:
+      "Highly skilled professionals with years of industry experience",
   },
   {
     icon: Zap,
@@ -103,22 +129,24 @@ const whyChooseUs = [
 
 const testimonials = [
   {
-    content: "Tech Expertsus has transformed our IT infrastructure with their innovative solutions. Their team's expertise and dedication are unmatched.",
+    content:
+      "Tech Expertsus has transformed our IT infrastructure with their innovative solutions. Their team's expertise and dedication are unmatched.",
     author: "John Doe",
     role: "CTO, Fortune 500 Company",
   },
   {
-    content: "Working with Tech Expertsus has been a game-changer for our business. They deliver exceptional results consistently.",
+    content:
+      "Working with Tech Expertsus has been a game-changer for our business. They deliver exceptional results consistently.",
     author: "Jane Smith",
     role: "IT Director, Global Enterprise",
   },
   {
-    content: "The professionalism and technical excellence of Tech Expertsus team exceeded our expectations. Highly recommended!",
+    content:
+      "The professionalism and technical excellence of Tech Expertsus team exceeded our expectations. Highly recommended!",
     author: "Mike Johnson",
     role: "VP of Operations, Tech Startup",
   },
 ];
-
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -146,7 +174,7 @@ export default function Services() {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
@@ -156,10 +184,13 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Parallax */}
-      <section ref={heroRef} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section
+        ref={heroRef}
+        className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+      >
         <ParticleBackground />
 
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background"
           style={{ opacity }}
         />
@@ -183,10 +214,15 @@ export default function Services() {
             x: [0, -50, 0],
             y: [0, 30, 0],
           }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         />
 
-        <motion.div 
+        <motion.div
           className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center"
           style={{ opacity, scale, y }}
         >
@@ -195,15 +231,18 @@ export default function Services() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-6xl md:text-8xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
             >
-              Our <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Services</span>
+              Our{" "}
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                Services
+              </span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-2xl md:text-4xl text-muted-foreground max-w-3xl mx-auto font-semibold"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -214,7 +253,12 @@ export default function Services() {
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100 }}
+              transition={{
+                delay: 0.6,
+                duration: 0.8,
+                type: "spring",
+                stiffness: 100,
+              }}
               className="mt-8 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
             />
           </motion.div>
@@ -247,20 +291,27 @@ export default function Services() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              Welcome To Our <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Tech Expertsus Services</span>
+              Welcome To Our{" "}
+              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                Tech Expertsus Services
+              </span>
             </h2>
-            <motion.p 
+            <motion.p
               className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.9 }}
             >
-              Tech Expertsus provides IT Infrastructure Managed Services to help design secure, Strategize, implement scalable and reliable communications and IT infrastructure. We are specialized in Application management services, Server Management and Storages services.
+              Tech Expertsus provides IT Infrastructure Managed Services to help
+              design secure, Strategize, implement scalable and reliable
+              communications and IT infrastructure. We are specialized in
+              Application management services, Server Management and Storages
+              services.
             </motion.p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-10"
             variants={containerVariants}
             initial="hidden"
@@ -268,13 +319,13 @@ export default function Services() {
             viewport={{ once: true, margin: "-100px" }}
           >
             {mainServices.map((service, index) => (
-              <motion.div 
-                key={service.title} 
+              <motion.div
+                key={service.title}
                 variants={itemVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.03,
                   rotateY: 5,
-                  z: 50
+                  z: 50,
                 }}
                 style={{ perspective: 1000 }}
               >
@@ -295,11 +346,15 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">Our Service Categories</h2>
-            <p className="text-2xl text-muted-foreground">Comprehensive solutions for every need</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">
+              Our Service Categories
+            </h2>
+            <p className="text-2xl text-muted-foreground">
+              Comprehensive solutions for every need
+            </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -310,11 +365,11 @@ export default function Services() {
               <motion.div
                 key={category.title}
                 variants={itemVariants}
-                whileHover={{ 
-                  y: -12, 
+                whileHover={{
+                  y: -12,
                   rotateX: 5,
                   rotateY: 5,
-                  scale: 1.02
+                  scale: 1.02,
                 }}
                 className="group relative"
                 style={{ transformStyle: "preserve-3d" }}
@@ -342,20 +397,26 @@ export default function Services() {
                   />
 
                   <div className="relative z-10">
-                    <motion.div 
+                    <motion.div
                       className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.15,
-                        rotate: 360
+                        rotate: 360,
                       }}
-                      transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 15,
+                      }}
                     >
                       <category.icon className="w-10 h-10 text-primary" />
                     </motion.div>
                     <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
                       {category.title}
                     </h3>
-                    <p className="text-muted-foreground text-lg">{category.description}</p>
+                    <p className="text-muted-foreground text-lg">
+                      {category.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -370,7 +431,8 @@ export default function Services() {
         <motion.div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
             backgroundSize: "40px 40px",
           }}
           animate={{
@@ -387,11 +449,15 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">Why Choose Us</h2>
-            <p className="text-2xl text-muted-foreground">Excellence in every aspect of our service</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">
+              Why Choose Us
+            </h2>
+            <p className="text-2xl text-muted-foreground">
+              Excellence in every aspect of our service
+            </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -402,16 +468,16 @@ export default function Services() {
               <motion.div
                 key={item.title}
                 variants={itemVariants}
-                whileHover={{ 
-                  y: -15, 
+                whileHover={{
+                  y: -15,
                   scale: 1.05,
-                  transition: { type: "spring", stiffness: 300, damping: 20 }
+                  transition: { type: "spring", stiffness: 300, damping: 20 },
                 }}
                 className="group relative"
               >
                 <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 overflow-hidden">
                   {/* Animated shimmer effect */}
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent"
                     initial={{ x: "-100%" }}
                     whileHover={{ x: "100%" }}
@@ -419,7 +485,7 @@ export default function Services() {
                   />
 
                   {/* Animated background gradient */}
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-primary/10 via-chart-2/10 to-transparent opacity-0 group-hover:opacity-100"
                     animate={{
                       rotate: [0, 360],
@@ -434,9 +500,9 @@ export default function Services() {
                   <div className="relative z-10">
                     <motion.div
                       className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6 group-hover:shadow-2xl group-hover:shadow-primary/40"
-                      whileHover={{ 
+                      whileHover={{
                         rotate: [0, -10, 10, -10, 0],
-                        scale: 1.1
+                        scale: 1.1,
                       }}
                       transition={{ duration: 0.6 }}
                     >
@@ -445,7 +511,9 @@ export default function Services() {
                     <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground text-lg">{item.description}</p>
+                    <p className="text-muted-foreground text-lg">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -465,37 +533,64 @@ export default function Services() {
             className="text-center mb-12"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">Our Clients</h2>
-            <p className="text-2xl text-muted-foreground">Trusted by industry leaders</p>
+            <p className="text-2xl text-muted-foreground">
+              Trusted by industry leaders
+            </p>
           </motion.div>
 
           <div className="relative">
             {/* Top horizontal triangular borders */}
-            <svg 
-              className="absolute left-0 right-0 w-full z-10" 
-              height="18" 
-              viewBox="0 0 1200 18" 
+            <svg
+              className="absolute left-0 right-0 w-full z-10"
+              height="18"
+              viewBox="0 0 1200 18"
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
-              style={{ top: '-25px' }}
+              style={{ top: "-25px" }}
             >
               <defs>
-                <linearGradient id="topLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                <linearGradient
+                  id="topLeftGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
                 </linearGradient>
-                <linearGradient id="topRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
+                <linearGradient
+                  id="topRightGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
                 </linearGradient>
               </defs>
               {/* Left triangle - starts thick at left, tapers to point at middle, straight bottom */}
-              <polygon 
-                points="0,0 0,18 600,18" 
-                fill="url(#topLeftGradient)"
-              />
+              <polygon points="0,0 0,18 600,18" fill="url(#topLeftGradient)" />
               {/* Right triangle - starts at middle point, expands to thick at right */}
-              <polygon 
-                points="600,9 1200,18 1200,0" 
+              <polygon
+                points="600,9 1200,18 1200,0"
                 fill="url(#topRightGradient)"
                 opacity="0"
               />
@@ -511,33 +606,61 @@ export default function Services() {
             </motion.div>
 
             {/* Bottom horizontal triangular borders */}
-            <svg 
-              className="absolute left-0 right-0 w-full z-10" 
-              height="18" 
-              viewBox="0 0 1200 18" 
+            <svg
+              className="absolute left-0 right-0 w-full z-10"
+              height="18"
+              viewBox="0 0 1200 18"
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
-              style={{ bottom: '-25px' }}
+              style={{ bottom: "-25px" }}
             >
               <defs>
-                <linearGradient id="bottomLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                <linearGradient
+                  id="bottomLeftGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
                 </linearGradient>
-                <linearGradient id="bottomRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
+                <linearGradient
+                  id="bottomRightGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
                 </linearGradient>
               </defs>
               {/* Left triangle - starts thick at left, tapers to point at middle */}
-              <polygon 
-                points="0,18 0,0 600,9" 
+              <polygon
+                points="0,18 0,0 600,9"
                 fill="url(#bottomLeftGradient)"
                 opacity="0"
               />
               {/* Right triangle - starts at middle point, expands to thick at right, straight top */}
-              <polygon 
-                points="600,0 1200,0 1200,18" 
+              <polygon
+                points="600,0 1200,0 1200,18"
                 fill="url(#bottomRightGradient)"
               />
             </svg>
@@ -555,8 +678,12 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-2xl text-muted-foreground">What our clients say about us</p>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">
+              Client Testimonials
+            </h2>
+            <p className="text-2xl text-muted-foreground">
+              What our clients say about us
+            </p>
           </motion.div>
 
           <motion.div
