@@ -65,7 +65,7 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
       data-testid={`card-service-${title.toLowerCase().replace(/\s+/g, "-")}`}
     >
       <motion.div 
-        className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_60px_rgba(34,211,238,0.25)]"
+        className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10"
         whileHover={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
