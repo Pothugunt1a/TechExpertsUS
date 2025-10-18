@@ -20,17 +20,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import worldMapImage from "@assets/world-map.png";
 
-const clientLogos = [
-  { name: "Microsoft", logo: "MS" },
-  { name: "Amazon", logo: "AWS" },
-  { name: "Google", logo: "GOOG" },
-  { name: "IBM", logo: "IBM" },
-  { name: "Oracle", logo: "ORCL" },
-  { name: "SAP", logo: "SAP" },
-  { name: "Cisco", logo: "CSCO" },
-  { name: "Dell", logo: "DELL" },
-];
-
 const locations = [
   {
     title: "Tech Expertsus USA",
@@ -353,84 +342,6 @@ export default function Contact() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Clients - Infinite Scroll */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        {/* Diagonal Gradient Background - similar to partner--gradient */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div 
-            className="absolute left-0 top-0 h-full w-full origin-top-left"
-            style={{
-              background: 'linear-gradient(150.39deg, hsl(var(--card) / 0.6) 15.02%, hsl(var(--card) / 0.2) 99.59%)',
-              transform: 'rotate(2deg) translateY(-5px)',
-            }}
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Clients</h2>
-            <p className="text-xl text-muted-foreground">Trusted by industry leaders</p>
-          </motion.div>
-
-          {/* Infinite Scroll Container */}
-          <div className="relative">
-            {/* Gradient Fade Edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-            
-            {/* Scrolling Logos */}
-            <div className="flex overflow-hidden py-8">
-              <motion.div
-                className="flex gap-8 pr-8"
-                animate={{
-                  x: [0, -1680],
-                }}
-                transition={{
-                  x: {
-                    duration: 25,
-                    repeat: Infinity,
-                    ease: "linear",
-                  },
-                }}
-              >
-                {/* First set of logos */}
-                {clientLogos.map((client) => (
-                  <div
-                    key={client.name}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 p-6 grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
-                  >
-                    <svg viewBox="0 0 120 40" className="w-full h-full" fill="currentColor">
-                      <text x="60" y="25" textAnchor="middle" className="text-[14px] font-bold fill-foreground/70 hover:fill-foreground transition-colors duration-300">
-                        {client.name}
-                      </text>
-                    </svg>
-                  </div>
-                ))}
-                {/* Duplicate set for seamless loop */}
-                {clientLogos.map((client) => (
-                  <div
-                    key={`${client.name}-duplicate`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 p-6 grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
-                  >
-                    <svg viewBox="0 0 120 40" className="w-full h-full" fill="currentColor">
-                      <text x="60" y="25" textAnchor="middle" className="text-[14px] font-bold fill-foreground/70 hover:fill-foreground transition-colors duration-300">
-                        {client.name}
-                      </text>
-                    </svg>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
           </div>
         </div>
       </section>
