@@ -496,6 +496,7 @@ export default function Services() {
               <polygon 
                 points="600,9 1200,18 1200,0" 
                 fill="url(#topRightGradient)"
+                opacity="0"
               />
             </svg>
 
@@ -530,6 +531,7 @@ export default function Services() {
               <polygon 
                 points="0,18 0,0 600,9" 
                 fill="url(#bottomLeftGradient)"
+                opacity="0"
               />
               {/* Right triangle - starts at middle point, expands to thick at right, straight top */}
               <polygon 
