@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import worldMapImage from "@assets/world map (1)_1760771865440.png";
 
 const locations = [
   {
@@ -315,254 +316,165 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative aspect-video bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 overflow-hidden"
+              className="relative aspect-video bg-gradient-to-br from-background to-background/80 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden"
             >
-              <svg viewBox="0 0 1000 500" className="w-full h-full">
-                {/* World map continents - simplified outlines */}
-                <motion.path
-                  d="M 100 180 Q 120 160 140 180 L 160 175 L 180 190 L 200 185 L 220 200 L 200 220 L 180 210 L 160 225 L 140 215 L 120 200 Z"
-                  fill="currentColor"
-                  className="text-primary/10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 1 }}
-                />
-                <motion.path
-                  d="M 380 140 Q 400 130 420 140 L 440 135 L 460 145 L 440 160 L 420 155 L 400 165 Z"
-                  fill="currentColor"
-                  className="text-chart-2/10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.4, duration: 1 }}
-                />
-                <motion.path
-                  d="M 600 200 Q 620 190 640 200 L 660 195 L 680 210 L 700 205 L 720 220 L 700 240 L 680 230 L 660 245 L 640 235 L 620 220 Z"
-                  fill="currentColor"
-                  className="text-chart-3/10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6, duration: 1 }}
-                />
-                
-                {/* Grid lines for depth */}
-                {[...Array(10)].map((_, i) => (
-                  <motion.line
-                    key={`h-${i}`}
-                    x1="50"
-                    y1={50 + i * 45}
-                    x2="950"
-                    y2={50 + i * 45}
-                    stroke="currentColor"
-                    strokeWidth="0.5"
-                    className="text-primary/5"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ delay: i * 0.05, duration: 0.8 }}
-                  />
-                ))}
-                {[...Array(20)].map((_, i) => (
-                  <motion.line
-                    key={`v-${i}`}
-                    x1={50 + i * 47.5}
-                    y1="50"
-                    x2={50 + i * 47.5}
-                    y2="450"
-                    stroke="currentColor"
-                    strokeWidth="0.5"
-                    className="text-primary/5"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ delay: i * 0.03, duration: 0.8 }}
-                  />
-                ))}
-                
-                {/* USA Location */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1, duration: 0.6 }}>
+              <img 
+                src={worldMapImage} 
+                alt="World Map" 
+                className="w-full h-full object-contain"
+              />
+              <svg viewBox="0 0 1000 500" className="absolute inset-0 w-full h-full">
+                {/* USA Location - Texas is around 22% from left, 44% from top */}
+                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
                   <motion.circle
-                    cx="180"
-                    cy="200"
+                    cx="220"
+                    cy="220"
                     r="12"
                     className="fill-primary"
                     animate={{ scale: [1, 1.15, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
                   <motion.circle
-                    cx="180"
-                    cy="200"
+                    cx="220"
+                    cy="220"
                     r="20"
                     className="fill-primary/30"
                     animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
                     transition={{ duration: 2.5, repeat: Infinity }}
                   />
                   <motion.circle
-                    cx="180"
-                    cy="200"
+                    cx="220"
+                    cy="220"
                     r="30"
                     className="fill-primary/20"
                     animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
                     transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
                   />
-                  <text x="180" y="245" className="text-sm font-semibold fill-current text-primary" textAnchor="middle">USA</text>
+                  <text x="220" y="260" className="text-xs md:text-sm font-semibold fill-current text-primary" textAnchor="middle">USA</text>
                 </motion.g>
                 
-                {/* Canada Location */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.3, duration: 0.6 }}>
+                {/* Canada Location - Toronto is around 24% from left, 34% from top */}
+                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.8, duration: 0.6 }}>
                   <motion.circle
-                    cx="220"
-                    cy="160"
+                    cx="240"
+                    cy="170"
                     r="12"
                     className="fill-chart-2"
                     animate={{ scale: [1, 1.15, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
                   />
                   <motion.circle
-                    cx="220"
-                    cy="160"
+                    cx="240"
+                    cy="170"
                     r="20"
                     className="fill-chart-2/30"
                     animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
                     transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
                   />
                   <motion.circle
-                    cx="220"
-                    cy="160"
+                    cx="240"
+                    cy="170"
                     r="30"
                     className="fill-chart-2/20"
                     animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
                     transition={{ duration: 3, repeat: Infinity, delay: 0.8 }}
                   />
-                  <text x="220" y="205" className="text-sm font-semibold fill-current text-chart-2" textAnchor="middle">Canada</text>
+                  <text x="240" y="210" className="text-xs md:text-sm font-semibold fill-current text-chart-2" textAnchor="middle">Canada</text>
                 </motion.g>
                 
-                {/* UK Location */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.6, duration: 0.6 }}>
+                {/* UK Location - London is around 49% from left, 30% from top */}
+                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.1, duration: 0.6 }}>
                   <motion.circle
-                    cx="480"
-                    cy="170"
+                    cx="490"
+                    cy="150"
                     r="12"
                     className="fill-chart-3"
                     animate={{ scale: [1, 1.15, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
                   />
                   <motion.circle
-                    cx="480"
-                    cy="170"
+                    cx="490"
+                    cy="150"
                     r="20"
                     className="fill-chart-3/30"
                     animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
                     transition={{ duration: 2.5, repeat: Infinity, delay: 0.6 }}
                   />
                   <motion.circle
-                    cx="480"
-                    cy="170"
+                    cx="490"
+                    cy="150"
                     r="30"
                     className="fill-chart-3/20"
                     animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
                     transition={{ duration: 3, repeat: Infinity, delay: 1.1 }}
                   />
-                  <text x="480" y="215" className="text-sm font-semibold fill-current text-chart-3" textAnchor="middle">UK</text>
+                  <text x="490" y="190" className="text-xs md:text-sm font-semibold fill-current text-chart-3" textAnchor="middle">UK</text>
                 </motion.g>
                 
-                {/* India Location */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.9, duration: 0.6 }}>
+                {/* India Location - Central India is around 71% from left, 46% from top */}
+                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.4, duration: 0.6 }}>
                   <motion.circle
-                    cx="700"
-                    cy="250"
+                    cx="710"
+                    cy="230"
                     r="12"
                     className="fill-chart-4"
                     animate={{ scale: [1, 1.15, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
                   />
                   <motion.circle
-                    cx="700"
-                    cy="250"
+                    cx="710"
+                    cy="230"
                     r="20"
                     className="fill-chart-4/30"
                     animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
                     transition={{ duration: 2.5, repeat: Infinity, delay: 0.9 }}
                   />
                   <motion.circle
-                    cx="700"
-                    cy="250"
+                    cx="710"
+                    cy="230"
                     r="30"
                     className="fill-chart-4/20"
                     animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
                     transition={{ duration: 3, repeat: Infinity, delay: 1.4 }}
                   />
-                  <text x="700" y="295" className="text-sm font-semibold fill-current text-chart-4" textAnchor="middle">India</text>
+                  <text x="710" y="270" className="text-xs md:text-sm font-semibold fill-current text-chart-4" textAnchor="middle">India</text>
                 </motion.g>
                 
                 {/* Animated connection lines with glowing effect */}
                 {/* USA to Canada */}
                 <motion.path
-                  d="M 180 200 Q 200 180 220 160"
+                  d="M 220 220 Q 230 195 240 170"
                   fill="none"
                   stroke="url(#gradient1)"
-                  strokeWidth="3"
+                  strokeWidth="2"
                   initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 1 }}
-                  transition={{ delay: 2.2, duration: 1.2, ease: "easeInOut" }}
+                  animate={{ pathLength: 1, opacity: 0.6 }}
+                  transition={{ delay: 1.7, duration: 1, ease: "easeInOut" }}
                 />
-                <motion.circle
-                  r="6"
-                  fill="currentColor"
-                  className="text-primary"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: [0, 1, 1, 0] }}
-                  transition={{ delay: 2.2, duration: 1.2, ease: "easeInOut" }}
-                >
-                  <animateMotion dur="1.2s" begin="2.2s" fill="freeze">
-                    <mpath href="#path1" />
-                  </animateMotion>
-                </motion.circle>
                 
                 {/* Canada to UK */}
                 <motion.path
-                  d="M 220 160 Q 350 140 480 170"
+                  d="M 240 170 Q 365 120 490 150"
                   fill="none"
                   stroke="url(#gradient2)"
-                  strokeWidth="3"
+                  strokeWidth="2"
                   initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 1 }}
-                  transition={{ delay: 3.4, duration: 1.5, ease: "easeInOut" }}
+                  animate={{ pathLength: 1, opacity: 0.6 }}
+                  transition={{ delay: 2.4, duration: 1.2, ease: "easeInOut" }}
                 />
-                <motion.circle
-                  r="6"
-                  fill="currentColor"
-                  className="text-chart-2"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: [0, 1, 1, 0] }}
-                  transition={{ delay: 3.4, duration: 1.5, ease: "easeInOut" }}
-                >
-                  <animateMotion dur="1.5s" begin="3.4s" fill="freeze">
-                    <mpath href="#path2" />
-                  </animateMotion>
-                </motion.circle>
                 
                 {/* UK to India */}
                 <motion.path
-                  d="M 480 170 Q 590 210 700 250"
+                  d="M 490 150 Q 600 190 710 230"
                   fill="none"
                   stroke="url(#gradient3)"
-                  strokeWidth="3"
+                  strokeWidth="2"
                   initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 1 }}
-                  transition={{ delay: 4.9, duration: 1.5, ease: "easeInOut" }}
+                  animate={{ pathLength: 1, opacity: 0.6 }}
+                  transition={{ delay: 3.6, duration: 1.2, ease: "easeInOut" }}
                 />
-                <motion.circle
-                  r="6"
-                  fill="currentColor"
-                  className="text-chart-3"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: [0, 1, 1, 0] }}
-                  transition={{ delay: 4.9, duration: 1.5, ease: "easeInOut" }}
-                >
-                  <animateMotion dur="1.5s" begin="4.9s" fill="freeze">
-                    <mpath href="#path3" />
-                  </animateMotion>
-                </motion.circle>
                 
-                {/* Hidden paths for animation */}
+                {/* Gradients */}
                 <defs>
                   <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
@@ -576,9 +488,6 @@ export default function Contact() {
                     <stop offset="0%" stopColor="hsl(var(--chart-3))" stopOpacity="0.8" />
                     <stop offset="100%" stopColor="hsl(var(--chart-4))" stopOpacity="0.8" />
                   </linearGradient>
-                  <path id="path1" d="M 180 200 Q 200 180 220 160" />
-                  <path id="path2" d="M 220 160 Q 350 140 480 170" />
-                  <path id="path3" d="M 480 170 Q 590 210 700 250" />
                 </defs>
               </svg>
             </motion.div>
