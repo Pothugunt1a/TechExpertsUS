@@ -342,38 +342,61 @@ export default function Home() {
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-            {["Adaptability", "Communication", "Satisfaction", "Performance", "Consciousness"].map((value, index) => (
+            {[
+              { name: "Adaptability", icon: "adaptability" },
+              { name: "Communication", icon: "communication" },
+              { name: "Satisfaction", icon: "satisfaction" },
+              { name: "Performance", icon: "performance" },
+              { name: "Consciousness", icon: "consciousness" }
+            ].map((value, index) => (
               <motion.div
-                key={value}
+                key={value.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.1, y: -10 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 className="flex flex-col items-center group"
-                data-testid={`value-${value.toLowerCase()}`}
+                data-testid={`value-${value.name.toLowerCase()}`}
               >
-                <motion.div
-                  className="relative w-32 h-32 mb-4"
-                  animate={{
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: index * 0.2,
-                  }}
-                >
-                  {/* Outer circle border */}
-                  <div className="absolute inset-0 rounded-full border-2 border-primary/30 group-hover:border-primary/60 transition-colors duration-300" />
+                <div className="relative w-40 h-40 mb-4">
+                  {/* Animated circle border with draw effect */}
+                  <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 160 160">
+                    <circle
+                      cx="80"
+                      cy="80"
+                      r="76"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      className="text-primary/20"
+                    />
+                    <motion.circle
+                      cx="80"
+                      cy="80"
+                      r="76"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      className="text-primary"
+                      strokeDasharray="477"
+                      initial={{ strokeDashoffset: 477 }}
+                      whileInView={{ strokeDashoffset: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 2,
+                        delay: index * 0.2,
+                        ease: "easeInOut"
+                      }}
+                    />
+                  </svg>
                   
                   {/* Animated glow effect */}
                   <motion.div
                     className="absolute inset-0 rounded-full bg-primary/5 blur-xl"
                     animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.3, 0.6, 0.3],
+                      scale: [1, 1.15, 1],
+                      opacity: [0.2, 0.4, 0.2],
                     }}
                     transition={{
                       duration: 3,
@@ -383,47 +406,29 @@ export default function Home() {
                     }}
                   />
                   
-                  {/* Inner content */}
-                  <div className="absolute inset-2 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-background/90 transition-colors duration-300">
+                  {/* Inner content with icon */}
+                  <div className="absolute inset-3 rounded-full bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center group-hover:bg-background transition-colors duration-300">
+                    <motion.img
+                      src={`/assets/icons/${value.icon}.svg`}
+                      alt={value.name}
+                      className="w-16 h-16 mb-2 text-primary"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.2 + 0.5 }}
+                      style={{ filter: 'invert(47%) sepia(96%) saturate(3071%) hue-rotate(190deg) brightness(95%) contrast(101%)' }}
+                    />
                     <motion.span
-                      className="text-4xl font-bold bg-gradient-to-br from-primary to-chart-2 bg-clip-text text-transparent"
-                      animate={{
-                        scale: [1, 1.1, 1],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.15,
-                      }}
+                      className="text-sm font-semibold text-center px-2"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.2 + 0.7 }}
                     >
-                      {value.charAt(0)}
+                      {value.name}
                     </motion.span>
                   </div>
-                  
-                  {/* Rotating ring */}
-                  <motion.div
-                    className="absolute inset-0 rounded-full border-t-2 border-primary/40"
-                    animate={{
-                      rotate: 360,
-                    }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                  />
-                </motion.div>
-                
-                <motion.h3
-                  className="font-semibold text-lg text-center group-hover:text-primary transition-colors duration-300"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
-                >
-                  {value}
-                </motion.h3>
+                </div>
               </motion.div>
             ))}
           </div>
