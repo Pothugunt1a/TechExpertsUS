@@ -47,10 +47,15 @@ export function ClientsScrollingCarousel() {
               className="relative flex-shrink-0 w-[170px] h-[60px] flex items-center justify-center group"
               data-testid={`client-logo-${client.name.toLowerCase().replace(/\s+/g, "-")}-${index}`}
             >
-              <img 
+              <motion.img 
                 src={client.logo} 
                 alt={client.name}
-                className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+                className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: [0, -2, 2, 0],
+                  transition: { duration: 0.3 }
+                }}
               />
             </div>
           ))}

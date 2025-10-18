@@ -471,11 +471,12 @@ export default function Services() {
           <div className="relative">
             {/* Top horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 top-0 w-full z-10" 
+              className="absolute left-0 right-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
+              style={{ top: '-20px' }}
             >
               <defs>
                 <linearGradient id="topLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -511,11 +512,12 @@ export default function Services() {
 
             {/* Bottom horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 bottom-0 w-full z-10" 
+              className="absolute left-0 right-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
+              style={{ bottom: '-20px' }}
             >
               <defs>
                 <linearGradient id="bottomLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
