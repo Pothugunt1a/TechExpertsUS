@@ -472,9 +472,9 @@ export default function Services() {
           <div className="relative">
             {/* Top horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 -top-[6px] w-full z-10" 
-              height="12" 
-              viewBox="0 0 1200 12" 
+              className="absolute left-0 right-0 -top-[9px] w-full z-10" 
+              height="18" 
+              viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -486,7 +486,7 @@ export default function Services() {
               </defs>
               {/* Left triangle - starts thick at left, tapers to point at middle */}
               <polygon 
-                points="0,0 0,12 600,6" 
+                points="0,0 0,18 600,9" 
                 fill="url(#topLeftGradient)"
               />
             </svg>
@@ -502,9 +502,9 @@ export default function Services() {
             
             {/* Bottom horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 -bottom-[6px] w-full z-10" 
-              height="12" 
-              viewBox="0 0 1200 12" 
+              className="absolute left-0 right-0 -bottom-[9px] w-full z-10" 
+              height="18" 
+              viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -516,7 +516,7 @@ export default function Services() {
               </defs>
               {/* Right triangle - starts at middle point, expands to thick at right */}
               <polygon 
-                points="600,6 1200,0 1200,12" 
+                points="600,9 1200,0 1200,18" 
                 fill="url(#bottomRightGradient)"
               />
             </svg>
