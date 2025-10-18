@@ -482,11 +482,20 @@ export default function Services() {
                   <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
                   <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
                 </linearGradient>
+                <linearGradient id="topRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
+                </linearGradient>
               </defs>
               {/* Left triangle - starts thick at left, tapers to point at middle, straight bottom */}
               <polygon 
                 points="0,0 0,18 600,18" 
                 fill="url(#topLeftGradient)"
+              />
+              {/* Right triangle - starts at middle point, expands to thick at right */}
+              <polygon 
+                points="600,9 1200,18 1200,0" 
+                fill="url(#topRightGradient)"
               />
             </svg>
 
@@ -512,11 +521,20 @@ export default function Services() {
                   <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
                   <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
                 </linearGradient>
+                <linearGradient id="bottomRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
+                </linearGradient>
               </defs>
               {/* Left triangle - starts thick at left, tapers to point at middle */}
               <polygon 
                 points="0,18 0,0 600,9" 
                 fill="url(#bottomLeftGradient)"
+              />
+              {/* Right triangle - starts at middle point, expands to thick at right, straight top */}
+              <polygon 
+                points="600,0 1200,0 1200,18" 
+                fill="url(#bottomRightGradient)"
               />
             </svg>
           </div>
