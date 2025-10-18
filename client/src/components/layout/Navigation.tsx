@@ -98,23 +98,21 @@ export function Navigation() {
                   
                   {/* Dropdown Menu */}
                   {item.subItems && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      whileHover={{ opacity: 1, y: 0 }}
-                      className="absolute top-full left-0 mt-2 w-56 bg-card/95 backdrop-blur-xl border border-primary/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
-                    >
-                      {item.subItems.map((subItem) => (
-                        <Link 
-                          key={subItem.path} 
-                          href={subItem.path}
-                          data-testid={`link-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
-                        >
-                          <div className="w-full px-4 py-2 text-left hover:bg-primary/10 cursor-pointer transition-colors">
-                            {subItem.name}
-                          </div>
-                        </Link>
-                      ))}
-                    </motion.div>
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-card/95 backdrop-blur-xl border border-primary/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="py-2">
+                        {item.subItems.map((subItem) => (
+                          <Link 
+                            key={subItem.path} 
+                            href={subItem.path}
+                            data-testid={`link-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
+                          >
+                            <div className="w-full px-4 py-3 text-left hover:bg-primary/10 cursor-pointer transition-colors text-sm">
+                              {subItem.name}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
               ))}
@@ -154,32 +152,57 @@ export function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link href={item.path} data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
-                    <div
-                      className="w-full px-4 py-2 text-lg cursor-pointer hover:bg-primary/10 transition-colors"
-                      onClick={() => !item.subItems && setIsMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </div>
-                  </Link>
+                  {!item.subItems ? (
+                    <Link href={item.path} data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
+                      <div
+                        className="w-full px-4 py-2 text-lg cursor-pointer hover:bg-primary/10 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </div>
+                    </Link>
+                  ) : null}
                   
                   {item.subItems && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      {item.subItems.map((subItem) => (
-                        <Link 
-                          key={subItem.path} 
-                          href={subItem.path}
-                          data-testid={`link-mobile-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    <>
+                      <div 
+                        className="w-full px-4 py-2 text-lg cursor-pointer hover:bg-primary/10 transition-colors flex items-center justify-between"
+                        onClick={() => setOpenSubmenu(openSubmenu === item.name ? null : item.name)}
+                      >
+                        {item.name}
+                        <motion.span
+                          animate={{ rotate: openSubmenu === item.name ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
                         >
-                          <div
-                            className="w-full px-4 py-2 text-muted-foreground cursor-pointer hover:bg-primary/10 transition-colors"
-                            onClick={() => setIsMobileMenuOpen(false)}
+                          ▼
+                        </motion.span>
+                      </div>
+                      <AnimatePresence>
+                        {openSubmenu === item.name && (
+                          <motion.div 
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="ml-4 overflow-hidden"
                           >
-                            {subItem.name}
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
+                            {item.subItems.map((subItem) => (
+                              <Link 
+                                key={subItem.path} 
+                                href={subItem.path}
+                                data-testid={`link-mobile-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
+                              >
+                                <div
+                                  className="w-full px-4 py-2 text-muted-foreground cursor-pointer hover:bg-primary/10 transition-colors"
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                  {subItem.name}
+                                </div>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
                   )}
                 </motion.div>
               ))}
