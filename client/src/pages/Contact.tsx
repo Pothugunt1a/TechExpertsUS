@@ -20,6 +20,17 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import worldMapImage from "@assets/world-map.png";
 
+const clientLogos = [
+  { name: "Microsoft", logo: "MS" },
+  { name: "Amazon", logo: "AWS" },
+  { name: "Google", logo: "GOOG" },
+  { name: "IBM", logo: "IBM" },
+  { name: "Oracle", logo: "ORCL" },
+  { name: "SAP", logo: "SAP" },
+  { name: "Cisco", logo: "CSCO" },
+  { name: "Dell", logo: "DELL" },
+];
+
 const locations = [
   {
     title: "Tech Expertsus USA",
@@ -380,38 +391,42 @@ export default function Contact() {
             {/* Scrolling Logos */}
             <div className="flex overflow-hidden py-8">
               <motion.div
-                className="flex gap-6 pr-6"
+                className="flex gap-8 pr-8"
                 animate={{
-                  x: [0, -1350],
+                  x: [0, -1680],
                 }}
                 transition={{
                   x: {
-                    duration: 20,
+                    duration: 25,
                     repeat: Infinity,
                     ease: "linear",
                   },
                 }}
               >
                 {/* First set of logos */}
-                {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
+                {clientLogos.map((client) => (
                   <div
-                    key={client}
-                    className="flex-shrink-0 w-40 h-24 flex items-center justify-center bg-card/40 backdrop-blur-sm rounded-lg grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
+                    key={client.name}
+                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 p-6 grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
                   >
-                    <div className="text-lg font-semibold text-foreground/60 hover:text-foreground transition-colors duration-300">
-                      {client}
-                    </div>
+                    <svg viewBox="0 0 120 40" className="w-full h-full" fill="currentColor">
+                      <text x="60" y="25" textAnchor="middle" className="text-[14px] font-bold fill-foreground/70 hover:fill-foreground transition-colors duration-300">
+                        {client.name}
+                      </text>
+                    </svg>
                   </div>
                 ))}
                 {/* Duplicate set for seamless loop */}
-                {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
+                {clientLogos.map((client) => (
                   <div
-                    key={`${client}-duplicate`}
-                    className="flex-shrink-0 w-40 h-24 flex items-center justify-center bg-card/40 backdrop-blur-sm rounded-lg grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
+                    key={`${client.name}-duplicate`}
+                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 p-6 grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
                   >
-                    <div className="text-lg font-semibold text-foreground/60 hover:text-foreground transition-colors duration-300">
-                      {client}
-                    </div>
+                    <svg viewBox="0 0 120 40" className="w-full h-full" fill="currentColor">
+                      <text x="60" y="25" textAnchor="middle" className="text-[14px] font-bold fill-foreground/70 hover:fill-foreground transition-colors duration-300">
+                        {client.name}
+                      </text>
+                    </svg>
                   </div>
                 ))}
               </motion.div>
