@@ -73,7 +73,6 @@ export function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1">
-              <ThemeToggle />
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link href={item.path} data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
@@ -116,6 +115,7 @@ export function Navigation() {
                   )}
                 </div>
               ))}
+              <ThemeToggle />
             </div>
 
             {/* Mobile Menu Button & Theme Toggle */}

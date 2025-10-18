@@ -308,7 +308,175 @@ export default function Contact() {
             <p className="text-xl text-muted-foreground">Serving clients worldwide</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            {/* Animated World Map */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative aspect-video bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 overflow-hidden"
+            >
+              <svg viewBox="0 0 800 400" className="w-full h-full">
+                {/* Simple world map outline */}
+                <path
+                  d="M 50 200 Q 100 180 150 200 T 250 200 Q 300 180 350 200 T 450 200 Q 500 180 550 200 T 650 200 Q 700 180 750 200"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  className="text-primary/20"
+                />
+                
+                {/* North America */}
+                <motion.circle
+                  cx="150"
+                  cy="150"
+                  r="8"
+                  className="fill-primary"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: [0, 1.2, 1] }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                />
+                <motion.circle
+                  cx="150"
+                  cy="150"
+                  r="15"
+                  className="fill-primary/20"
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                
+                {/* Canada */}
+                <motion.circle
+                  cx="180"
+                  cy="130"
+                  r="8"
+                  className="fill-chart-2"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: [0, 1.2, 1] }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                />
+                <motion.circle
+                  cx="180"
+                  cy="130"
+                  r="15"
+                  className="fill-chart-2/20"
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                />
+                
+                {/* UK */}
+                <motion.circle
+                  cx="420"
+                  cy="140"
+                  r="8"
+                  className="fill-chart-3"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: [0, 1.2, 1] }}
+                  transition={{ delay: 1.1, duration: 0.6 }}
+                />
+                <motion.circle
+                  cx="420"
+                  cy="140"
+                  r="15"
+                  className="fill-chart-3/20"
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                />
+                
+                {/* India */}
+                <motion.circle
+                  cx="620"
+                  cy="220"
+                  r="8"
+                  className="fill-chart-4"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: [0, 1.2, 1] }}
+                  transition={{ delay: 1.4, duration: 0.6 }}
+                />
+                <motion.circle
+                  cx="620"
+                  cy="220"
+                  r="15"
+                  className="fill-chart-4/20"
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
+                />
+                
+                {/* Animated connection lines */}
+                <motion.path
+                  d="M 150 150 Q 285 90 420 140"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="text-primary/40"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ delay: 1.8, duration: 1.5 }}
+                />
+                <motion.path
+                  d="M 420 140 Q 520 180 620 220"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="text-chart-2/40"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ delay: 2.2, duration: 1.5 }}
+                />
+                
+                {/* Labels */}
+                <text x="150" y="190" className="text-xs fill-current text-primary" textAnchor="middle">USA</text>
+                <text x="180" y="115" className="text-xs fill-current text-chart-2" textAnchor="middle">Canada</text>
+                <text x="420" y="125" className="text-xs fill-current text-chart-3" textAnchor="middle">UK</text>
+                <text x="620" y="205" className="text-xs fill-current text-chart-4" textAnchor="middle">India</text>
+              </svg>
+            </motion.div>
+
+            {/* Location Details Summary */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-4 h-4 rounded-full bg-primary"></div>
+                  <h3 className="text-xl font-semibold">North America</h3>
+                </div>
+                <p className="text-muted-foreground">Argyle, TX 76226, United States</p>
+                <p className="text-sm text-primary">+1 469-666-0019</p>
+              </div>
+
+              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-4 h-4 rounded-full bg-chart-2"></div>
+                  <h3 className="text-xl font-semibold">Canada</h3>
+                </div>
+                <p className="text-muted-foreground">Toronto, Canada</p>
+              </div>
+
+              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-4 h-4 rounded-full bg-chart-3"></div>
+                  <h3 className="text-xl font-semibold">United Kingdom</h3>
+                </div>
+                <p className="text-muted-foreground">London, England</p>
+              </div>
+
+              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-4 h-4 rounded-full bg-chart-4"></div>
+                  <h3 className="text-xl font-semibold">India</h3>
+                </div>
+                <p className="text-muted-foreground">Hyderabad & Andhra Pradesh</p>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {locations.map((location, index) => (
               <motion.div
                 key={location.title}
