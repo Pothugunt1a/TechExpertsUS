@@ -52,63 +52,63 @@ const serviceCategories = [
   {
     title: "Software as a Service (SaaS)",
     description:
-      "Cloud-based applications delivered over the internet with automatic updates and scalability",
+      "Applications, Runtime, Data, Middleware, OSes, Virtualization, Servers, Storage and networking. For: Google Apps, Salesforce, Workday, Concur, Citrix, GoToMeeting, Cisco WebEX",
     icon: Cloud,
     visual: serviceVisuals.saas,
   },
   {
     title: "Application Service Providers (ASP)",
     description:
-      "Mobile and web application platforms with advanced targeting and analytics capabilities",
+      "Consumer Acquisition, Appnext, Avazu Mobile DSP, StrikeAd by Sizmek, AppLift, Mobusi, Smaato, Liftoff, Trademob, PocketMath, Merchenta, Jampp, Splicky, MobFox DSP by Matomy, Fiksu",
     icon: Server,
     visual: serviceVisuals.asp,
   },
   {
     title: "Virtualization",
     description:
-      "Create multiple virtual machines on a single physical server to maximize resource utilization",
+      "KVM, VMware Workstation, VMware Fusion, Hyper-V, Windows Virtual PC, Xen, VirtualBox, Parallels Workstation, QEMU, Adeos, Mac-on-Linux, Win4Lin Pro, Egenera vBlade",
     icon: Cpu,
     visual: serviceVisuals.virtualization,
   },
   {
     title: "Cloud Computing",
     description:
-      "Scalable cloud platforms offering infrastructure, platform, and software services on demand",
+      "AppFog, BitNami, Cloudify, ConPaaS, ElasticBox, Gondor, Google AppEngine, Azure, Uhuru, PaaS, Stackato, Pydra, Oracle, EngineYard, Cumulogic, Heroku, ScaleMatrix",
     icon: Globe,
     visual: serviceVisuals.cloud,
   },
   {
     title: "Enterprise Resource Planning (ERP)",
     description:
-      "Integrated business management systems for finance, HR, supply chain, and operations",
+      "WebERP, Openbravo, Postbooks, Tryton, SQL-Ledger,Odoo, Adaxa Suite, HeliumV,LedgerSMB, JFire, Kuali, ERPNEXT, Dolibarr, Compiere, ERP5, FrontAccounting, Scipio ERP",
     icon: Database,
     visual: serviceVisuals.erp,
   },
   {
     title: "Customer Relations Management",
     description:
-      "Manage customer interactions, sales pipelines, and support tickets in one unified platform",
+      "ConnectWise PSA, Desk.com, Zoho CRM, Vtiger CRM, TeamWox, SuiteCRM, Base CRM, Dolibarr, Casengo, Dynamics CRM, SugarCRM, Streak, Salesforce.com, WORKetc, SuperOffice CRM",
     icon: Users,
     visual: serviceVisuals.crm,
   },
   {
     title: "Infrastructure as a Service (IaaS)",
     description:
-      "On-demand computing resources including servers, storage, and networking infrastructure",
+      "Amazon Web Services, Windows Azure, Google Compute Engine, Rackspace, IBM SmartCloud, Enterprise, HP Enterprise Converged Infrastructure, Cisco Metapod",
     icon: Shield,
     visual: serviceVisuals.iaas,
   },
   {
     title: "Internet of Things (IoT)",
     description:
-      "Connect and manage smart devices, sensors, and systems for real-time data collection",
+      "XOBXOB, Lab of Things, Konekt, Temboo, Open Sensors, Smart Living, Google Cloud Platform, RTI, ThingWorx, Cisco, GE Predix, Verizon, ThingSpace, IBM BlueMix",
     icon: Network,
     visual: serviceVisuals.iot,
   },
   {
     title: "Big Data",
     description:
-      "Process and analyze massive datasets with advanced machine learning and AI technologies",
+      "Apache Hadoop, Julia, SAS, Python, SQL, Scala, MATLAB, HiveQL, Pig Latin, Go, Kafka, Storm, Hive, Octave, Java",
     icon: BarChart,
     visual: serviceVisuals.bigdata,
   },
@@ -348,7 +348,7 @@ export default function Services() {
       {/* Interactive Service Categories */}
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -356,12 +356,12 @@ export default function Services() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
-              Our Service Categories
+              Our Services 
             </h2>
             <p className="text-2xl text-muted-foreground">
               Comprehensive solutions for every need
             </p>
-          </motion.div>
+          </motion.div> */}
 
           <InteractiveServiceCategories categories={serviceCategories} />
         </div>
