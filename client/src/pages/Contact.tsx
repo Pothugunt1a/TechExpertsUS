@@ -56,7 +56,7 @@ const locations = [
 
 export default function Contact() {
   const { toast } = useToast();
-  
+
   const form = useForm<InsertContact>({
     resolver: zodResolver(insertContactSchema),
     defaultValues: {
@@ -96,10 +96,16 @@ export default function Contact() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <ParticleBackground />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        
+        <div className="absolute inset-0">
+          <img 
+            src="/assets/Contact.gif" 
+            alt="Contact Animation" 
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -351,7 +357,7 @@ export default function Contact() {
                     transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
                   />
                 </motion.g>
-                
+
                 {/* Canada Location - Toronto (20% from left, 34% from top) */}
                 <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.8, duration: 0.6 }}>
                   <motion.circle
@@ -379,7 +385,7 @@ export default function Contact() {
                     transition={{ duration: 3, repeat: Infinity, delay: 0.8 }}
                   />
                 </motion.g>
-                
+
                 {/* UK Location - London (50% from left, 30% from top) */}
                 <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.1, duration: 0.6 }}>
                   <motion.circle
@@ -407,7 +413,7 @@ export default function Contact() {
                     transition={{ duration: 3, repeat: Infinity, delay: 1.1 }}
                   />
                 </motion.g>
-                
+
                 {/* India Location - Central India (71% from left, 44% from top) */}
                 <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.4, duration: 0.6 }}>
                   <motion.circle
@@ -435,7 +441,7 @@ export default function Contact() {
                     transition={{ duration: 3, repeat: Infinity, delay: 1.4 }}
                   />
                 </motion.g>
-                
+
                 {/* Connection Lines */}
                 <motion.path
                   d="M 180 210 Q 190 190 200 170"
@@ -446,7 +452,7 @@ export default function Contact() {
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ delay: 1.7, duration: 1, ease: "easeInOut" }}
                 />
-                
+
                 <motion.path
                   d="M 200 170 Q 350 130 500 150"
                   fill="none"
@@ -456,7 +462,7 @@ export default function Contact() {
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ delay: 2.4, duration: 1.2, ease: "easeInOut" }}
                 />
-                
+
                 <motion.path
                   d="M 500 150 Q 605 185 710 220"
                   fill="none"
@@ -466,7 +472,7 @@ export default function Contact() {
                   animate={{ pathLength: 1, opacity: 0.5 }}
                   transition={{ delay: 3.6, duration: 1.2, ease: "easeInOut" }}
                 />
-                
+
                 <defs>
                   <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
