@@ -347,8 +347,11 @@ export default function Contact() {
       </section>
 
       {/* Our Clients - Infinite Scroll */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/30 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Diagonal Gradient Background Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-card/40 to-card/10 -skew-y-2 transform origin-top-left" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -363,19 +366,19 @@ export default function Contact() {
           {/* Infinite Scroll Container */}
           <div className="relative">
             {/* Gradient Fade Edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
             
             {/* Scrolling Logos */}
-            <div className="flex overflow-hidden">
+            <div className="flex overflow-hidden py-8">
               <motion.div
-                className="flex gap-12 pr-12"
+                className="flex gap-8 pr-8"
                 animate={{
-                  x: [0, -1400],
+                  x: [0, -1456],
                 }}
                 transition={{
                   x: {
-                    duration: 30,
+                    duration: 25,
                     repeat: Infinity,
                     ease: "linear",
                   },
@@ -385,9 +388,9 @@ export default function Contact() {
                 {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
                   <div
                     key={client}
-                    className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
+                    className="flex-shrink-0 w-44 h-28 flex items-center justify-center bg-background/60 backdrop-blur-sm border border-border/50 rounded-lg grayscale brightness-90 hover:grayscale-0 hover:brightness-100 hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md hover:border-primary/30"
                   >
-                    <div className="text-2xl font-bold text-muted-foreground">
+                    <div className="text-xl font-bold text-foreground/70 hover:text-foreground transition-colors duration-300">
                       {client}
                     </div>
                   </div>
@@ -396,9 +399,9 @@ export default function Contact() {
                 {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
                   <div
                     key={`${client}-duplicate`}
-                    className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
+                    className="flex-shrink-0 w-44 h-28 flex items-center justify-center bg-background/60 backdrop-blur-sm border border-border/50 rounded-lg grayscale brightness-90 hover:grayscale-0 hover:brightness-100 hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md hover:border-primary/30"
                   >
-                    <div className="text-2xl font-bold text-muted-foreground">
+                    <div className="text-xl font-bold text-foreground/70 hover:text-foreground transition-colors duration-300">
                       {client}
                     </div>
                   </div>
