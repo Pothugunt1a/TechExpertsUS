@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import { ServiceCard } from "@/components/ui/service-card";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
-import { ClientLogo } from "@/components/ui/client-logo";
+import { ClientsScrollingCarousel } from "@/components/ui/clients-scrolling-carousel";
 import { Server, Network, ClipboardCheck, Cloud, Database, Shield, Cpu, Globe, BarChart, Users, Zap, Target } from "lucide-react";
 import { useRef } from "react";
 
@@ -120,10 +120,6 @@ const testimonials = [
   },
 ];
 
-const clients = [
-  "Microsoft", "Amazon", "Google", "IBM",
-  "Oracle", "SAP", "Cisco", "Dell"
-];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -484,32 +480,27 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Our Clients */}
-      <section className="relative py-20 md:py-32">
+      {/* Our Clients - Scrolling Carousel */}
+      <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-12"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">Our Clients</h2>
             <p className="text-2xl text-muted-foreground">Trusted by industry leaders</p>
           </motion.div>
 
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {clients.map((client, index) => (
-              <motion.div key={client} variants={itemVariants}>
-                <ClientLogo name={client} index={index} />
-              </motion.div>
-            ))}
+            <ClientsScrollingCarousel />
           </motion.div>
         </div>
       </section>
