@@ -1,4 +1,3 @@
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import { ServiceCard } from "@/components/ui/service-card";
@@ -159,7 +158,7 @@ export default function Services() {
       {/* Hero Section with Parallax */}
       <section ref={heroRef} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <ParticleBackground />
-        
+
         <motion.div 
           className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background"
           style={{ opacity }}
@@ -186,7 +185,7 @@ export default function Services() {
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
-        
+
         <motion.div 
           className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center"
           style={{ opacity, scale, y }}
@@ -341,7 +340,7 @@ export default function Services() {
                     }}
                     transition={{ duration: 0.8 }}
                   />
-                  
+
                   <div className="relative z-10">
                     <motion.div 
                       className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
@@ -418,7 +417,7 @@ export default function Services() {
                     whileHover={{ x: "100%" }}
                     transition={{ duration: 0.8 }}
                   />
-                  
+
                   {/* Animated background gradient */}
                   <motion.div 
                     className="absolute inset-0 bg-gradient-to-br from-primary/10 via-chart-2/10 to-transparent opacity-0 group-hover:opacity-100"
@@ -431,7 +430,7 @@ export default function Services() {
                       ease: "linear",
                     }}
                   />
-                  
+
                   <div className="relative z-10">
                     <motion.div
                       className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6 group-hover:shadow-2xl group-hover:shadow-primary/40"
@@ -472,7 +471,7 @@ export default function Services() {
           <div className="relative">
             {/* Top horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 -top-[9px] w-full z-10" 
+              className="absolute left-0 right-0 top-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
@@ -481,16 +480,25 @@ export default function Services() {
               <defs>
                 <linearGradient id="topLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="topRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
                 </linearGradient>
               </defs>
-              {/* Left triangle - starts thick at left, tapers to point at middle */}
+              {/* Left triangle - starts thick at left, tapers to point at middle, straight bottom */}
               <polygon 
-                points="0,0 0,18 600,9" 
+                points="0,0 0,18 600,18" 
                 fill="url(#topLeftGradient)"
               />
+              {/* Right triangle - starts at middle point, expands to thick at right */}
+              <polygon 
+                points="600,9 1200,18 1200,0" 
+                fill="url(#topRightGradient)"
+              />
             </svg>
-            
+
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -499,24 +507,33 @@ export default function Services() {
             >
               <ClientsScrollingCarousel />
             </motion.div>
-            
+
             {/* Bottom horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 -bottom-[9px] w-full z-10" 
+              className="absolute left-0 right-0 bottom-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
+                <linearGradient id="bottomLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                </linearGradient>
                 <linearGradient id="bottomRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
                   <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
                 </linearGradient>
               </defs>
-              {/* Right triangle - starts at middle point, expands to thick at right */}
+              {/* Left triangle - starts thick at left, tapers to point at middle */}
               <polygon 
-                points="600,9 1200,0 1200,18" 
+                points="0,18 0,0 600,9" 
+                fill="url(#bottomLeftGradient)"
+              />
+              {/* Right triangle - starts at middle point, expands to thick at right, straight top */}
+              <polygon 
+                points="600,0 1200,0 1200,18" 
                 fill="url(#bottomRightGradient)"
               />
             </svg>
