@@ -51,6 +51,7 @@ A stunning modern website for Tech Experts US with **both light and dark mode** 
 - **Particle Background**: Custom particle animation system
 - **Components**:
   - Animated navigation with theme toggle (desktop & mobile)
+  - **Interactive Service Categories** with clickable list and dynamic SVG visuals
   - Service cards with 3D hover effects
   - Statistics counter with CountUp animation
   - Testimonial carousel
@@ -67,6 +68,7 @@ A stunning modern website for Tech Experts US with **both light and dark mode** 
 - Text: Three-level hierarchy (default, secondary, tertiary)
 
 ## Key Features
+- ✅ **Interactive Service Categories** with clickable navigation and dynamic SVG visuals
 - ✅ **Light & Dark Mode** with persistent theme switching
 - ✅ **Floating Promotional Banner** with animations
 - ✅ **Parallax Scroll Effects** on hero section
@@ -97,13 +99,16 @@ A stunning modern website for Tech Experts US with **both light and dark mode** 
 - ⏳ Contact form integration pending
 
 ## Recent Updates (Latest Session)
-1. ✅ Created ThemeProvider with localStorage persistence
-2. ✅ Added animated theme toggle button to navigation
-3. ✅ Built floating promotional banner with shimmer and glow effects
-4. ✅ Implemented parallax scroll effects on hero section
-5. ✅ Added animated floating tech icons (CPU, Database, Cloud, Zap)
-6. ✅ Enhanced "Why Choose Us" section with animated background glow and interactive icons
-7. ✅ Added custom CSS animations (shimmer, pulse-glow)
+1. ✅ Created **Interactive Service Categories** component with:
+   - Left-side clickable list of service categories
+   - Right-side dynamic SVG visualizations that change on click
+   - Animated background with floating geometric shapes and gradient orbs
+   - Smooth transitions and hover effects
+   - 9 unique SVG illustrations for each service category (SaaS, ASP, Virtualization, Cloud, ERP, CRM, IaaS, IoT, Big Data)
+   - Fully responsive design for mobile and desktop
+   - Test IDs for automation
+2. ✅ Migrated REST API project from Replit Agent to Replit environment
+3. ✅ All previous features: ThemeProvider, animated theme toggle, floating banner, parallax effects, animated tech icons, enhanced "Why Choose Us" section
 
 ## How to Use
 - **Theme Toggle**: Click the sun/moon icon in the navigation bar to switch between light and dark modes
