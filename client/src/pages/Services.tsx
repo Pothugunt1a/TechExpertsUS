@@ -455,31 +455,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-2xl text-muted-foreground">What our clients say about us</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <TestimonialCarousel testimonials={testimonials} />
-          </motion.div>
-        </div>
-      </section>
-
       {/* Our Clients - Scrolling Carousel */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -526,6 +501,31 @@ export default function Services() {
               }}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold mb-4">Client Testimonials</h2>
+            <p className="text-2xl text-muted-foreground">What our clients say about us</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <TestimonialCarousel testimonials={testimonials} />
+          </motion.div>
         </div>
       </section>
     </div>
