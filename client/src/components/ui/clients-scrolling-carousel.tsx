@@ -29,10 +29,13 @@ export function ClientsScrollingCarousel() {
           // Move to next logo
           await controls.start({
             x: -i * logoWidth,
-            transition: { duration: 0.5, ease: "easeInOut" }
+            transition: { 
+              duration: 1.2, 
+              ease: [0.25, 0.1, 0.25, 1.0] // cubic-bezier for smooth easing
+            }
           });
           // Pause at logo
-          await new Promise(resolve => setTimeout(resolve, 1500));
+          await new Promise(resolve => setTimeout(resolve, 2000));
         }
         // Reset to start
         await controls.start({
