@@ -108,13 +108,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   whileHover={{ x: 8, scale: 1.02 }}
-                  className={`
-                    relative w-full text-left p-5 rounded-xl transition-all duration-300
-                    ${isSelected 
-                      ? 'bg-gradient-to-r from-primary/20 to-chart-2/20 border-2 border-primary shadow-lg shadow-primary/20' 
-                      : 'bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card/80'
-                    }
-                  `}
+                  className="relative w-full text-left p-5 rounded-xl transition-all duration-300 bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card/80"
                   data-testid={`category-item-${index}`}
                 >
                   <div className="flex items-start gap-4">
@@ -145,11 +139,11 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                     </div>
                   </div>
                   
-                  {/* Selection indicator */}
+                  {/* Vertical bar indicator in center */}
                   {isSelected && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-3/4 bg-gradient-to-b from-primary to-chart-2 rounded-r-full"
+                      className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-1 h-3/4 bg-gradient-to-b from-primary to-chart-2 rounded-full"
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
