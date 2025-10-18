@@ -22,7 +22,7 @@ export function ClientsScrollingCarousel() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Single unified background for all logos */}
-      <div className="relative bg-card/30 backdrop-blur-sm py-8 px-4">
+      <div className="relative bg-gradient-to-r from-primary/5 via-primary/8 to-primary/5 backdrop-blur-sm py-4 px-4">
         {/* Gradient overlays for fade effect */}
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
@@ -44,7 +44,7 @@ export function ClientsScrollingCarousel() {
           {duplicatedClients.map((client, index) => (
             <div
               key={`${client.name}-${index}`}
-              className="relative flex-shrink-0 w-[170px] h-[90px] flex items-center justify-center group"
+              className="relative flex-shrink-0 w-[170px] h-[60px] flex items-center justify-center group"
               data-testid={`client-logo-${client.name.toLowerCase().replace(/\s+/g, "-")}-${index}`}
             >
               <img 
