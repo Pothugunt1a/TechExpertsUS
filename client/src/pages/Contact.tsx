@@ -346,6 +346,69 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Our Clients - Infinite Scroll */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/30 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Clients</h2>
+            <p className="text-xl text-muted-foreground">Trusted by industry leaders</p>
+          </motion.div>
+
+          {/* Infinite Scroll Container */}
+          <div className="relative">
+            {/* Gradient Fade Edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+            
+            {/* Scrolling Logos */}
+            <div className="flex overflow-hidden">
+              <motion.div
+                className="flex gap-12 pr-12"
+                animate={{
+                  x: [0, -1400],
+                }}
+                transition={{
+                  x: {
+                    duration: 30,
+                    repeat: Infinity,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {/* First set of logos */}
+                {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
+                  <div
+                    key={client}
+                    className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
+                  >
+                    <div className="text-2xl font-bold text-muted-foreground">
+                      {client}
+                    </div>
+                  </div>
+                ))}
+                {/* Duplicate set for seamless loop */}
+                {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
+                  <div
+                    key={`${client}-duplicate`}
+                    className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-card/30 backdrop-blur-sm border border-primary/10 rounded-xl grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
+                  >
+                    <div className="text-2xl font-bold text-muted-foreground">
+                      {client}
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Locations */}
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
