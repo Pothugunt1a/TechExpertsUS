@@ -52,7 +52,7 @@ const serviceCategories = [
   {
     title: "Software as a Service (SaaS)",
     description:
-      "Applications, Runtime, Data, Middleware, OSes, Virtualization, Servers, Storage and networking. For: Google Apps, Salesforce, Workday, Concur, Citrix, GoToMeeting, Cisco WebEX",
+      "Cloud-based applications delivered over the internet with automatic updates and scalability",
     icon: Cloud,
     visual: serviceVisuals.saas,
   },
