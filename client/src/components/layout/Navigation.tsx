@@ -8,14 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { 
-    name: "Services", 
+  {
+    name: "Services",
     path: "/services",
     subItems: [
       { name: "Data Center Management Services", path: "/services/dms" },
       { name: "Infrastructure Consulting Services", path: "/services/ics" },
       { name: "Project Management Solutions", path: "/services/pms" },
-    ]
+    ],
   },
   {
     name: "Consult",
@@ -24,7 +24,7 @@ const navItems = [
       { name: "Consulting", path: "/consult/consulting" },
       { name: "Outsourcing", path: "/consult/outsourcing" },
       { name: "Staffing Solutions", path: "/consult/staffing" },
-    ]
+    ],
   },
   { name: "Contact", path: "/contact" },
 ];
@@ -63,9 +63,9 @@ export function Navigation() {
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center space-x-2 cursor-pointer"
               >
-                <img 
-                  src="/attached_assets/TechExperts_1760680720730.png" 
-                  alt="Tech Experts US Logo" 
+                <img
+                  src="/assets/TechExperts.png"
+                  alt="Tech Experts US Logo"
                   className="h-12 w-auto"
                 />
               </motion.div>
@@ -75,10 +75,14 @@ export function Navigation() {
             <div className="hidden lg:flex items-center space-x-1">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link href={item.path} data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
+                  <Link
+                    href={item.path}
+                    data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
                     <div
                       className={`relative px-4 py-2 cursor-pointer transition-colors ${
-                        location === item.path || location.startsWith(item.path + "/")
+                        location === item.path ||
+                        location.startsWith(item.path + "/")
                           ? "text-primary"
                           : "text-foreground hover:text-primary"
                       }`}
@@ -88,20 +92,24 @@ export function Navigation() {
                         className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-chart-2"
                         initial={{ scaleX: 0 }}
                         animate={{
-                          scaleX: location === item.path || location.startsWith(item.path + "/") ? 1 : 0,
+                          scaleX:
+                            location === item.path ||
+                            location.startsWith(item.path + "/")
+                              ? 1
+                              : 0,
                         }}
                         transition={{ duration: 0.3 }}
                       />
                     </div>
                   </Link>
-                  
+
                   {/* Dropdown Menu */}
                   {item.subItems && (
                     <div className="absolute top-full left-0 mt-2 w-64 bg-card/95 backdrop-blur-xl border border-primary/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <div className="py-2">
                         {item.subItems.map((subItem) => (
-                          <Link 
-                            key={subItem.path} 
+                          <Link
+                            key={subItem.path}
                             href={subItem.path}
                             data-testid={`link-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
                           >
@@ -153,7 +161,10 @@ export function Navigation() {
                   transition={{ delay: index * 0.1 }}
                 >
                   {!item.subItems ? (
-                    <Link href={item.path} data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
+                    <Link
+                      href={item.path}
+                      data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
                       <div
                         className="w-full px-4 py-2 text-lg cursor-pointer hover:bg-primary/10 transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
@@ -162,16 +173,22 @@ export function Navigation() {
                       </div>
                     </Link>
                   ) : null}
-                  
+
                   {item.subItems && (
                     <>
-                      <div 
+                      <div
                         className="w-full px-4 py-2 text-lg cursor-pointer hover:bg-primary/10 transition-colors flex items-center justify-between"
-                        onClick={() => setOpenSubmenu(openSubmenu === item.name ? null : item.name)}
+                        onClick={() =>
+                          setOpenSubmenu(
+                            openSubmenu === item.name ? null : item.name,
+                          )
+                        }
                       >
                         {item.name}
                         <motion.span
-                          animate={{ rotate: openSubmenu === item.name ? 180 : 0 }}
+                          animate={{
+                            rotate: openSubmenu === item.name ? 180 : 0,
+                          }}
                           transition={{ duration: 0.2 }}
                         >
                           ▼
@@ -179,15 +196,15 @@ export function Navigation() {
                       </div>
                       <AnimatePresence>
                         {openSubmenu === item.name && (
-                          <motion.div 
+                          <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             className="ml-4 overflow-hidden"
                           >
                             {item.subItems.map((subItem) => (
-                              <Link 
-                                key={subItem.path} 
+                              <Link
+                                key={subItem.path}
                                 href={subItem.path}
                                 data-testid={`link-mobile-${subItem.name.toLowerCase().replace(/\s+/g, "-")}`}
                               >

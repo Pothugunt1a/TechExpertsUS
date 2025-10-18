@@ -34,7 +34,7 @@ export function Footer() {
     <footer className="relative bg-gradient-to-b from-background to-card border-t border-primary/10">
       {/* Gradient divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
@@ -45,14 +45,15 @@ export function Footer() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/attached_assets/TechExperts_1760680720730.png" 
-                alt="Tech Experts US Logo" 
+              <img
+                src="/assets/TechExperts.png"
+                alt="Tech Experts US Logo"
                 className="h-12 w-auto"
               />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Technology expertise, Innovative solutions and long lasting partnership with customers since 2012.
+              Technology expertise, Innovative solutions and long lasting
+              partnership with customers since 2012.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -83,9 +84,9 @@ export function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.path}>
-                    <Link 
+                    <Link
                       href={link.path}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200" 
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
                       data-testid={`link-footer-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
                     >
                       {link.name}
@@ -101,10 +102,13 @@ export function Footer() {
         <div className="pt-8 border-t border-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Tech Experts US. All rights reserved.
+              © {new Date().getFullYear()} Tech Experts US. All rights
+              reserved.
             </p>
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-muted-foreground">Built with excellence</span>
+              <span className="text-sm text-muted-foreground">
+                Built with excellence
+              </span>
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
             </div>
           </div>
