@@ -290,22 +290,169 @@ export default function Home() {
       {/* Stats Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Achievements</h2>
-            <p className="text-xl text-muted-foreground">Numbers that speak for themselves</p>
-          </motion.div>
-
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <StatCounter end={13} label="Our Products" />
-            <StatCounter end={126} label="Our Customers" />
-            <StatCounter end={320} label="Staffing" />
-            <StatCounter end={144} label="New Updates" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center group"
+              data-testid="stat-our-products"
+            >
+              <motion.div
+                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: [0, -10, 10, -10, 0]
+                }}
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  },
+                  rotate: {
+                    duration: 0.6
+                  }
+                }}
+              >
+                <Code className="w-10 h-10 text-primary" />
+              </motion.div>
+              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
+                <StatCounter end={13} label="" />
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
+                Our Products
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center group"
+              data-testid="stat-our-customers"
+            >
+              <motion.div
+                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: 360
+                }}
+                animate={{
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  scale: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  },
+                  rotate: {
+                    duration: 0.8
+                  }
+                }}
+              >
+                <Users className="w-10 h-10 text-primary" />
+              </motion.div>
+              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
+                <StatCounter end={126} label="" />
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
+                Our Customers
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center group"
+              data-testid="stat-staffing"
+            >
+              <motion.div
+                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                whileHover={{ 
+                  scale: 1.1,
+                  y: [-5, 5, -5]
+                }}
+                animate={{
+                  rotate: [0, 5, -5, 0],
+                }}
+                transition={{
+                  rotate: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  },
+                  y: {
+                    duration: 0.4,
+                    ease: "easeInOut"
+                  }
+                }}
+              >
+                <Network className="w-10 h-10 text-primary" />
+              </motion.div>
+              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
+                <StatCounter end={320} label="" />
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
+                Staffing
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center group"
+              data-testid="stat-new-updates"
+            >
+              <motion.div
+                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: [0, 360]
+                }}
+                animate={{
+                  y: [0, -8, 0],
+                  rotate: [0, 10, -10, 0]
+                }}
+                transition={{
+                  y: {
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  },
+                  rotate: {
+                    y: {
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    },
+                    hover: {
+                      duration: 0.8
+                    }
+                  }
+                }}
+              >
+                <Zap className="w-10 h-10 text-primary" />
+              </motion.div>
+              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
+                <StatCounter end={144} label="" />
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
+                New Updates
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
