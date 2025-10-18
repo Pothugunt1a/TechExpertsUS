@@ -315,14 +315,14 @@ export default function Contact() {
             <p className="text-xl text-muted-foreground">Serving clients worldwide</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Animated World Map */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative aspect-video bg-gradient-to-br from-background to-background/80 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden lg:col-span-3"
+              className="relative aspect-video bg-gradient-to-br from-background to-background/80 backdrop-blur-sm rounded-2xl overflow-hidden"
             >
               <img 
                 src={worldMapImage} 
@@ -490,17 +490,13 @@ export default function Contact() {
               </svg>
             </motion.div>
 
-            {/* Location Cards Next to Map */}
+            {/* Location Cards in 2x2 Grid */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-2 space-y-4 max-h-[500px] overflow-y-auto pr-2"
-              style={{
-                scrollbarWidth: 'thin',
-                scrollbarColor: 'hsl(var(--primary) / 0.3) transparent'
-              }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-4"
             >
               {locations.map((location, index) => (
                 <motion.div
