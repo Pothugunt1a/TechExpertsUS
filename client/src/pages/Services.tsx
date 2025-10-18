@@ -471,7 +471,7 @@ export default function Services() {
           <div className="relative">
             {/* Top horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 top-0 w-full z-10 pb-1" 
+              className="absolute left-0 right-0 top-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
@@ -511,7 +511,7 @@ export default function Services() {
 
             {/* Bottom horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 bottom-0 w-full z-10 pt-1" 
+              className="absolute left-0 right-0 bottom-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
