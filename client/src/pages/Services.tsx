@@ -476,7 +476,7 @@ export default function Services() {
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
-              style={{ top: '-20px' }}
+              style={{ top: '-25px' }}
             >
               <defs>
                 <linearGradient id="topLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -517,7 +517,7 @@ export default function Services() {
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
-              style={{ bottom: '-20px' }}
+              style={{ bottom: '-25px' }}
             >
               <defs>
                 <linearGradient id="bottomLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
