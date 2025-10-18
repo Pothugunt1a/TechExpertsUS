@@ -1,0 +1,169 @@
+<div class="partner partner--gradient">
+      <div class="container">
+        <div class="partner__wrapper">
+          <div class="partner__slider swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+            <div class="swiper-wrapper" id="swiper-wrapper-1094e92ad1565e3a2" aria-live="off" style="cursor: grab; transition-duration: 2000ms; transform: translate3d(-2146.83px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/4.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="4" role="group" aria-label="5 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/5.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="5" role="group" aria-label="6 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/google-cloud-logo.png" alt="partner logo" class="dark" style="margin-top: 10px;">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="6" role="group" aria-label="7 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/trading-view-logo.png" alt="partner logo" class="dark" style="margin-top: 12px;">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" role="group" aria-label="8 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/discord-logo.png" alt="partner logo" class="dark" style="margin-top: 10px;">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" role="group" aria-label="9 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/bybit-logo.png" alt="partner logo" class="dark" style="margin-top: 5px; margin-left: 10px;">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/1.png" alt="partner logo" class="dark" style="margin-left: 15px;">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/2.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/3.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/4.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="4" role="group" aria-label="5 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/5.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+              <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="5" role="group" aria-label="6 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/google-cloud-logo.png" alt="partner logo" class="dark" style="margin-top: 10px;">
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="6" role="group" aria-label="7 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/trading-view-logo.png" alt="partner logo" class="dark" style="margin-top: 12px;">
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="swiper-slide" data-swiper-slide-index="7" role="group" aria-label="8 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/discord-logo.png" alt="partner logo" class="dark" style="margin-top: 10px;">
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="swiper-slide" data-swiper-slide-index="8" role="group" aria-label="9 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/bybit-logo.png" alt="partner logo" class="dark" style="margin-top: 5px; margin-left: 10px;">
+                  </div>
+                </div>
+              </div>
+             
+
+
+
+            
+              
+
+
+
+            <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/1.png" alt="partner logo" class="dark" style="margin-left: 15px;">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/2.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/3.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/4.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="4" role="group" aria-label="5 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/5.png" alt="partner logo" class="dark">
+                  </div>
+                </div>
+              </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="5" role="group" aria-label="6 / 9" style="width: 170.167px; margin-right: 25px;">
+                <div class="partner__item">
+                  <div class="partner__item-inner">
+                    <img src="https://crypt0nest.io/assets/images/partner/light/google-cloud-logo.png" alt="partner logo" class="dark" style="margin-top: 10px;">
+                  </div>
+                </div>
+              </div></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+      </div>
+    </div>
