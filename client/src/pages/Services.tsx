@@ -469,10 +469,10 @@ export default function Services() {
             <p className="text-2xl text-muted-foreground">Trusted by industry leaders</p>
           </motion.div>
 
-          <div className="relative">
+          <div className="relative pt-[18px] pb-[18px]">
             {/* Top horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 -top-[9px] w-full z-10" 
+              className="absolute left-0 right-0 top-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
@@ -481,13 +481,22 @@ export default function Services() {
               <defs>
                 <linearGradient id="topLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="topRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
                 </linearGradient>
               </defs>
               {/* Left triangle - starts thick at left, tapers to point at middle */}
               <polygon 
                 points="0,0 0,18 600,9" 
                 fill="url(#topLeftGradient)"
+              />
+              {/* Right triangle - starts at middle point, expands to thick at right */}
+              <polygon 
+                points="600,9 1200,18 1200,0" 
+                fill="url(#topRightGradient)"
               />
             </svg>
             
@@ -502,18 +511,27 @@ export default function Services() {
             
             {/* Bottom horizontal triangular borders */}
             <svg 
-              className="absolute left-0 right-0 -bottom-[9px] w-full z-10" 
+              className="absolute left-0 right-0 bottom-0 w-full z-10" 
               height="18" 
               viewBox="0 0 1200 18" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
+                <linearGradient id="bottomLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                </linearGradient>
                 <linearGradient id="bottomRightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
                   <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
                 </linearGradient>
               </defs>
+              {/* Left triangle - starts thick at left, tapers to point at middle */}
+              <polygon 
+                points="0,18 0,0 600,9" 
+                fill="url(#bottomLeftGradient)"
+              />
               {/* Right triangle - starts at middle point, expands to thick at right */}
               <polygon 
                 points="600,9 1200,0 1200,18" 
