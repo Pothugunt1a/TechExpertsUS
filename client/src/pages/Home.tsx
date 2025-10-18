@@ -299,30 +299,32 @@ export default function Home() {
               className="text-center group"
               data-testid="stat-our-products"
             >
-              <motion.div
-                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                whileHover={{ 
-                  scale: 1.1,
-                  rotate: [0, -10, 10, -10, 0]
-                }}
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  y: {
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  },
-                  rotate: {
-                    duration: 0.6
-                  }
-                }}
-              >
-                <Code className="w-10 h-10 text-primary" />
-              </motion.div>
-              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
-                <StatCounter end={13} label="" />
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <motion.div
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: [0, -10, 10, -10, 0]
+                  }}
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    y: {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    },
+                    rotate: {
+                      duration: 0.6
+                    }
+                  }}
+                >
+                  <Code className="w-10 h-10 text-primary" />
+                </motion.div>
+                <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  <StatCounter end={13} label="" />
+                </div>
               </div>
               <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
                 Our Products
@@ -337,31 +339,33 @@ export default function Home() {
               className="text-center group"
               data-testid="stat-our-customers"
             >
-              <motion.div
-                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                whileHover={{ 
-                  scale: 1.1,
-                  rotate: 360
-                }}
-                animate={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  scale: {
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.5
-                  },
-                  rotate: {
-                    duration: 0.8
-                  }
-                }}
-              >
-                <Users className="w-10 h-10 text-primary" />
-              </motion.div>
-              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
-                <StatCounter end={126} label="" />
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <motion.div
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: 360
+                  }}
+                  animate={{
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    scale: {
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5
+                    },
+                    rotate: {
+                      duration: 0.8
+                    }
+                  }}
+                >
+                  <Users className="w-10 h-10 text-primary" />
+                </motion.div>
+                <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  <StatCounter end={126} label="" />
+                </div>
               </div>
               <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
                 Our Customers
@@ -376,31 +380,33 @@ export default function Home() {
               className="text-center group"
               data-testid="stat-staffing"
             >
-              <motion.div
-                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                whileHover={{ 
-                  scale: 1.1,
-                  y: [-5, 5, -5]
-                }}
-                animate={{
-                  rotate: [0, 5, -5, 0],
-                }}
-                transition={{
-                  rotate: {
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  },
-                  y: {
-                    duration: 0.4,
-                    ease: "easeInOut"
-                  }
-                }}
-              >
-                <Network className="w-10 h-10 text-primary" />
-              </motion.div>
-              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
-                <StatCounter end={320} label="" />
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <motion.div
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.1,
+                    y: [-5, 5, -5]
+                  }}
+                  animate={{
+                    rotate: [0, 5, -5, 0],
+                  }}
+                  transition={{
+                    rotate: {
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    },
+                    y: {
+                      duration: 0.4,
+                      ease: "easeInOut"
+                    }
+                  }}
+                >
+                  <Network className="w-10 h-10 text-primary" />
+                </motion.div>
+                <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  <StatCounter end={320} label="" />
+                </div>
               </div>
               <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
                 Staffing
@@ -415,39 +421,41 @@ export default function Home() {
               className="text-center group"
               data-testid="stat-new-updates"
             >
-              <motion.div
-                className="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                whileHover={{ 
-                  scale: 1.1,
-                  rotate: [0, 360]
-                }}
-                animate={{
-                  y: [0, -8, 0],
-                  rotate: [0, 10, -10, 0]
-                }}
-                transition={{
-                  y: {
-                    duration: 2.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  },
-                  rotate: {
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <motion.div
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: [0, 360]
+                  }}
+                  animate={{
+                    y: [0, -8, 0],
+                    rotate: [0, 10, -10, 0]
+                  }}
+                  transition={{
                     y: {
-                      duration: 5,
+                      duration: 2.5,
                       repeat: Infinity,
-                      ease: "easeInOut"
+                      ease: "easeInOut",
+                      delay: 1
                     },
-                    hover: {
-                      duration: 0.8
+                    rotate: {
+                      y: {
+                        duration: 5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      },
+                      hover: {
+                        duration: 0.8
+                      }
                     }
-                  }
-                }}
-              >
-                <Zap className="w-10 h-10 text-primary" />
-              </motion.div>
-              <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
-                <StatCounter end={144} label="" />
+                  }}
+                >
+                  <Zap className="w-10 h-10 text-primary" />
+                </motion.div>
+                <div className="text-5xl md:text-6xl font-mono font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  <StatCounter end={144} label="" />
+                </div>
               </div>
               <p className="text-sm md:text-base text-muted-foreground uppercase tracking-wider">
                 New Updates

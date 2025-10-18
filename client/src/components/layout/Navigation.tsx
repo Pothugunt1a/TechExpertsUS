@@ -12,9 +12,9 @@ const navItems = [
     name: "Services", 
     path: "/services",
     subItems: [
-      { name: "Data Center Management", path: "/services/dms" },
-      { name: "Infrastructure Consulting", path: "/services/ics" },
-      { name: "Project Management", path: "/services/pms" },
+      { name: "Data Center Management Services", path: "/services/dms" },
+      { name: "Infrastructure Consulting Services", path: "/services/ics" },
+      { name: "Project Management Solutions", path: "/services/pms" },
     ]
   },
   {
