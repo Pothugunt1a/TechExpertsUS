@@ -470,16 +470,21 @@ export default function Services() {
           </motion.div>
 
           <div className="relative">
-            {/* Top diagonal border - thick on left, thin on right */}
-            <div 
-              className="absolute left-0 right-0 -top-[2px] overflow-hidden z-10"
-              style={{
-                height: '3px',
-                background: 'linear-gradient(to right, hsl(var(--primary) / 0.4) 0%, hsl(var(--primary) / 0.15) 100%)',
-                transform: 'rotate(-1deg)',
-                transformOrigin: 'left',
-              }}
-            />
+            {/* Top curved bulged border */}
+            <svg 
+              className="absolute left-0 right-0 -top-[3px] w-full z-10" 
+              height="8" 
+              viewBox="0 0 1200 8" 
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path 
+                d="M0,4 Q300,0 600,4 T1200,4" 
+                fill="none" 
+                stroke="hsl(var(--primary) / 0.5)" 
+                strokeWidth="2"
+              />
+            </svg>
             
             <motion.div
               initial={{ opacity: 0 }}
@@ -490,16 +495,21 @@ export default function Services() {
               <ClientsScrollingCarousel />
             </motion.div>
             
-            {/* Bottom diagonal border - thick on right, thin on left */}
-            <div 
-              className="absolute left-0 right-0 -bottom-[2px] overflow-hidden z-10"
-              style={{
-                height: '3px',
-                background: 'linear-gradient(to right, hsl(var(--primary) / 0.15) 0%, hsl(var(--primary) / 0.4) 100%)',
-                transform: 'rotate(1deg)',
-                transformOrigin: 'left',
-              }}
-            />
+            {/* Bottom curved bulged border */}
+            <svg 
+              className="absolute left-0 right-0 -bottom-[3px] w-full z-10" 
+              height="8" 
+              viewBox="0 0 1200 8" 
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path 
+                d="M0,4 Q300,8 600,4 T1200,4" 
+                fill="none" 
+                stroke="hsl(var(--primary) / 0.5)" 
+                strokeWidth="2"
+              />
+            </svg>
           </div>
         </div>
       </section>
