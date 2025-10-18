@@ -348,8 +348,16 @@ export default function Contact() {
 
       {/* Our Clients - Infinite Scroll */}
       <section className="relative py-20 md:py-32 overflow-hidden">
-        {/* Diagonal Gradient Background Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-card/40 to-card/10 -skew-y-2 transform origin-top-left" />
+        {/* Diagonal Gradient Background - similar to partner--gradient */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div 
+            className="absolute left-0 top-0 h-full w-full origin-top-left"
+            style={{
+              background: 'linear-gradient(150.39deg, hsl(var(--card) / 0.6) 15.02%, hsl(var(--card) / 0.2) 99.59%)',
+              transform: 'rotate(2deg) translateY(-5px)',
+            }}
+          />
+        </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -372,13 +380,13 @@ export default function Contact() {
             {/* Scrolling Logos */}
             <div className="flex overflow-hidden py-8">
               <motion.div
-                className="flex gap-8 pr-8"
+                className="flex gap-6 pr-6"
                 animate={{
-                  x: [0, -1456],
+                  x: [0, -1350],
                 }}
                 transition={{
                   x: {
-                    duration: 25,
+                    duration: 20,
                     repeat: Infinity,
                     ease: "linear",
                   },
@@ -388,9 +396,9 @@ export default function Contact() {
                 {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
                   <div
                     key={client}
-                    className="flex-shrink-0 w-44 h-28 flex items-center justify-center bg-background/60 backdrop-blur-sm border border-border/50 rounded-lg grayscale brightness-90 hover:grayscale-0 hover:brightness-100 hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md hover:border-primary/30"
+                    className="flex-shrink-0 w-40 h-24 flex items-center justify-center bg-card/40 backdrop-blur-sm rounded-lg grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
                   >
-                    <div className="text-xl font-bold text-foreground/70 hover:text-foreground transition-colors duration-300">
+                    <div className="text-lg font-semibold text-foreground/60 hover:text-foreground transition-colors duration-300">
                       {client}
                     </div>
                   </div>
@@ -399,9 +407,9 @@ export default function Contact() {
                 {["TradingView", "Discord", "BYBIT", "Coinbase", "CoinGecko", "Slack"].map((client) => (
                   <div
                     key={`${client}-duplicate`}
-                    className="flex-shrink-0 w-44 h-28 flex items-center justify-center bg-background/60 backdrop-blur-sm border border-border/50 rounded-lg grayscale brightness-90 hover:grayscale-0 hover:brightness-100 hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md hover:border-primary/30"
+                    className="flex-shrink-0 w-40 h-24 flex items-center justify-center bg-card/40 backdrop-blur-sm rounded-lg grayscale brightness-75 hover:grayscale-0 hover:brightness-100 hover:scale-110 transition-all duration-300"
                   >
-                    <div className="text-xl font-bold text-foreground/70 hover:text-foreground transition-colors duration-300">
+                    <div className="text-lg font-semibold text-foreground/60 hover:text-foreground transition-colors duration-300">
                       {client}
                     </div>
                   </div>
