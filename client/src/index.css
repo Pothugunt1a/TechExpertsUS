@@ -354,3 +354,39 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
 }
+
+
+/* Variable width borders for client carousel */
+.border-variable-width-top::before,
+.border-variable-width-bottom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, 
+    hsl(var(--primary) / 0.6) 0%, 
+    hsl(var(--primary) / 0.4) 25%, 
+    hsl(var(--primary) / 0.2) 50%, 
+    hsl(var(--primary) / 0.4) 75%, 
+    hsl(var(--primary) / 0.6) 100%
+  );
+  mask-image: linear-gradient(90deg, 
+    black 0% 10%, 
+    transparent 48% 52%, 
+    black 90% 100%
+  );
+  -webkit-mask-image: linear-gradient(90deg, 
+    black 0% 10%, 
+    transparent 48% 52%, 
+    black 90% 100%
+  );
+}
+
+.border-variable-width-top::before {
+  top: -10px;
+}
+
+.border-variable-width-bottom::before {
+  bottom: -10px;
+}

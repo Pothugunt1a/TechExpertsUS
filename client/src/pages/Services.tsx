@@ -470,20 +470,38 @@ export default function Services() {
           </motion.div>
 
           <div className="relative">
-            {/* Top curved bulged border */}
+            {/* Top curved bulged border with variable thickness */}
             <svg 
-              className="absolute left-0 right-0 -top-[3px] w-full z-10" 
-              height="8" 
-              viewBox="0 0 1200 8" 
+              className="absolute left-0 right-0 -top-[6px] w-full z-10" 
+              height="16" 
+              viewBox="0 0 1200 16" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
             >
+              <defs>
+                <linearGradient id="topBorderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
+                  <stop offset="25%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+                  <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
+                  <stop offset="75%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
+                </linearGradient>
+              </defs>
               <path 
-                d="M0,4 Q300,0 600,4 T1200,4" 
+                d="M0,8 Q300,2 600,8 T1200,8" 
                 fill="none" 
-                stroke="hsl(var(--primary) / 0.5)" 
-                strokeWidth="2"
-              />
+                stroke="url(#topBorderGradient)" 
+                strokeWidth="10"
+                strokeLinecap="round"
+              >
+                <animate
+                  attributeName="stroke-width"
+                  values="10;2;10;2;10"
+                  keyTimes="0;0.25;0.5;0.75;1"
+                  dur="0.1s"
+                  repeatCount="1"
+                />
+              </path>
             </svg>
             
             <motion.div
@@ -495,20 +513,38 @@ export default function Services() {
               <ClientsScrollingCarousel />
             </motion.div>
             
-            {/* Bottom curved bulged border */}
+            {/* Bottom curved bulged border with variable thickness */}
             <svg 
-              className="absolute left-0 right-0 -bottom-[3px] w-full z-10" 
-              height="8" 
-              viewBox="0 0 1200 8" 
+              className="absolute left-0 right-0 -bottom-[6px] w-full z-10" 
+              height="16" 
+              viewBox="0 0 1200 16" 
               preserveAspectRatio="none"
               xmlns="http://www.w3.org/2000/svg"
             >
+              <defs>
+                <linearGradient id="bottomBorderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
+                  <stop offset="25%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+                  <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
+                  <stop offset="75%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
+                </linearGradient>
+              </defs>
               <path 
-                d="M0,4 Q300,8 600,4 T1200,4" 
+                d="M0,8 Q300,14 600,8 T1200,8" 
                 fill="none" 
-                stroke="hsl(var(--primary) / 0.5)" 
-                strokeWidth="2"
-              />
+                stroke="url(#bottomBorderGradient)" 
+                strokeWidth="10"
+                strokeLinecap="round"
+              >
+                <animate
+                  attributeName="stroke-width"
+                  values="10;2;10;2;10"
+                  keyTimes="0;0.25;0.5;0.75;1"
+                  dur="0.1s"
+                  repeatCount="1"
+                />
+              </path>
             </svg>
           </div>
         </div>
