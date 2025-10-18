@@ -123,8 +123,53 @@ export default function Contact() {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="relative py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Animated gradient orbs */}
+          <motion.div
+            className="absolute top-20 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+            animate={{
+              x: [0, 100, 0],
+              y: [0, 50, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-40 right-0 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
+            animate={{
+              x: [0, -80, 0],
+              y: [0, 80, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-20 left-1/3 w-80 h-80 bg-chart-3/15 rounded-full blur-3xl"
+            animate={{
+              x: [0, 60, 0],
+              y: [0, -60, 0],
+              scale: [1, 1.15, 1],
+            }}
+            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          />
+          
+          {/* Animated dots pattern */}
+          <motion.div
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+            animate={{
+              backgroundPosition: ["0px 0px", "40px 40px"],
+            }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
