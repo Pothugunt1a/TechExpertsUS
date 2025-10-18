@@ -481,12 +481,14 @@ export default function Services() {
       </section>
 
       {/* Our Clients - Scrolling Carousel */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        {/* Top horizontal border */}
-        <div className="absolute left-0 right-0 top-0 h-px bg-border z-0" />
+      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-transparent via-card/10 to-transparent">
+        {/* Top diagonal border stripe */}
+        <div className="absolute left-0 right-0 top-0 h-1 bg-primary/20 transform -rotate-[0.5deg] origin-left -translate-y-0 z-0" />
+        <div className="absolute left-0 right-0 top-0 h-px bg-primary/40 transform -rotate-[0.5deg] origin-left translate-y-1 z-0" />
         
-        {/* Bottom horizontal border */}
-        <div className="absolute left-0 right-0 bottom-0 h-px bg-border z-0" />
+        {/* Bottom diagonal border stripe */}
+        <div className="absolute left-0 right-0 bottom-0 h-1 bg-primary/20 transform rotate-[0.5deg] origin-left translate-y-0 z-0" />
+        <div className="absolute left-0 right-0 bottom-0 h-px bg-primary/40 transform rotate-[0.5deg] origin-left -translate-y-1 z-0" />
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
