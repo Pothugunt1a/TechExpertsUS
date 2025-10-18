@@ -495,8 +495,16 @@ export default function Services() {
           </motion.div>
 
           <div className="relative">
-            {/* Top diagonal border - directly above carousel */}
-            <div className="absolute left-0 right-0 -top-1 h-[2px] bg-primary/30 transform -rotate-[1deg] origin-left z-10" />
+            {/* Top diagonal border - thick on left, thin on right */}
+            <div 
+              className="absolute left-0 right-0 -top-[2px] overflow-hidden z-10"
+              style={{
+                height: '3px',
+                background: 'linear-gradient(to right, hsl(var(--primary) / 0.4) 0%, hsl(var(--primary) / 0.15) 100%)',
+                transform: 'rotate(-1deg)',
+                transformOrigin: 'left',
+              }}
+            />
             
             <motion.div
               initial={{ opacity: 0 }}
@@ -507,8 +515,16 @@ export default function Services() {
               <ClientsScrollingCarousel />
             </motion.div>
             
-            {/* Bottom diagonal border - directly below carousel */}
-            <div className="absolute left-0 right-0 -bottom-1 h-[2px] bg-primary/30 transform rotate-[1deg] origin-left z-10" />
+            {/* Bottom diagonal border - thick on right, thin on left */}
+            <div 
+              className="absolute left-0 right-0 -bottom-[2px] overflow-hidden z-10"
+              style={{
+                height: '3px',
+                background: 'linear-gradient(to right, hsl(var(--primary) / 0.15) 0%, hsl(var(--primary) / 0.4) 100%)',
+                transform: 'rotate(1deg)',
+                transformOrigin: 'left',
+              }}
+            />
           </div>
         </div>
       </section>
