@@ -165,6 +165,17 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
         >
           {/* Visual Container - No Card Styling */}
           <div className="relative w-full h-full flex items-center justify-center">
+            {/* Top Right Corner Border */}
+            <div className="absolute top-0 right-0 w-32 h-32 pointer-events-none">
+              <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-l from-foreground/60 to-transparent"></div>
+              <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-foreground/60 to-transparent"></div>
+            </div>
+            
+            {/* Bottom Left Corner Border */}
+            <div className="absolute bottom-0 left-0 w-32 h-32 pointer-events-none">
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-foreground/60 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 w-1 h-full bg-gradient-to-t from-foreground/60 to-transparent"></div>
+            </div>
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedIndex}
