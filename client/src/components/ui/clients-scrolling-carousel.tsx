@@ -20,7 +20,7 @@ const clients: Client[] = [
 export function ClientsScrollingCarousel() {
   const duplicatedClients = [...clients, ...clients, ...clients];
   const controls = useAnimationControls();
-  const logoWidth = 280 + 64; // width + gap (bigger logos)
+  const logoWidth = 220 + 48; // width + gap (increased for bigger logos)
 
   useEffect(() => {
     let isMounted = true;
@@ -78,13 +78,13 @@ export function ClientsScrollingCarousel() {
             {duplicatedClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="relative flex-shrink-0 w-[280px] h-[140px] flex items-center justify-center group"
+                className="relative flex-shrink-0 w-[220px] h-[100px] flex items-center justify-center group"
                 data-testid={`client-logo-${client.name.toLowerCase().replace(/\s+/g, "-")}-${index}`}
               >
                 <motion.img 
                   src={client.logo} 
                   alt={client.name}
-                  className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                  className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   whileHover={{ 
                     scale: 1.15,
                     rotate: [0, -2, 2, 0],
