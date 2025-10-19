@@ -480,16 +480,16 @@ export default function Services() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left side - Service Categories (1/4) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-1"
+              className="w-full lg:w-1/4 flex-shrink-0"
             >
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {[
                   "Programming & app development",
                   "Security & compliance governance",
@@ -503,11 +503,11 @@ export default function Services() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="relative pl-6 border-l-2 border-primary/30 hover:border-primary transition-colors duration-300"
+                    transition={{ delay: index * 0.15 }}
+                    className="relative pl-8 border-l-2 border-primary/30 hover:border-primary transition-colors duration-300"
                   >
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary" />
-                    <p className="text-base md:text-lg font-medium text-foreground/90 hover:text-primary transition-colors duration-300">
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-lg shadow-primary/50" />
+                    <p className="text-lg font-semibold text-foreground hover:text-primary transition-colors duration-300">
                       {category}
                     </p>
                   </motion.div>
@@ -515,13 +515,13 @@ export default function Services() {
               </div>
             </motion.div>
 
-            {/* Right side - Client Logos (3/4) */}
+            {/* Right side - Client Logos (3/4) - Centered */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-3"
+              className="w-full lg:flex-1 flex items-center justify-center"
             >
               <ClientsScrollingCarousel />
             </motion.div>
