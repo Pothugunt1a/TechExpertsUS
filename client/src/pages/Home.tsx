@@ -3,6 +3,7 @@ import { ParticleBackground } from "@/components/ui/particle-background";
 import { ServiceCard } from "@/components/ui/service-card";
 import { StatCounter } from "@/components/ui/stat-counter";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
+import { HeroCarousel } from "@/components/ui/hero-carousel";
 import { Server, Network, ClipboardCheck, Users, Code, Shield, Cpu, Database, Cloud, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -77,113 +78,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Carousel Section */}
+      <section ref={heroRef} className="relative">
         <ParticleBackground />
-        
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        
-        {/* Animated Tech Icons */}
-        <motion.div
-          style={{ opacity, scale }}
-          className="absolute inset-0 pointer-events-none"
-        >
-          <motion.div
-            className="absolute top-1/4 left-1/4"
-            animate={{ 
-              y: [0, -20, 0],
-              rotate: [0, 10, 0]
-            }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Cpu className="w-16 h-16 text-primary/20 dark:text-primary/30" />
-          </motion.div>
-          <motion.div
-            className="absolute top-1/3 right-1/4"
-            animate={{ 
-              y: [0, 20, 0],
-              rotate: [0, -10, 0]
-            }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          >
-            <Database className="w-20 h-20 text-chart-2/20 dark:text-chart-2/30" />
-          </motion.div>
-          <motion.div
-            className="absolute bottom-1/3 left-1/3"
-            animate={{ 
-              y: [0, -15, 0],
-              rotate: [0, 15, 0]
-            }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          >
-            <Cloud className="w-24 h-24 text-primary/20 dark:text-primary/30" />
-          </motion.div>
-          <motion.div
-            className="absolute top-1/2 right-1/3"
-            animate={{ 
-              y: [0, 25, 0],
-              rotate: [0, -15, 0]
-            }}
-            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          >
-            <Zap className="w-14 h-14 text-chart-2/20 dark:text-chart-2/30" />
-          </motion.div>
-        </motion.div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent"
-              animate={{ backgroundPosition: ["0%", "100%", "0%"] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-              style={{ backgroundSize: "200% auto" }}
-            >
-              Solutions that you need!
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto"
-            >
-              We aim to improve client proficiency, profit & productivity
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Link href="/services">
-                <Button size="lg" className="text-lg px-8" data-testid="button-explore-services">
-                  Explore Services
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="text-lg px-8" data-testid="button-contact-us">
-                  Contact Us
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
+        <div className="relative z-10">
+          <HeroCarousel />
         </div>
-
-        {/* Floating decorative elements */}
-        <motion.div
-          className="absolute top-20 right-20 w-32 h-32 bg-primary/10 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-20 w-40 h-40 bg-chart-2/10 rounded-full blur-3xl"
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.6, 0.3, 0.6] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
       </section>
 
       {/* Features Section */}
