@@ -8,7 +8,7 @@ export function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 2000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);
