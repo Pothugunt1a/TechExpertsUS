@@ -212,8 +212,10 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                           alt={altText}
                           className="w-full h-auto object-contain"
                           style={isERP ? {
-                            maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
-                            WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)'
+                            maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+                            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+                            maskComposite: 'intersect',
+                            WebkitMaskComposite: 'source-in'
                           } : undefined}
                         />
                       </div>
