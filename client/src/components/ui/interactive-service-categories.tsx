@@ -161,55 +161,6 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
           transition={{ duration: 0.8 }}
           className="relative lg:sticky lg:top-24 h-full min-h-[800px]"
         >
-          {/* Geometric Shape Background - Top Left to Bottom Left */}
-          <motion.div
-            className="absolute left-0 top-0 w-64 h-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <svg className="w-full h-full" viewBox="0 0 256 800" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="leftGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.15" />
-                  <stop offset="50%" stopColor="hsl(var(--chart-2))" stopOpacity="0.1" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
-                </linearGradient>
-              </defs>
-              <polygon points="0,0 150,0 50,800 0,800" fill="url(#leftGradient)" />
-              <polygon points="80,100 180,100 120,700 80,700" fill="hsl(var(--primary))" fillOpacity="0.08" />
-            </svg>
-          </motion.div>
-
-          {/* Geometric Shape Background - Top Right to Bottom Right */}
-          <motion.div
-            className="absolute right-0 top-0 w-64 h-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            <svg className="w-full h-full" viewBox="0 0 256 800" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="rightGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="hsl(var(--chart-2))" stopOpacity="0.15" />
-                  <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
-                  <stop offset="100%" stopColor="hsl(var(--chart-2))" stopOpacity="0.05" />
-                </linearGradient>
-              </defs>
-              <polygon points="106,0 256,0 256,800 206,800" fill="url(#rightGradient)" />
-              <polygon points="76,100 176,100 136,700 96,700" fill="hsl(var(--chart-2))" fillOpacity="0.08" />
-            </svg>
-          </motion.div>
-
-          {/* Background glow effect */}
-          <motion.div
-            key={`glow-${selectedIndex}`}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute inset-0 bg-gradient-to-br from-primary/20 via-chart-2/20 to-primary/20 blur-3xl"
-          />
-
           {/* Visual Container - No Card Styling */}
           <div className="relative w-full h-full flex items-center justify-center">
             <AnimatePresence mode="wait">
