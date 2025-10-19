@@ -25,8 +25,8 @@ export function HeroCarousel() {
             transition={{ duration: 0.5 }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full">
+              <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
                 {/* Left side - Text from top */}
                 <motion.div
                   initial={{ y: -100, opacity: 0 }}
@@ -34,10 +34,10 @@ export function HeroCarousel() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-left"
                 >
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                     Solutions that you need!
                   </h1>
-                  <p className="text-xl md:text-2xl text-muted-foreground">
+                  <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
                     We aim to improve client proficiency, profit & productivity
                   </p>
                 </motion.div>
@@ -69,10 +69,10 @@ export function HeroCarousel() {
             transition={{ duration: 0.5 }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-              <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full">
+              <div className="flex flex-row gap-2 sm:gap-4 lg:gap-8 items-center">
                 {/* Left side - Animated boxes (1/3 width) */}
-                <div className="w-full lg:w-1/3 space-y-3">
+                <div className="w-1/3 space-y-1 sm:space-y-2 lg:space-y-3">
                   {[
                     "Programming & app development",
                     "Security & compliance governance",
@@ -86,10 +86,10 @@ export function HeroCarousel() {
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="relative pl-6 py-3 border-l-4 border-primary/50 bg-card/50 backdrop-blur-sm rounded-r-xl hover:border-primary hover:bg-card/80 transition-all duration-300"
+                      className="relative pl-2 sm:pl-4 lg:pl-6 py-1 sm:py-2 lg:py-3 border-l-2 sm:border-l-3 lg:border-l-4 border-primary/50 bg-card/50 backdrop-blur-sm rounded-r-xl hover:border-primary hover:bg-card/80 transition-all duration-300"
                     >
-                      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary shadow-lg shadow-primary/50" />
-                      <p className="text-base font-semibold text-foreground">
+                      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 rounded-full bg-primary shadow-lg shadow-primary/50" />
+                      <p className="text-[10px] sm:text-xs lg:text-base font-semibold text-foreground">
                         {item}
                       </p>
                     </motion.div>
@@ -97,8 +97,8 @@ export function HeroCarousel() {
                 </div>
 
                 {/* Right side - Two images centered (2/3 width) */}
-                <div className="w-full lg:w-2/3 flex items-center justify-center">
-                  <div className="grid grid-cols-2 gap-8 w-full max-w-5xl">
+                <div className="w-2/3 flex items-center justify-center">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-4 lg:gap-8 w-full max-w-5xl">
                     <motion.div
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
@@ -108,7 +108,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.1.png"
                         alt="Service 1"
-                        className="w-[150%] h-auto min-w-[300px] rounded-2xl"
+                        className="w-[150%] h-auto min-w-[120px] sm:min-w-[200px] lg:min-w-[300px] rounded-lg sm:rounded-xl lg:rounded-2xl"
                       />
                     </motion.div>
                     <motion.div
@@ -120,7 +120,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.png"
                         alt="Service 2"
-                        className="w-[150%] h-auto min-w-[300px] rounded-2xl"
+                        className="w-[150%] h-auto min-w-[120px] sm:min-w-[200px] lg:min-w-[300px] rounded-lg sm:rounded-xl lg:rounded-2xl"
                       />
                     </motion.div>
                   </div>
