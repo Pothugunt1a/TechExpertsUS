@@ -162,20 +162,125 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="relative lg:sticky lg:top-24 h-full min-h-[800px]"
+          style={{ perspective: "1500px", transformStyle: "preserve-3d" }}
         >
           {/* Visual Container - No Card Styling */}
           <div className="relative w-full h-full flex items-center justify-center">
-            {/* Top Right Corner Border */}
-            <div className="absolute top-0 right-0 w-32 h-32 pointer-events-none">
-              <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-l from-foreground/60 to-transparent"></div>
-              <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-foreground/60 to-transparent"></div>
-            </div>
+            {/* Top Right 3D Corner Border */}
+            <motion.div 
+              className="absolute top-0 right-0 w-40 h-40 pointer-events-none z-20"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              {/* Layer 1 - Main border with 3D transform */}
+              <motion.div
+                className="absolute top-0 right-0 w-full h-full"
+                style={{ transformStyle: "preserve-3d" }}
+                animate={{ 
+                  rotateX: [0, 5, 0],
+                  rotateY: [0, -5, 0],
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="absolute top-0 right-0 w-full h-1.5 bg-gradient-to-l from-foreground/70 via-foreground/40 to-transparent shadow-lg" 
+                     style={{ 
+                       transform: "translateZ(10px)",
+                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
+                     }}></div>
+                <div className="absolute top-0 right-0 w-1.5 h-full bg-gradient-to-b from-foreground/70 via-foreground/40 to-transparent shadow-lg"
+                     style={{ 
+                       transform: "translateZ(10px)",
+                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
+                     }}></div>
+              </motion.div>
+              
+              {/* Layer 2 - Depth layer */}
+              <motion.div
+                className="absolute top-1 right-1 w-full h-full opacity-50"
+                style={{ transformStyle: "preserve-3d" }}
+                animate={{ 
+                  rotateX: [0, -3, 0],
+                  rotateY: [0, 3, 0],
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+              >
+                <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-primary/60 to-transparent"
+                     style={{ transform: "translateZ(5px)" }}></div>
+                <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-primary/60 to-transparent"
+                     style={{ transform: "translateZ(5px)" }}></div>
+              </motion.div>
+              
+              {/* Layer 3 - Glow effect */}
+              <motion.div
+                className="absolute -top-2 -right-2 w-16 h-16"
+                animate={{ 
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="w-full h-full bg-gradient-to-br from-primary/40 to-chart-2/40 blur-xl rounded-full"></div>
+              </motion.div>
+            </motion.div>
             
-            {/* Bottom Left Corner Border */}
-            <div className="absolute bottom-0 left-0 w-32 h-32 pointer-events-none">
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-foreground/60 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 w-1 h-full bg-gradient-to-t from-foreground/60 to-transparent"></div>
-            </div>
+            {/* Bottom Left 3D Corner Border */}
+            <motion.div 
+              className="absolute bottom-0 left-0 w-40 h-40 pointer-events-none z-20"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              {/* Layer 1 - Main border with 3D transform */}
+              <motion.div
+                className="absolute bottom-0 left-0 w-full h-full"
+                style={{ transformStyle: "preserve-3d" }}
+                animate={{ 
+                  rotateX: [0, -5, 0],
+                  rotateY: [0, 5, 0],
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent shadow-lg"
+                     style={{ 
+                       transform: "translateZ(10px)",
+                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
+                     }}></div>
+                <div className="absolute bottom-0 left-0 w-1.5 h-full bg-gradient-to-t from-foreground/70 via-foreground/40 to-transparent shadow-lg"
+                     style={{ 
+                       transform: "translateZ(10px)",
+                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
+                     }}></div>
+              </motion.div>
+              
+              {/* Layer 2 - Depth layer */}
+              <motion.div
+                className="absolute bottom-1 left-1 w-full h-full opacity-50"
+                style={{ transformStyle: "preserve-3d" }}
+                animate={{ 
+                  rotateX: [0, 3, 0],
+                  rotateY: [0, -3, 0],
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+              >
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-chart-2/60 to-transparent"
+                     style={{ transform: "translateZ(5px)" }}></div>
+                <div className="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-chart-2/60 to-transparent"
+                     style={{ transform: "translateZ(5px)" }}></div>
+              </motion.div>
+              
+              {/* Layer 3 - Glow effect */}
+              <motion.div
+                className="absolute -bottom-2 -left-2 w-16 h-16"
+                animate={{ 
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+              >
+                <div className="w-full h-full bg-gradient-to-tl from-chart-2/40 to-primary/40 blur-xl rounded-full"></div>
+              </motion.div>
+            </motion.div>
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedIndex}
