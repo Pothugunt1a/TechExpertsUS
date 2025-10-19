@@ -187,8 +187,179 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/30 overflow-hidden">
+        {/* Hexagon Decorations - Top Right Corner */}
+        <div className="absolute top-0 right-0 w-80 h-80 pointer-events-none opacity-40">
+          {[...Array(12)].map((_, i) => {
+            const row = Math.floor(i / 4);
+            const col = i % 4;
+            const isOddRow = row % 2 === 1;
+            return (
+              <motion.div
+                key={i}
+                className="absolute"
+                style={{
+                  top: `${row * 60}px`,
+                  right: `${col * 70 + (isOddRow ? 35 : 0)}px`,
+                }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: i * 0.05,
+                  duration: 0.6,
+                  type: "spring"
+                }}
+              >
+                <svg
+                  width="50"
+                  height="58"
+                  viewBox="0 0 50 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="drop-shadow-lg"
+                >
+                  <path
+                    d="M25 0L48.3013 14.5V43.5L25 58L1.69873 43.5V14.5L25 0Z"
+                    fill="url(#hexGradient)"
+                    fillOpacity="0.3"
+                  />
+                  <path
+                    d="M25 0L48.3013 14.5V43.5L25 58L1.69873 43.5V14.5L25 0Z"
+                    stroke="url(#hexStroke)"
+                    strokeWidth="2"
+                  />
+                  <defs>
+                    <linearGradient id="hexGradient" x1="25" y1="0" x2="25" y2="58" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="hsl(var(--primary))" stopOpacity="0.6"/>
+                      <stop offset="1" stopColor="hsl(var(--chart-2))" stopOpacity="0.2"/>
+                    </linearGradient>
+                    <linearGradient id="hexStroke" x1="25" y1="0" x2="25" y2="58" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="hsl(var(--primary))"/>
+                      <stop offset="1" stopColor="hsl(var(--chart-2))"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Hexagon Decorations - Bottom Right Corner */}
+        <div className="absolute bottom-0 right-0 w-80 h-80 pointer-events-none opacity-30">
+          {[...Array(10)].map((_, i) => {
+            const row = Math.floor(i / 4);
+            const col = i % 4;
+            const isOddRow = row % 2 === 1;
+            return (
+              <motion.div
+                key={i}
+                className="absolute"
+                style={{
+                  bottom: `${row * 60}px`,
+                  right: `${col * 70 + (isOddRow ? 35 : 0)}px`,
+                }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: i * 0.05,
+                  duration: 0.6,
+                  type: "spring"
+                }}
+              >
+                <svg
+                  width="50"
+                  height="58"
+                  viewBox="0 0 50 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="drop-shadow-lg"
+                >
+                  <path
+                    d="M25 0L48.3013 14.5V43.5L25 58L1.69873 43.5V14.5L25 0Z"
+                    fill="url(#hexGradient2)"
+                    fillOpacity="0.4"
+                  />
+                  <path
+                    d="M25 0L48.3013 14.5V43.5L25 58L1.69873 43.5V14.5L25 0Z"
+                    stroke="url(#hexStroke2)"
+                    strokeWidth="2"
+                  />
+                  <defs>
+                    <linearGradient id="hexGradient2" x1="25" y1="0" x2="25" y2="58" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="hsl(var(--chart-2))" stopOpacity="0.6"/>
+                      <stop offset="1" stopColor="hsl(var(--primary))" stopOpacity="0.2"/>
+                    </linearGradient>
+                    <linearGradient id="hexStroke2" x1="25" y1="0" x2="25" y2="58" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="hsl(var(--chart-2))"/>
+                      <stop offset="1" stopColor="hsl(var(--primary))"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Hexagon Decorations - Top Left Corner */}
+        <div className="absolute top-0 left-0 w-64 h-64 pointer-events-none opacity-25">
+          {[...Array(6)].map((_, i) => {
+            const row = Math.floor(i / 3);
+            const col = i % 3;
+            const isOddRow = row % 2 === 1;
+            return (
+              <motion.div
+                key={i}
+                className="absolute"
+                style={{
+                  top: `${row * 60}px`,
+                  left: `${col * 70 + (isOddRow ? 35 : 0)}px`,
+                }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: i * 0.05,
+                  duration: 0.6,
+                  type: "spring"
+                }}
+              >
+                <svg
+                  width="50"
+                  height="58"
+                  viewBox="0 0 50 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="drop-shadow-lg"
+                >
+                  <path
+                    d="M25 0L48.3013 14.5V43.5L25 58L1.69873 43.5V14.5L25 0Z"
+                    fill="url(#hexGradient3)"
+                    fillOpacity="0.35"
+                  />
+                  <path
+                    d="M25 0L48.3013 14.5V43.5L25 58L1.69873 43.5V14.5L25 0Z"
+                    stroke="url(#hexStroke3)"
+                    strokeWidth="2"
+                  />
+                  <defs>
+                    <linearGradient id="hexGradient3" x1="25" y1="0" x2="25" y2="58" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="hsl(var(--primary))" stopOpacity="0.5"/>
+                      <stop offset="1" stopColor="hsl(var(--chart-2))" stopOpacity="0.3"/>
+                    </linearGradient>
+                    <linearGradient id="hexStroke3" x1="25" y1="0" x2="25" y2="58" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="hsl(var(--primary))"/>
+                      <stop offset="1" stopColor="hsl(var(--chart-2))"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,7 +369,7 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive IT solutions tailored to your business needs
+              Unlock the full potential of our services with our amazing features and top-notch solutions.
             </p>
           </motion.div>
 
