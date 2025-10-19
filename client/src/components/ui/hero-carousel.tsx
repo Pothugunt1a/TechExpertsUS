@@ -144,7 +144,7 @@ export function HeroCarousel() {
               <motion.div
                 initial={{ x: -200, y: -200, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
+                transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                 className="absolute top-10 left-10 w-32 h-32 z-10"
               >
                 <img
@@ -158,7 +158,7 @@ export function HeroCarousel() {
               <motion.div
                 initial={{ x: 200, y: -200, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 100 }}
+                transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
                 className="absolute top-10 right-10 w-48 h-48 z-10"
               >
                 <img
