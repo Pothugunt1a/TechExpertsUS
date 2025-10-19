@@ -52,7 +52,7 @@ export function HeroCarousel() {
                   <img
                     src="/assets/Home1.png"
                     alt="Solutions"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
+                    className="w-full h-auto rounded-2xl"
                   />
                 </motion.div>
               </div>
@@ -98,7 +98,7 @@ export function HeroCarousel() {
 
                 {/* Right side - Two images centered (2/3 width) */}
                 <div className="w-full lg:w-2/3 flex items-center justify-center">
-                  <div className="grid grid-cols-2 gap-8 max-w-4xl w-full">
+                  <div className="grid grid-cols-2 gap-8 w-full max-w-5xl">
                     <motion.div
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
@@ -108,7 +108,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.1.png"
                         alt="Service 1"
-                        className="w-full h-auto min-h-[110%] rounded-2xl shadow-2xl"
+                        className="w-[150%] h-auto min-w-[300px] rounded-2xl shadow-2xl"
                       />
                     </motion.div>
                     <motion.div
@@ -120,7 +120,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.png"
                         alt="Service 2"
-                        className="w-full h-auto min-h-[110%] rounded-2xl shadow-2xl"
+                        className="w-[150%] h-auto min-w-[300px] rounded-2xl shadow-2xl"
                       />
                     </motion.div>
                   </div>
