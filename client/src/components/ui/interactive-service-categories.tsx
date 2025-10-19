@@ -201,6 +201,22 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                       imageSrc = "/assets/ERP.gif";
                       altText = "Enterprise Resource Planning";
                       break;
+                    case "Customer Relations Management":
+                      imageSrc = "/assets/CRM.gif";
+                      altText = "Customer Relations Management";
+                      break;
+                    case "Infrastructure as a Service (IaaS)":
+                      imageSrc = "/assets/Iaas.gif";
+                      altText = "Infrastructure as a Service";
+                      break;
+                    case "Internet of Things (IoT)":
+                      imageSrc = "/assets/IOT.png";
+                      altText = "Internet of Things";
+                      break;
+                    case "Big Data":
+                      imageSrc = "/assets/Bigdata.png";
+                      altText = "Big Data";
+                      break;
                   }
                   
                   if (imageSrc) {
