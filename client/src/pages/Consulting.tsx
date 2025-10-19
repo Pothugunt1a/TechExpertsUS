@@ -30,14 +30,14 @@ export default function Consulting() {
       </section>
 
       {/* Main Content */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Helping Companies Think Ahead</h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground">
@@ -50,7 +50,7 @@ export default function Consulting() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-10">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -114,14 +114,14 @@ export default function Consulting() {
       </section>
 
       {/* Competitive Advantages */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Competitive Advantages</h2>
           </motion.div>
@@ -141,7 +141,7 @@ export default function Consulting() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

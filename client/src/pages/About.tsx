@@ -54,14 +54,14 @@ export default function About() {
       </section>
 
       {/* Why Tech Experts USA */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Tech Experts USA</h2>
           </motion.div>
@@ -107,7 +107,7 @@ export default function About() {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             <motion.div
@@ -175,7 +175,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-20"
+            className="mb-10"
           >
             <h3 className="text-3xl font-bold text-center mb-12">Our Core Values</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -199,14 +199,14 @@ export default function About() {
       </section>
 
       {/* Skills Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Skills</h2>
             <p className="text-xl text-muted-foreground">Excellence in every dimension</p>
@@ -221,14 +221,14 @@ export default function About() {
       </section>
 
       {/* Happy Clients */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Happy Clients</h2>
             <p className="text-xl text-muted-foreground">Trusted by industry leaders</p>
@@ -243,7 +243,7 @@ export default function About() {
       </section>
 
       {/* Passion for Innovation */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

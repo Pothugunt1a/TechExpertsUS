@@ -88,14 +88,14 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/30">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -112,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -189,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
@@ -367,14 +367,14 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
             <p className="text-xl text-muted-foreground">What our clients say about us</p>
@@ -385,14 +385,14 @@ export default function Home() {
       </section>
 
       {/* Core Values Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/30">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Values</h2>
           </motion.div>

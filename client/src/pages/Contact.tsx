@@ -123,7 +123,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Animated gradient orbs */}
@@ -347,14 +347,14 @@ export default function Contact() {
       </section>
 
       {/* Our Locations */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Global Presence</h2>
             <p className="text-xl text-muted-foreground">Serving clients worldwide</p>

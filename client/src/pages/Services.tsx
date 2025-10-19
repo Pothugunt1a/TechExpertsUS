@@ -292,14 +292,14 @@ export default function Services() {
       </section>
 
       {/* Services Overview with 3D Transform */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="text-center mb-20"
+            className="text-center mb-10"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
               Welcome To Our{" "}
@@ -346,14 +346,14 @@ export default function Services() {
       </section>
 
       {/* Interactive Service Categories */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background overflow-hidden">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-10"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
               Our Services 
@@ -368,7 +368,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Us with Magnetic Effect */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         {/* Animated background pattern */}
         <motion.div
           className="absolute inset-0 opacity-10"
@@ -389,7 +389,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-10"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
               Why Choose Us
@@ -465,7 +465,7 @@ export default function Services() {
       </section>
 
       {/* Our Clients - Scrolling Carousel */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -611,14 +611,14 @@ export default function Services() {
       </section>
 
       {/* Testimonials */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-10"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
               Client Testimonials
