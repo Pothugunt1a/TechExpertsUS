@@ -346,7 +346,7 @@ export default function Services() {
       </section>
 
       {/* Interactive Service Categories */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -480,51 +480,132 @@ export default function Services() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
-            {/* Left side - Service Categories (1/4) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-1"
+          <div className="relative">
+            {/* Top horizontal triangular borders */}
+            <svg
+              className="absolute left-0 right-0 w-full z-10"
+              height="18"
+              viewBox="0 0 1200 18"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ top: "-25px" }}
             >
-              <div className="space-y-6">
-                {[
-                  "Programming & app development",
-                  "Security & compliance governance",
-                  "Mobile apps & device management",
-                  "Project management",
-                  "Database administration",
-                  "Data Analytics"
-                ].map((category, index) => (
-                  <motion.div
-                    key={category}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="relative pl-6 border-l-2 border-primary/30 hover:border-primary transition-colors duration-300"
-                  >
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary" />
-                    <p className="text-base md:text-lg font-medium text-foreground/90 hover:text-primary transition-colors duration-300">
-                      {category}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+              <defs>
+                <linearGradient
+                  id="topLeftGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                </linearGradient>
+                <linearGradient
+                  id="topRightGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                </linearGradient>
+              </defs>
+              {/* Left triangle - starts thick at left, tapers to point at middle, straight bottom */}
+              <polygon points="0,0 0,18 600,18" fill="url(#topLeftGradient)" />
+              {/* Right triangle - starts at middle point, expands to thick at right */}
+              <polygon
+                points="600,9 1200,18 1200,0"
+                fill="url(#topRightGradient)"
+                opacity="0"
+              />
+            </svg>
 
-            {/* Right side - Client Logos (3/4) */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-3"
             >
               <ClientsScrollingCarousel />
             </motion.div>
+
+            {/* Bottom horizontal triangular borders */}
+            <svg
+              className="absolute left-0 right-0 w-full z-10"
+              height="18"
+              viewBox="0 0 1200 18"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ bottom: "-25px" }}
+            >
+              <defs>
+                <linearGradient
+                  id="bottomLeftGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                </linearGradient>
+                <linearGradient
+                  id="bottomRightGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                </linearGradient>
+              </defs>
+              {/* Left triangle - starts thick at left, tapers to point at middle */}
+              <polygon
+                points="0,18 0,0 600,9"
+                fill="url(#bottomLeftGradient)"
+                opacity="0"
+              />
+              {/* Right triangle - starts at middle point, expands to thick at right, straight top */}
+              <polygon
+                points="600,0 1200,0 1200,18"
+                fill="url(#bottomRightGradient)"
+              />
+            </svg>
           </div>
         </div>
       </section>
