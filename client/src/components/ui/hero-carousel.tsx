@@ -20,19 +20,29 @@ const slides = [
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
+    
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000); // 6 seconds per slide for better viewing
+    }, 2000); // 2 seconds per slide as requested
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const slide = slides[currentSlide];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div 
+      className="relative w-full min-h-screen overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      role="region"
+      aria-label="Hero carousel"
+      aria-live="polite"
+    >
       <AnimatePresence mode="wait">
         {slide.type === "slide1" && (
           <Slide1 key="slide1" />
@@ -50,13 +60,18 @@ export function HeroCarousel() {
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => {
+              setCurrentSlide(index);
+              setIsPaused(false); // Reset timer on manual navigation
+            }}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
                 ? "bg-primary w-8"
                 : "bg-white/50 hover:bg-white/70"
             }`}
             data-testid={`indicator-slide-${index}`}
+            aria-label={`Go to slide ${index + 1}`}
+            aria-current={index === currentSlide ? "true" : "false"}
           />
         ))}
       </div>
@@ -71,47 +86,32 @@ function Slide1() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="absolute inset-0 w-full h-full bg-gradient-to-br from-background via-background to-primary/10"
+      transition={{ duration: 0.3 }}
+      className="absolute inset-0 w-full min-h-screen flex items-center bg-gradient-to-br from-background via-background to-primary/10 py-20"
     >
-      <div className="relative w-full h-full flex items-center justify-center px-6 lg:px-8">
+      <div className="relative w-full px-6 lg:px-8">
         <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content - Animate from top */}
+          {/* Text Content - Animate from TOP */}
           <motion.div
-            initial={{ y: -100, opacity: 0 }}
+            initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 60 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-center lg:text-left z-10"
           >
-            <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Solutions
               </span>{" "}
               that you need!
-            </motion.h1>
+            </h1>
             
-            <motion.p
-              className="text-2xl md:text-3xl text-muted-foreground mb-8 max-w-2xl"
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
+            <p className="text-2xl md:text-3xl text-muted-foreground mb-8 max-w-2xl">
               We aim to improve client
               <br />
               proficiency, profit & productivity
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href="/services">
                 <Button size="lg" className="text-lg px-8" data-testid="button-explore-services">
                   Explore Services
@@ -122,35 +122,21 @@ function Slide1() {
                   Contact Us
                 </Button>
               </Link>
-            </motion.div>
+            </div>
           </motion.div>
 
-          {/* Image - Animate from left */}
+          {/* Image - Animate from LEFT */}
           <motion.div
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: -400, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 60 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative flex items-center justify-center"
           >
-            <motion.div
-              animate={{ 
-                y: [0, -20, 0],
-              }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-              className="relative"
-            >
-              <img
-                src="/assets/Home1.png"
-                alt="Solutions"
-                className="w-full max-w-lg h-auto object-contain drop-shadow-2xl"
-              />
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-chart-2/20 blur-3xl -z-10" />
-            </motion.div>
+            <img
+              src="/assets/Home1.png"
+              alt="Solutions"
+              className="w-full max-w-lg h-auto object-contain drop-shadow-2xl"
+            />
           </motion.div>
         </div>
       </div>
@@ -174,100 +160,62 @@ function Slide2() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="absolute inset-0 w-full h-full bg-gradient-to-br from-background via-chart-2/5 to-background"
+      transition={{ duration: 0.3 }}
+      className="absolute inset-0 w-full min-h-screen flex items-center bg-gradient-to-br from-background via-chart-2/5 to-background py-20"
     >
-      <div className="relative w-full h-full flex items-center justify-center px-6 lg:px-8">
+      <div className="relative w-full px-6 lg:px-8">
         <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Service Boxes - Left side */}
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-          >
+          {/* Service Boxes - Left side with staggered animation */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {services.map((service, index) => (
               <motion.div
                 key={service}
-                initial={{ x: -100, opacity: 0, scale: 0.8 }}
-                animate={{ x: 0, opacity: 1, scale: 1 }}
+                initial={{ x: -200, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={{ 
-                  duration: 0.6, 
+                  duration: 0.5, 
                   delay: 0.1 * index,
-                  type: "spring",
-                  stiffness: 100
+                  ease: "easeOut"
                 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  y: -5,
-                  boxShadow: "0 10px 40px rgba(59, 130, 246, 0.3)"
-                }}
-                className="relative p-6 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-sm border border-primary/20 rounded-xl shadow-lg group overflow-hidden"
+                className="relative p-6 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-sm border border-primary/20 rounded-xl shadow-lg overflow-hidden"
                 data-testid={`service-box-${index}`}
               >
-                {/* Animated background on hover */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-primary/10 to-chart-2/10 opacity-0 group-hover:opacity-100"
-                  transition={{ duration: 0.3 }}
-                />
-                
                 <p className="relative text-sm md:text-base font-semibold text-foreground text-center">
                   {service}
                 </p>
-
-                {/* Corner accent */}
                 <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary/40 rounded-tr-xl" />
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Images - Right side */}
-          <motion.div
-            className="flex gap-6 items-center justify-center"
-          >
+          {/* Images - Right side, appear together */}
+          <div className="flex gap-6 items-center justify-center flex-wrap lg:flex-nowrap">
             <motion.div
-              initial={{ x: 100, opacity: 0, rotateY: -20 }}
-              animate={{ x: 0, opacity: 1, rotateY: 0 }}
-              transition={{ duration: 1, delay: 0.3, type: "spring" }}
-              className="relative flex-1 max-w-xs"
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="relative flex-1 max-w-xs min-w-[200px]"
             >
-              <motion.img
+              <img
                 src="/assets/Home2.1.png"
                 alt="Service 1"
                 className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
-                animate={{ 
-                  y: [0, -15, 0],
-                }}
-                transition={{ 
-                  duration: 3, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  delay: 0
-                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent blur-2xl -z-10" />
             </motion.div>
 
             <motion.div
-              initial={{ x: 150, opacity: 0, rotateY: 20 }}
-              animate={{ x: 0, opacity: 1, rotateY: 0 }}
-              transition={{ duration: 1, delay: 0.5, type: "spring" }}
-              className="relative flex-1 max-w-xs"
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              className="relative flex-1 max-w-xs min-w-[200px]"
             >
-              <motion.img
+              <img
                 src="/assets/Home2.png"
                 alt="Service 2"
                 className="w-full h-auto object-contain drop-shadow-2xl rounded-lg"
-                animate={{ 
-                  y: [0, -15, 0],
-                }}
-                transition={{ 
-                  duration: 3, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  delay: 0.5
-                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-tl from-chart-2/10 to-transparent blur-2xl -z-10" />
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </motion.div>
@@ -281,121 +229,97 @@ function Slide3() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="absolute inset-0 w-full h-full bg-gradient-to-br from-background via-primary/5 to-chart-2/10"
+      transition={{ duration: 0.3 }}
+      className="absolute inset-0 w-full min-h-screen flex items-center bg-gradient-to-br from-background via-primary/5 to-chart-2/10 py-20"
     >
-      <div className="relative w-full h-full flex items-center justify-center px-6 lg:px-8">
-        <div className="max-w-5xl w-full mx-auto text-center relative">
-          {/* Small Balloon - Top Left */}
+      <div className="relative w-full px-6 lg:px-8">
+        <div className="max-w-5xl w-full mx-auto text-center relative min-h-[600px] flex items-center justify-center">
+          {/* Small Balloon - Top Left - Responsive positioning */}
           <motion.div
-            initial={{ x: -200, y: -200, opacity: 0, scale: 0.5 }}
-            animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+            initial={{ x: -300, y: -300, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
             transition={{ 
-              duration: 1.5, 
-              delay: 0.2,
-              type: "spring",
-              stiffness: 60
+              duration: 0.8, 
+              ease: "easeOut"
             }}
-            className="absolute -top-20 -left-20 lg:top-0 lg:left-0"
+            className="absolute top-0 left-0 lg:top-10 lg:left-10 hidden sm:block"
+            style={{ maxWidth: "clamp(80px, 15vw, 128px)" }}
           >
-            <motion.img
+            <img
               src="/assets/Home3.png"
               alt="Balloon"
-              className="w-32 h-auto object-contain drop-shadow-xl"
-              animate={{ 
-                y: [0, -30, 0],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{ 
-                duration: 5, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
+              className="w-full h-auto object-contain drop-shadow-xl"
             />
           </motion.div>
 
-          {/* Medium Balloon - Top Right */}
+          {/* Medium Balloon - Top Right - Responsive positioning */}
           <motion.div
-            initial={{ x: 200, y: -200, opacity: 0, scale: 0.5 }}
-            animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+            initial={{ x: 300, y: -300, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
             transition={{ 
-              duration: 1.5, 
-              delay: 0.4,
-              type: "spring",
-              stiffness: 60
+              duration: 0.8,
+              delay: 0.1,
+              ease: "easeOut"
             }}
-            className="absolute -top-32 -right-32 lg:top-0 lg:right-0"
+            className="absolute top-0 right-0 lg:top-5 lg:right-5 hidden sm:block"
+            style={{ maxWidth: "clamp(120px, 20vw, 192px)" }}
           >
-            <motion.img
+            <img
               src="/assets/Home3.1.png"
               alt="Balloon"
-              className="w-48 h-auto object-contain drop-shadow-xl"
-              animate={{ 
-                y: [0, -40, 0],
-                rotate: [0, -5, 5, 0]
-              }}
-              transition={{ 
-                duration: 6, 
-                repeat: Infinity, 
-                ease: "easeInOut",
-                delay: 1
-              }}
+              className="w-full h-auto object-contain drop-shadow-xl"
             />
           </motion.div>
 
           {/* Text Content */}
-          <div className="relative z-10">
+          <div className="relative z-10 max-w-3xl mx-auto">
             {/* "Opportunity" from top to center */}
             <motion.h2
-              initial={{ y: -150, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ 
-                duration: 1, 
-                delay: 0.6,
-                type: "spring",
-                stiffness: 70
+                duration: 0.6,
+                ease: "easeOut"
               }}
-              className="text-6xl md:text-8xl font-bold mb-8"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8"
             >
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Opportunity
               </span>
             </motion.h2>
 
             {/* "You will be satisfied and" from bottom to center */}
             <motion.p
-              initial={{ y: 150, opacity: 0 }}
+              initial={{ y: 200, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ 
-                duration: 1, 
-                delay: 0.8,
-                type: "spring",
-                stiffness: 70
+                duration: 0.6,
+                delay: 0.2,
+                ease: "easeOut"
               }}
-              className="text-3xl md:text-4xl text-muted-foreground mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-4"
             >
               You will be satisfied and
             </motion.p>
 
             {/* "your customers will reward you for it" from bottom to center */}
             <motion.p
-              initial={{ y: 150, opacity: 0 }}
+              initial={{ y: 200, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ 
-                duration: 1, 
-                delay: 1,
-                type: "spring",
-                stiffness: 70
+                duration: 0.6,
+                delay: 0.3,
+                ease: "easeOut"
               }}
-              className="text-3xl md:text-4xl text-muted-foreground mb-12"
+              className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12"
             >
               your customers will reward you for it
             </motion.p>
 
             <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link href="/services">
