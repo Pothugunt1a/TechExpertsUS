@@ -47,7 +47,7 @@ export function HeroCarousel() {
                   initial={{ x: -200, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="relative"
+                  className="relative max-w-lg mx-auto"
                 >
                   <img
                     src="/assets/Home1.png"
