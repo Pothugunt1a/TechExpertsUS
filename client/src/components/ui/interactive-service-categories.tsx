@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { LucideIcon } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 
 interface ServiceCategory {
   title: string;
@@ -17,6 +18,7 @@ interface InteractiveServiceCategoriesProps {
 export function InteractiveServiceCategories({ categories }: InteractiveServiceCategoriesProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectedCategory = categories[selectedIndex];
+  const { theme } = useTheme();
 
   return (
     <div className="relative w-full">
@@ -173,11 +175,21 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                 className="relative z-10 w-full max-w-lg"
                 data-testid={`visual-display-${selectedIndex}`}
               >
-                {/* Visual Content - SVG Illustration */}
-                <div 
-                  className="w-full flex items-center justify-center px-8"
-                  dangerouslySetInnerHTML={{ __html: selectedCategory.visual }}
-                />
+                {/* Visual Content - Image for SaaS or SVG for others */}
+                {selectedCategory.title === "Software as a Service (SaaS)" ? (
+                  <div className="w-full flex items-center justify-center px-8">
+                    <img
+                      src={theme === "dark" ? "/assets/Saas.png" : "/assets/Saas1.png"}
+                      alt="Software as a Service"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div 
+                    className="w-full flex items-center justify-center px-8"
+                    dangerouslySetInnerHTML={{ __html: selectedCategory.visual }}
+                  />
+                )}
                 
                 {/* Category label at bottom */}
                 <motion.div
