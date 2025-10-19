@@ -153,70 +153,96 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
           </div>
         </motion.div>
 
-        {/* Right Side - Interactive Visual */}
+        {/* Right Side - Interactive Visual (Full Height) */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative lg:sticky lg:top-24"
+          className="relative lg:sticky lg:top-24 h-full min-h-[800px]"
         >
-          <div className="relative aspect-square max-w-lg mx-auto">
-            {/* Background glow effect */}
-            <motion.div
-              key={`glow-${selectedIndex}`}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              className="absolute inset-0 bg-gradient-to-br from-primary/30 via-chart-2/30 to-primary/30 rounded-3xl blur-3xl"
-            />
+          {/* Geometric Shape Background - Top Left to Bottom Left */}
+          <motion.div
+            className="absolute left-0 top-0 w-64 h-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <svg className="w-full h-full" viewBox="0 0 256 800" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="leftGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.15" />
+                  <stop offset="50%" stopColor="hsl(var(--chart-2))" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
+                </linearGradient>
+              </defs>
+              <polygon points="0,0 150,0 50,800 0,800" fill="url(#leftGradient)" />
+              <polygon points="80,100 180,100 120,700 80,700" fill="hsl(var(--primary))" fillOpacity="0.08" />
+            </svg>
+          </motion.div>
 
-            {/* Visual Container */}
-            <div className="relative bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-xl rounded-3xl border border-primary/20 p-8 shadow-2xl overflow-hidden">
-              {/* Animated pattern background */}
-              <div className="absolute inset-0 opacity-10">
-                <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <circle cx="20" cy="20" r="1" fill="currentColor" className="text-primary" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-                </svg>
-              </div>
+          {/* Geometric Shape Background - Top Right to Bottom Right */}
+          <motion.div
+            className="absolute right-0 top-0 w-64 h-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <svg className="w-full h-full" viewBox="0 0 256 800" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="rightGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="hsl(var(--chart-2))" stopOpacity="0.15" />
+                  <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="hsl(var(--chart-2))" stopOpacity="0.05" />
+                </linearGradient>
+              </defs>
+              <polygon points="106,0 256,0 256,800 206,800" fill="url(#rightGradient)" />
+              <polygon points="76,100 176,100 136,700 96,700" fill="hsl(var(--chart-2))" fillOpacity="0.08" />
+            </svg>
+          </motion.div>
 
-              <AnimatePresence mode="wait">
+          {/* Background glow effect */}
+          <motion.div
+            key={`glow-${selectedIndex}`}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="absolute inset-0 bg-gradient-to-br from-primary/20 via-chart-2/20 to-primary/20 blur-3xl"
+          />
+
+          {/* Visual Container - No Card Styling */}
+          <div className="relative w-full h-full flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedIndex}
+                initial={{ opacity: 0, scale: 0.9, rotateY: -10 }}
+                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                exit={{ opacity: 0, scale: 0.9, rotateY: 10 }}
+                transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="relative z-10 w-full max-w-lg"
+                data-testid={`visual-display-${selectedIndex}`}
+              >
+                {/* Visual Content - SVG Illustration */}
+                <div 
+                  className="w-full flex items-center justify-center px-8"
+                  dangerouslySetInnerHTML={{ __html: selectedCategory.visual }}
+                />
+                
+                {/* Category label at bottom */}
                 <motion.div
-                  key={selectedIndex}
-                  initial={{ opacity: 0, scale: 0.9, rotateY: -10 }}
-                  animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                  exit={{ opacity: 0, scale: 0.9, rotateY: 10 }}
-                  transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="relative z-10"
-                  data-testid={`visual-display-${selectedIndex}`}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="mt-12 text-center"
                 >
-                  {/* Visual Content - SVG Illustration */}
-                  <div 
-                    className="w-full h-full flex items-center justify-center"
-                    dangerouslySetInnerHTML={{ __html: selectedCategory.visual }}
-                  />
-                  
-                  {/* Category label at bottom */}
-                  <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                    className="mt-8 text-center"
-                  >
-                    <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary/20 to-chart-2/20 backdrop-blur-sm rounded-full border border-primary/30">
-                      <p className="text-lg font-semibold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                        {selectedCategory.title}
-                      </p>
-                    </div>
-                  </motion.div>
+                  <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary/20 to-chart-2/20 backdrop-blur-sm rounded-full border border-primary/30">
+                    <p className="text-lg font-semibold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                      {selectedCategory.title}
+                    </p>
+                  </div>
                 </motion.div>
-              </AnimatePresence>
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </motion.div>
       </div>
