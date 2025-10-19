@@ -20,7 +20,7 @@ const clients: Client[] = [
 export function ClientsScrollingCarousel() {
   const duplicatedClients = [...clients, ...clients, ...clients];
   const controls = useAnimationControls();
-  const logoWidth = 170 + 32; // width + gap
+  const logoWidth = 220 + 48; // width + gap (increased for bigger logos)
 
   useEffect(() => {
     let isMounted = true;
@@ -64,35 +64,37 @@ export function ClientsScrollingCarousel() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Single unified background for all logos */}
-      <div className="relative bg-gradient-to-r from-primary/5 via-primary/8 to-primary/5 backdrop-blur-sm py-4 px-4">
+      <div className="relative bg-gradient-to-r from-primary/5 via-primary/8 to-primary/5 backdrop-blur-sm py-8 px-6">
         {/* Gradient overlays for fade effect */}
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
         
-        {/* Scrolling container */}
-        <motion.div
-          className="flex gap-6 md:gap-8"
-          animate={controls}
-        >
-          {duplicatedClients.map((client, index) => (
-            <div
-              key={`${client.name}-${index}`}
-              className="relative flex-shrink-0 w-[170px] h-[60px] flex items-center justify-center group"
-              data-testid={`client-logo-${client.name.toLowerCase().replace(/\s+/g, "-")}-${index}`}
-            >
-              <motion.img 
-                src={client.logo} 
-                alt={client.name}
-                className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                whileHover={{ 
-                  scale: 1.1,
-                  rotate: [0, -2, 2, 0],
-                  transition: { duration: 0.3 }
-                }}
-              />
-            </div>
-          ))}
-        </motion.div>
+        {/* Scrolling container - centered */}
+        <div className="flex justify-center items-center min-h-[120px]">
+          <motion.div
+            className="flex gap-8 md:gap-12 items-center"
+            animate={controls}
+          >
+            {duplicatedClients.map((client, index) => (
+              <div
+                key={`${client.name}-${index}`}
+                className="relative flex-shrink-0 w-[220px] h-[100px] flex items-center justify-center group"
+                data-testid={`client-logo-${client.name.toLowerCase().replace(/\s+/g, "-")}-${index}`}
+              >
+                <motion.img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  whileHover={{ 
+                    scale: 1.15,
+                    rotate: [0, -2, 2, 0],
+                    transition: { duration: 0.3 }
+                  }}
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
