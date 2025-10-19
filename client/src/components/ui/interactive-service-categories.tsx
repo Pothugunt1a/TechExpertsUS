@@ -210,7 +210,11 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                         <img
                           src={imageSrc}
                           alt={altText}
-                          className={`w-full h-auto object-contain ${isERP ? 'rounded-3xl' : ''}`}
+                          className="w-full h-auto object-contain"
+                          style={isERP ? {
+                            maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
+                            WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)'
+                          } : undefined}
                         />
                       </div>
                     );
