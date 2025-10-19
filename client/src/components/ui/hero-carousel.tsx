@@ -203,7 +203,7 @@ export function HeroCarousel() {
       </AnimatePresence>
 
       {/* Slide indicators */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
         {[0, 1, 2].map((index) => (
           <button
             key={index}
