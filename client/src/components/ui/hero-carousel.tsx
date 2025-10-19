@@ -8,7 +8,7 @@ export function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 3500);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -108,7 +108,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.1.png"
                         alt="Service 1"
-                        className="w-[150%] h-auto min-w-[300px] rounded-2xl shadow-2xl"
+                        className="w-[150%] h-auto min-w-[300px] rounded-2xl"
                       />
                     </motion.div>
                     <motion.div
@@ -120,7 +120,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.png"
                         alt="Service 2"
-                        className="w-[150%] h-auto min-w-[300px] rounded-2xl shadow-2xl"
+                        className="w-[150%] h-auto min-w-[300px] rounded-2xl"
                       />
                     </motion.div>
                   </div>
