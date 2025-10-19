@@ -204,12 +204,13 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                   }
                   
                   if (imageSrc) {
+                    const isERP = selectedCategory.title === "Enterprise Resource Planning (ERP)";
                     return (
                       <div className="w-full flex items-center justify-center px-8">
                         <img
                           src={imageSrc}
                           alt={altText}
-                          className="w-full h-auto object-contain"
+                          className={`w-full h-auto object-contain ${isERP ? 'rounded-3xl' : ''}`}
                         />
                       </div>
                     );
