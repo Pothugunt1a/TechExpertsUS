@@ -23,9 +23,16 @@ export function ClientsScrollingCarousel() {
   const logoWidth = 170 + 32; // width + gap
 
   useEffect(() => {
+    let isMounted = true;
+
     const animate = async () => {
-      while (true) {
+      // Wait for next tick to ensure component is mounted
+      await new Promise(resolve => setTimeout(resolve, 0));
+      
+      while (isMounted) {
         for (let i = 0; i < clients.length; i++) {
+          if (!isMounted) break;
+          
           // Move to next logo
           await controls.start({
             x: -i * logoWidth,
@@ -38,14 +45,20 @@ export function ClientsScrollingCarousel() {
           await new Promise(resolve => setTimeout(resolve, 2000));
         }
         // Reset to start
-        await controls.start({
-          x: 0,
-          transition: { duration: 0 }
-        });
+        if (isMounted) {
+          await controls.start({
+            x: 0,
+            transition: { duration: 0 }
+          });
+        }
       }
     };
 
     animate();
+
+    return () => {
+      isMounted = false;
+    };
   }, [controls, logoWidth]);
 
   return (
