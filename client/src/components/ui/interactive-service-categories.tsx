@@ -175,21 +175,53 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                 className="relative z-10 w-full max-w-lg"
                 data-testid={`visual-display-${selectedIndex}`}
               >
-                {/* Visual Content - Image for SaaS or SVG for others */}
-                {selectedCategory.title === "Software as a Service (SaaS)" ? (
-                  <div className="w-full flex items-center justify-center px-8">
-                    <img
-                      src={theme === "dark" ? "/assets/Saas.png" : "/assets/Saas1.png"}
-                      alt="Software as a Service"
-                      className="w-full h-auto object-contain"
+                {/* Visual Content - Image for specific services or SVG for others */}
+                {(() => {
+                  let imageSrc = "";
+                  let altText = "";
+                  
+                  switch (selectedCategory.title) {
+                    case "Software as a Service (SaaS)":
+                      imageSrc = theme === "dark" ? "/assets/Saas.png" : "/assets/Saas1.png";
+                      altText = "Software as a Service";
+                      break;
+                    case "Application Service Providers (ASP)":
+                      imageSrc = "/assets/ASP.png";
+                      altText = "Application Service Providers";
+                      break;
+                    case "Virtualization":
+                      imageSrc = "/assets/Virtualization.png";
+                      altText = "Virtualization";
+                      break;
+                    case "Cloud Computing":
+                      imageSrc = "/assets/CloudComputing.gif";
+                      altText = "Cloud Computing";
+                      break;
+                    case "Enterprise Resource Planning (ERP)":
+                      imageSrc = "/assets/ERP.gif";
+                      altText = "Enterprise Resource Planning";
+                      break;
+                  }
+                  
+                  if (imageSrc) {
+                    return (
+                      <div className="w-full flex items-center justify-center px-8">
+                        <img
+                          src={imageSrc}
+                          alt={altText}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    );
+                  }
+                  
+                  return (
+                    <div 
+                      className="w-full flex items-center justify-center px-8"
+                      dangerouslySetInnerHTML={{ __html: selectedCategory.visual }}
                     />
-                  </div>
-                ) : (
-                  <div 
-                    className="w-full flex items-center justify-center px-8"
-                    dangerouslySetInnerHTML={{ __html: selectedCategory.visual }}
-                  />
-                )}
+                  );
+                })()}
                 
                 {/* Category label at bottom */}
                 <motion.div
