@@ -185,66 +185,6 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                 </svg>
               </div>
 
-              {/* Geometric Corner Decorations - Top Left */}
-              <div className="absolute top-0 left-0 w-40 h-40 opacity-20 pointer-events-none">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  {/* Diagonal lines pattern */}
-                  {[...Array(15)].map((_, i) => (
-                    <line
-                      key={`tl-${i}`}
-                      x1={i * 15}
-                      y1="0"
-                      x2="0"
-                      y2={i * 15}
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      className="text-primary"
-                    />
-                  ))}
-                  {/* Concentric corner lines */}
-                  {[...Array(8)].map((_, i) => (
-                    <path
-                      key={`corner-tl-${i}`}
-                      d={`M ${i * 20} 0 L 0 ${i * 20}`}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      className="text-primary/60"
-                    />
-                  ))}
-                </svg>
-              </div>
-
-              {/* Geometric Corner Decorations - Bottom Right */}
-              <div className="absolute bottom-0 right-0 w-40 h-40 opacity-20 pointer-events-none">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  {/* Diagonal lines pattern */}
-                  {[...Array(15)].map((_, i) => (
-                    <line
-                      key={`br-${i}`}
-                      x1={200 - i * 15}
-                      y1="200"
-                      x2="200"
-                      y2={200 - i * 15}
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      className="text-primary"
-                    />
-                  ))}
-                  {/* Concentric corner lines */}
-                  {[...Array(8)].map((_, i) => (
-                    <path
-                      key={`corner-br-${i}`}
-                      d={`M ${200 - i * 20} 200 L 200 ${200 - i * 20}`}
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      className="text-primary/60"
-                    />
-                  ))}
-                </svg>
-              </div>
-
               <AnimatePresence mode="wait">
                 <motion.div
                   key={selectedIndex}
