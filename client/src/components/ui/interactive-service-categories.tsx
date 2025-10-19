@@ -166,119 +166,207 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
         >
           {/* Visual Container - No Card Styling */}
           <div className="relative w-full h-full flex items-center justify-center">
-            {/* Top Right 3D Corner Border */}
+            {/* Top Right 3D Corner Border - Enhanced */}
             <motion.div 
-              className="absolute top-0 right-0 w-40 h-40 pointer-events-none z-20"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+              className="absolute top-0 right-0 w-48 h-48 pointer-events-none z-20"
+              initial={{ opacity: 0, scale: 0.8, rotateZ: -15 }}
+              animate={{ opacity: 1, scale: 1, rotateZ: 0 }}
+              transition={{ delay: 0.3, duration: 1, type: "spring", stiffness: 100 }}
             >
-              {/* Layer 1 - Main border with 3D transform */}
+              {/* Corner Accent Square */}
+              <motion.div
+                className="absolute top-0 right-0 w-3 h-3 bg-gradient-to-br from-primary to-chart-2 rounded-sm"
+                animate={{ 
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 90, 0],
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                style={{ transform: "translateZ(20px)" }}
+              />
+              
+              {/* Main Border - Thick Professional */}
               <motion.div
                 className="absolute top-0 right-0 w-full h-full"
                 style={{ transformStyle: "preserve-3d" }}
                 animate={{ 
-                  rotateX: [0, 5, 0],
-                  rotateY: [0, -5, 0],
+                  rotateX: [0, 8, 0],
+                  rotateY: [0, -8, 0],
                 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
               >
-                <div className="absolute top-0 right-0 w-full h-1.5 bg-gradient-to-l from-foreground/70 via-foreground/40 to-transparent shadow-lg" 
-                     style={{ 
-                       transform: "translateZ(10px)",
-                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
-                     }}></div>
-                <div className="absolute top-0 right-0 w-1.5 h-full bg-gradient-to-b from-foreground/70 via-foreground/40 to-transparent shadow-lg"
-                     style={{ 
-                       transform: "translateZ(10px)",
-                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
-                     }}></div>
+                <motion.div 
+                  className="absolute top-0 right-0 w-full h-2 bg-gradient-to-l from-primary via-chart-2 to-transparent"
+                  style={{ 
+                    transform: "translateZ(15px)",
+                    boxShadow: "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
+                  }}
+                  animate={{
+                    boxShadow: [
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
+                      "0 0 40px rgba(59, 130, 246, 0.8), 0 0 80px rgba(59, 130, 246, 0.5)",
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.div 
+                  className="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-primary via-chart-2 to-transparent"
+                  style={{ 
+                    transform: "translateZ(15px)",
+                    boxShadow: "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
+                  }}
+                  animate={{
+                    boxShadow: [
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
+                      "0 0 40px rgba(59, 130, 246, 0.8), 0 0 80px rgba(59, 130, 246, 0.5)",
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
               </motion.div>
               
-              {/* Layer 2 - Depth layer */}
+              {/* Inner Accent Line */}
               <motion.div
-                className="absolute top-1 right-1 w-full h-full opacity-50"
-                style={{ transformStyle: "preserve-3d" }}
-                animate={{ 
-                  rotateX: [0, -3, 0],
-                  rotateY: [0, 3, 0],
-                }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-              >
-                <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-primary/60 to-transparent"
-                     style={{ transform: "translateZ(5px)" }}></div>
-                <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-primary/60 to-transparent"
-                     style={{ transform: "translateZ(5px)" }}></div>
-              </motion.div>
-              
-              {/* Layer 3 - Glow effect */}
-              <motion.div
-                className="absolute -top-2 -right-2 w-16 h-16"
-                animate={{ 
-                  opacity: [0.3, 0.6, 0.3],
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="w-full h-full bg-gradient-to-br from-primary/40 to-chart-2/40 blur-xl rounded-full"></div>
-              </motion.div>
-            </motion.div>
-            
-            {/* Bottom Left 3D Corner Border */}
-            <motion.div 
-              className="absolute bottom-0 left-0 w-40 h-40 pointer-events-none z-20"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              {/* Layer 1 - Main border with 3D transform */}
-              <motion.div
-                className="absolute bottom-0 left-0 w-full h-full"
+                className="absolute top-3 right-3 w-full h-full opacity-70"
                 style={{ transformStyle: "preserve-3d" }}
                 animate={{ 
                   rotateX: [0, -5, 0],
                   rotateY: [0, 5, 0],
                 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95], delay: 0.5 }}
               >
-                <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent shadow-lg"
-                     style={{ 
-                       transform: "translateZ(10px)",
-                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
-                     }}></div>
-                <div className="absolute bottom-0 left-0 w-1.5 h-full bg-gradient-to-t from-foreground/70 via-foreground/40 to-transparent shadow-lg"
-                     style={{ 
-                       transform: "translateZ(10px)",
-                       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
-                     }}></div>
+                <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-white/80 via-primary/60 to-transparent"
+                     style={{ transform: "translateZ(8px)" }}></div>
+                <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-white/80 via-primary/60 to-transparent"
+                     style={{ transform: "translateZ(8px)" }}></div>
               </motion.div>
               
-              {/* Layer 2 - Depth layer */}
+              {/* Animated Glow Orb */}
               <motion.div
-                className="absolute bottom-1 left-1 w-full h-full opacity-50"
+                className="absolute -top-4 -right-4 w-24 h-24"
+                animate={{ 
+                  opacity: [0.4, 0.8, 0.4],
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              >
+                <div className="w-full h-full bg-gradient-to-br from-primary/50 via-chart-2/50 to-transparent blur-2xl rounded-full"></div>
+              </motion.div>
+              
+              {/* Particle Trail Effect */}
+              <motion.div
+                className="absolute top-0 right-0"
+                animate={{ 
+                  x: [0, -100],
+                  opacity: [0, 1, 0]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeOut", repeatDelay: 1 }}
+              >
+                <div className="w-1 h-1 bg-primary rounded-full blur-sm"></div>
+              </motion.div>
+            </motion.div>
+            
+            {/* Bottom Left 3D Corner Border - Enhanced */}
+            <motion.div 
+              className="absolute bottom-0 left-0 w-48 h-48 pointer-events-none z-20"
+              initial={{ opacity: 0, scale: 0.8, rotateZ: 15 }}
+              animate={{ opacity: 1, scale: 1, rotateZ: 0 }}
+              transition={{ delay: 0.3, duration: 1, type: "spring", stiffness: 100 }}
+            >
+              {/* Corner Accent Square */}
+              <motion.div
+                className="absolute bottom-0 left-0 w-3 h-3 bg-gradient-to-tl from-chart-2 to-primary rounded-sm"
+                animate={{ 
+                  scale: [1, 1.3, 1],
+                  rotate: [0, -90, 0],
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                style={{ transform: "translateZ(20px)" }}
+              />
+              
+              {/* Main Border - Thick Professional */}
+              <motion.div
+                className="absolute bottom-0 left-0 w-full h-full"
                 style={{ transformStyle: "preserve-3d" }}
                 animate={{ 
-                  rotateX: [0, 3, 0],
-                  rotateY: [0, -3, 0],
+                  rotateX: [0, -8, 0],
+                  rotateY: [0, 8, 0],
                 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
               >
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-chart-2/60 to-transparent"
-                     style={{ transform: "translateZ(5px)" }}></div>
-                <div className="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-chart-2/60 to-transparent"
-                     style={{ transform: "translateZ(5px)" }}></div>
+                <motion.div 
+                  className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-chart-2 via-primary to-transparent"
+                  style={{ 
+                    transform: "translateZ(15px)",
+                    boxShadow: "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
+                  }}
+                  animate={{
+                    boxShadow: [
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
+                      "0 0 40px rgba(147, 51, 234, 0.8), 0 0 80px rgba(147, 51, 234, 0.5)",
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.div 
+                  className="absolute bottom-0 left-0 w-2 h-full bg-gradient-to-t from-chart-2 via-primary to-transparent"
+                  style={{ 
+                    transform: "translateZ(15px)",
+                    boxShadow: "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
+                  }}
+                  animate={{
+                    boxShadow: [
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
+                      "0 0 40px rgba(147, 51, 234, 0.8), 0 0 80px rgba(147, 51, 234, 0.5)",
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
               </motion.div>
               
-              {/* Layer 3 - Glow effect */}
+              {/* Inner Accent Line */}
               <motion.div
-                className="absolute -bottom-2 -left-2 w-16 h-16"
+                className="absolute bottom-3 left-3 w-full h-full opacity-70"
+                style={{ transformStyle: "preserve-3d" }}
                 animate={{ 
-                  opacity: [0.3, 0.6, 0.3],
-                  scale: [1, 1.1, 1]
+                  rotateX: [0, 5, 0],
+                  rotateY: [0, -5, 0],
                 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95], delay: 0.5 }}
               >
-                <div className="w-full h-full bg-gradient-to-tl from-chart-2/40 to-primary/40 blur-xl rounded-full"></div>
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-white/80 via-chart-2/60 to-transparent"
+                     style={{ transform: "translateZ(8px)" }}></div>
+                <div className="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-white/80 via-chart-2/60 to-transparent"
+                     style={{ transform: "translateZ(8px)" }}></div>
+              </motion.div>
+              
+              {/* Animated Glow Orb */}
+              <motion.div
+                className="absolute -bottom-4 -left-4 w-24 h-24"
+                animate={{ 
+                  opacity: [0.4, 0.8, 0.4],
+                  scale: [1, 1.2, 1],
+                  rotate: [0, -180, -360]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              >
+                <div className="w-full h-full bg-gradient-to-tl from-chart-2/50 via-primary/50 to-transparent blur-2xl rounded-full"></div>
+              </motion.div>
+              
+              {/* Particle Trail Effect */}
+              <motion.div
+                className="absolute bottom-0 left-0"
+                animate={{ 
+                  x: [0, 100],
+                  opacity: [0, 1, 0]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeOut", repeatDelay: 1 }}
+              >
+                <div className="w-1 h-1 bg-chart-2 rounded-full blur-sm"></div>
               </motion.div>
             </motion.div>
             <AnimatePresence mode="wait">
