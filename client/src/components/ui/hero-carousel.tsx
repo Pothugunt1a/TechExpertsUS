@@ -108,7 +108,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.1.png"
                         alt="Service 1"
-                        className="w-full h-auto rounded-2xl shadow-2xl"
+                        className="w-full h-auto min-h-[110%] rounded-2xl shadow-2xl"
                       />
                     </motion.div>
                     <motion.div
@@ -120,7 +120,7 @@ export function HeroCarousel() {
                       <img
                         src="/assets/Home2.png"
                         alt="Service 2"
-                        className="w-full h-auto rounded-2xl shadow-2xl"
+                        className="w-full h-auto min-h-[110%] rounded-2xl shadow-2xl"
                       />
                     </motion.div>
                   </div>
