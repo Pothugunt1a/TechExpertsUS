@@ -207,11 +207,11 @@ export function HeroCarousel() {
       </AnimatePresence>
 
       {/* Bottom Banner Border */}
-      <div className="absolute bottom-0 left-0 w-full h-16 z-10">
+      <div className="absolute bottom-0 left-0 w-full z-10">
         <img 
           src="/assets/Home-border.png" 
           alt="Banner Border" 
-          className="w-full h-full object-cover object-bottom"
+          className="w-full h-auto object-cover"
         />
       </div>
 
