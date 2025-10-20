@@ -206,20 +206,8 @@ export function HeroCarousel() {
         )}
       </AnimatePresence>
 
-      {/* Bottom border image - 4 repeating images seamlessly joined */}
-      <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 left-0 right-0 z-10 flex">
-        {[1, 2, 3, 4].map((index) => (
-          <img
-            key={index}
-            src="/assets/Home-border.png"
-            alt="Decorative border"
-            className="w-1/4 h-12 sm:h-16 md:h-20 object-fill block"
-          />
-        ))}
-      </div>
-
       {/* Slide indicators */}
-      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
         {[0, 1, 2].map((index) => (
           <button
             key={index}
