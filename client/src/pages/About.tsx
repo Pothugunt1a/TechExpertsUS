@@ -37,9 +37,9 @@ export default function About() {
         
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
         
-        {/* Floating GIF Images */}
+        {/* Floating Professional Images */}
         <motion.div
-          className="absolute top-20 left-10 w-24 h-24 md:w-32 md:h-32 opacity-70"
+          className="absolute top-20 left-10 w-24 h-24 md:w-32 md:h-32 opacity-70 rounded-lg overflow-hidden shadow-lg"
           animate={{
             y: [0, -30, 0],
             rotate: [0, 10, -10, 0],
@@ -50,11 +50,11 @@ export default function About() {
             ease: "easeInOut",
           }}
         >
-          <img src="/assets/CloudComputing.gif" alt="Cloud Computing" className="w-full h-full object-contain" />
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop" alt="Cloud Computing" className="w-full h-full object-cover" />
         </motion.div>
 
         <motion.div
-          className="absolute top-32 right-16 w-20 h-20 md:w-28 md:h-28 opacity-60"
+          className="absolute top-32 right-16 w-20 h-20 md:w-28 md:h-28 opacity-60 rounded-lg overflow-hidden shadow-lg"
           animate={{
             y: [0, 25, 0],
             rotate: [0, -15, 0],
@@ -67,11 +67,11 @@ export default function About() {
             delay: 1,
           }}
         >
-          <img src="/assets/CRM.gif" alt="CRM" className="w-full h-full object-contain" />
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop" alt="Data Analytics" className="w-full h-full object-cover" />
         </motion.div>
 
         <motion.div
-          className="absolute bottom-24 left-20 w-28 h-28 md:w-36 md:h-36 opacity-50"
+          className="absolute bottom-24 left-20 w-28 h-28 md:w-36 md:h-36 opacity-50 rounded-lg overflow-hidden shadow-lg"
           animate={{
             y: [0, -20, 0],
             x: [0, 15, 0],
@@ -84,11 +84,11 @@ export default function About() {
             delay: 2,
           }}
         >
-          <img src="/assets/ERP.gif" alt="ERP" className="w-full h-full object-contain" />
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop" alt="Technology" className="w-full h-full object-cover" />
         </motion.div>
 
         <motion.div
-          className="absolute bottom-32 right-24 w-22 h-22 md:w-30 md:h-30 opacity-65"
+          className="absolute bottom-32 right-24 w-22 h-22 md:w-30 md:h-30 opacity-65 rounded-lg overflow-hidden shadow-lg"
           animate={{
             y: [0, 35, 0],
             rotate: [0, -10, 10, 0],
@@ -101,11 +101,11 @@ export default function About() {
             delay: 0.5,
           }}
         >
-          <img src="/assets/Iaas.gif" alt="IaaS" className="w-full h-full object-contain" />
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=400&fit=crop" alt="Infrastructure" className="w-full h-full object-cover" />
         </motion.div>
 
         <motion.div
-          className="absolute top-1/2 left-8 w-20 h-20 md:w-26 md:h-26 opacity-55"
+          className="absolute top-1/2 left-8 w-20 h-20 md:w-26 md:h-26 opacity-55 rounded-lg overflow-hidden shadow-lg"
           animate={{
             y: [0, -25, 0],
             x: [0, 10, 0],
@@ -117,7 +117,7 @@ export default function About() {
             delay: 1.5,
           }}
         >
-          <img src="/assets/Contact.gif" alt="Contact" className="w-full h-full object-contain" />
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=400&fit=crop" alt="Business Technology" className="w-full h-full object-cover" />
         </motion.div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
