@@ -109,12 +109,12 @@ export default function Contact() {
         <ParticleBackground />
 
         {/* Centered Text Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center" style={{ height: '85vh' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center flex flex-col items-center justify-center"
+            className="text-center flex flex-col items-center justify-center w-full"
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
               Get In Touch
