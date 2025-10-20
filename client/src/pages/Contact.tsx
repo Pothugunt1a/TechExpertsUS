@@ -96,13 +96,11 @@ export default function Contact() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <ParticleBackground />
-        
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <img
             src="/assets/Contact.png"
             alt="Contact Animation"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -112,13 +110,13 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
               Get In{" "}
               <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto drop-shadow-lg">
               Contact Us
             </p>
           </motion.div>
