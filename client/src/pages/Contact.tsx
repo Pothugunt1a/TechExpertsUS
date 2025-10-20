@@ -119,8 +119,11 @@ export default function Contact() {
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
               Get In Touch
             </h1>
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-2">
+              We'd love to hear from you.
+            </p>
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
-              We'd love to hear from you. Reach out to us and let's start a conversation.
+              Reach out to us and let's start a conversation.
             </p>
           </motion.div>
         </div>
