@@ -79,8 +79,12 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Carousel Section */}
-      <section ref={heroRef} className="relative">
-        <HeroCarousel />
+      <section ref={heroRef} className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <ParticleBackground />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+        <div className="relative z-10">
+          <HeroCarousel />
+        </div>
       </section>
 
       {/* Features Section */}
