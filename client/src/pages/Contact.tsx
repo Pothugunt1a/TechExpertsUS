@@ -94,44 +94,38 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Contact Banner */}
+      {/* Hero Section with Contact Banner Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/Contact.png"
+            alt="Contact Banner"
+            className="w-full h-full object-contain object-center"
+          />
+        </div>
+
+        {/* Particle Background Overlay */}
         <ParticleBackground />
 
+        {/* Centered Text Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Contact Banner Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <img
-                src="/assets/Contact.png"
-                alt="Contact Banner"
-                className="w-full h-auto"
-              />
-            </motion.div>
-
-            {/* Right side - Get In Touch Text */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center lg:text-left"
-            >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-                Get In{" "}
-                <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                  Touch
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                We'd love to hear from you. Reach out to us and let's start a conversation.
-              </p>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+              Get In{" "}
+              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                Touch
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              We'd love to hear from you. Reach out to us and let's start a conversation.
+            </p>
+          </motion.div>
         </div>
       </section>
 
