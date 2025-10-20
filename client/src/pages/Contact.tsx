@@ -96,6 +96,8 @@ export default function Contact() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <ParticleBackground />
+        
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/Contact.png"
