@@ -40,22 +40,33 @@ const solutions = [
 export default function ICS() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section - Full Screen Banner */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(/assets/Infrastructure-banner.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+
+        {/* Particle Background Overlay */}
         <ParticleBackground />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
+
+        {/* Centered Text Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center" style={{ height: '85vh' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center flex flex-col items-center justify-center w-full"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Infrastructure <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Consulting Services</span>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+              Infrastructure Consulting Services
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
               We Are Professional
             </p>
           </motion.div>
