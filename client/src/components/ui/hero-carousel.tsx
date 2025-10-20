@@ -223,11 +223,11 @@ export function HeroCarousel() {
       </div>
 
       {/* Bottom border image */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-16 md:h-20 overflow-visible">
+      <div className="absolute bottom-0 left-0 right-0 z-10">
         <img
           src="/assets/Home-border.png"
           alt="Decorative border"
-          className="w-full h-full object-fill"
+          className="w-full h-auto"
         />
       </div>
     </div>
