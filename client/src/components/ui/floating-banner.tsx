@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, Megaphone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -40,11 +40,12 @@ export function FloatingBanner({ message, link }: FloatingBannerProps) {
               
               <div className="relative flex items-center justify-between gap-4 px-6 py-3">
                 <div className="flex items-center gap-3 flex-1">
-                  <img 
-                    src="/assets/Contact.png" 
-                    alt="Contact Banner" 
-                    className="w-8 h-8 object-contain"
-                  />
+                  <motion.div
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    <Megaphone className="w-5 h-5 text-white dark:text-white" />
+                  </motion.div>
                   <p className="text-sm md:text-base font-medium text-white dark:text-white">
                     {message}
                   </p>
