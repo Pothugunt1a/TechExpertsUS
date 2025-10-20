@@ -227,7 +227,7 @@ export function HeroCarousel() {
         <img
           src="/assets/Home-border.png"
           alt="Decorative border"
-          className="w-full h-12 object-cover object-center"
+          className="w-full h-auto"
         />
       </div>
     </div>
