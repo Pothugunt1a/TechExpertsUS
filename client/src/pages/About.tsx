@@ -37,6 +37,89 @@ export default function About() {
         
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
         
+        {/* Floating GIF Images */}
+        <motion.div
+          className="absolute top-20 left-10 w-24 h-24 md:w-32 md:h-32 opacity-70"
+          animate={{
+            y: [0, -30, 0],
+            rotate: [0, 10, -10, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <img src="/assets/CloudComputing.gif" alt="Cloud Computing" className="w-full h-full object-contain" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-32 right-16 w-20 h-20 md:w-28 md:h-28 opacity-60"
+          animate={{
+            y: [0, 25, 0],
+            rotate: [0, -15, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        >
+          <img src="/assets/CRM.gif" alt="CRM" className="w-full h-full object-contain" />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-24 left-20 w-28 h-28 md:w-36 md:h-36 opacity-50"
+          animate={{
+            y: [0, -20, 0],
+            x: [0, 15, 0],
+            rotate: [0, 20, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        >
+          <img src="/assets/ERP.gif" alt="ERP" className="w-full h-full object-contain" />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-32 right-24 w-22 h-22 md:w-30 md:h-30 opacity-65"
+          animate={{
+            y: [0, 35, 0],
+            rotate: [0, -10, 10, 0],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 5.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5,
+          }}
+        >
+          <img src="/assets/Iaas.gif" alt="IaaS" className="w-full h-full object-contain" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 left-8 w-20 h-20 md:w-26 md:h-26 opacity-55"
+          animate={{
+            y: [0, -25, 0],
+            x: [0, 10, 0],
+          }}
+          transition={{
+            duration: 6.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.5,
+          }}
+        >
+          <img src="/assets/Contact.gif" alt="Contact" className="w-full h-full object-contain" />
+        </motion.div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
