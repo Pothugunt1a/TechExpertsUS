@@ -97,31 +97,163 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <ParticleBackground />
-        
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/Contact.png"
-            alt="Contact Animation"
-            className="w-full h-full object-cover"
-          />
-        </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
-              Get In{" "}
-              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                Touch
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto drop-shadow-lg">
-              Contact Us
-            </p>
-          </motion.div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Animated Contact Images */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="grid grid-cols-2 gap-6">
+                {/* Email Icon */}
+                <motion.div
+                  animate={{
+                    y: [0, -20, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="flex items-center justify-center"
+                >
+                  <div className="relative">
+                    <motion.div
+                      className="absolute inset-0 bg-primary/20 rounded-full blur-2xl"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.6, 0.3]
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                      }}
+                    />
+                    <div className="relative w-32 h-32 bg-gradient-to-br from-primary/20 to-chart-2/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-primary/20">
+                      <Mail className="w-16 h-16 text-primary" />
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Phone Icon */}
+                <motion.div
+                  animate={{
+                    y: [0, 20, 0],
+                  }}
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                  className="flex items-center justify-center"
+                >
+                  <div className="relative">
+                    <motion.div
+                      className="absolute inset-0 bg-chart-2/20 rounded-full blur-2xl"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.6, 0.3]
+                      }}
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
+                        delay: 0.5
+                      }}
+                    />
+                    <div className="relative w-32 h-32 bg-gradient-to-br from-chart-2/20 to-chart-3/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-chart-2/20">
+                      <Phone className="w-16 h-16 text-chart-2" />
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Location Icon */}
+                <motion.div
+                  animate={{
+                    y: [0, 15, 0],
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                  className="flex items-center justify-center"
+                >
+                  <div className="relative">
+                    <motion.div
+                      className="absolute inset-0 bg-chart-3/20 rounded-full blur-2xl"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.6, 0.3]
+                      }}
+                      transition={{
+                        duration: 2.2,
+                        repeat: Infinity,
+                        delay: 1
+                      }}
+                    />
+                    <div className="relative w-32 h-32 bg-gradient-to-br from-chart-3/20 to-chart-4/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-chart-3/20">
+                      <MapPin className="w-16 h-16 text-chart-3" />
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Message Icon */}
+                <motion.div
+                  animate={{
+                    y: [0, -15, 0],
+                  }}
+                  transition={{
+                    duration: 2.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.5
+                  }}
+                  className="flex items-center justify-center"
+                >
+                  <div className="relative">
+                    <motion.div
+                      className="absolute inset-0 bg-primary/20 rounded-full blur-2xl"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.6, 0.3]
+                      }}
+                      transition={{
+                        duration: 2.8,
+                        repeat: Infinity,
+                        delay: 1.5
+                      }}
+                    />
+                    <div className="relative w-32 h-32 bg-gradient-to-br from-primary/20 to-chart-2/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-primary/20">
+                      <Mail className="w-16 h-16 text-primary" />
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Right side - Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left"
+            >
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+                Get In{" "}
+                <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  Touch
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+                We'd love to hear from you. Reach out to us and let's start a conversation.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
