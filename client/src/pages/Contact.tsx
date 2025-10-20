@@ -98,31 +98,15 @@ export default function Contact() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <motion.div 
-          className="absolute inset-0 z-0 flex items-center justify-center"
-          initial={{ scale: 0, opacity: 0, rotate: -180 }}
-          animate={{ 
-            scale: 1, 
-            opacity: 1, 
-            rotate: 0,
-          }}
-          transition={{ 
-            duration: 1.5, 
-            ease: [0.34, 1.56, 0.64, 1],
-            scale: {
-              type: "spring",
-              damping: 10,
-              stiffness: 50,
-              restDelta: 0.001
-            }
-          }}
+          className="absolute inset-0 z-0"
+          initial={{ x: '100%', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <motion.img
+          <img
             src="/assets/Contact.png"
             alt="Contact Banner"
             className="w-full h-full object-contain object-center"
-            initial={{ filter: "brightness(0.5) blur(10px)" }}
-            animate={{ filter: "brightness(1) blur(0px)" }}
-            transition={{ duration: 1.5, delay: 0.3 }}
           />
         </motion.div>
 
