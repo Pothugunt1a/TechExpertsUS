@@ -14,7 +14,51 @@ export function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background via-primary/5 to-chart-2/10">
+      {/* Animated Background Orbs */}
+      <motion.div
+        className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-chart-2/30 rounded-full blur-3xl"
+        animate={{
+          x: [0, 100, -50, 0],
+          y: [0, -100, 50, 0],
+          scale: [1, 1.2, 0.8, 1],
+          opacity: [0.3, 0.5, 0.4, 0.3],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-chart-2/30 to-primary/30 rounded-full blur-3xl"
+        animate={{
+          x: [0, -80, 100, 0],
+          y: [0, 80, -80, 0],
+          scale: [1, 0.9, 1.3, 1],
+          opacity: [0.4, 0.3, 0.5, 0.4],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-br from-primary/20 to-chart-2/20 rounded-full blur-3xl"
+        animate={{
+          x: [-200, 200, -100, -200],
+          y: [-200, -100, 200, -200],
+          scale: [1, 1.1, 0.9, 1],
+          opacity: [0.2, 0.4, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      
       <AnimatePresence mode="wait">
         {currentSlide === 0 && (
           <motion.div
@@ -23,9 +67,9 @@ export function HeroCarousel() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute inset-0 flex items-center justify-center backdrop-blur-[1px]"
           >
-            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full relative z-10">
               <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
                 {/* Left side - Text from top */}
                 <motion.div
@@ -67,9 +111,9 @@ export function HeroCarousel() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute inset-0 flex items-center justify-center backdrop-blur-[1px]"
           >
-            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full relative z-10">
               <div className="flex flex-row gap-2 sm:gap-4 lg:gap-8 items-center">
                 {/* Left side - Animated boxes (1/3 width) */}
                 <div className="w-1/3 space-y-1 sm:space-y-2 lg:space-y-3">
