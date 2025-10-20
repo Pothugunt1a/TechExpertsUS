@@ -97,13 +97,18 @@ export default function Contact() {
       {/* Hero Section with Contact Banner Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <motion.div 
+          className="absolute inset-0 z-0"
+          initial={{ x: '100%', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <img
             src="/assets/Contact.png"
             alt="Contact Banner"
             className="w-full h-full object-contain object-center"
           />
-        </div>
+        </motion.div>
 
         {/* Particle Background Overlay */}
         <ParticleBackground />
