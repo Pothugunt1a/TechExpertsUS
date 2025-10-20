@@ -19,9 +19,7 @@ export function HeroCarousel() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url(/assets/About.png)" }}
-      >
-        <div className="absolute inset-0 bg-background/20" />
-      </div>
+      />
 
       {/* Particle Background */}
       <ParticleBackground />
