@@ -18,7 +18,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { FloatingBanner } from "@/components/ui/floating-banner";
 import worldMapImage from "@assets/world-map.png";
 
 const locations = [
@@ -95,10 +94,19 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen">
-      {/* Contact Banner */}
-      <FloatingBanner 
-        message="📞 Have questions? Our team is ready to help you 24/7!"
-      />
+      {/* Contact Banner Image */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full"
+      >
+        <img
+          src="/assets/Contact.png"
+          alt="Contact Banner"
+          className="w-full h-auto object-cover"
+        />
+      </motion.div>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

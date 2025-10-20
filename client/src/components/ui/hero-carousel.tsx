@@ -100,34 +100,20 @@ export function HeroCarousel() {
                   ))}
                 </div>
 
-                {/* Right side - Two images centered (2/3 width) */}
+                {/* Right side - Single image centered (2/3 width) */}
                 <div className="w-2/3 flex items-center justify-center">
-                  <div className="grid grid-cols-2 gap-2 sm:gap-4 lg:gap-8 w-full max-w-5xl">
-                    <motion.div
-                      initial={{ scale: 0, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.3 }}
-                      className="flex items-center justify-center"
-                    >
-                      <img
-                        src="/assets/Home2.1.png"
-                        alt="Service 1"
-                        className="w-[150%] h-auto min-w-[120px] sm:min-w-[200px] lg:min-w-[300px] rounded-lg sm:rounded-xl lg:rounded-2xl"
-                      />
-                    </motion.div>
-                    <motion.div
-                      initial={{ scale: 0, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.5 }}
-                      className="flex items-center justify-center"
-                    >
-                      <img
-                        src="/assets/Home2.png"
-                        alt="Service 2"
-                        className="w-[150%] h-auto min-w-[120px] sm:min-w-[200px] lg:min-w-[300px] rounded-lg sm:rounded-xl lg:rounded-2xl"
-                      />
-                    </motion.div>
-                  </div>
+                  <motion.div
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="flex items-center justify-center max-w-3xl"
+                  >
+                    <img
+                      src="/assets/Home2.png"
+                      alt="Services"
+                      className="w-full h-auto rounded-lg sm:rounded-xl lg:rounded-2xl"
+                    />
+                  </motion.div>
                 </div>
               </div>
             </div>
