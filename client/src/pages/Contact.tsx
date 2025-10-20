@@ -101,7 +101,7 @@ export default function Contact() {
           className="absolute inset-0 z-0"
           initial={{ x: '100%', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <img
             src="/assets/Contact.png"
@@ -118,7 +118,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-center flex flex-col items-center justify-center w-full"
             style={{ marginTop: '-6px' }}
           >
