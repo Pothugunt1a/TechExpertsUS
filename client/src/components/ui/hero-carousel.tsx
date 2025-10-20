@@ -16,6 +16,14 @@ export function HeroCarousel() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/assets/About.png)' }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+      </div>
+      
       {/* Particle Background */}
       <ParticleBackground />
       
