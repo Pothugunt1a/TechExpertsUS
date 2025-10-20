@@ -19,50 +19,6 @@ export function HeroCarousel() {
       {/* Particle Background */}
       <ParticleBackground />
       
-      {/* Animated Background Orbs */}
-      <motion.div
-        className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-chart-2/20 rounded-full blur-3xl"
-        animate={{
-          x: [0, 100, -50, 0],
-          y: [0, -100, 50, 0],
-          scale: [1, 1.2, 0.8, 1],
-          opacity: [0.2, 0.3, 0.2, 0.2],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-chart-2/20 to-primary/20 rounded-full blur-3xl"
-        animate={{
-          x: [0, -80, 100, 0],
-          y: [0, 80, -80, 0],
-          scale: [1, 0.9, 1.3, 1],
-          opacity: [0.2, 0.2, 0.3, 0.2],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-br from-primary/15 to-chart-2/15 rounded-full blur-3xl"
-        animate={{
-          x: [-200, 200, -100, -200],
-          y: [-200, -100, 200, -200],
-          scale: [1, 1.1, 0.9, 1],
-          opacity: [0.15, 0.25, 0.2, 0.15],
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      
       <AnimatePresence mode="wait">
         {currentSlide === 0 && (
           <motion.div
