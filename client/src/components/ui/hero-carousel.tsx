@@ -221,6 +221,15 @@ export function HeroCarousel() {
           />
         ))}
       </div>
+
+      {/* Bottom border image */}
+      <div className="absolute bottom-0 left-0 right-0 z-10">
+        <img
+          src="/assets/Home-border.png"
+          alt="Decorative border"
+          className="w-full h-12 object-cover object-center"
+        />
+      </div>
     </div>
   );
 }
