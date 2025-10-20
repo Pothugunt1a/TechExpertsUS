@@ -382,6 +382,12 @@ export default function Home() {
 
       {/* Core Values Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
+        {/* Bottom Banner Border Background */}
+        <div 
+          className="absolute bottom-0 left-0 w-full h-32 bg-cover bg-bottom bg-no-repeat opacity-30"
+          style={{ backgroundImage: 'url(/assets/Home-border.png)' }}
+        />
+        
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
