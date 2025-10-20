@@ -1,4 +1,3 @@
-
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ParticleBackground } from "./particle-background";
@@ -17,16 +16,16 @@ export function HeroCarousel() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/assets/About.png)' }}
+        style={{ backgroundImage: "url(/assets/About.png)" }}
       >
-        <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/20" />
       </div>
-      
+
       {/* Particle Background */}
       <ParticleBackground />
-      
+
       <AnimatePresence mode="wait">
         {currentSlide === 0 && (
           <motion.div
@@ -91,7 +90,7 @@ export function HeroCarousel() {
                     "Mobile apps & device management",
                     "Project management",
                     "Database administration",
-                    "Data Analytics"
+                    "Data Analytics",
                   ].map((item, index) => (
                     <motion.div
                       key={item}
