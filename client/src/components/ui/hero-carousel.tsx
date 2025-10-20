@@ -222,13 +222,16 @@ export function HeroCarousel() {
         ))}
       </div>
 
-      {/* Bottom border image */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <img
-          src="/assets/Home-border.png"
-          alt="Decorative border"
-          className="w-full h-auto"
-        />
+      {/* Bottom border image - 4 repeating images */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 flex">
+        {[1, 2, 3, 4].map((index) => (
+          <img
+            key={index}
+            src="/assets/Home-border.png"
+            alt="Decorative border"
+            className="w-1/4 h-12 sm:h-16 md:h-20 object-cover"
+          />
+        ))}
       </div>
     </div>
   );
