@@ -158,13 +158,9 @@ export default function About() {
                   <Heart className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">Our Values</h3>
-                <div className="flex flex-wrap gap-2">
-                  {values.slice(0, 4).map((value) => (
-                    <span key={value.title} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                      {value.title}
-                    </span>
-                  ))}
-                </div>
+                <p className="text-muted-foreground">
+                  We uphold the highest standards of commitment, integrity, reputation, and honesty in all our endeavors.
+                </p>
               </div>
             </motion.div>
           </div>
