@@ -380,6 +380,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Bottom Banner Border */}
+      <section className="relative w-full overflow-hidden">
+        <img 
+          src="/assets/Home-border.png" 
+          alt="Banner Border" 
+          className="w-full h-auto object-cover"
+        />
+      </section>
+
       {/* Core Values Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
