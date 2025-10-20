@@ -95,16 +95,16 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <ParticleBackground />
+        
         <div className="absolute inset-0">
-          <img 
-            src="/assets/Contact.gif" 
-            alt="Contact Animation" 
+          <img
+            src="/assets/Contact.png"
+            alt="Contact Animation"
             className="w-full h-full object-cover opacity-30"
           />
         </div>
-
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
           <motion.div
@@ -113,7 +113,10 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Get In <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Touch</span>
+              Get In{" "}
+              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                Touch
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
               Contact Us
@@ -154,12 +157,13 @@ export default function Contact() {
             }}
             transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
           />
-          
+
           {/* Animated dots pattern */}
           <motion.div
             className="absolute inset-0 opacity-5"
             style={{
-              backgroundImage: "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
+              backgroundImage:
+                "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
               backgroundSize: "40px 40px",
             }}
             animate={{
@@ -180,7 +184,10 @@ export default function Contact() {
             >
               <h2 className="text-3xl font-bold mb-8">Send Us a Message</h2>
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -308,7 +315,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground" data-testid="text-phone">+1 469-666-0019</p>
+                    <p
+                      className="text-muted-foreground"
+                      data-testid="text-phone"
+                    >
+                      +1 469-666-0019
+                    </p>
                   </div>
                 </div>
 
@@ -318,7 +330,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground" data-testid="text-email">info@techexpertsus.com</p>
+                    <p
+                      className="text-muted-foreground"
+                      data-testid="text-email"
+                    >
+                      info@techexpertsus.com
+                    </p>
                   </div>
                 </div>
 
@@ -327,8 +344,15 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">USA Corporate Headquarters</h3>
-                    <p className="text-muted-foreground" data-testid="text-address">Argyle, TX 76226, United States</p>
+                    <h3 className="font-semibold mb-1">
+                      USA Corporate Headquarters
+                    </h3>
+                    <p
+                      className="text-muted-foreground"
+                      data-testid="text-address"
+                    >
+                      Argyle, TX 76226, United States
+                    </p>
                   </div>
                 </div>
               </div>
@@ -336,8 +360,12 @@ export default function Contact() {
               <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
                 <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p data-testid="text-hours-weekday">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p data-testid="text-hours-saturday">Saturday: 10:00 AM - 4:00 PM</p>
+                  <p data-testid="text-hours-weekday">
+                    Monday - Friday: 9:00 AM - 6:00 PM
+                  </p>
+                  <p data-testid="text-hours-saturday">
+                    Saturday: 10:00 AM - 4:00 PM
+                  </p>
                   <p data-testid="text-hours-sunday">Sunday: Closed</p>
                 </div>
               </div>
@@ -356,8 +384,12 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Global Presence</h2>
-            <p className="text-xl text-muted-foreground">Serving clients worldwide</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Our Global Presence
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Serving clients worldwide
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -369,14 +401,21 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               className="relative aspect-video bg-gradient-to-br from-background to-background/80 backdrop-blur-sm rounded-2xl overflow-hidden flex items-center justify-center"
             >
-              <img 
-                src={worldMapImage} 
-                alt="World Map" 
+              <img
+                src={worldMapImage}
+                alt="World Map"
                 className="w-full h-full object-contain"
               />
-              <svg viewBox="0 0 1000 500" className="absolute inset-0 w-full h-full">
+              <svg
+                viewBox="0 0 1000 500"
+                className="absolute inset-0 w-full h-full"
+              >
                 {/* USA Location - Texas (18% from left, 42% from top) */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
+                <motion.g
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                >
                   <motion.circle
                     cx="180"
                     cy="210"
@@ -404,7 +443,11 @@ export default function Contact() {
                 </motion.g>
 
                 {/* Canada Location - Toronto (20% from left, 34% from top) */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.8, duration: 0.6 }}>
+                <motion.g
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                >
                   <motion.circle
                     cx="200"
                     cy="170"
@@ -432,7 +475,11 @@ export default function Contact() {
                 </motion.g>
 
                 {/* UK Location - London (50% from left, 30% from top) */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.1, duration: 0.6 }}>
+                <motion.g
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 1.1, duration: 0.6 }}
+                >
                   <motion.circle
                     cx="500"
                     cy="150"
@@ -460,7 +507,11 @@ export default function Contact() {
                 </motion.g>
 
                 {/* India Location - Central India (71% from left, 44% from top) */}
-                <motion.g initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.4, duration: 0.6 }}>
+                <motion.g
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 1.4, duration: 0.6 }}
+                >
                   <motion.circle
                     cx="710"
                     cy="220"
@@ -519,17 +570,59 @@ export default function Contact() {
                 />
 
                 <defs>
-                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="hsl(var(--chart-2))" stopOpacity="0.8" />
+                  <linearGradient
+                    id="gradient1"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="hsl(var(--primary))"
+                      stopOpacity="0.8"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="hsl(var(--chart-2))"
+                      stopOpacity="0.8"
+                    />
                   </linearGradient>
-                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="hsl(var(--chart-2))" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="hsl(var(--chart-3))" stopOpacity="0.8" />
+                  <linearGradient
+                    id="gradient2"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="hsl(var(--chart-2))"
+                      stopOpacity="0.8"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="hsl(var(--chart-3))"
+                      stopOpacity="0.8"
+                    />
                   </linearGradient>
-                  <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="hsl(var(--chart-3))" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="hsl(var(--chart-4))" stopOpacity="0.8" />
+                  <linearGradient
+                    id="gradient3"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="hsl(var(--chart-3))"
+                      stopOpacity="0.8"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="hsl(var(--chart-4))"
+                      stopOpacity="0.8"
+                    />
                   </linearGradient>
                 </defs>
               </svg>
@@ -556,20 +649,34 @@ export default function Contact() {
                   <div className="inline-block px-2 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium mb-3">
                     {location.region}
                   </div>
-                  <h3 className="text-lg font-semibold mb-3">{location.title}</h3>
+                  <h3 className="text-lg font-semibold mb-3">
+                    {location.title}
+                  </h3>
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <p className="flex items-start space-x-2">
                       <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span data-testid={`text-address-${location.region.toLowerCase()}`}>{location.address}</span>
+                      <span
+                        data-testid={`text-address-${location.region.toLowerCase()}`}
+                      >
+                        {location.address}
+                      </span>
                     </p>
                     <p className="flex items-center space-x-2">
                       <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span data-testid={`text-email-${location.region.toLowerCase()}`}>{location.email}</span>
+                      <span
+                        data-testid={`text-email-${location.region.toLowerCase()}`}
+                      >
+                        {location.email}
+                      </span>
                     </p>
                     {location.phone && (
                       <p className="flex items-center space-x-2">
                         <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span data-testid={`text-phone-${location.region.toLowerCase()}`}>{location.phone}</span>
+                        <span
+                          data-testid={`text-phone-${location.region.toLowerCase()}`}
+                        >
+                          {location.phone}
+                        </span>
                       </p>
                     )}
                   </div>
