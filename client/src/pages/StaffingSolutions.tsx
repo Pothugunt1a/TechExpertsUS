@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { Users, Target, Clock, TrendingUp, Award, Shield, CheckCircle, Sparkles, Zap, Building2 } from "lucide-react";
+import { Users, Target, Clock, TrendingUp, Award, Shield, CheckCircle, Sparkles, Zap, Building2, Globe, Headphones, GraduationCap, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useRef } from "react";
@@ -321,10 +321,30 @@ export default function StaffingSolutions() {
 
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
-                  { label: "Fortune 500", value: "Clients" },
-                  { label: "Global", value: "Reach" },
-                  { label: "24/7", value: "Support" },
-                  { label: "Expert", value: "Team" }
+                  { 
+                    icon: Trophy, 
+                    label: "Fortune 500", 
+                    value: "Clients",
+                    gradient: "from-amber-500 to-orange-500"
+                  },
+                  { 
+                    icon: Globe, 
+                    label: "Global", 
+                    value: "Reach",
+                    gradient: "from-blue-500 to-cyan-500"
+                  },
+                  { 
+                    icon: Headphones, 
+                    label: "24/7", 
+                    value: "Support",
+                    gradient: "from-purple-500 to-pink-500"
+                  },
+                  { 
+                    icon: GraduationCap, 
+                    label: "Expert", 
+                    value: "Team",
+                    gradient: "from-green-500 to-emerald-500"
+                  }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -332,10 +352,26 @@ export default function StaffingSolutions() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-4 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl"
+                    whileHover={{ y: -5, scale: 1.02 }}
+                    className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                    data-testid={`stat-${item.label.toLowerCase().replace(/\//g, '-')}`}
                   >
-                    <p className="text-2xl font-bold text-primary">{item.label}</p>
-                    <p className="text-sm text-muted-foreground">{item.value}</p>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-xl`} />
+                    
+                    <div className="relative z-10 flex items-start gap-4">
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center flex-shrink-0 shadow-lg`}
+                      >
+                        <item.icon className="w-6 h-6 text-white" />
+                      </motion.div>
+                      
+                      <div>
+                        <p className="text-2xl font-bold text-primary mb-1">{item.label}</p>
+                        <p className="text-sm text-muted-foreground">{item.value}</p>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </div>
