@@ -449,7 +449,7 @@ export default function StaffingSolutions() {
           </motion.div>
 
           <div className="space-y-0">
-            {/* First Component - Image Left, Content on Right */}
+            {/* First Component - Image Left, Two Content Items on Right */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -474,32 +474,148 @@ export default function StaffingSolutions() {
                   </div>
                 </div>
 
-                {/* Content - Right Side */}
-                <div className="bg-white dark:bg-card/50 backdrop-blur-sm p-8 lg:p-10 flex flex-col justify-center">
-                  <div className="mb-3">
-                    <span className="text-xs lg:text-sm font-semibold text-primary uppercase tracking-wide">
-                      Success Story
-                    </span>
+                {/* Two Content Items Stacked - Right Side */}
+                <div className="flex flex-col">
+                  {/* First Content Item - Top Right */}
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                    {/* Animated background gradient */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
+                      animate={{
+                        x: ['-100%', '100%'],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                    />
+                    
+                    {/* Floating particles */}
+                    <motion.div
+                      className="absolute top-0 left-0 w-2 h-2 bg-primary/20 rounded-full"
+                      animate={{
+                        x: [0, 100, 0],
+                        y: [0, 50, 0],
+                        scale: [1, 1.5, 1],
+                        opacity: [0.3, 0.7, 0.3]
+                      }}
+                      transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    />
+                    <motion.div
+                      className="absolute bottom-0 right-0 w-3 h-3 bg-chart-2/20 rounded-full"
+                      animate={{
+                        x: [0, -80, 0],
+                        y: [0, -40, 0],
+                        scale: [1, 1.8, 1],
+                        opacity: [0.2, 0.6, 0.2]
+                      }}
+                      transition={{
+                        duration: 5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 1
+                      }}
+                    />
+
+                    <div className="relative z-10 flex items-start gap-4">
+                      <motion.div
+                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        animate={{
+                          y: [0, -5, 0],
+                        }}
+                        transition={{
+                          y: {
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }
+                        }}
+                      >
+                        <Users className="w-6 h-6 text-primary" />
+                      </motion.div>
+                      <div>
+                        <h3 className="text-lg lg:text-xl font-bold mb-2">
+                          Staff Augmentation
+                        </h3>
+                        <p className="text-muted-foreground text-sm">
+                          Supplement your team with skilled IT consultants who can hit the ground running
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-                    Powered by Big Data
-                  </h3>
-                  <p className="text-muted-foreground text-sm lg:text-base mb-6">
-                    Media leader implements a big data solution using AWS cloud to uncover new value from their data
-                  </p>
-                  <div>
-                    <Button 
-                      className="px-6 py-2 text-sm"
-                      data-testid="button-read-story"
-                    >
-                      Read This Store
-                    </Button>
+
+                  {/* Second Content Item - Bottom Right */}
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                    {/* Animated background gradient */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
+                      animate={{
+                        x: ['100%', '-100%'],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5
+                      }}
+                    />
+
+                    {/* Floating particles */}
+                    <motion.div
+                      className="absolute top-1/2 left-1/4 w-2 h-2 bg-chart-2/20 rounded-full"
+                      animate={{
+                        x: [0, 60, 0],
+                        y: [0, -30, 0],
+                        scale: [1, 1.3, 1],
+                        opacity: [0.3, 0.8, 0.3]
+                      }}
+                      transition={{
+                        duration: 4.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.5
+                      }}
+                    />
+
+                    <div className="relative z-10 flex items-start gap-4">
+                      <motion.div
+                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        animate={{
+                          y: [0, -5, 0],
+                        }}
+                        transition={{
+                          y: {
+                            duration: 2.5,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.3
+                          }
+                        }}
+                      >
+                        <Target className="w-6 h-6 text-chart-2" />
+                      </motion.div>
+                      <div>
+                        <h3 className="text-lg lg:text-xl font-bold mb-2">
+                          Project Solutions
+                        </h3>
+                        <p className="text-muted-foreground text-sm">
+                          Complete project lifecycle solutions with experienced professionals
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Second Component - Content on Left, Image Right */}
+            {/* Second Component - Two Content Items on Left, Image Right */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -509,26 +625,130 @@ export default function StaffingSolutions() {
               data-testid="service-component-2"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
-                {/* Content - Left Side */}
-                <div className="bg-white dark:bg-card/50 backdrop-blur-sm p-8 lg:p-10 flex flex-col justify-center order-2 lg:order-1">
-                  <div className="mb-3">
-                    <span className="text-xs lg:text-sm font-semibold text-primary uppercase tracking-wide">
-                      Article
-                    </span>
+                {/* Two Content Items Stacked - Left Side */}
+                <div className="flex flex-col order-2 lg:order-1">
+                  {/* First Content Item - Top Left */}
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                    {/* Animated background gradient */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
+                      animate={{
+                        x: ['-100%', '100%'],
+                      }}
+                      transition={{
+                        duration: 3.5,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1
+                      }}
+                    />
+
+                    {/* Floating particles */}
+                    <motion.div
+                      className="absolute top-1/4 right-1/4 w-2 h-2 bg-primary/20 rounded-full"
+                      animate={{
+                        x: [0, -70, 0],
+                        y: [0, 40, 0],
+                        scale: [1, 1.6, 1],
+                        opacity: [0.2, 0.7, 0.2]
+                      }}
+                      transition={{
+                        duration: 4.2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.8
+                      }}
+                    />
+
+                    <div className="relative z-10 flex items-start gap-4">
+                      <motion.div
+                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        animate={{
+                          y: [0, -5, 0],
+                        }}
+                        transition={{
+                          y: {
+                            duration: 2.2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.5
+                          }
+                        }}
+                      >
+                        <Shield className="w-6 h-6 text-primary" />
+                      </motion.div>
+                      <div>
+                        <h3 className="text-lg lg:text-xl font-bold mb-2">
+                          Vendor Management
+                        </h3>
+                        <p className="text-muted-foreground text-sm">
+                          Comprehensive vendor management services to streamline your operations
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-                    Future, AmplifiedThink cloud-first: How to Leverage Cloud Services to Accelerate Growth
-                  </h3>
-                  <p className="text-muted-foreground text-sm lg:text-base mb-6">
-                    Learn how to leverage cloud services and solutions to accelerate growth
-                  </p>
-                  <div>
-                    <Button 
-                      className="px-6 py-2 text-sm"
-                      data-testid="button-learn-more"
-                    >
-                      Learn More
-                    </Button>
+
+                  {/* Second Content Item - Bottom Left */}
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                    {/* Animated background gradient */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-l from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
+                      animate={{
+                        x: ['100%', '-100%'],
+                      }}
+                      transition={{
+                        duration: 3.2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1.5
+                      }}
+                    />
+
+                    {/* Floating particles */}
+                    <motion.div
+                      className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-chart-2/20 rounded-full"
+                      animate={{
+                        x: [0, 50, 0],
+                        y: [0, -25, 0],
+                        scale: [1, 1.4, 1],
+                        opacity: [0.3, 0.6, 0.3]
+                      }}
+                      transition={{
+                        duration: 3.8,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 1.2
+                      }}
+                    />
+
+                    <div className="relative z-10 flex items-start gap-4">
+                      <motion.div
+                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        animate={{
+                          y: [0, -5, 0],
+                        }}
+                        transition={{
+                          y: {
+                            duration: 2.8,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.7
+                          }
+                        }}
+                      >
+                        <Sparkles className="w-6 h-6 text-chart-2" />
+                      </motion.div>
+                      <div>
+                        <h3 className="text-lg lg:text-xl font-bold mb-2">
+                          Executive Search
+                        </h3>
+                        <p className="text-muted-foreground text-sm">
+                          Targeted searches for middle to upper management positions
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
