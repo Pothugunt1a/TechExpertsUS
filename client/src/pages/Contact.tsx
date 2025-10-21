@@ -367,16 +367,26 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
-                <div className="space-y-2 text-muted-foreground">
-                  <p data-testid="text-hours-weekday">
-                    Monday - Friday: 9:00 AM - 6:00 PM
-                  </p>
-                  <p data-testid="text-hours-saturday">
-                    Saturday: 10:00 AM - 4:00 PM
-                  </p>
-                  <p data-testid="text-hours-sunday">Sunday: Closed</p>
+              <div 
+                className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 overflow-hidden"
+                style={{
+                  backgroundImage: "url(/assets/Contactmap.jpg)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center"
+                }}
+              >
+                <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+                <div className="relative z-10">
+                  <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p data-testid="text-hours-weekday">
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                    </p>
+                    <p data-testid="text-hours-saturday">
+                      Saturday: 10:00 AM - 4:00 PM
+                    </p>
+                    <p data-testid="text-hours-sunday">Sunday: Closed</p>
+                  </div>
                 </div>
               </div>
             </motion.div>

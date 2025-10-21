@@ -48,7 +48,7 @@ export function Footer() {
               <img
                 src="/assets/TechExperts.png"
                 alt="Tech Experts US Logo"
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-sm text-muted-foreground mb-4">

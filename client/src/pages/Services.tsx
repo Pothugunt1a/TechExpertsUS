@@ -199,6 +199,12 @@ export default function Services() {
         ref={heroRef}
         className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
       >
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url(/assets/Services.webp)" }}
+        />
+        
         <ParticleBackground />
 
         <motion.div
