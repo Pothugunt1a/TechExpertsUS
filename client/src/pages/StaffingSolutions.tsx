@@ -254,7 +254,7 @@ export default function StaffingSolutions() {
                 src="/assets/Staffing-banner.png"
                 alt="Staffing Solutions"
                 className="w-auto h-auto max-w-full"
-              /></motion.div>
+              />
 
               {/* Floating stats cards */}
               <motion.div
