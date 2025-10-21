@@ -449,7 +449,7 @@ export default function StaffingSolutions() {
           </motion.div>
 
           <div className="space-y-0">
-            {/* First Component - Image Left, Two Content Items on Right */}
+            {/* First Component - Image Left, Content on Right */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -460,7 +460,7 @@ export default function StaffingSolutions() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
                 {/* Image Placeholder - Left Side with Diagonal Cut */}
-                <div className="relative h-[400px] lg:h-[500px] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
+                <div className="relative h-[250px] lg:h-[280px] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
@@ -474,32 +474,32 @@ export default function StaffingSolutions() {
                   </div>
                 </div>
 
-                {/* Two Content Items Stacked - Right Side */}
-                <div className="flex flex-col">
-                  {/* First Content Item - Top Right */}
-                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
-                      Staff Augmentation
-                    </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base">
-                      Supplement your team with skilled IT consultants who can hit the ground running
-                    </p>
+                {/* Content - Right Side */}
+                <div className="bg-white dark:bg-card/50 backdrop-blur-sm p-8 lg:p-10 flex flex-col justify-center">
+                  <div className="mb-3">
+                    <span className="text-xs lg:text-sm font-semibold text-primary uppercase tracking-wide">
+                      Success Story
+                    </span>
                   </div>
-
-                  {/* Second Content Item - Bottom Right */}
-                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
-                      Project Solutions
-                    </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base">
-                      Complete project lifecycle solutions with experienced professionals
-                    </p>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                    Powered by Big Data
+                  </h3>
+                  <p className="text-muted-foreground text-sm lg:text-base mb-6">
+                    Media leader implements a big data solution using AWS cloud to uncover new value from their data
+                  </p>
+                  <div>
+                    <Button 
+                      className="px-6 py-2 text-sm"
+                      data-testid="button-read-story"
+                    >
+                      Read This Store
+                    </Button>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Second Component - Two Content Items on Left, Image Right */}
+            {/* Second Component - Content on Left, Image Right */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -509,31 +509,31 @@ export default function StaffingSolutions() {
               data-testid="service-component-2"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
-                {/* Two Content Items Stacked - Left Side */}
-                <div className="flex flex-col order-2 lg:order-1">
-                  {/* First Content Item - Top Left */}
-                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
-                      Vendor Management
-                    </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base">
-                      Comprehensive vendor management services to streamline your operations
-                    </p>
+                {/* Content - Left Side */}
+                <div className="bg-white dark:bg-card/50 backdrop-blur-sm p-8 lg:p-10 flex flex-col justify-center order-2 lg:order-1">
+                  <div className="mb-3">
+                    <span className="text-xs lg:text-sm font-semibold text-primary uppercase tracking-wide">
+                      Article
+                    </span>
                   </div>
-
-                  {/* Second Content Item - Bottom Left */}
-                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
-                      Executive Search
-                    </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base">
-                      Targeted searches for middle to upper management positions
-                    </p>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                    Future, AmplifiedThink cloud-first: How to Leverage Cloud Services to Accelerate Growth
+                  </h3>
+                  <p className="text-muted-foreground text-sm lg:text-base mb-6">
+                    Learn how to leverage cloud services and solutions to accelerate growth
+                  </p>
+                  <div>
+                    <Button 
+                      className="px-6 py-2 text-sm"
+                      data-testid="button-learn-more"
+                    >
+                      Learn More
+                    </Button>
                   </div>
                 </div>
 
                 {/* Image Placeholder - Right Side with Diagonal Cut */}
-                <div className="relative h-[400px] lg:h-[500px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden order-1 lg:order-2">
+                <div className="relative h-[250px] lg:h-[280px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden order-1 lg:order-2">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
