@@ -16,16 +16,19 @@ export default function DMS() {
     <div className="min-h-screen">
       {/* Hero Section - Full Screen Banner */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image - High Resolution GIF */}
-        <div className="absolute inset-0 z-0">
+        {/* Background Image */}
+        <motion.div
+          className="absolute inset-0 z-0"
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <img
             src="/assets/DataCenterManagement-banner.gif"
             alt="Data Center Management Banner"
-            className="w-full h-full object-cover object-center"
-            style={{ imageRendering: 'high-quality' }}
-            loading="eager"
+            className="w-full h-full object-contain object-center"
           />
-        </div>
+        </motion.div>
 
         {/* Particle Background Overlay */}
         <ParticleBackground />
@@ -35,7 +38,7 @@ export default function DMS() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-center flex flex-col items-center justify-center w-full"
             style={{ marginTop: '-6px' }}
           >
