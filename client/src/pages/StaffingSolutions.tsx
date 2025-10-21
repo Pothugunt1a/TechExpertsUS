@@ -300,7 +300,7 @@ export default function StaffingSolutions() {
       </section>
 
       {/* About Section with Image */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -424,7 +424,7 @@ export default function StaffingSolutions() {
       </section>
 
       {/* Services Section - Bento Grid Style */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/30">
+      <section className="relative py-12 md:py-20 bg-gradient-to-b from-background to-card/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -517,7 +517,7 @@ export default function StaffingSolutions() {
       </section>
 
       {/* Benefits Section - Modern Cards with Icons */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -575,7 +575,7 @@ export default function StaffingSolutions() {
       </section>
 
       {/* Professional Recruiting - Split Layout with Image */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background overflow-hidden">
+      <section className="relative py-12 md:py-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
@@ -656,7 +656,7 @@ export default function StaffingSolutions() {
       </section>
 
       {/* CTA Section - Modern with Animation */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
           <ParticleBackground />
