@@ -75,33 +75,54 @@ export function Navigation() {
             <div className="hidden lg:flex items-center space-x-1">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link
-                    href={item.path}
-                    data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
+                  {!item.subItems ? (
+                    <Link
+                      href={item.path}
+                      data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      <div
+                        className={`relative px-4 py-2 cursor-pointer transition-colors ${
+                          location === item.path ||
+                          location.startsWith(item.path + "/")
+                            ? "text-primary"
+                            : "text-foreground hover:text-primary"
+                        }`}
+                      >
+                        {item.name}
+                        <motion.div
+                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-chart-2"
+                          initial={{ scaleX: 0 }}
+                          animate={{
+                            scaleX:
+                              location === item.path ||
+                              location.startsWith(item.path + "/")
+                                ? 1
+                                : 0,
+                          }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </div>
+                    </Link>
+                  ) : (
                     <div
                       className={`relative px-4 py-2 cursor-pointer transition-colors ${
-                        location === item.path ||
                         location.startsWith(item.path + "/")
                           ? "text-primary"
                           : "text-foreground hover:text-primary"
                       }`}
+                      data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
                     >
                       {item.name}
                       <motion.div
                         className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-chart-2"
                         initial={{ scaleX: 0 }}
                         animate={{
-                          scaleX:
-                            location === item.path ||
-                            location.startsWith(item.path + "/")
-                              ? 1
-                              : 0,
+                          scaleX: location.startsWith(item.path + "/") ? 1 : 0,
                         }}
                         transition={{ duration: 0.3 }}
                       />
                     </div>
-                  </Link>
+                  )}
 
                   {/* Dropdown Menu */}
                   {item.subItems && (
