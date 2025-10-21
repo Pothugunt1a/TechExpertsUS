@@ -263,15 +263,20 @@ export default function StaffingSolutions() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
                   <div className="text-center p-8">
                     <Users className="w-24 h-24 mx-auto mb-4 text-primary/40" />
-                    <p className="text-muted-foreground text-sm">
+                    {/* <p className="text-muted-foreground text-sm">
                       Upload Hero Image/GIF Here
                     </p>
                     <p className="text-xs text-muted-foreground mt-2">
                       800x600 recommended
-                    </p>
+                    </p> */}
                   </div>
                 </div>
-                {/* Replace with: <img src="/assets/staffing-hero-image.gif" alt="Staffing Solutions" className="w-full h-full object-cover" /> */}
+
+                <img
+                  src="/assets/Staffing-banner.png"
+                  alt="Staffing Solutions"
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
 
               {/* Floating stats cards */}
@@ -332,7 +337,11 @@ export default function StaffingSolutions() {
               className="order-2 lg:order-1"
             >
               <div className="relative">
-                <img src="/assets/Staffing2.gif" alt="About Tech Expertsus" className="w-auto h-auto max-w-full" />
+                <img
+                  src="/assets/Staffing2.gif"
+                  alt="About Tech Expertsus"
+                  className="w-auto h-auto max-w-full"
+                />
               </div>
             </motion.div>
 
@@ -658,7 +667,11 @@ export default function StaffingSolutions() {
               transition={{ duration: 0.8 }}
             >
               <div className="relative">
-                <img src="/assets/Staffing1.gif" alt="Professional Recruiting" className="w-auto h-auto max-w-full" />
+                <img
+                  src="/assets/Staffing1.gif"
+                  alt="Professional Recruiting"
+                  className="w-auto h-auto max-w-full"
+                />
               </div>
             </motion.div>
           </div>
