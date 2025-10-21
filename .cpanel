@@ -1,0 +1,16 @@
+# cPanel Node.js Configuration File
+# This file can be used as a reference for cPanel Node.js App settings
+
+# Application Settings
+app_name=tech-expertsus
+node_version=20
+application_mode=production
+application_root=tech-expertsus
+application_startup_file=dist/index.js
+application_port=3000
+
+# Environment Variables (configure these in cPanel UI)
+# DATABASE_URL=postgresql://user:password@localhost:5432/database
+# NODE_ENV=production
+# PORT=3000
+# SESSION_SECRET=your-secret-here
