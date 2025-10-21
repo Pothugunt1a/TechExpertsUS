@@ -22,7 +22,6 @@ export default function DMS() {
             src="/assets/DataCenterManagement-banner.gif"
             alt="Data Center Management Banner"
             className="w-full h-full object-cover object-center"
-            style={{ imageRendering: 'high-quality' }}
             loading="eager"
           />
         </div>
@@ -33,18 +32,153 @@ export default function DMS() {
         {/* Centered Text Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center" style={{ height: '85vh' }}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-center flex flex-col items-center justify-center w-full"
             style={{ marginTop: '-6px' }}
           >
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-              Data Center Management Services
-            </h1>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
-              We Are Professional
-            </p>
+            {/* Animated Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="mb-4 sm:mb-6"
+            >
+              <motion.div
+                animate={{ 
+                  boxShadow: [
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                    "0 0 40px rgba(59, 130, 246, 0.5)",
+                    "0 0 20px rgba(59, 130, 246, 0.3)"
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="inline-block px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
+              >
+                <span className="text-xs sm:text-sm font-semibold text-primary">
+                  Next-Gen Infrastructure
+                </span>
+              </motion.div>
+            </motion.div>
+
+            {/* Main Title with Staggered Word Animation */}
+            <div className="overflow-hidden mb-3 sm:mb-4 lg:mb-6">
+              <motion.h1 
+                className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                {["Powering", "Your", "Digital", "Future"].map((word, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ 
+                      duration: 0.8, 
+                      delay: 0.2 + index * 0.1,
+                      ease: [0.25, 0.1, 0.25, 1]
+                    }}
+                    className="inline-block mr-3 sm:mr-4 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent"
+                    data-testid={`banner-word-${index}`}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </motion.h1>
+            </div>
+
+            {/* Subtitle with Multiple Animations */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="space-y-2"
+            >
+              <motion.p 
+                className="text-sm sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground"
+                animate={{ 
+                  textShadow: [
+                    "0 0 10px rgba(59, 130, 246, 0.3)",
+                    "0 0 20px rgba(59, 130, 246, 0.5)",
+                    "0 0 10px rgba(59, 130, 246, 0.3)"
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                data-testid="banner-subtitle-main"
+              >
+                Innovation Meets Excellence
+              </motion.p>
+              
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
+                className="h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto max-w-md"
+              />
+              
+              <motion.p 
+                className="text-xs sm:text-base md:text-lg lg:text-xl text-muted-foreground"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1.4 }}
+                data-testid="banner-subtitle-secondary"
+              >
+                Transforming Infrastructure into Intelligent Systems
+              </motion.p>
+            </motion.div>
+
+            {/* Animated CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className="mt-6 sm:mt-8"
+            >
+              <Link href="/contact">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  data-testid="button-explore-solutions"
+                >
+                  <Button 
+                    size="lg" 
+                    className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full shadow-lg hover:shadow-primary/50 transition-shadow"
+                  >
+                    Explore Solutions
+                  </Button>
+                </motion.div>
+              </Link>
+            </motion.div>
+
+            {/* Floating Icons Animation */}
+            <div className="absolute inset-0 pointer-events-none">
+              <motion.div
+                className="absolute top-1/4 left-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-primary/40 rounded-full blur-sm"
+                animate={{
+                  y: [0, -30, 0],
+                  opacity: [0.4, 1, 0.4],
+                  scale: [1, 1.5, 1]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div
+                className="absolute top-1/3 right-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-chart-2/40 rounded-full blur-sm"
+                animate={{
+                  y: [0, 30, 0],
+                  opacity: [0.4, 1, 0.4],
+                  scale: [1, 1.5, 1]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              />
+              <motion.div
+                className="absolute bottom-1/3 left-1/3 w-2 h-2 sm:w-3 sm:h-3 bg-primary/40 rounded-full blur-sm"
+                animate={{
+                  y: [0, -20, 0],
+                  opacity: [0.4, 1, 0.4],
+                  scale: [1, 1.5, 1]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+              />
+            </div>
           </motion.div>
         </div>
       </section>
