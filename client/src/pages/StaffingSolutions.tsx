@@ -448,14 +448,14 @@ export default function StaffingSolutions() {
             </p>
           </motion.div>
 
-          <div className="space-y-6">
+          <div className="space-y-0">
             {/* First Component - Image Left, Two Content Items on Right */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative -mx-6 lg:-mx-8"
               data-testid="service-component-1"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
@@ -505,7 +505,7 @@ export default function StaffingSolutions() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="relative -mx-6 lg:-mx-8"
               data-testid="service-component-2"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
