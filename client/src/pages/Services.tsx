@@ -205,6 +205,9 @@ export default function Services() {
           style={{ backgroundImage: "url(/assets/Services.webp)" }}
         />
         
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-background/20" />
+        
         <ParticleBackground />
 
         {/* Animated gradient orbs */}
