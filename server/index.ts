@@ -1,6 +1,7 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
 
 const app = express();
 app.use(express.json());
@@ -53,7 +54,19 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    serveStatic(app);
+    // Serve static files in production
+    app.use(express.static(path.join(process.cwd(), "dist/public")));
+
+    // Serve assets with proper MIME types
+    app.use('/assets', express.static(path.join(process.cwd(), "dist/public/assets"), {
+      setHeaders: (res, filepath) => {
+        if (filepath.endsWith('.png')) res.setHeader('Content-Type', 'image/png');
+        if (filepath.endsWith('.jpg') || filepath.endsWith('.jpeg')) res.setHeader('Content-Type', 'image/jpeg');
+        if (filepath.endsWith('.webp')) res.setHeader('Content-Type', 'image/webp');
+        if (filepath.endsWith('.gif')) res.setHeader('Content-Type', 'image/gif');
+        if (filepath.endsWith('.svg')) res.setHeader('Content-Type', 'image/svg+xml');
+      }
+    }));
   }
 
   // ALWAYS serve the app on the port specified in the environment variable PORT
