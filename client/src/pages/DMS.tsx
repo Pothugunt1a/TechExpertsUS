@@ -30,10 +30,9 @@ export default function DMS() {
         <ParticleBackground />
 
         {/* Centered Text Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center" style={{ height: '85vh' }}>
+        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center min-h-screen py-20">
           <motion.div
             className="text-center flex flex-col items-center justify-center w-full"
-            style={{ marginTop: '-6px' }}
           >
             {/* Animated Badge */}
             <motion.div
@@ -141,7 +140,7 @@ export default function DMS() {
                 >
                   <Button 
                     size="lg" 
-                    className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full shadow-lg hover:shadow-primary/50 transition-shadow"
+                    className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-lg shadow-lg hover:shadow-primary/50 transition-shadow"
                   >
                     Explore Solutions
                   </Button>
