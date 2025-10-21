@@ -332,7 +332,7 @@ export default function StaffingSolutions() {
               className="order-2 lg:order-1"
             >
               <div className="relative aspect-[6/5] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                <img src="/assets/Staffing1.gif" alt="About Tech Expertsus" className="w-full h-full object-cover" />
+                <img src="/assets/Staffing2.gif" alt="About Tech Expertsus" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
@@ -658,7 +658,7 @@ export default function StaffingSolutions() {
               transition={{ duration: 0.8 }}
             >
               <div className="relative aspect-[6/7] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                <img src="/assets/Staffing2.gif" alt="Professional Recruiting" className="w-full h-full object-cover" />
+                <img src="/assets/Staffing1.gif" alt="Professional Recruiting" className="w-full h-full object-cover" />
               </div>
             </motion.div>
           </div>
