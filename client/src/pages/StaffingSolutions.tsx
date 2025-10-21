@@ -250,34 +250,11 @@ export default function StaffingSolutions() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              {/* 
-                IMAGE PLACEHOLDER 2: Hero Image/GIF
-                Recommended: Animated GIF of team collaboration or professional recruiting
-                Size: 800x600
-                Path: /assets/staffing-hero-image.gif
-              */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Users className="w-24 h-24 mx-auto mb-4 text-primary/40" />
-                    {/* <p className="text-muted-foreground text-sm">
-                      Upload Hero Image/GIF Here
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      800x600 recommended
-                    </p> */}
-                  </div>
-                </div>
-
-                <img
-                  src="/assets/Staffing-banner.png"
-                  alt="Staffing Solutions"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
+              <img
+                src="/assets/Staffing-banner.png"
+                alt="Staffing Solutions"
+                className="w-auto h-auto max-w-full"
+              /></motion.div>
 
               {/* Floating stats cards */}
               <motion.div
