@@ -375,7 +375,7 @@ export default function Contact() {
                   backgroundPosition: "center"
                 }}
               >
-                <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+                <div className="absolute inset-0 bg-background/30" />
                 <div className="relative z-10">
                   <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
                   <div className="space-y-2 text-muted-foreground">
