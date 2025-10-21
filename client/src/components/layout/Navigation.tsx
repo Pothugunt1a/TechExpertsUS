@@ -75,7 +75,7 @@ export function Navigation() {
             <div className="hidden lg:flex items-center space-x-1">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  {!item.subItems ? (
+                  {item.name !== "Consult" ? (
                     <Link
                       href={item.path}
                       data-testid={`link-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
