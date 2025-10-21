@@ -423,7 +423,7 @@ export default function StaffingSolutions() {
         </div>
       </section>
 
-      {/* Services Section - Bento Grid Style */}
+      {/* Services Section - Diagonal Split Layout */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-background to-card/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -448,70 +448,186 @@ export default function StaffingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative"
-                data-testid={`service-${feature.title.toLowerCase().replace(/\s+/g, "-")}`}
-              >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 overflow-hidden transition-all duration-500 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10">
-                  {/* Animated gradient background */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                  />
-
-                  {/* Animated corner accent */}
-                  <motion.div
-                    className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.gradient} opacity-20 blur-3xl`}
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.2, 0.3, 0.2],
+          <div className="space-y-6">
+            {/* First Row - Image Left, Content Right (Top-Right) */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+              data-testid="service-staff-augmentation"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
+                {/* Image Placeholder - Left Side with Diagonal Cut */}
+                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                      clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)',
                     }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  />
-
-                  <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
-                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6 shadow-lg`}
-                    >
-                      <feature.icon className="w-8 h-8 text-white" />
-                    </motion.div>
-
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-lg">
-                      {feature.description}
-                    </p>
-
-                    {/* Hover arrow */}
-                    <motion.div
-                      initial={{ x: -10, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      className="mt-4 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <span className="text-sm font-semibold mr-2">
-                        Learn more
-                      </span>
-                      <motion.span
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                      >
-                        →
-                      </motion.span>
-                    </motion.div>
+                  >
+                    {/* IMAGE PLACEHOLDER: Staff Augmentation visual */}
+                    <div className="w-full h-full bg-gradient-to-br from-blue-500/30 to-cyan-500/30 flex items-center justify-center">
+                      <Users className="w-20 h-20 text-white/50" />
+                    </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+
+                {/* Content - Right Side */}
+                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="inline-block mb-3">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                      {features[0].title}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
+                    {features[0].title}
+                  </h3>
+                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
+                    {features[0].description}
+                  </p>
+                  <Button variant="outline" className="w-fit">
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Second Row - Content Left (Bottom-Left), Image Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="relative"
+              data-testid="service-project-solutions"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
+                {/* Content - Left Side */}
+                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                  <div className="inline-block mb-3">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                      Article
+                    </span>
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
+                    {features[1].title}
+                  </h3>
+                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
+                    {features[1].description}
+                  </p>
+                  <Button variant="outline" className="w-fit">
+                    Learn More
+                  </Button>
+                </div>
+
+                {/* Image Placeholder - Right Side with Diagonal Cut */}
+                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden order-1 lg:order-2">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                      clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)',
+                    }}
+                  >
+                    {/* IMAGE PLACEHOLDER: Project Solutions visual */}
+                    <div className="w-full h-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center">
+                      <Target className="w-20 h-20 text-white/50" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Third Row - Image Left, Content Right (Top-Right) */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+              data-testid="service-vendor-management"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
+                {/* Image Placeholder - Left Side with Diagonal Cut */}
+                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-orange-500/20 to-red-500/20 overflow-hidden">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                      clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)',
+                    }}
+                  >
+                    {/* IMAGE PLACEHOLDER: Vendor Management visual */}
+                    <div className="w-full h-full bg-gradient-to-br from-orange-500/30 to-red-500/30 flex items-center justify-center">
+                      <Shield className="w-20 h-20 text-white/50" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content - Right Side */}
+                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="inline-block mb-3">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                      Success Story
+                    </span>
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
+                    {features[2].title}
+                  </h3>
+                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
+                    {features[2].description}
+                  </p>
+                  <Button variant="outline" className="w-fit">
+                    Read This Story
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Fourth Row - Content Left (Bottom-Left), Image Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative"
+              data-testid="service-executive-search"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
+                {/* Content - Left Side */}
+                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                  <div className="inline-block mb-3">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                      Article
+                    </span>
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
+                    {features[3].title}
+                  </h3>
+                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
+                    {features[3].description}
+                  </p>
+                  <Button variant="outline" className="w-fit">
+                    Learn More
+                  </Button>
+                </div>
+
+                {/* Image Placeholder - Right Side with Diagonal Cut */}
+                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-green-500/20 to-emerald-500/20 overflow-hidden order-1 lg:order-2">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                      clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)',
+                    }}
+                  >
+                    {/* IMAGE PLACEHOLDER: Executive Search visual */}
+                    <div className="w-full h-full bg-gradient-to-br from-green-500/30 to-emerald-500/30 flex items-center justify-center">
+                      <Sparkles className="w-20 h-20 text-white/50" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
