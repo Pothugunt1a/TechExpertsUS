@@ -206,7 +206,7 @@ export default function Services() {
         />
         
         {/* Subtle overlay */}
-        <div className="absolute inset-0 bg-background/20" />
+        <div className="absolute inset-0 bg-background/40" />
         
         <ParticleBackground />
 
