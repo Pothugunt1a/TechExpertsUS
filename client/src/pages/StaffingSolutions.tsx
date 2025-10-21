@@ -459,19 +459,15 @@ export default function StaffingSolutions() {
               data-testid="service-component-1"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
-                {/* Image Placeholder - Left Side with Diagonal Cut */}
+                {/* Image - Left Side with Diagonal Cut */}
                 <div className="relative h-[250px] lg:h-[280px] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                       clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)',
+                      backgroundImage: 'url(/assets/Staffing3.png)',
                     }}
-                  >
-                    {/* IMAGE PLACEHOLDER */}
-                    <div className="w-full h-full bg-gradient-to-br from-blue-500/30 to-cyan-500/30 flex items-center justify-center">
-                      <Users className="w-20 h-20 text-white/50" />
-                    </div>
-                  </div>
+                  />
                 </div>
 
                 {/* Two Content Items Stacked - Right Side */}
@@ -752,19 +748,15 @@ export default function StaffingSolutions() {
                   </div>
                 </div>
 
-                {/* Image Placeholder - Right Side with Diagonal Cut */}
+                {/* Image - Right Side with Diagonal Cut */}
                 <div className="relative h-[250px] lg:h-[280px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden order-1 lg:order-2">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                       clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)',
+                      backgroundImage: 'url(/assets/Staffing4.png)',
                     }}
-                  >
-                    {/* IMAGE PLACEHOLDER */}
-                    <div className="w-full h-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center">
-                      <Target className="w-20 h-20 text-white/50" />
-                    </div>
-                  </div>
+                  />
                 </div>
               </div>
             </motion.div>
