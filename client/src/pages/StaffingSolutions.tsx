@@ -331,25 +331,8 @@ export default function StaffingSolutions() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              {/* 
-                IMAGE PLACEHOLDER 3: About Image
-                Recommended: Professional office environment or team meeting
-                Size: 600x500
-                Path: /assets/staffing-about.jpg or .gif
-              */}
               <div className="relative aspect-[6/5] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Building2 className="w-20 h-20 mx-auto mb-4 text-primary/40" />
-                    <p className="text-muted-foreground text-sm">
-                      Upload About Image Here
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      600x500 recommended
-                    </p>
-                  </div>
-                </div>
-                {/* Replace with: <img src="/assets/staffing-about.jpg" alt="About Tech Expertsus" className="w-full h-full object-cover" /> */}
+                <img src="/assets/Staffing1.gif" alt="About Tech Expertsus" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
@@ -674,25 +657,8 @@ export default function StaffingSolutions() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              {/* 
-                IMAGE PLACEHOLDER 4: Professional Recruiting
-                Recommended: Executive interview or professional handshake
-                Size: 600x700
-                Path: /assets/staffing-recruiting.jpg or .gif
-              */}
               <div className="relative aspect-[6/7] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Target className="w-20 h-20 mx-auto mb-4 text-primary/40" />
-                    <p className="text-muted-foreground text-sm">
-                      Upload Recruiting Image Here
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      600x700 recommended
-                    </p>
-                  </div>
-                </div>
-                {/* Replace with: <img src="/assets/staffing-recruiting.jpg" alt="Professional Recruiting" className="w-full h-full object-cover" /> */}
+                <img src="/assets/Staffing2.gif" alt="Professional Recruiting" className="w-full h-full object-cover" />
               </div>
             </motion.div>
           </div>
