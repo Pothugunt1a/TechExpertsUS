@@ -97,9 +97,9 @@ export default function Contact() {
       {/* Hero Section with Contact Banner Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 z-0"
-          initial={{ x: '100%', opacity: 0 }}
+          initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
         >
@@ -114,13 +114,20 @@ export default function Contact() {
         <ParticleBackground />
 
         {/* Centered Text Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center" style={{ height: '85vh' }}>
+        <div
+          className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center"
+          style={{ height: "85vh" }}
+        >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{
+              duration: 0.8,
+              delay: 0.3,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
             className="text-center flex flex-col items-center justify-center w-full"
-            style={{ marginTop: '-6px' }}
+            style={{ marginTop: "-6px" }}
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
               Get In Touch
@@ -367,12 +374,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div 
+              <div
                 className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 overflow-hidden"
                 style={{
-                  backgroundImage: "url(/assets/Contactmap.jpg)",
+                  backgroundImage: "url(/assets/Contactmap.png)",
                   backgroundSize: "cover",
-                  backgroundPosition: "center"
+                  backgroundPosition: "center",
                 }}
               >
                 <div className="absolute inset-0 bg-background/30" />

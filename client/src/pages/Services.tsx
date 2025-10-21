@@ -202,12 +202,12 @@ export default function Services() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/assets/Services.webp)" }}
+          style={{ backgroundImage: "url(/assets/Services.png)" }}
         />
-        
+
         {/* Subtle overlay */}
         <div className="absolute inset-0 bg-background/40" />
-        
+
         <ParticleBackground />
 
         {/* Animated gradient orbs */}
@@ -268,7 +268,8 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 1 }}
             >
-              From infrastructure management to cutting-edge cloud solutions, we deliver comprehensive IT services tailored to your needs
+              From infrastructure management to cutting-edge cloud solutions, we
+              deliver comprehensive IT services tailored to your needs
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
