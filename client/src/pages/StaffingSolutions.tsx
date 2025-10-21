@@ -324,26 +324,22 @@ export default function StaffingSolutions() {
                   { 
                     icon: Trophy, 
                     label: "Fortune 500", 
-                    value: "Clients",
-                    gradient: "from-amber-500 to-orange-500"
+                    value: "Clients"
                   },
                   { 
                     icon: Globe, 
                     label: "Global", 
-                    value: "Reach",
-                    gradient: "from-blue-500 to-cyan-500"
+                    value: "Reach"
                   },
                   { 
                     icon: Headphones, 
                     label: "24/7", 
-                    value: "Support",
-                    gradient: "from-purple-500 to-pink-500"
+                    value: "Support"
                   },
                   { 
                     icon: GraduationCap, 
                     label: "Expert", 
-                    value: "Team",
-                    gradient: "from-green-500 to-emerald-500"
+                    value: "Team"
                   }
                 ].map((item, index) => (
                   <motion.div
@@ -356,15 +352,15 @@ export default function StaffingSolutions() {
                     className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
                     data-testid={`stat-${item.label.toLowerCase().replace(/\//g, '-')}`}
                   >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-xl`} />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                     
                     <div className="relative z-10 flex items-start gap-4">
                       <motion.div
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
-                        className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center flex-shrink-0 shadow-lg`}
+                        className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
                       >
-                        <item.icon className="w-6 h-6 text-white" />
+                        <item.icon className="w-6 h-6 text-primary" />
                       </motion.div>
                       
                       <div>
