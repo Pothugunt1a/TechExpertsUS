@@ -478,38 +478,22 @@ export default function StaffingSolutions() {
                 <div className="flex flex-col">
                   {/* First Content Item - Top Right */}
                   <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <div className="inline-block mb-3">
-                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                        Success Story
-                      </span>
-                    </div>
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
-                      Powered by Big Data
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
+                      Staff Augmentation
                     </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
-                      Media leader implements a big data solution using AWS cloud to uncover new value from their data
+                    <p className="text-muted-foreground text-sm lg:text-base">
+                      Supplement your team with skilled IT consultants who can hit the ground running
                     </p>
-                    <Button variant="outline" className="w-fit">
-                      Read This Story
-                    </Button>
                   </div>
 
                   {/* Second Content Item - Bottom Right */}
                   <div className="bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <div className="inline-block mb-3">
-                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                        Article
-                      </span>
-                    </div>
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
-                      Future, AmplifiedThink cloud-first
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
+                      Project Solutions
                     </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
-                      Learn how to leverage cloud services and solutions to accelerate growth
+                    <p className="text-muted-foreground text-sm lg:text-base">
+                      Complete project lifecycle solutions with experienced professionals
                     </p>
-                    <Button variant="outline" className="w-fit">
-                      Learn More
-                    </Button>
                   </div>
                 </div>
               </div>
@@ -529,38 +513,22 @@ export default function StaffingSolutions() {
                 <div className="flex flex-col order-2 lg:order-1">
                   {/* First Content Item - Top Left */}
                   <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <div className="inline-block mb-3">
-                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                        Service
-                      </span>
-                    </div>
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
-                      Staff Augmentation
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
+                      Vendor Management
                     </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
-                      Supplement your team with skilled IT consultants who can hit the ground running
+                    <p className="text-muted-foreground text-sm lg:text-base">
+                      Comprehensive vendor management services to streamline your operations
                     </p>
-                    <Button variant="outline" className="w-fit">
-                      Learn More
-                    </Button>
                   </div>
 
                   {/* Second Content Item - Bottom Left */}
                   <div className="bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-8 lg:p-10 flex flex-col justify-center flex-1">
-                    <div className="inline-block mb-3">
-                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                        Service
-                      </span>
-                    </div>
-                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
-                      Project Solutions
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
+                      Executive Search
                     </h3>
-                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
-                      Complete project lifecycle solutions with experienced professionals
+                    <p className="text-muted-foreground text-sm lg:text-base">
+                      Targeted searches for middle to upper management positions
                     </p>
-                    <Button variant="outline" className="w-fit">
-                      Learn More
-                    </Button>
                   </div>
                 </div>
 
