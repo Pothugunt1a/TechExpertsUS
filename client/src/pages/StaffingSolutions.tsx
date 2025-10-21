@@ -449,180 +449,132 @@ export default function StaffingSolutions() {
           </motion.div>
 
           <div className="space-y-6">
-            {/* First Row - Image Left, Content Right (Top-Right) */}
+            {/* First Component - Image Left, Two Content Items on Right */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="relative"
-              data-testid="service-staff-augmentation"
+              data-testid="service-component-1"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
                 {/* Image Placeholder - Left Side with Diagonal Cut */}
-                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
+                <div className="relative h-[400px] lg:h-[500px] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                       clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)',
                     }}
                   >
-                    {/* IMAGE PLACEHOLDER: Staff Augmentation visual */}
+                    {/* IMAGE PLACEHOLDER */}
                     <div className="w-full h-full bg-gradient-to-br from-blue-500/30 to-cyan-500/30 flex items-center justify-center">
                       <Users className="w-20 h-20 text-white/50" />
                     </div>
                   </div>
                 </div>
 
-                {/* Content - Right Side */}
-                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="inline-block mb-3">
-                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                      {features[0].title}
-                    </span>
+                {/* Two Content Items Stacked - Right Side */}
+                <div className="flex flex-col">
+                  {/* First Content Item - Top Right */}
+                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-10 flex flex-col justify-center flex-1">
+                    <div className="inline-block mb-3">
+                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                        Success Story
+                      </span>
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
+                      Powered by Big Data
+                    </h3>
+                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
+                      Media leader implements a big data solution using AWS cloud to uncover new value from their data
+                    </p>
+                    <Button variant="outline" className="w-fit">
+                      Read This Story
+                    </Button>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
-                    {features[0].title}
-                  </h3>
-                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
-                    {features[0].description}
-                  </p>
-                  <Button variant="outline" className="w-fit">
-                    Learn More
-                  </Button>
+
+                  {/* Second Content Item - Bottom Right */}
+                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-8 lg:p-10 flex flex-col justify-center flex-1">
+                    <div className="inline-block mb-3">
+                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                        Article
+                      </span>
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
+                      Future, AmplifiedThink cloud-first
+                    </h3>
+                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
+                      Learn how to leverage cloud services and solutions to accelerate growth
+                    </p>
+                    <Button variant="outline" className="w-fit">
+                      Learn More
+                    </Button>
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Second Row - Content Left (Bottom-Left), Image Right */}
+            {/* Second Component - Two Content Items on Left, Image Right */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative"
-              data-testid="service-project-solutions"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
-                {/* Content - Left Side */}
-                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                  <div className="inline-block mb-3">
-                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                      Article
-                    </span>
-                  </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
-                    {features[1].title}
-                  </h3>
-                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
-                    {features[1].description}
-                  </p>
-                  <Button variant="outline" className="w-fit">
-                    Learn More
-                  </Button>
-                </div>
-
-                {/* Image Placeholder - Right Side with Diagonal Cut */}
-                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden order-1 lg:order-2">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                      clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)',
-                    }}
-                  >
-                    {/* IMAGE PLACEHOLDER: Project Solutions visual */}
-                    <div className="w-full h-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center">
-                      <Target className="w-20 h-20 text-white/50" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Third Row - Image Left, Content Right (Top-Right) */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
-              data-testid="service-vendor-management"
+              data-testid="service-component-2"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
-                {/* Image Placeholder - Left Side with Diagonal Cut */}
-                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-orange-500/20 to-red-500/20 overflow-hidden">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                      clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)',
-                    }}
-                  >
-                    {/* IMAGE PLACEHOLDER: Vendor Management visual */}
-                    <div className="w-full h-full bg-gradient-to-br from-orange-500/30 to-red-500/30 flex items-center justify-center">
-                      <Shield className="w-20 h-20 text-white/50" />
+                {/* Two Content Items Stacked - Left Side */}
+                <div className="flex flex-col order-2 lg:order-1">
+                  {/* First Content Item - Top Left */}
+                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-10 flex flex-col justify-center flex-1">
+                    <div className="inline-block mb-3">
+                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                        Service
+                      </span>
                     </div>
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
+                      Staff Augmentation
+                    </h3>
+                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
+                      Supplement your team with skilled IT consultants who can hit the ground running
+                    </p>
+                    <Button variant="outline" className="w-fit">
+                      Learn More
+                    </Button>
                   </div>
-                </div>
 
-                {/* Content - Right Side */}
-                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="inline-block mb-3">
-                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                      Success Story
-                    </span>
+                  {/* Second Content Item - Bottom Left */}
+                  <div className="bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-8 lg:p-10 flex flex-col justify-center flex-1">
+                    <div className="inline-block mb-3">
+                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                        Service
+                      </span>
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3 text-primary">
+                      Project Solutions
+                    </h3>
+                    <p className="text-muted-foreground text-sm lg:text-base mb-4">
+                      Complete project lifecycle solutions with experienced professionals
+                    </p>
+                    <Button variant="outline" className="w-fit">
+                      Learn More
+                    </Button>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
-                    {features[2].title}
-                  </h3>
-                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
-                    {features[2].description}
-                  </p>
-                  <Button variant="outline" className="w-fit">
-                    Read This Story
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Fourth Row - Content Left (Bottom-Left), Image Right */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative"
-              data-testid="service-executive-search"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
-                {/* Content - Left Side */}
-                <div className="bg-card/50 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                  <div className="inline-block mb-3">
-                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                      Article
-                    </span>
-                  </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">
-                    {features[3].title}
-                  </h3>
-                  <p className="text-muted-foreground text-base lg:text-lg mb-6">
-                    {features[3].description}
-                  </p>
-                  <Button variant="outline" className="w-fit">
-                    Learn More
-                  </Button>
                 </div>
 
                 {/* Image Placeholder - Right Side with Diagonal Cut */}
-                <div className="relative h-[300px] lg:h-[350px] bg-gradient-to-br from-green-500/20 to-emerald-500/20 overflow-hidden order-1 lg:order-2">
+                <div className="relative h-[400px] lg:h-[500px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden order-1 lg:order-2">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                       clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)',
                     }}
                   >
-                    {/* IMAGE PLACEHOLDER: Executive Search visual */}
-                    <div className="w-full h-full bg-gradient-to-br from-green-500/30 to-emerald-500/30 flex items-center justify-center">
-                      <Sparkles className="w-20 h-20 text-white/50" />
+                    {/* IMAGE PLACEHOLDER */}
+                    <div className="w-full h-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center">
+                      <Target className="w-20 h-20 text-white/50" />
                     </div>
                   </div>
                 </div>
