@@ -7,26 +7,25 @@ import { Link } from "wouter";
 export default function Consulting() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <ParticleBackground />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
+      {/* Hero Section - Full Screen Banner */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background with subtle animated gradient */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-background to-chart-2/5">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Tech Expertsus <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Consulting</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              We Are Professional
-            </p>
-          </motion.div>
+            className="absolute inset-0"
+            animate={{
+              background: [
+                "radial-gradient(circle at 20% 50%, rgba(34, 211, 238, 0.1) 0%, transparent 50%)",
+                "radial-gradient(circle at 80% 50%, rgba(34, 211, 238, 0.1) 0%, transparent 50%)",
+                "radial-gradient(circle at 20% 50%, rgba(34, 211, 238, 0.1) 0%, transparent 50%)",
+              ],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          />
         </div>
+
+        {/* Particle Background Overlay */}
+        <ParticleBackground />
       </section>
 
       {/* Main Content */}

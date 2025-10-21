@@ -50,26 +50,24 @@ const solutions = [
 export default function PMS() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <ParticleBackground />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Project Management <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Solutions</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              We Are Professional
-            </p>
-          </motion.div>
+      {/* Hero Section - Full Screen Banner */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/ProjectManagement.png"
+            alt="Project Management Solutions Banner"
+            className="w-full h-full object-cover object-center"
+            style={{ imageRendering: 'high-quality' }}
+            loading="eager"
+          />
         </div>
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/80 z-[1]" />
+
+        {/* Particle Background Overlay */}
+        <ParticleBackground />
       </section>
 
       {/* Overview Section */}

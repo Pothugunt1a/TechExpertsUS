@@ -50,26 +50,32 @@ const features = [
 export default function StaffingSolutions() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <ParticleBackground />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
+      {/* Hero Section - Full Screen Banner */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Dynamic gradient background with floating elements */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-chart-4/10 via-background to-chart-2/10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Staffing <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Solutions</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              We Are Professional
-            </p>
-          </motion.div>
+            className="absolute top-1/3 left-1/4 w-72 h-72 bg-primary/15 rounded-full blur-3xl"
+            animate={{
+              x: [0, 50, 0],
+              y: [0, 30, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-chart-3/15 rounded-full blur-3xl"
+            animate={{
+              x: [0, -50, 0],
+              y: [0, -30, 0],
+              scale: [1, 1.15, 1],
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          />
         </div>
+
+        {/* Particle Background Overlay */}
+        <ParticleBackground />
       </section>
 
       {/* Overview */}
