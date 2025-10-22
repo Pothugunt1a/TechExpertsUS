@@ -805,17 +805,17 @@ export default function StaffingSolutions() {
                     className="group"
                     data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
                   >
-                    <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                    <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-4 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                       <div className="relative z-10">
-                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                          <benefit.icon className="w-6 h-6 text-primary" />
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                          <benefit.icon className="w-5 h-5 text-primary" />
                         </div>
-                        <h3 className="text-base font-semibold mb-3 group-hover:text-primary transition-colors">
+                        <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">
                           {benefit.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs text-muted-foreground">
                           {benefit.description}
                         </p>
                       </div>
@@ -836,20 +836,20 @@ export default function StaffingSolutions() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 }}
                       whileHover={{ y: -8 }}
-                      className="group w-[calc(65%-0.5rem)]"
+                      className="group w-[calc(50%-0.5rem)]"
                       data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
                     >
-                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-4 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                         <div className="relative z-10">
-                          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                            <Icon className="w-6 h-6 text-primary" />
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                            <Icon className="w-5 h-5 text-primary" />
                           </div>
-                          <h3 className="text-base font-semibold mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">
                             {benefit.title}
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-xs text-muted-foreground">
                             {benefit.description}
                           </p>
                         </div>
@@ -868,11 +868,11 @@ export default function StaffingSolutions() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="flex justify-center items-center h-full"
             >
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-full max-w-sm flex items-center justify-center">
                 <img
                   src="https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif"
                   alt="Partnership Handshake"
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </motion.div>
@@ -892,17 +892,17 @@ export default function StaffingSolutions() {
                     className="group"
                     data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
                   >
-                    <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                    <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-4 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                       <div className="relative z-10">
-                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                          <benefit.icon className="w-6 h-6 text-primary" />
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                          <benefit.icon className="w-5 h-5 text-primary" />
                         </div>
-                        <h3 className="text-base font-semibold mb-3 group-hover:text-primary transition-colors">
+                        <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">
                           {benefit.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs text-muted-foreground">
                           {benefit.description}
                         </p>
                       </div>
@@ -923,20 +923,20 @@ export default function StaffingSolutions() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.5 }}
                       whileHover={{ y: -8 }}
-                      className="group w-[calc(65%-0.5rem)]"
+                      className="group w-[calc(50%-0.5rem)]"
                       data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
                     >
-                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-4 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                         <div className="relative z-10">
-                          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                            <Icon className="w-6 h-6 text-primary" />
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                            <Icon className="w-5 h-5 text-primary" />
                           </div>
-                          <h3 className="text-base font-semibold mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">
                             {benefit.title}
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-xs text-muted-foreground">
                             {benefit.description}
                           </p>
                         </div>
