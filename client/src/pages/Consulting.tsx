@@ -708,84 +708,88 @@ export default function Consulting() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* CTA Section - Modern with Animation */}
+      <section className="relative py-12 md:py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
+          <ParticleBackground />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden bg-gradient-to-br from-primary/20 via-chart-2/20 to-primary/20 backdrop-blur-sm border border-primary/20 rounded-2xl p-12"
+            transition={{ duration: 0.8 }}
           >
-            {/* Animated background pattern */}
             <motion.div
-              className="absolute inset-0 opacity-10"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)",
-                backgroundSize: "40px 40px",
-              }}
               animate={{
-                backgroundPosition: ["0px 0px", "40px 40px"],
+                scale: [1, 1.05, 1],
               }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            />
+              transition={{ duration: 2, repeat: Infinity }}
+              className="inline-block mb-6"
+            >
+              <Sparkles className="w-16 h-16 text-primary mx-auto" />
+            </motion.div>
 
-            <div className="relative z-10 text-center">
-              <motion.div
-                initial={{ scale: 0.9 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                  Ready to Transform Your Business?
-                </h2>
-                <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Let our consulting experts help you anticipate the future and
-                  stay ahead of the competition. Experience the advantage of
-                  future thinking today.
-                </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let our consulting experts help you anticipate the future and
+              stay ahead of the competition. Contact us today to get started.
+            </p>
+
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
                 <motion.div
-                  className="flex flex-wrap gap-4 justify-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <Link href="/contact">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button
-                        size="lg"
-                        className="text-lg px-10 py-6"
-                        data-testid="button-schedule-consultation"
-                      >
-                        Schedule a Consultation
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                      </Button>
-                    </motion.div>
-                  </Link>
-                  <Link href="/about">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="text-lg px-10 py-6"
-                        data-testid="button-learn-about-us"
-                      >
-                        Learn About Us
-                      </Button>
-                    </motion.div>
-                  </Link>
+                  <Button
+                    size="lg"
+                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
+                    data-testid="button-contact-consulting"
+                  >
+                    Get in Touch
+                  </Button>
                 </motion.div>
+              </Link>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-10 py-6 rounded-lg"
+                  data-testid="button-view-services"
+                >
+                  View All Services
+                </Button>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
+            >
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>Future Thinking</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>Proven Results</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>Expert Team</span>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
