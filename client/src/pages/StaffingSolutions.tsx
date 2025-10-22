@@ -868,7 +868,7 @@ export default function StaffingSolutions() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="flex justify-center items-center h-full"
             >
-              <div className="w-full max-w-sm flex items-center justify-center">
+              <div className="w-32 h-32 flex items-center justify-center">
                 <img
                   src="https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif"
                   alt="Partnership Handshake"
