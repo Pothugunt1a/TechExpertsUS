@@ -477,10 +477,10 @@ export default function Consulting() {
                     <Target className="w-24 h-24 text-white" />
                   </div>
 
-                  {/* Curved Line (SVG) - Proper circular arc bend */}
+                  {/* Curved Line (SVG) - Proper semi-circle arc */}
                   <svg className="absolute -right-20 top-0 w-48 h-full" viewBox="0 0 150 500" style={{ overflow: 'visible' }}>
                     <path
-                      d="M 30 50 Q 130 60, 140 140 Q 145 220, 140 300 Q 130 380, 30 450"
+                      d="M 30 50 A 120 200 0 0 1 30 450"
                       stroke="#E97451"
                       strokeWidth="4"
                       fill="none"
@@ -489,7 +489,7 @@ export default function Consulting() {
                     />
                   </svg>
 
-                  {/* Numbered Circles along the curve - Positioned on the circular arc */}
+                  {/* Numbered Circles along the semi-circle arc - Positioned mathematically */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -505,7 +505,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    className="absolute right-[-42px] top-[25%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-80px] top-[27.5%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">02</span>
                   </motion.div>
@@ -515,7 +515,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    className="absolute right-[-45px] top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-95px] top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">03</span>
                   </motion.div>
@@ -525,7 +525,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    className="absolute right-[-42px] top-[75%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-80px] top-[72.5%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">04</span>
                   </motion.div>
