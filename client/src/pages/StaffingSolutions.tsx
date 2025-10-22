@@ -458,7 +458,7 @@ export default function StaffingSolutions() {
               className="relative -mx-6 lg:-mx-8"
               data-testid="service-component-1"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-0 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-0 overflow-hidden">
                 {/* Image - Left Side with Diagonal Cut */}
 <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
                   <div 
@@ -620,7 +620,7 @@ export default function StaffingSolutions() {
               className="relative -mx-6 lg:-mx-8"
               data-testid="service-component-2"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-0 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-0 overflow-hidden">
                 {/* Two Content Items Stacked - Left Side */}
                 <div className="flex flex-col order-2 lg:order-1">
                   {/* First Content Item - Top Left */}
