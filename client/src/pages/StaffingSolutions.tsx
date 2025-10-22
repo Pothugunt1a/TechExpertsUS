@@ -460,9 +460,9 @@ export default function StaffingSolutions() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-0 overflow-hidden">
                 {/* Image - Left Side with Diagonal Cut */}
-                <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
+<div className="relative h-[250px] lg:h-[280px] overflow-hidden">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center rounded-br-sm"
+                    className="absolute inset-0 bg-cover bg-center rounded-br"
                     style={{
                       clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0 100%)',
                       backgroundImage: 'url(/assets/Staffing3.png)',
@@ -751,7 +751,7 @@ export default function StaffingSolutions() {
                 {/* Image - Right Side with Diagonal Cut */}
                 <div className="relative h-[250px] lg:h-[280px] overflow-hidden order-1 lg:order-2">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center rounded-tl-sm"
+                    className="absolute inset-0 bg-cover bg-center rounded-tl"
                     style={{
                       clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)',
                       backgroundImage: 'url(/assets/Staffing4.png)',
