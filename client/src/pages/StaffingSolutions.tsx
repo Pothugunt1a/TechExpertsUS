@@ -753,7 +753,7 @@ export default function StaffingSolutions() {
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                      clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)',
+                      clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)',
                       backgroundImage: 'url(/assets/Staffing4.png)',
                     }}
                   />
