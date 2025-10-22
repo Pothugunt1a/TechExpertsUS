@@ -488,7 +488,13 @@ export default function Outsourcing() {
                     ))}
                   </div>
                 </div>
-                <div className="w-full h-80 bg-gradient-to-br from-primary/10 to-chart-2/10 rounded-xl flex items-center justify-center">
+                {/* 
+                  IMAGE PLACEHOLDER 4: Application Outsourcing
+                  Recommended: Application development, coding, software architecture
+                  Size: 500x400
+                  Path: /assets/app-outsourcing.jpg
+                */}
+                <div className="w-full h-80 bg-gradient-to-br from-primary/10 to-chart-2/10 rounded-xl flex items-center justify-center border border-primary/20">
                   <p className="text-muted-foreground text-center p-8">
                     [Image Placeholder: Application Outsourcing]
                     <br />
@@ -508,7 +514,13 @@ export default function Outsourcing() {
               className="group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-300">
-                <div className="w-full h-80 bg-gradient-to-br from-chart-2/10 to-primary/10 rounded-xl flex items-center justify-center order-2 lg:order-1">
+                {/* 
+                  IMAGE PLACEHOLDER 5: Infrastructure Outsourcing
+                  Recommended: Data center, servers, network infrastructure
+                  Size: 500x400
+                  Path: /assets/infra-outsourcing.jpg
+                */}
+                <div className="w-full h-80 bg-gradient-to-br from-chart-2/10 to-primary/10 rounded-xl flex items-center justify-center border border-primary/20 order-2 lg:order-1">
                   <p className="text-muted-foreground text-center p-8">
                     [Image Placeholder: Infrastructure Outsourcing]
                     <br />
@@ -602,7 +614,13 @@ export default function Outsourcing() {
                     ))}
                   </div>
                 </div>
-                <div className="w-full h-80 bg-gradient-to-br from-primary/10 to-chart-2/10 rounded-xl flex items-center justify-center">
+                {/* 
+                  IMAGE PLACEHOLDER 6: Business Process Outsourcing
+                  Recommended: Business processes, workflow automation, team collaboration
+                  Size: 500x400
+                  Path: /assets/bpo-outsourcing.jpg
+                */}
+                <div className="w-full h-80 bg-gradient-to-br from-primary/10 to-chart-2/10 rounded-xl flex items-center justify-center border border-primary/20">
                   <p className="text-muted-foreground text-center p-8">
                     [Image Placeholder: BPO Services]
                     <br />
