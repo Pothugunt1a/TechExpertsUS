@@ -789,7 +789,7 @@ export default function StaffingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1.5fr] gap-8 lg:gap-12 items-start">
             {/* Left Side - 3 Cards (2 in row 1, 1 centered in row 2) */}
             <div className="space-y-6">
               {/* Row 1: Cards 1 and 2 */}
