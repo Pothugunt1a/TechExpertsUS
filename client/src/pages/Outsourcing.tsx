@@ -246,21 +246,12 @@ export default function Outsourcing() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              {/* 
-                IMAGE PLACEHOLDER 2: Hero Right Side
-                Recommended: IT infrastructure illustration, cloud network, or team collaboration
-                Size: 800x600 or similar
-                Path: /assets/outsourcing-hero.png
-              */}
-              <div className="w-full h-96 bg-gradient-to-br from-primary/10 to-chart-2/10 rounded-2xl flex items-center justify-center border border-primary/20">
-                <p className="text-muted-foreground text-center p-8">
-                  [Image Placeholder: Outsourcing Hero Visual]
-                  <br />
-                  <span className="text-xs">
-                    Suggested: IT infrastructure network or cloud computing
-                    illustration
-                  </span>
-                </p>
+              <div className="w-full h-96 rounded-2xl overflow-hidden border border-primary/20">
+                <img 
+                  src="/assets/Outsourcing.jpg" 
+                  alt="IT Outsourcing Solutions" 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating stats cards */}
