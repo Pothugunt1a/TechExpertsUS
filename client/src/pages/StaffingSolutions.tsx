@@ -460,12 +460,12 @@ export default function StaffingSolutions() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-0 overflow-hidden">
                 {/* Image - Left Side with Diagonal Cut */}
-<div className="relative h-[250px] lg:h-[280px] overflow-hidden">
-                  <div 
+                <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
+                  <div
                     className="absolute inset-0 bg-cover bg-center rounded-br"
                     style={{
-                      clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0 100%)',
-                      backgroundImage: 'url(/assets/Staffing3.png)',
+                      clipPath: "polygon(0 0, 100% 0, 75% 100%, 0 100%)",
+                      backgroundImage: "url(/assets/Staffing3.png)",
                     }}
                   />
                 </div>
@@ -478,15 +478,15 @@ export default function StaffingSolutions() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
                       animate={{
-                        x: ['-100%', '100%'],
+                        x: ["-100%", "100%"],
                       }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
-                        ease: "linear"
+                        ease: "linear",
                       }}
                     />
-                    
+
                     {/* Floating particles */}
                     <motion.div
                       className="absolute top-0 left-0 w-2 h-2 bg-primary/20 rounded-full"
@@ -494,12 +494,12 @@ export default function StaffingSolutions() {
                         x: [0, 100, 0],
                         y: [0, 50, 0],
                         scale: [1, 1.5, 1],
-                        opacity: [0.3, 0.7, 0.3]
+                        opacity: [0.3, 0.7, 0.3],
                       }}
                       transition={{
                         duration: 4,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
                     <motion.div
@@ -508,13 +508,13 @@ export default function StaffingSolutions() {
                         x: [0, -80, 0],
                         y: [0, -40, 0],
                         scale: [1, 1.8, 1],
-                        opacity: [0.2, 0.6, 0.2]
+                        opacity: [0.2, 0.6, 0.2],
                       }}
                       transition={{
                         duration: 5,
                         repeat: Infinity,
                         ease: "easeInOut",
-                        delay: 1
+                        delay: 1,
                       }}
                     />
 
@@ -529,8 +529,8 @@ export default function StaffingSolutions() {
                           y: {
                             duration: 2,
                             repeat: Infinity,
-                            ease: "easeInOut"
-                          }
+                            ease: "easeInOut",
+                          },
                         }}
                       >
                         <Users className="w-6 h-6 text-primary" />
@@ -540,7 +540,8 @@ export default function StaffingSolutions() {
                           Staff Augmentation
                         </h3>
                         <p className="text-muted-foreground text-sm">
-                          Supplement your team with skilled IT consultants who can hit the ground running
+                          Supplement your team with skilled IT consultants who
+                          can hit the ground running
                         </p>
                       </div>
                     </div>
@@ -552,13 +553,13 @@ export default function StaffingSolutions() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
                       animate={{
-                        x: ['100%', '-100%'],
+                        x: ["100%", "-100%"],
                       }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
                         ease: "linear",
-                        delay: 0.5
+                        delay: 0.5,
                       }}
                     />
 
@@ -569,13 +570,13 @@ export default function StaffingSolutions() {
                         x: [0, 60, 0],
                         y: [0, -30, 0],
                         scale: [1, 1.3, 1],
-                        opacity: [0.3, 0.8, 0.3]
+                        opacity: [0.3, 0.8, 0.3],
                       }}
                       transition={{
                         duration: 4.5,
                         repeat: Infinity,
                         ease: "easeInOut",
-                        delay: 0.5
+                        delay: 0.5,
                       }}
                     />
 
@@ -591,8 +592,8 @@ export default function StaffingSolutions() {
                             duration: 2.5,
                             repeat: Infinity,
                             ease: "easeInOut",
-                            delay: 0.3
-                          }
+                            delay: 0.3,
+                          },
                         }}
                       >
                         <Target className="w-6 h-6 text-chart-2" />
@@ -602,7 +603,8 @@ export default function StaffingSolutions() {
                           Project Solutions
                         </h3>
                         <p className="text-muted-foreground text-sm">
-                          Complete project lifecycle solutions with experienced professionals
+                          Complete project lifecycle solutions with experienced
+                          professionals
                         </p>
                       </div>
                     </div>
@@ -629,13 +631,13 @@ export default function StaffingSolutions() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
                       animate={{
-                        x: ['-100%', '100%'],
+                        x: ["-100%", "100%"],
                       }}
                       transition={{
                         duration: 3.5,
                         repeat: Infinity,
                         ease: "linear",
-                        delay: 1
+                        delay: 1,
                       }}
                     />
 
@@ -646,13 +648,13 @@ export default function StaffingSolutions() {
                         x: [0, -70, 0],
                         y: [0, 40, 0],
                         scale: [1, 1.6, 1],
-                        opacity: [0.2, 0.7, 0.2]
+                        opacity: [0.2, 0.7, 0.2],
                       }}
                       transition={{
                         duration: 4.2,
                         repeat: Infinity,
                         ease: "easeInOut",
-                        delay: 0.8
+                        delay: 0.8,
                       }}
                     />
 
@@ -668,8 +670,8 @@ export default function StaffingSolutions() {
                             duration: 2.2,
                             repeat: Infinity,
                             ease: "easeInOut",
-                            delay: 0.5
-                          }
+                            delay: 0.5,
+                          },
                         }}
                       >
                         <Shield className="w-6 h-6 text-primary" />
@@ -679,7 +681,8 @@ export default function StaffingSolutions() {
                           Vendor Management
                         </h3>
                         <p className="text-muted-foreground text-sm">
-                          Comprehensive vendor management services to streamline your operations
+                          Comprehensive vendor management services to streamline
+                          your operations
                         </p>
                       </div>
                     </div>
@@ -691,13 +694,13 @@ export default function StaffingSolutions() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-l from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
                       animate={{
-                        x: ['100%', '-100%'],
+                        x: ["100%", "-100%"],
                       }}
                       transition={{
                         duration: 3.2,
                         repeat: Infinity,
                         ease: "linear",
-                        delay: 1.5
+                        delay: 1.5,
                       }}
                     />
 
@@ -708,13 +711,13 @@ export default function StaffingSolutions() {
                         x: [0, 50, 0],
                         y: [0, -25, 0],
                         scale: [1, 1.4, 1],
-                        opacity: [0.3, 0.6, 0.3]
+                        opacity: [0.3, 0.6, 0.3],
                       }}
                       transition={{
                         duration: 3.8,
                         repeat: Infinity,
                         ease: "easeInOut",
-                        delay: 1.2
+                        delay: 1.2,
                       }}
                     />
 
@@ -730,8 +733,8 @@ export default function StaffingSolutions() {
                             duration: 2.8,
                             repeat: Infinity,
                             ease: "easeInOut",
-                            delay: 0.7
-                          }
+                            delay: 0.7,
+                          },
                         }}
                       >
                         <Sparkles className="w-6 h-6 text-chart-2" />
@@ -741,7 +744,8 @@ export default function StaffingSolutions() {
                           Executive Search
                         </h3>
                         <p className="text-muted-foreground text-sm">
-                          Targeted searches for middle to upper management positions
+                          Targeted searches for middle to upper management
+                          positions
                         </p>
                       </div>
                     </div>
@@ -750,11 +754,11 @@ export default function StaffingSolutions() {
 
                 {/* Image - Right Side with Diagonal Cut */}
                 <div className="relative h-[250px] lg:h-[280px] overflow-hidden order-1 lg:order-2">
-                  <div 
+                  <div
                     className="absolute inset-0 bg-cover bg-center rounded-tl"
                     style={{
-                      clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)',
-                      backgroundImage: 'url(/assets/Staffing4.png)',
+                      clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%)",
+                      backgroundImage: "url(/assets/Staffing4.png)",
                     }}
                   />
                 </div>
@@ -868,9 +872,9 @@ export default function StaffingSolutions() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="flex justify-center items-center h-full"
             >
-              <div className="w-32 h-32 flex items-center justify-center">
+              <div className="w-64 h-64 flex items-center justify-center">
                 <img
-                  src=""
+                  src="/assets/Staffing5.png"
                   alt="Partnership Handshake"
                   className="w-full h-auto object-contain"
                 />
