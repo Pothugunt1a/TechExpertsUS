@@ -870,7 +870,7 @@ export default function StaffingSolutions() {
             >
               <div className="w-32 h-32 flex items-center justify-center">
                 <img
-                  src="https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif"
+                  src=""
                   alt="Partnership Handshake"
                   className="w-full h-auto object-contain"
                 />
