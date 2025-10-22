@@ -471,32 +471,33 @@ export default function Consulting() {
                 transition={{ duration: 0.8 }}
                 className="relative flex justify-center lg:justify-end"
               >
-                <div className="relative h-[400px] flex items-center">
+                <div className="relative h-[500px] flex items-center">
                   {/* Large Circle */}
                   <div className="w-64 h-64 rounded-full bg-gradient-to-br from-[#E97451] to-[#F4A261] flex items-center justify-center shadow-2xl">
                     <Target className="w-24 h-24 text-white" />
                   </div>
 
-                  {/* Curved Line (SVG) - Extended to cover full height */}
-                  <svg className="absolute -right-12 top-0 w-32 h-full" viewBox="0 0 100 400" style={{ overflow: 'visible' }}>
+                  {/* Curved Line (SVG) - Extended to cover full height with proper S-curve */}
+                  <svg className="absolute -right-16 top-0 w-40 h-full" viewBox="0 0 120 500" style={{ overflow: 'visible' }}>
                     <path
-                      d="M 20 40 Q 90 90, 90 200 Q 90 310, 20 360"
+                      d="M 20 50 Q 100 100, 100 250 Q 100 400, 20 450"
                       stroke="#E97451"
-                      strokeWidth="4"
+                      strokeWidth="3"
                       fill="none"
                       strokeLinecap="round"
+                      opacity="0.8"
                     />
                   </svg>
 
-                  {/* Numbered Circles along the curve - All 5 positioned */}
+                  {/* Numbered Circles along the curve - Properly spaced with exact positioning */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="absolute -right-8 top-6 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                    className="absolute -right-6 top-[10%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-2 border-white"
                   >
-                    <span className="text-2xl font-bold text-white">01</span>
+                    <span className="text-xl font-bold text-white">01</span>
                   </motion.div>
 
                   <motion.div
@@ -504,9 +505,9 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    className="absolute -right-8 top-[25%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                    className="absolute -right-6 top-[27.5%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-2 border-white"
                   >
-                    <span className="text-2xl font-bold text-white">02</span>
+                    <span className="text-xl font-bold text-white">02</span>
                   </motion.div>
 
                   <motion.div
@@ -514,9 +515,9 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    className="absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                    className="absolute -right-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-2 border-white"
                   >
-                    <span className="text-2xl font-bold text-white">03</span>
+                    <span className="text-xl font-bold text-white">03</span>
                   </motion.div>
 
                   <motion.div
@@ -524,9 +525,9 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    className="absolute -right-8 top-[75%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                    className="absolute -right-6 top-[72.5%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-2 border-white"
                   >
-                    <span className="text-2xl font-bold text-white">04</span>
+                    <span className="text-xl font-bold text-white">04</span>
                   </motion.div>
 
                   <motion.div
@@ -534,9 +535,9 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.7 }}
-                    className="absolute -right-8 bottom-6 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                    className="absolute -right-6 top-[90%] w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl border-2 border-white"
                   >
-                    <span className="text-2xl font-bold text-white">05</span>
+                    <span className="text-xl font-bold text-white">05</span>
                   </motion.div>
                 </div>
               </motion.div>
