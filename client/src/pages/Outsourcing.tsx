@@ -309,11 +309,11 @@ export default function Outsourcing() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <div className="relative w-full h-96 rounded-2xl overflow-hidden">
+              <div className="relative w-full h-64 rounded-2xl overflow-hidden">
                 <img
                   src="/assets/Outsourcing.gif"
                   alt="IT Outsourcing Overview"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </motion.div>
