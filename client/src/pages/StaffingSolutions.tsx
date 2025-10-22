@@ -931,13 +931,13 @@ export default function StaffingSolutions() {
             </div>
           </div>
 
-          {/* Handshake GIF - Centered below all cards */}
+          {/* Handshake GIF - Centered in the middle */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="flex justify-center mt-12"
+            className="flex justify-center items-center min-h-[400px]"
           >
             <div className="w-64 h-64 flex items-center justify-center">
               <img
