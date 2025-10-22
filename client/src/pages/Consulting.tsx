@@ -471,14 +471,14 @@ export default function Consulting() {
                 transition={{ duration: 0.8 }}
                 className="relative flex justify-center lg:justify-end"
               >
-                <div className="relative h-[500px] flex items-center gap-8">
-                  {/* GIF Image on the left */}
+                <div className="relative h-[500px] flex items-center gap-6">
+                  {/* GIF Image on the left - Bigger */}
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-48 h-48 rounded-xl overflow-hidden shadow-lg"
+                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg"
                   >
                     <img
                       src="/assets/Outsourcing5.gif"
@@ -487,9 +487,9 @@ export default function Consulting() {
                     />
                   </motion.div>
 
-                  {/* Large Circle */}
-                  <div className="w-64 h-64 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
-                    <Target className="w-24 h-24 text-white" />
+                  {/* Circle - Smaller */}
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
+                    <Target className="w-16 h-16 text-white" />
                   </div>
 
                   {/* Curved Line (SVG) - Perfect semi-circle arc */}
@@ -504,13 +504,13 @@ export default function Consulting() {
                     />
                   </svg>
 
-                  {/* Numbered Circles along the semi-circle arc - Positioned on perfect arc */}
+                  {/* Numbered Circles along the semi-circle arc - Properly aligned */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="absolute right-[-50px] top-[10%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-40px] top-[8%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">01</span>
                   </motion.div>
@@ -520,7 +520,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    className="absolute right-[-120px] top-[25%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-110px] top-[23%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">02</span>
                   </motion.div>
@@ -530,7 +530,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    className="absolute right-[-150px] top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-145px] top-[50%] -translate-y-1/2 w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">03</span>
                   </motion.div>
@@ -540,7 +540,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    className="absolute right-[-120px] top-[75%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-110px] top-[77%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">04</span>
                   </motion.div>
@@ -550,7 +550,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.7 }}
-                    className="absolute right-[-50px] top-[90%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-40px] top-[92%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">05</span>
                   </motion.div>
