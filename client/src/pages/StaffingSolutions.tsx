@@ -789,11 +789,11 @@ export default function StaffingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Left Side */}
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+            {/* Left Side - 3 Cards */}
+            <div className="space-y-6">
               {/* Cards 1 and 2 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 {benefits.slice(0, 2).map((benefit, index) => (
                   <motion.div
                     key={benefit.title}
@@ -824,46 +824,61 @@ export default function StaffingSolutions() {
                 ))}
               </div>
 
-              {/* Card 3 - Centered below 1 and 2 */}
-              <div className="flex justify-center">
-                {(() => {
-                  const benefit = benefits[2];
-                  const Icon = benefit.icon;
-                  return (
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.2 }}
-                      whileHover={{ y: -8 }}
-                      className="group w-full md:w-1/2"
-                      data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
-                    >
-                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Card 3 */}
+              {(() => {
+                const benefit = benefits[2];
+                const Icon = benefit.icon;
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    whileHover={{ y: -8 }}
+                    className="group"
+                    data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                        <div className="relative z-10">
-                          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                            <Icon className="w-6 h-6 text-primary" />
-                          </div>
-                          <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                            {benefit.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {benefit.description}
-                          </p>
+                      <div className="relative z-10">
+                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                          <Icon className="w-6 h-6 text-primary" />
                         </div>
+                        <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {benefit.description}
+                        </p>
                       </div>
-                    </motion.div>
-                  );
-                })()}
-              </div>
+                    </div>
+                  </motion.div>
+                );
+              })()}
             </div>
 
-            {/* Right Side */}
-            <div className="space-y-8">
+            {/* Center - Handshake GIF */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="flex justify-center items-center h-full"
+            >
+              <div className="w-full max-w-sm flex items-center justify-center">
+                <img
+                  src="https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif"
+                  alt="Partnership Handshake"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </motion.div>
+
+            {/* Right Side - 3 Cards */}
+            <div className="space-y-6">
               {/* Cards 4 and 5 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 {benefits.slice(3, 5).map((benefit, index) => (
                   <motion.div
                     key={benefit.title}
@@ -894,59 +909,40 @@ export default function StaffingSolutions() {
                 ))}
               </div>
 
-              {/* Card 6 - Centered below 4 and 5 */}
-              <div className="flex justify-center">
-                {(() => {
-                  const benefit = benefits[5];
-                  const Icon = benefit.icon;
-                  return (
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5 }}
-                      whileHover={{ y: -8 }}
-                      className="group w-full md:w-1/2"
-                      data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
-                    >
-                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Card 6 */}
+              {(() => {
+                const benefit = benefits[5];
+                const Icon = benefit.icon;
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    whileHover={{ y: -8 }}
+                    className="group"
+                    data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                        <div className="relative z-10">
-                          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                            <Icon className="w-6 h-6 text-primary" />
-                          </div>
-                          <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                            {benefit.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {benefit.description}
-                          </p>
+                      <div className="relative z-10">
+                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                          <Icon className="w-6 h-6 text-primary" />
                         </div>
+                        <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {benefit.description}
+                        </p>
                       </div>
-                    </motion.div>
-                  );
-                })()}
-              </div>
+                    </div>
+                  </motion.div>
+                );
+              })()}
             </div>
           </div>
-
-          {/* Handshake GIF - Centered in the middle */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="flex justify-center items-center min-h-[400px]"
-          >
-            <div className="w-64 h-64 flex items-center justify-center">
-              <img
-                src="https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif"
-                alt="Partnership Handshake"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
 
