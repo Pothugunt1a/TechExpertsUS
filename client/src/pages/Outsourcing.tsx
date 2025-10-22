@@ -247,9 +247,9 @@ export default function Outsourcing() {
               className="relative"
             >
               <div className="w-full h-96 rounded-2xl overflow-hidden border border-primary/20">
-                <img 
-                  src="/assets/Outsourcing.jpg" 
-                  alt="IT Outsourcing Solutions" 
+                <img
+                  src="/assets/Outsourcing.png"
+                  alt="IT Outsourcing Solutions"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -267,7 +267,9 @@ export default function Outsourcing() {
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-primary">50%</p>
-                    <p className="text-xs text-muted-foreground">Cost Reduction</p>
+                    <p className="text-xs text-muted-foreground">
+                      Cost Reduction
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -448,8 +450,9 @@ export default function Outsourcing() {
               What Tech Expertsus Provides
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Transparent, flexible and scalable full service offerings delivered
-              seamlessly through our GNDM with global uniform delivery standards
+              Transparent, flexible and scalable full service offerings
+              delivered seamlessly through our GNDM with global uniform delivery
+              standards
             </p>
           </motion.div>
 
@@ -473,9 +476,9 @@ export default function Outsourcing() {
                   </div>
                   <p className="text-lg text-muted-foreground mb-6">
                     Streamline your processes by leveraging your application
-                    management and IT investments. Our full services model enables
-                    you to meet all your needs and business goals with maximum
-                    efficiency.
+                    management and IT investments. Our full services model
+                    enables you to meet all your needs and business goals with
+                    maximum efficiency.
                   </p>
                   <div className="space-y-3">
                     {applicationServices.map((service, index) => (
