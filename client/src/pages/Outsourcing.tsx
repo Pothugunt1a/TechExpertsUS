@@ -246,7 +246,7 @@ export default function Outsourcing() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="w-full h-96 rounded-2xl overflow-hidden border border-primary/20">
+              <div className="w-full h-96 rounded-2xl overflow-hidden">
                 <img
                   src="/assets/Outsourcing.png"
                   alt="IT Outsourcing Solutions"
