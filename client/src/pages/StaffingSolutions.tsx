@@ -826,31 +826,37 @@ export default function StaffingSolutions() {
 
               {/* Card 3 - Centered below 1 and 2 */}
               <div className="flex justify-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  whileHover={{ y: -8 }}
-                  className="group w-full md:w-1/2"
-                  data-testid={`benefit-${benefits[2].title.toLowerCase().replace(/\s+/g, "-")}`}
-                >
-                  <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                {(() => {
+                  const benefit = benefits[2];
+                  const Icon = benefit.icon;
+                  return (
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 }}
+                      whileHover={{ y: -8 }}
+                      className="group w-full md:w-1/2"
+                      data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                    <div className="relative z-10">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                        <benefits[2].icon className="w-6 h-6 text-primary" />
+                        <div className="relative z-10">
+                          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <Icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                            {benefit.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {benefit.description}
+                          </p>
+                        </div>
                       </div>
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                        {benefits[2].title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {benefits[2].description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
+                    </motion.div>
+                  );
+                })()}
               </div>
             </div>
 
@@ -890,31 +896,37 @@ export default function StaffingSolutions() {
 
               {/* Card 6 - Centered below 4 and 5 */}
               <div className="flex justify-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                  whileHover={{ y: -8 }}
-                  className="group w-full md:w-1/2"
-                  data-testid={`benefit-${benefits[5].title.toLowerCase().replace(/\s+/g, "-")}`}
-                >
-                  <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                {(() => {
+                  const benefit = benefits[5];
+                  const Icon = benefit.icon;
+                  return (
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.5 }}
+                      whileHover={{ y: -8 }}
+                      className="group w-full md:w-1/2"
+                      data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                    <div className="relative z-10">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                        <benefits[5].icon className="w-6 h-6 text-primary" />
+                        <div className="relative z-10">
+                          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <Icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                            {benefit.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {benefit.description}
+                          </p>
+                        </div>
                       </div>
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                        {benefits[5].title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {benefits[5].description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
+                    </motion.div>
+                  );
+                })()}
               </div>
             </div>
           </div>
