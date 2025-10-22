@@ -520,14 +520,12 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/infra-outsourcing.jpg
                 */}
-                <div className="w-full h-80 bg-gradient-to-br from-chart-2/10 to-primary/10 rounded-xl flex items-center justify-center border border-primary/20 order-2 lg:order-1">
-                  <p className="text-muted-foreground text-center p-8">
-                    [Image Placeholder: Infrastructure Outsourcing]
-                    <br />
-                    <span className="text-xs">
-                      Suggested: Data center or network infrastructure
-                    </span>
-                  </p>
+                <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
+                  <img
+                    src="/assets/Outsourcing3.jpg"
+                    alt="Infrastructure Outsourcing"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="order-1 lg:order-2">
                   <div className="inline-flex items-center gap-3 mb-4">
@@ -620,14 +618,12 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/bpo-outsourcing.jpg
                 */}
-                <div className="w-full h-80 bg-gradient-to-br from-primary/10 to-chart-2/10 rounded-xl flex items-center justify-center border border-primary/20">
-                  <p className="text-muted-foreground text-center p-8">
-                    [Image Placeholder: BPO Services]
-                    <br />
-                    <span className="text-xs">
-                      Suggested: Business processes or workflow automation
-                    </span>
-                  </p>
+                <div className="w-full h-80 rounded-xl overflow-hidden">
+                  <img
+                    src="/assets/Outsourcing4.jpg"
+                    alt="Business Process Outsourcing"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </motion.div>
