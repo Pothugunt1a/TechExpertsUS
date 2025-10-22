@@ -81,7 +81,7 @@ export default function Consulting() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <Lightbulb className="w-12 h-12 text-primary mb-4" />
-                <h4 className="text-lg font-semibold mb-2">Innovation</h4>
+                <h4 className="text-lg font-semibold mb-2 text-primary">Innovation</h4>
                 <p className="text-sm text-muted-foreground">Future-focused solutions</p>
               </motion.div>
               <motion.div
@@ -89,7 +89,7 @@ export default function Consulting() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <TrendingUp className="w-12 h-12 text-primary mb-4" />
-                <h4 className="text-lg font-semibold mb-2">Growth</h4>
+                <h4 className="text-lg font-semibold mb-2 text-primary">Growth</h4>
                 <p className="text-sm text-muted-foreground">Scalable strategies</p>
               </motion.div>
               <motion.div
@@ -97,7 +97,7 @@ export default function Consulting() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <Target className="w-12 h-12 text-primary mb-4" />
-                <h4 className="text-lg font-semibold mb-2">Precision</h4>
+                <h4 className="text-lg font-semibold mb-2 text-primary">Precision</h4>
                 <p className="text-sm text-muted-foreground">Targeted approach</p>
               </motion.div>
               <motion.div
@@ -105,7 +105,7 @@ export default function Consulting() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <Zap className="w-12 h-12 text-primary mb-4" />
-                <h4 className="text-lg font-semibold mb-2">Efficiency</h4>
+                <h4 className="text-lg font-semibold mb-2 text-primary">Efficiency</h4>
                 <p className="text-sm text-muted-foreground">Optimized operations</p>
               </motion.div>
             </motion.div>
@@ -133,7 +133,7 @@ export default function Consulting() {
             <p>
               We have the flexibility to deliver solutions quickly and cost-effectively. And our confidence in our ability to think ahead makes us willing to be measured against any business outcomes.
             </p>
-            <p className="text-xl font-semibold text-foreground">
+            <p className="text-xl font-semibold text-primary">
               Which means that with Tech Expertsus Consulting, you get the advantage of future thinking - along with the advantage of being taken the rest of the way.
             </p>
           </div>

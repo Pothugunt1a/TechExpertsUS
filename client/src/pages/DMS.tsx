@@ -216,7 +216,7 @@ export default function DMS() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <Server className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Server Management</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary">Server Management</h3>
                 <p className="text-sm text-muted-foreground">24/7 monitoring and maintenance</p>
               </motion.div>
               <motion.div
@@ -224,7 +224,7 @@ export default function DMS() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <Database className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Data Storage</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary">Data Storage</h3>
                 <p className="text-sm text-muted-foreground">Scalable storage solutions</p>
               </motion.div>
               <motion.div
@@ -232,7 +232,7 @@ export default function DMS() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <Shield className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Security</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary">Security</h3>
                 <p className="text-sm text-muted-foreground">Enterprise-grade protection</p>
               </motion.div>
               <motion.div
@@ -240,7 +240,7 @@ export default function DMS() {
                 className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
               >
                 <Zap className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Performance</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary">Performance</h3>
                 <p className="text-sm text-muted-foreground">Optimized operations</p>
               </motion.div>
             </motion.div>

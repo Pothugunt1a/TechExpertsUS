@@ -384,7 +384,7 @@ export default function Contact() {
               >
                 <div className="absolute inset-0 bg-background/30" />
                 <div className="relative z-10">
-                  <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-primary">Business Hours</h3>
                   <div className="space-y-2 text-muted-foreground">
                     <p data-testid="text-hours-weekday">
                       Monday - Friday: 9:00 AM - 6:00 PM

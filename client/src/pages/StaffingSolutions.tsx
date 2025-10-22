@@ -268,7 +268,7 @@ export default function StaffingSolutions() {
                     <Award className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">500+</p>
+                    <p className="text-2xl font-bold text-primary">500+</p>
                     <p className="text-xs text-muted-foreground">
                       Clients Served
                     </p>
@@ -287,7 +287,7 @@ export default function StaffingSolutions() {
                     <TrendingUp className="w-6 h-6 text-chart-2" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">98%</p>
+                    <p className="text-2xl font-bold text-primary">98%</p>
                     <p className="text-xs text-muted-foreground">
                       Success Rate
                     </p>

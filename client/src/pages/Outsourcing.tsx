@@ -275,7 +275,7 @@ export default function Outsourcing() {
                     <TrendingDown className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">50%</p>
+                    <p className="text-2xl font-bold text-primary">50%</p>
                     <p className="text-xs text-muted-foreground">Cost Reduction</p>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function Outsourcing() {
                     <Globe className="w-6 h-6 text-chart-2" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">Global</p>
+                    <p className="text-2xl font-bold text-primary">Global</p>
                     <p className="text-xs text-muted-foreground">Delivery</p>
                   </div>
                 </div>

@@ -471,7 +471,7 @@ export default function Home() {
                       style={{ filter: 'invert(47%) sepia(96%) saturate(3071%) hue-rotate(190deg) brightness(95%) contrast(101%)' }}
                     />
                     <motion.span
-                      className="text-sm font-semibold text-center px-2"
+                      className="text-sm font-semibold text-center px-2 text-primary"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
