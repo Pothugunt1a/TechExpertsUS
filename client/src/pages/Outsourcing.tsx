@@ -309,20 +309,12 @@ export default function Outsourcing() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              {/* 
-                IMAGE PLACEHOLDER 3: Overview Visual
-                Recommended: Team working on IT solutions, data center, or collaboration image
-                Size: 600x600 or similar
-                Path: /assets/outsourcing-overview.jpg
-              */}
-              <div className="relative w-full h-96 bg-gradient-to-br from-chart-2/10 to-primary/10 rounded-2xl flex items-center justify-center border border-primary/20">
-                <p className="text-muted-foreground text-center p-8">
-                  [Image Placeholder: Overview Visual]
-                  <br />
-                  <span className="text-xs">
-                    Suggested: IT team collaboration or GNDM network diagram
-                  </span>
-                </p>
+              <div className="relative w-full h-96 rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/Outsourcing.gif"
+                  alt="IT Outsourcing Overview"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
 
