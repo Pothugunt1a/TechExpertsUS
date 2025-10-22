@@ -458,13 +458,13 @@ export default function StaffingSolutions() {
               className="relative -mx-6 lg:-mx-8"
               data-testid="service-component-1"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-0 overflow-hidden">
                 {/* Image - Left Side with Diagonal Cut */}
                 <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                      clipPath: 'polygon(0 0, 95% 0, 100% 100%, 0 100%)',
+                      clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)',
                       backgroundImage: 'url(/assets/Staffing3.png)',
                     }}
                   />
@@ -473,7 +473,7 @@ export default function StaffingSolutions() {
                 {/* Two Content Items Stacked - Right Side */}
                 <div className="flex flex-col">
                   {/* First Content Item - Top Right */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
                     {/* Animated background gradient */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
@@ -547,7 +547,7 @@ export default function StaffingSolutions() {
                   </div>
 
                   {/* Second Content Item - Bottom Right */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
                     {/* Animated background gradient */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
@@ -620,11 +620,11 @@ export default function StaffingSolutions() {
               className="relative -mx-6 lg:-mx-8"
               data-testid="service-component-2"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-0 overflow-hidden">
                 {/* Two Content Items Stacked - Left Side */}
                 <div className="flex flex-col order-2 lg:order-1">
                   {/* First Content Item - Top Left */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
                     {/* Animated background gradient */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
@@ -686,7 +686,7 @@ export default function StaffingSolutions() {
                   </div>
 
                   {/* Second Content Item - Bottom Left */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm border border-primary/10 border-t-0 p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
                     {/* Animated background gradient */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-l from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
