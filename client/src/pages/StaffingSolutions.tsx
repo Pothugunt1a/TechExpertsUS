@@ -793,7 +793,7 @@ export default function StaffingSolutions() {
             {/* Left Side - 3 Cards (2 in row 1, 1 centered in row 2) */}
             <div className="space-y-6">
               {/* Row 1: Cards 1 and 2 */}
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4">
                 {benefits.slice(0, 2).map((benefit, index) => (
                   <motion.div
                     key={benefit.title}
@@ -836,7 +836,7 @@ export default function StaffingSolutions() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 }}
                       whileHover={{ y: -8 }}
-                      className="group w-[calc(50%-0.75rem)]"
+                      className="group w-[calc(65%-0.5rem)]"
                       data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
                     >
                       <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
@@ -868,7 +868,7 @@ export default function StaffingSolutions() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="flex justify-center items-center h-full"
             >
-              <div className="w-48 h-48 flex items-center justify-center">
+              <div className="w-40 h-40 flex items-center justify-center">
                 <img
                   src="https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif"
                   alt="Partnership Handshake"
@@ -880,7 +880,7 @@ export default function StaffingSolutions() {
             {/* Right Side - 3 Cards (2 in row 1, 1 centered in row 2) */}
             <div className="space-y-6">
               {/* Row 1: Cards 4 and 5 */}
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4">
                 {benefits.slice(3, 5).map((benefit, index) => (
                   <motion.div
                     key={benefit.title}
@@ -923,7 +923,7 @@ export default function StaffingSolutions() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.5 }}
                       whileHover={{ y: -8 }}
-                      className="group w-[calc(50%-0.75rem)]"
+                      className="group w-[calc(65%-0.5rem)]"
                       data-testid={`benefit-${benefit.title.toLowerCase().replace(/\s+/g, "-")}`}
                     >
                       <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
