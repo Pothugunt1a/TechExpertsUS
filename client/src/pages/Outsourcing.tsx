@@ -108,12 +108,14 @@ export default function Outsourcing() {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
+        {/* 
+          IMAGE PLACEHOLDER 1: Hero Background
+          Recommended: Modern IT outsourcing, cloud infrastructure, or global network visualization
+          Size: 1920x1080 or larger
+          Path: /assets/outsourcing-hero-bg.jpg or .gif
+        */}
         <div className="absolute inset-0 z-0">
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(/assets/Outsourcing.jpg)' }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background/80 to-chart-2/20" />
+          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
         </div>
 
         <ParticleBackground />
