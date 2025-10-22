@@ -494,14 +494,12 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/app-outsourcing.jpg
                 */}
-                <div className="w-full h-80 bg-gradient-to-br from-primary/10 to-chart-2/10 rounded-xl flex items-center justify-center border border-primary/20">
-                  <p className="text-muted-foreground text-center p-8">
-                    [Image Placeholder: Application Outsourcing]
-                    <br />
-                    <span className="text-xs">
-                      Suggested: Software development or enterprise applications
-                    </span>
-                  </p>
+                <div className="w-full h-80 rounded-xl overflow-hidden">
+                  <img
+                    src="/assets/Outsourcing2.jpg"
+                    alt="Application Outsourcing"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </motion.div>
