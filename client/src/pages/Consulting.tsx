@@ -435,6 +435,157 @@ export default function Consulting() {
         </div>
       </section>
 
+      {/* Client Challenges Section - Circular Layout */}
+      <section className="relative py-12 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-card/10 to-background" />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="inline-block mb-4">
+              <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                <span className="text-sm font-semibold text-primary">
+                  Our Focus
+                </span>
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              Client Challenges We Address
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We tackle the most critical challenges facing modern businesses with proven strategies and innovative solutions
+            </p>
+          </motion.div>
+
+          <div className="relative max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Side: Large Circle with Icon */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative flex justify-center lg:justify-end"
+              >
+                <div className="relative">
+                  {/* Large Circle */}
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-br from-[#E97451] to-[#F4A261] flex items-center justify-center shadow-2xl">
+                    <Target className="w-24 h-24 text-white" />
+                  </div>
+
+                  {/* Curved Line (SVG) */}
+                  <svg className="absolute -right-12 top-0 w-32 h-full" viewBox="0 0 100 300" style={{ overflow: 'visible' }}>
+                    <path
+                      d="M 20 50 Q 80 80, 80 150 Q 80 220, 20 250"
+                      stroke="#E97451"
+                      strokeWidth="4"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+
+                  {/* Numbered Circles along the curve */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="absolute -right-8 top-12 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                  >
+                    <span className="text-2xl font-bold text-white">01</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                    className="absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                  >
+                    <span className="text-2xl font-bold text-white">02</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    className="absolute -right-8 bottom-12 w-16 h-16 rounded-full bg-[#C85A4B] flex items-center justify-center shadow-xl"
+                  >
+                    <span className="text-2xl font-bold text-white">03</span>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              {/* Right Side: Challenge Descriptions */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-8"
+              >
+                {[
+                  {
+                    number: "01",
+                    icon: Users,
+                    title: "Talent Acquisition & Retention",
+                    description: "Finding and keeping the right talent in a competitive market"
+                  },
+                  {
+                    number: "02",
+                    icon: TrendingUp,
+                    title: "Digital Transformation",
+                    description: "Adapting to rapidly evolving technology and business models"
+                  },
+                  {
+                    number: "03",
+                    icon: Shield,
+                    title: "Operational Efficiency",
+                    description: "Streamlining processes and reducing costs while maintaining quality"
+                  },
+                  {
+                    number: "04",
+                    icon: Zap,
+                    title: "Market Competitiveness",
+                    description: "Staying ahead of competitors in a fast-paced industry"
+                  },
+                  {
+                    number: "05",
+                    icon: Globe,
+                    title: "Scalability & Growth",
+                    description: "Building infrastructure that supports sustainable expansion"
+                  }
+                ].map((challenge, index) => (
+                  <motion.div
+                    key={challenge.number}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 + 0.3 }}
+                    className="flex items-start gap-4 group"
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <challenge.icon className="w-6 h-6 text-primary" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold mb-1">{challenge.title}</h3>
+                      <p className="text-muted-foreground">{challenge.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Transformation Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
