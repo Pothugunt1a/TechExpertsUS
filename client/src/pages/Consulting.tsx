@@ -298,38 +298,65 @@ export default function Consulting() {
         </motion.div>
       </section>
 
-      {/* Introduction Section */}
+      {/* About Section with Image */}
       <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <div className="inline-block mb-4">
-              <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                <span className="text-sm font-semibold text-primary">
-                  Our Approach
-                </span>
-              </div>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Future-Focused Solutions
-            </h2>
-          </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
+            {/* Image Placeholder */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="order-2 lg:order-1"
             >
+              <div className="relative">
+                {/* 
+                  IMAGE PLACEHOLDER 3: Approach/Strategy Image
+                  Recommended: Team collaboration, strategic planning session, or digital transformation
+                  Size: 600x400
+                  Path: /assets/consulting-approach.jpg
+                */}
+                <div className="relative w-full h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <Brain className="w-20 h-20 text-primary mx-auto mb-4 opacity-50" />
+                    <p className="text-muted-foreground">
+                      Approach Image Placeholder
+                      <br />
+                      600x400px
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-block mb-4"
+              >
+                <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                  <span className="text-sm font-semibold text-primary">
+                    Our Approach
+                  </span>
+                </div>
+              </motion.div>
+
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Future-Focused Solutions
+              </h2>
+
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
                   At Tech Expertsus Consulting, we help companies think ahead.
@@ -347,72 +374,62 @@ export default function Consulting() {
                 </p>
               </div>
 
-              <motion.div
-                className="flex flex-wrap gap-4 pt-4"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-              >
+              <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
-                  "Strategic Planning",
-                  "Future Thinking",
-                  "Innovation",
-                  "Transformation",
-                ].map((tag, index) => (
+                  {
+                    icon: Lightbulb,
+                    label: "Strategic",
+                    value: "Planning",
+                  },
+                  {
+                    icon: Rocket,
+                    label: "Future",
+                    value: "Thinking",
+                  },
+                  {
+                    icon: TrendingUp,
+                    label: "Innovation",
+                    value: "Focus",
+                  },
+                  {
+                    icon: Target,
+                    label: "Digital",
+                    value: "Transformation",
+                  },
+                ].map((item, index) => (
                   <motion.div
-                    key={tag}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full"
+                    whileHover={{ y: -5, scale: 1.02 }}
+                    className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                    data-testid={`stat-${item.label.toLowerCase().replace(/\//g, "-")}`}
                   >
-                    <span className="text-sm font-medium text-primary">
-                      {tag}
-                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+
+                    <div className="relative z-10 flex items-start gap-4">
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
+                      >
+                        <item.icon className="w-6 h-6 text-primary" />
+                      </motion.div>
+
+                      <div>
+                        <p className="text-2xl font-bold text-primary mb-1">
+                          {item.label}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.value}
+                        </p>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
-              </motion.div>
-            </motion.div>
-
-            {/* Image Placeholder */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              {/* 
-                IMAGE PLACEHOLDER 3: Approach/Strategy Image
-                Recommended: Team collaboration, strategic planning session, or digital transformation
-                Size: 600x400
-                Path: /assets/consulting-approach.jpg
-              */}
-              <div className="relative w-full h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Brain className="w-20 h-20 text-primary mx-auto mb-4 opacity-50" />
-                  <p className="text-muted-foreground">
-                    Approach Image Placeholder
-                    <br />
-                    600x400px
-                  </p>
-                </div>
               </div>
-
-              {/* Animated badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-chart-2 text-white px-6 py-3 rounded-full shadow-xl"
-              >
-                <p className="font-semibold text-sm">
-                  21st Century Virtual Corporation
-                </p>
-              </motion.div>
             </motion.div>
           </div>
         </div>
