@@ -471,7 +471,22 @@ export default function Consulting() {
                 transition={{ duration: 0.8 }}
                 className="relative flex justify-center lg:justify-end"
               >
-                <div className="relative h-[500px] flex items-center">
+                <div className="relative h-[500px] flex items-center gap-8">
+                  {/* GIF Image on the left */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-48 h-48 rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src="/assets/Outsourcing5.gif"
+                      alt="Client Challenges"
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
+
                   {/* Large Circle */}
                   <div className="w-64 h-64 rounded-full bg-gradient-to-br from-[#E97451] to-[#F4A261] flex items-center justify-center shadow-2xl">
                     <Target className="w-24 h-24 text-white" />
