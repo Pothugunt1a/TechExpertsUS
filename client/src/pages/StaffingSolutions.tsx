@@ -460,7 +460,7 @@ export default function StaffingSolutions() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
                 {/* Image - Left Side with Diagonal Cut */}
-                <div className="relative h-[250px] lg:h-[280px] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
+                <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
@@ -749,7 +749,7 @@ export default function StaffingSolutions() {
                 </div>
 
                 {/* Image - Right Side with Diagonal Cut */}
-                <div className="relative h-[250px] lg:h-[280px] bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden order-1 lg:order-2">
+                <div className="relative h-[250px] lg:h-[280px] overflow-hidden order-1 lg:order-2">
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
