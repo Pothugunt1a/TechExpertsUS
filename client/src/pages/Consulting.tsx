@@ -967,66 +967,6 @@ export default function Consulting() {
         </div>
       </section>
 
-      {/* Visual Impact Section with Multiple Images */}
-      <section className="relative py-12 md:py-20 pt-8 bg-gradient-to-b from-card/30 to-background overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Our Expertise in Action
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how we've transformed businesses across industries
-            </p>
-          </motion.div>
-
-          {/*
-            IMAGE PLACEHOLDER 8-11: Case Study/Expertise Images
-            Recommended: Success stories, industry applications, client transformations
-            Size: Variable - responsive grid
-            Path: /assets/consulting-expertise-1.jpg through consulting-expertise-4.jpg
-          */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { title: "Digital Transformation", icon: Rocket },
-              { title: "Process Optimization", icon: Settings },
-              { title: "Strategic Growth", icon: TrendingUp },
-              { title: "Innovation Leadership", icon: Lightbulb },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="relative h-64 rounded-xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 group cursor-pointer"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-chart-2/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <item.icon className="w-16 h-16 text-primary mb-4 opacity-50" />
-                  </motion.div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Image Placeholder
-                    <br />
-                    Responsive Grid
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section - Modern with Animation */}
       <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
