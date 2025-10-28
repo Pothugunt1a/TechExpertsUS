@@ -421,99 +421,105 @@ export default function Outsourcing() {
                   <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
                     <Target className="w-16 h-16 text-white" />
                   </div>
+
+                  {/* Curved Line (SVG) - Perfect semi-circle arc */}
+                  <svg className="absolute -right-20 top-0 w-56 h-full" viewBox="0 0 180 500" style={{ overflow: 'visible' }}>
+                    <path
+                      d="M 30 50 A 180 200 0 0 1 30 450"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth="4"
+                      fill="none"
+                      strokeLinecap="round"
+                      opacity="0.8"
+                    />
+                  </svg>
+
+                  {/* Numbered Circles along the semi-circle arc - Precisely calculated positions */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    style={{ right: '30px', top: '20px' }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-white">01</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                    style={{ right: '-76px', top: '94px' }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-white">02</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    style={{ right: '-118px', top: '218px' }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-white">03</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 }}
+                    style={{ right: '-76px', top: '343px' }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-white">04</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.7 }}
+                    style={{ right: '32px', top: '416px' }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-white">05</span>
+                  </motion.div>
                 </div>
               </motion.div>
 
-              {/* Right Side: Challenges List with Numbered Circles */}
+              {/* Right Side: Challenge Descriptions */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative"
+                className="space-y-10 pl-20"
               >
-                {/* Connecting Line */}
-                <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 hidden lg:block" />
-
-                {/* Numbered Circles positioned on the right */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  style={{ right: '30px', top: '20px' }}
-                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                >
-                  <span className="text-xl font-bold text-white">01</span>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  style={{ right: '-76px', top: '94px' }}
-                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                >
-                  <span className="text-xl font-bold text-white">02</span>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                  style={{ right: '-118px', top: '218px' }}
-                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                >
-                  <span className="text-xl font-bold text-white">03</span>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.6 }}
-                  style={{ right: '-76px', top: '343px' }}
-                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                >
-                  <span className="text-xl font-bold text-white">04</span>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.7 }}
-                  style={{ right: '32px', top: '416px' }}
-                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                >
-                  <span className="text-xl font-bold text-white">05</span>
-                </motion.div>
-
-                {/* Challenges List */}
-                <div className="space-y-6">
-                  {challenges.map((challenge, index) => (
-                    <motion.div
-                      key={challenge.title}
-                      initial={{ opacity: 0, x: 30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 + 0.3 }}
-                      className="flex items-start gap-4 group"
-                    >
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                          <challenge.icon className="w-6 h-6 text-primary" />
-                        </div>
+                {challenges.map((challenge, index) => (
+                  <motion.div
+                    key={challenge.title}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 + 0.3 }}
+                    className="flex items-start gap-4 group"
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <challenge.icon className="w-6 h-6 text-primary" />
                       </div>
-                      <div>
-                        <h3 className="text-lg font-bold mb-1">{challenge.title}</h3>
-                        <p className="text-muted-foreground">{challenge.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold mb-1">{challenge.title}</h3>
+                      <p className="text-muted-foreground">{challenge.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </motion.div>
             </div>
           </div>
