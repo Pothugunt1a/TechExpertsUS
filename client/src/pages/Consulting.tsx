@@ -774,8 +774,18 @@ export default function Consulting() {
 
       {/* Competitive Advantages Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        {/* Background with tech pattern */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background dark:via-primary/10" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/assets/Consulting-background.jpg"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark blue overlay */}
+          <div className="absolute inset-0 bg-[#0a1929]/95" />
+        </div>
+
+        {/* Tech pattern overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
@@ -870,65 +880,46 @@ export default function Consulting() {
               transition={{ duration: 0.8 }}
               className="relative space-y-8"
             >
-              {/* Circular Image */}
+              {/* Circular Image with curved edge */}
               <div className="relative flex justify-center">
                 <div className="relative">
-                  {/* Animated glow effect */}
-                  <motion.div
-                    className="absolute -inset-8 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-full blur-3xl"
-                    animate={{
-                      opacity: [0.4, 0.7, 0.4],
-                      scale: [1, 1.1, 1]
-                    }}
-                    transition={{ duration: 4, repeat: Infinity }}
-                  />
-                  
+                  {/* Curved blue accent on the left */}
+                  <div className="absolute -left-12 top-0 bottom-0 w-24 bg-blue-600 rounded-l-full" style={{ clipPath: 'ellipse(50% 50% at 100% 50%)' }}></div>
+
                   {/* Circular image container */}
-                  <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
+                  <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white/10 shadow-2xl">
                     <img
                       src="/assets/stock_images/professional_busines_78765498.jpg"
                       alt="Professional consulting team"
                       className="w-full h-full object-cover"
                     />
                   </div>
-
-                  {/* Decorative circles */}
-                  <motion.div
-                    className="absolute -top-4 -right-4 w-24 h-24 border-4 border-primary/40 rounded-full"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  />
-                  <motion.div
-                    className="absolute -bottom-8 -left-8 w-32 h-32 border-4 border-chart-2/40 rounded-full"
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  />
                 </div>
               </div>
 
-              {/* Statistics Bar - Integrated with right column */}
+              {/* Statistics Bar - Blue rectangular overlay */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="relative"
+                className="relative -mt-20"
               >
-                <div className="bg-primary dark:bg-primary/90 rounded-2xl p-6 md:p-8 shadow-2xl backdrop-blur-sm">
-                  {/* Dot pattern overlay */}
-                  <div className="absolute inset-0 opacity-10 rounded-2xl overflow-hidden">
+                <div className="bg-blue-600 rounded-lg p-6 md:p-8 shadow-2xl relative overflow-hidden">
+                  {/* Dot pattern overlay on the left side */}
+                  <div className="absolute left-0 top-0 bottom-0 w-32 opacity-20">
                     <div className="absolute inset-0" style={{
-                      backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
-                      backgroundSize: '30px 30px'
+                      backgroundImage: `radial-gradient(circle at 6px 6px, white 3px, transparent 0)`,
+                      backgroundSize: '20px 20px'
                     }} />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-6 relative z-10">
+                  <div className="grid grid-cols-4 gap-4 md:gap-8 relative z-10">
                     {[
-                      { value: "200", suffix: "+", label: "Projects" },
-                      { value: "95", suffix: "%", label: "Success Rate" },
-                      { value: "50", suffix: "+", label: "Experts" },
-                      { value: "24", suffix: "/7", label: "Support" }
+                      { value: "3", suffix: "+", label: "" },
+                      { value: "7", suffix: "+", label: "" },
+                      { value: "5", suffix: "+", label: "" },
+                      { value: "6", suffix: "", label: "" }
                     ].map((stat, index) => (
                       <motion.div
                         key={index}
@@ -936,17 +927,11 @@ export default function Consulting() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 1 + index * 0.1 }}
-                        whileHover={{ scale: 1.05, y: -5 }}
-                        className="text-center"
+                        className="text-center border-r border-white/20 last:border-r-0 px-2"
                       >
-                        <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                        <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
                           {stat.value}{stat.suffix}
                         </div>
-                        {stat.label && (
-                          <div className="text-sm md:text-base text-white/80 uppercase tracking-wide">
-                            {stat.label}
-                          </div>
-                        )}
                       </motion.div>
                     ))}
                   </div>
