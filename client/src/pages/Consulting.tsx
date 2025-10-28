@@ -293,8 +293,9 @@ export default function Consulting() {
       </section>
 
       {/* Competitive Advantages Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-primary/5 dark:to-primary/10 overflow-hidden">
-        {/* Background Pattern */}
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        {/* Background with tech pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background dark:via-primary/10" />
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
@@ -303,53 +304,10 @@ export default function Consulting() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-            {/* Left Side - Circular Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative flex justify-center lg:justify-start"
-            >
-              <div className="relative">
-                {/* Animated glow effect */}
-                <motion.div
-                  className="absolute -inset-8 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-full blur-3xl"
-                  animate={{
-                    opacity: [0.4, 0.7, 0.4],
-                    scale: [1, 1.1, 1]
-                  }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                />
-                
-                {/* Circular image container */}
-                <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
-                  <img
-                    src="/assets/stock_images/professional_busines_78765498.jpg"
-                    alt="Professional team collaborating"
-                    className="w-full h-full object-cover"
-                    data-testid="img-competitive-advantages-team"
-                  />
-                </div>
-
-                {/* Decorative circles */}
-                <motion.div
-                  className="absolute -top-4 -right-4 w-24 h-24 border-4 border-primary/40 rounded-full"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                />
-                <motion.div
-                  className="absolute -bottom-8 -left-8 w-32 h-32 border-4 border-chart-2/40 rounded-full"
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                />
-              </div>
-            </motion.div>
-
-            {/* Right Side - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -391,13 +349,13 @@ export default function Consulting() {
                 We've been a nearly strategic thought leader for five we are bring unrivaled decades incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
               </motion.p>
 
-              {/* Features Grid */}
+              {/* Features Grid - Two columns */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4"
+                className="grid grid-cols-2 gap-4 pt-4"
               >
                 {[
                   { icon: CheckCircle2, text: "Custom shortcodes" },
@@ -425,55 +383,101 @@ export default function Consulting() {
                 ))}
               </motion.div>
             </motion.div>
-          </div>
 
-          {/* Bottom Statistics Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="relative"
-          >
-            <div className="bg-primary dark:bg-primary/90 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm">
-              {/* Dot pattern overlay */}
-              <div className="absolute inset-0 opacity-10 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0" style={{
-                  backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
-                  backgroundSize: '30px 30px'
-                }} />
-              </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
-                {[
-                  { value: "3", suffix: "+", label: "" },
-                  { value: "7", suffix: "+", label: "" },
-                  { value: "5", suffix: "+", label: "" },
-                  { value: "6", suffix: "", label: "" }
-                ].map((stat, index) => (
+            {/* Right Column - Image and Statistics Combined */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative space-y-8"
+            >
+              {/* Circular Image */}
+              <div className="relative flex justify-center">
+                <div className="relative">
+                  {/* Animated glow effect */}
                   <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 1 + index * 0.1 }}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                    className="text-center"
-                    data-testid={`stat-competitive-${index}`}
-                  >
-                    <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
-                      {stat.value}{stat.suffix}
-                    </div>
-                    {stat.label && (
-                      <div className="text-sm md:text-base text-white/80 uppercase tracking-wide">
-                        {stat.label}
-                      </div>
-                    )}
-                  </motion.div>
-                ))}
+                    className="absolute -inset-8 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-full blur-3xl"
+                    animate={{
+                      opacity: [0.4, 0.7, 0.4],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                  />
+                  
+                  {/* Circular image container */}
+                  <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
+                    <img
+                      src="/assets/stock_images/professional_busines_78765498.jpg"
+                      alt="Professional team collaborating"
+                      className="w-full h-full object-cover"
+                      data-testid="img-competitive-advantages-team"
+                    />
+                  </div>
+
+                  {/* Decorative circles */}
+                  <motion.div
+                    className="absolute -top-4 -right-4 w-24 h-24 border-4 border-primary/40 rounded-full"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-8 -left-8 w-32 h-32 border-4 border-chart-2/40 rounded-full"
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                  />
+                </div>
               </div>
-            </div>
-          </motion.div>
+
+              {/* Statistics Bar - Integrated with right column */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="relative"
+              >
+                <div className="bg-primary dark:bg-primary/90 rounded-2xl p-6 md:p-8 shadow-2xl backdrop-blur-sm">
+                  {/* Dot pattern overlay */}
+                  <div className="absolute inset-0 opacity-10 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
+                      backgroundSize: '30px 30px'
+                    }} />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-6 relative z-10">
+                    {[
+                      { value: "3", suffix: "+", label: "" },
+                      { value: "7", suffix: "+", label: "" },
+                      { value: "5", suffix: "+", label: "" },
+                      { value: "6", suffix: "", label: "" }
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 1 + index * 0.1 }}
+                        whileHover={{ scale: 1.05, y: -5 }}
+                        className="text-center"
+                        data-testid={`stat-competitive-${index}`}
+                      >
+                        <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                          {stat.value}{stat.suffix}
+                        </div>
+                        {stat.label && (
+                          <div className="text-sm md:text-base text-white/80 uppercase tracking-wide">
+                            {stat.label}
+                          </div>
+                        )}
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
