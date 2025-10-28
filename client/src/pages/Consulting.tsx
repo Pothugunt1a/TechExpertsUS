@@ -304,21 +304,12 @@ export default function Consulting() {
               className="order-2 lg:order-1"
             >
               <div className="relative">
-                {/* 
-                  IMAGE PLACEHOLDER 3: Approach/Strategy Image
-                  Recommended: Team collaboration, strategic planning session, or digital transformation
-                  Size: 600x400
-                  Path: /assets/consulting-approach.jpg
-                */}
-                <div className="relative w-full h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Brain className="w-20 h-20 text-primary mx-auto mb-4 opacity-50" />
-                    <p className="text-muted-foreground">
-                      Approach Image Placeholder
-                      <br />
-                      600x400px
-                    </p>
-                  </div>
+                <div className="relative w-full h-80 rounded-2xl overflow-hidden">
+                  <img
+                    src="/assets/Consulting1.gif"
+                    alt="Future-Focused Solutions"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </motion.div>
