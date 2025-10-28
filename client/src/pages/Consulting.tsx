@@ -446,39 +446,39 @@ export default function Consulting() {
           </motion.div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
               {/* Left Side: Large Circle with Icon */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative flex justify-center lg:justify-end"
+                className="relative flex justify-center lg:justify-end pr-0 lg:pr-8"
               >
-                <div className="relative h-[500px] flex items-center gap-6">
+                <div className="relative h-[500px] flex items-center gap-0">
                   {/* GIF Image on the left - Bigger */}
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg"
+                    className="w-80 h-80 rounded-xl overflow-hidden shadow-lg"
                   >
                     <img
                       src="/assets/Consulting2.png"
                       alt="Client Challenges"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </motion.div>
 
                   {/* Circle - Smaller */}
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl ml-4">
                     <Target className="w-16 h-16 text-white" />
                   </div>
 
                   {/* Curved Line (SVG) - Perfect semi-circle arc */}
                   <svg
-                    className="absolute -right-20 top-0 w-56 h-full"
+                    className="absolute -right-16 top-0 w-56 h-full"
                     viewBox="0 0 180 500"
                     style={{ overflow: "visible" }}
                   >
@@ -556,7 +556,7 @@ export default function Consulting() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-10 pl-20"
+                className="space-y-10 pl-8 lg:pl-16"
               >
                 {[
                   {
