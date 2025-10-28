@@ -970,7 +970,7 @@ export default function Consulting() {
               </div>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Our Expertise in Action
+              Excellence in Practice
             </h2>
           </motion.div>
 
@@ -1008,7 +1008,7 @@ export default function Consulting() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer"
+                className="relative h-96 rounded-2xl overflow-hidden group cursor-pointer flex flex-col"
                 data-testid={`expertise-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* Background Image */}
@@ -1016,7 +1016,7 @@ export default function Consulting() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Dark Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
@@ -1032,7 +1032,7 @@ export default function Consulting() {
                 </motion.div>
 
                 {/* Content at bottom with transparent border box */}
-                <div className="absolute bottom-4 left-4 right-4 p-6 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl">
+                <div className="absolute left-4 right-4 p-2 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginTop: '160px' }}>
                   <h3 className="text-xl font-bold mb-3 leading-tight">
                     {item.title}
                   </h3>
