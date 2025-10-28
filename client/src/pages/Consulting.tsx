@@ -773,7 +773,7 @@ export default function Consulting() {
       </section>
 
       {/* Competitive Advantages Section */}
-      <section className="relative py-10 md:py-16 pt-32 pb-24 overflow-hidden">
+      <section className="relative py-10 md:py-16 pt-32 pb-16 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -920,7 +920,7 @@ export default function Consulting() {
       </section>
 
       {/* Statistics Bar - Overlapping Component */}
-      <section className="relative -mt-32 z-20">
+      <section className="relative -mt-24 mb-0 z-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -968,7 +968,7 @@ export default function Consulting() {
       </section>
 
       {/* Visual Impact Section with Multiple Images */}
-      <section className="relative py-12 md:py-20 pt-24 bg-gradient-to-b from-card/30 to-background overflow-hidden">
+      <section className="relative py-12 md:py-20 pt-16 bg-gradient-to-b from-card/30 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
