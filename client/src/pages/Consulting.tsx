@@ -962,12 +962,19 @@ export default function Consulting() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 uppercase tracking-wide">
+            <div className="inline-block mb-4">
+              <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                <span className="text-sm font-semibold text-primary">
+                  Our Impact
+                </span>
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Our Expertise in Action
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-0">
             {[
               {
                 title: "Digital Transformation",
