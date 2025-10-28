@@ -686,7 +686,7 @@ export default function Consulting() {
                 {[
                   {
                     num: 1,
-                    src: "/assets/consulting4.gif",
+                    src: "/assets/Consulting4.gif",
                     alt: "Lean Optimization",
                   },
                   {
@@ -696,12 +696,12 @@ export default function Consulting() {
                   },
                   {
                     num: 3,
-                    src: "/assets/Consulting6.gif",
+                    src: "/assets/Consulting7.gif",
                     alt: "Trust-Based Partnerships",
                   },
                   {
                     num: 4,
-                    src: "/assets/Consulting7.gif",
+                    src: "/assets/Consulting6.webp",
                     alt: "Virtual Operations",
                   },
                 ].map((item) => (
