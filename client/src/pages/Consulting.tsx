@@ -1014,7 +1014,7 @@ export default function Consulting() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer"
+                className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer border border-primary/30 backdrop-blur-md bg-card/10"
                 data-testid={`expertise-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* Background Image */}
@@ -1022,10 +1022,10 @@ export default function Consulting() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Dark Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
                 </div>
 
                 {/* Icon in top right */}
