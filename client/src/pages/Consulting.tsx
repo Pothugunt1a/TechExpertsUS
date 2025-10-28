@@ -974,7 +974,7 @@ export default function Consulting() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0">
             {[
               {
                 title: "Digital Transformation",
@@ -1008,7 +1008,7 @@ export default function Consulting() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer"
+                className="relative h-74 rounded-2xl overflow-hidden group cursor-pointer"
                 data-testid={`expertise-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* Background Image */}
