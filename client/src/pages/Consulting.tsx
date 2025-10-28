@@ -556,7 +556,7 @@ export default function Consulting() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-10 pl-8 lg:pl-16"
+                className="space-y-10 pl-20"
               >
                 {[
                   {
