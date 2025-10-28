@@ -774,8 +774,17 @@ export default function Consulting() {
 
       {/* Competitive Advantages Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/assets/Consulting-background.jpg"
+            alt="Consulting Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/80 dark:bg-background/85" />
+        </div>
         {/* Background with tech pattern */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background dark:via-primary/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent dark:via-primary/10" />
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
