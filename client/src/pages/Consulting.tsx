@@ -1014,7 +1014,7 @@ export default function Consulting() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer"
+                className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer border border-primary/30 backdrop-blur-md bg-card/10"
                 data-testid={`expertise-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* Background Image */}
@@ -1037,8 +1037,8 @@ export default function Consulting() {
                   <item.icon className="w-7 h-7 text-white" />
                 </motion.div>
 
-                {/* Content at bottom with transparent border box */}
-                <div className="absolute bottom-4 left-4 right-4 p-6 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl">
+                {/* Content at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-xl font-bold mb-3 leading-tight">
                     {item.title}
                   </h3>
