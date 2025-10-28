@@ -100,7 +100,7 @@ export default function Consulting() {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* 
+        {/*
           IMAGE PLACEHOLDER 1: Hero Background
           Recommended: Business consulting, strategic planning, modern office, or professional team
           Size: 1920x1080 or larger
@@ -446,14 +446,14 @@ export default function Consulting() {
           </motion.div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               {/* Left Side: Large Circle with Icon */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative flex justify-center lg:justify-end pr-0 lg:pr-8"
+                className="relative flex justify-center lg:justify-end"
               >
                 <div className="relative h-[500px] flex items-center gap-0">
                   {/* GIF Image on the left - Bigger */}
@@ -883,7 +883,7 @@ export default function Consulting() {
             </p>
           </motion.div>
 
-          {/* 
+          {/*
             IMAGE PLACEHOLDER 8-11: Case Study/Expertise Images
             Recommended: Success stories, industry applications, client transformations
             Size: Variable - responsive grid
