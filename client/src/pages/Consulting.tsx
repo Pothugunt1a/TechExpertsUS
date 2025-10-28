@@ -1008,7 +1008,7 @@ export default function Consulting() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="relative h-74 rounded-2xl overflow-hidden group cursor-pointer"
+                className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer"
                 data-testid={`expertise-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* Background Image */}
