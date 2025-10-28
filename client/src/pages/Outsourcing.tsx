@@ -246,11 +246,11 @@ export default function Outsourcing() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="w-full h-96 rounded-2xl overflow-hidden">
+              <div className="w-full h-96 rounded-2xl overflow-hidden bg-card/50">
                 <img
                   src="/assets/Outsourcing.png"
                   alt="IT Outsourcing Solutions"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
@@ -387,7 +387,8 @@ export default function Outsourcing() {
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We tackle the most critical challenges facing modern businesses with proven strategies and innovative solutions
+              We tackle the most critical challenges facing modern businesses
+              with proven strategies and innovative solutions
             </p>
           </motion.div>
 
@@ -408,12 +409,12 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg"
+                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg bg-card/50"
                   >
                     <img
-                      src="/assets/Outsourcing5.gif"
+                      src="/assets/Outsourcing5.png"
                       alt="Client Challenges"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </motion.div>
 
@@ -423,7 +424,11 @@ export default function Outsourcing() {
                   </div>
 
                   {/* Curved Line (SVG) - Perfect semi-circle arc */}
-                  <svg className="absolute -right-20 top-0 w-56 h-full" viewBox="0 0 180 500" style={{ overflow: 'visible' }}>
+                  <svg
+                    className="absolute -right-20 top-0 w-56 h-full"
+                    viewBox="0 0 180 500"
+                    style={{ overflow: "visible" }}
+                  >
                     <path
                       d="M 30 50 A 180 200 0 0 1 30 450"
                       stroke="hsl(var(--primary))"
@@ -440,7 +445,7 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    style={{ right: '30px', top: '20px' }}
+                    style={{ right: "30px", top: "20px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">01</span>
@@ -451,7 +456,7 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    style={{ right: '-76px', top: '94px' }}
+                    style={{ right: "-76px", top: "94px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">02</span>
@@ -462,7 +467,7 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    style={{ right: '-118px', top: '218px' }}
+                    style={{ right: "-118px", top: "218px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">03</span>
@@ -473,7 +478,7 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    style={{ right: '-76px', top: '343px' }}
+                    style={{ right: "-76px", top: "343px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">04</span>
@@ -484,7 +489,7 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.7 }}
-                    style={{ right: '32px', top: '416px' }}
+                    style={{ right: "32px", top: "416px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">05</span>
@@ -515,8 +520,12 @@ export default function Outsourcing() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold mb-1">{challenge.title}</h3>
-                      <p className="text-muted-foreground">{challenge.description}</p>
+                      <h3 className="text-lg font-bold mb-1">
+                        {challenge.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {challenge.description}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -598,11 +607,11 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/app-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden">
+                <div className="w-full h-80 rounded-xl overflow-hidden bg-card/50">
                   <img
                     src="/assets/Outsourcing2.jpg"
                     alt="Application Outsourcing"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
@@ -622,11 +631,11 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/infra-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
+                <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1 bg-card/50">
                   <img
                     src="/assets/Outsourcing3.jpg"
                     alt="Infrastructure Outsourcing"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="order-1 lg:order-2">
@@ -720,11 +729,11 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/bpo-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden">
+                <div className="w-full h-80 rounded-xl overflow-hidden bg-card/50">
                   <img
                     src="/assets/Outsourcing4.jpg"
                     alt="Business Process Outsourcing"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
