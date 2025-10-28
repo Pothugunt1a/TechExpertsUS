@@ -304,7 +304,7 @@ export default function Consulting() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
