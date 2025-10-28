@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
-import { FloatingBanner } from "@/components/ui/floating-banner";
 import { CustomCursor } from "@/components/CustomCursor";
 
 // Pages
@@ -48,10 +47,6 @@ function App() {
           <CustomCursor />
           <div className="min-h-screen bg-background text-foreground">
             <Navigation />
-            <FloatingBanner 
-              message="🎉 Special Offer: Get 20% off on all IT consulting services this month!"
-              link={{ text: "Learn More", href: "/contact" }}
-            />
             <main className="pt-20">
               <Router />
             </main>
