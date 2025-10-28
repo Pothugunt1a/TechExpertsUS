@@ -962,98 +962,187 @@ export default function Consulting() {
       </section>
 
       {/* Competitive Advantages Section */}
-      <section className="relative py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block mb-4">
-              <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                <span className="text-sm font-semibold text-primary">
-                  Why Choose Us
-                </span>
-              </div>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Competitive Advantages
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Tech Expertsus Consulting can give you the business analyses you
-              need and follow through with implementation. As part of eLan, the
-              world's leading provider of integrated business, technology and
-              process solutions, we can deliver a depth of resources that's
-              unsurpassed by other firms.
-            </p>
-          </motion.div>
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        {/* Background with tech pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background dark:via-primary/10" />
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {competitiveAdvantages.map((advantage, index) => (
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            {/* Left Column - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              {/* Badge */}
               <motion.div
-                key={advantage.title}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="inline-block"
+              >
+                <div className="px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full inline-block">
+                  <span className="text-sm font-semibold text-primary">Why Choose Us</span>
+                </div>
+              </motion.div>
+
+              {/* Heading */}
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+              >
+                Competitive Advantages
+              </motion.h2>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-lg text-muted-foreground leading-relaxed"
+              >
+                Tech Expertsus Consulting can give you the business analyses you need and follow through with implementation. We deliver a depth of resources that's unsurpassed by other firms.
+              </motion.p>
+
+              {/* Features Grid - Two columns */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="grid grid-cols-2 gap-4 pt-4"
+              >
+                {[
+                  { icon: BarChart3, text: "Business Analysis" },
+                  { icon: Globe, text: "Global Resources" },
+                  { icon: Zap, text: "Rapid Deployment" },
+                  { icon: Award, text: "Outcome-Based" }
+                ].map((feature, index) => (
+                  <motion.div
+                    key={feature.text}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 + index * 0.1 }}
+                    className="flex items-center gap-3 group"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="flex-shrink-0"
+                    >
+                      <feature.icon className="w-6 h-6 text-primary" />
+                    </motion.div>
+                    <span className="text-base md:text-lg font-medium">{feature.text}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            {/* Right Column - Image and Statistics Combined */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative space-y-8"
+            >
+              {/* Circular Image */}
+              <div className="relative flex justify-center">
+                <div className="relative">
+                  {/* Animated glow effect */}
+                  <motion.div
+                    className="absolute -inset-8 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-full blur-3xl"
+                    animate={{
+                      opacity: [0.4, 0.7, 0.4],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                  />
+                  
+                  {/* Circular image container */}
+                  <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
+                    <img
+                      src="/assets/stock_images/professional_busines_78765498.jpg"
+                      alt="Professional consulting team"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Decorative circles */}
+                  <motion.div
+                    className="absolute -top-4 -right-4 w-24 h-24 border-4 border-primary/40 rounded-full"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-8 -left-8 w-32 h-32 border-4 border-chart-2/40 rounded-full"
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                  />
+                </div>
+              </div>
+
+              {/* Statistics Bar - Integrated with right column */}
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group relative"
-                data-testid={`advantage-${advantage.title.toLowerCase().replace(/\s+/g, "-")}`}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="relative"
               >
-                <div className="relative h-full bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="bg-primary dark:bg-primary/90 rounded-2xl p-6 md:p-8 shadow-2xl backdrop-blur-sm">
+                  {/* Dot pattern overlay */}
+                  <div className="absolute inset-0 opacity-10 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
+                      backgroundSize: '30px 30px'
+                    }} />
+                  </div>
 
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <advantage.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                      {advantage.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {advantage.description}
-                    </p>
+                  <div className="grid grid-cols-2 gap-6 relative z-10">
+                    {[
+                      { value: "200", suffix: "+", label: "Projects" },
+                      { value: "95", suffix: "%", label: "Success Rate" },
+                      { value: "50", suffix: "+", label: "Experts" },
+                      { value: "24", suffix: "/7", label: "Support" }
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 1 + index * 0.1 }}
+                        whileHover={{ scale: 1.05, y: -5 }}
+                        className="text-center"
+                      >
+                        <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                          {stat.value}{stat.suffix}
+                        </div>
+                        {stat.label && (
+                          <div className="text-sm md:text-base text-white/80 uppercase tracking-wide">
+                            {stat.label}
+                          </div>
+                        )}
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </motion.div>
-            ))}
+            </motion.div>
           </div>
-
-          {/* Bottom Statement */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="bg-gradient-to-br from-primary/10 via-chart-2/10 to-primary/10 border border-primary/20 rounded-2xl p-8 md:p-12 text-center">
-              <motion.div
-                initial={{ scale: 0.9 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <CheckCircle className="w-8 h-8 text-primary" />
-                  <h3 className="text-2xl md:text-3xl font-bold">
-                    The Complete Advantage
-                  </h3>
-                </div>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-4">
-                  We have the flexibility to deliver solutions quickly and
-                  cost-effectively. And our confidence in our ability to think
-                  ahead makes us willing to be measured against any business
-                  outcomes.
-                </p>
-                <p className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                  Which means that with Tech Expertsus Consulting, you get the
-                  advantage of future thinking - along with the advantage of
-                  being taken the rest of the way.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
