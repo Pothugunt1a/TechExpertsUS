@@ -914,7 +914,7 @@ export default function Consulting() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-primary rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            className="relative bg-blue-700 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
             {/* Decorative dot pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -969,26 +969,26 @@ export default function Consulting() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { 
-                title: "Digital Transformation", 
+              {
+                title: "Digital Transformation",
                 icon: Rocket,
                 description: "Leveraging cutting-edge technologies to modernize your business operations and drive digital innovation.",
                 image: "/assets/Consulting10.jpg"
               },
-              { 
-                title: "Process Optimization", 
+              {
+                title: "Process Optimization",
                 icon: Settings,
                 description: "Streamlining workflows and eliminating inefficiencies to maximize productivity and reduce costs.",
                 image: "/assets/Consulting11.jpg"
               },
-              { 
-                title: "Strategic Growth", 
+              {
+                title: "Strategic Growth",
                 icon: TrendingUp,
                 description: "Developing data-driven strategies to accelerate business expansion and market penetration.",
                 image: "/assets/Consulting12.jpg"
               },
-              { 
-                title: "Innovation Leadership", 
+              {
+                title: "Innovation Leadership",
                 icon: Lightbulb,
                 description: "Cultivating a culture of innovation and staying ahead of industry trends and disruption.",
                 image: "/assets/Consulting13.jpg"
