@@ -218,19 +218,6 @@ export default function Consulting() {
                     </Button>
                   </motion.div>
                 </Link>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="text-base px-8 py-6 rounded-lg"
-                    data-testid="button-learn-more"
-                  >
-                    Learn More
-                  </Button>
-                </motion.div>
               </motion.div>
             </motion.div>
 
@@ -1102,19 +1089,21 @@ export default function Consulting() {
                   </Button>
                 </motion.div>
               </Link>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-10 py-6 rounded-lg"
-                  data-testid="button-view-services"
+              <Link href="/services">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  View All Services
-                </Button>
-              </motion.div>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="text-lg px-10 py-6 rounded-lg"
+                    data-testid="button-view-services"
+                  >
+                    View All Services
+                  </Button>
+                </motion.div>
+              </Link>
             </div>
 
             <motion.div
