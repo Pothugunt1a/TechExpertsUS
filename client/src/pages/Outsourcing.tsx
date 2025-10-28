@@ -409,7 +409,7 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg"
+                    className="w-72 h-72"
                   >
                     <img
                       src="/assets/Outsourcing5.png"

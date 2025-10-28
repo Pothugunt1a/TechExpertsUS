@@ -464,7 +464,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-80 h-80 rounded-xl overflow-hidden shadow-lg"
+                    className="w-80 h-80"
                   >
                     <img
                       src="/assets/Consulting3.png"
