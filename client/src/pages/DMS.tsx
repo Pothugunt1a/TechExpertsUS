@@ -320,7 +320,7 @@ export default function DMS() {
 
       {/* Overview Section with Image Placeholder */}
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image Placeholder with Decorative Elements */}
             <motion.div
@@ -412,7 +412,7 @@ export default function DMS() {
 
       {/* Services Section - Matching Website Theme */}
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -489,7 +489,7 @@ export default function DMS() {
 
       {/* IT Services Details Section - Matching Website Theme */}
       <section className="relative py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -540,7 +540,7 @@ export default function DMS() {
 
       {/* Enterprise Computing Section with Image Placeholder */}
       <section className="relative py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content First on Desktop */}
             <motion.div
@@ -684,7 +684,7 @@ export default function DMS() {
           />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <div className="relative max-w-4xl mx-auto px-4 lg:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

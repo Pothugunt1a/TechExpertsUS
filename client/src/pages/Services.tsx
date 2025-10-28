@@ -303,7 +303,7 @@ export default function Services() {
 
       {/* Services Overview with 3D Transform */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -357,7 +357,7 @@ export default function Services() {
 
       {/* Interactive Service Categories */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -476,7 +476,7 @@ export default function Services() {
 
       {/* Our Clients - Scrolling Carousel */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -622,7 +622,7 @@ export default function Services() {
 
       {/* Testimonials */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

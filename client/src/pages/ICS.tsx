@@ -75,7 +75,7 @@ export default function ICS() {
 
       {/* Overview Section */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ export default function ICS() {
 
       {/* Solutions Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ export default function ICS() {
 
       {/* CTA Section */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

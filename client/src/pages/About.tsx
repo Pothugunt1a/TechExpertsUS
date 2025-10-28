@@ -69,7 +69,7 @@ export default function About() {
 
       {/* Why Tech Experts USA */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export default function About() {
 
       {/* Mission, Vision, Values */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -214,7 +214,7 @@ export default function About() {
 
       {/* Skills Section */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -236,7 +236,7 @@ export default function About() {
 
       {/* Happy Clients */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ export default function About() {
 
       {/* Passion for Innovation */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

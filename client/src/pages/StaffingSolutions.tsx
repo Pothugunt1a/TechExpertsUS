@@ -290,7 +290,7 @@ export default function StaffingSolutions() {
       <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Placeholder */}
             <motion.div
@@ -412,7 +412,7 @@ export default function StaffingSolutions() {
 
       {/* Services Section - Diagonal Split Layout */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-background to-card/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -757,7 +757,7 @@ export default function StaffingSolutions() {
 
       {/* Benefits Section - Custom Grid Layout */}
       <section className="relative py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -943,7 +943,7 @@ export default function StaffingSolutions() {
 
       {/* Professional Recruiting - Split Layout with Image */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <motion.div
@@ -1029,7 +1029,7 @@ export default function StaffingSolutions() {
           <ParticleBackground />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 lg:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
