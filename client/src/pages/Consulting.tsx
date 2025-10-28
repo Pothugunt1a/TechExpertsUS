@@ -283,7 +283,7 @@ export default function Consulting() {
       <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
 
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Placeholder */}
             <motion.div
@@ -411,7 +411,7 @@ export default function Consulting() {
       <section className="relative py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/10 to-background" />
 
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -615,7 +615,7 @@ export default function Consulting() {
 
       {/* Transformation Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -908,7 +908,7 @@ export default function Consulting() {
 
       {/* Statistics Bar - Overlapping Component */}
       <section className="relative -mt-10 mb-0 z-20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1056,7 +1056,7 @@ export default function Consulting() {
           <ParticleBackground />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 lg:px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-3 lg:px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

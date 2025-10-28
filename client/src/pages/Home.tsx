@@ -85,7 +85,7 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export default function Home() {
 
       {/* About Section */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -186,7 +186,7 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -364,7 +364,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -382,7 +382,7 @@ export default function Home() {
 
       {/* Core Values Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
