@@ -305,7 +305,7 @@ export default function Consulting() {
               className="order-2 lg:order-1"
             >
               <div className="relative">
-                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden bg-card/50">
+                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
                   <img
                     src="/assets/Consulting1.gif"
                     alt="Future-Focused Solutions"

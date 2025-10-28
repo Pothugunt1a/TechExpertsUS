@@ -246,7 +246,7 @@ export default function Outsourcing() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="w-full h-96 rounded-2xl overflow-hidden bg-card/50">
+              <div className="w-full h-96 rounded-2xl overflow-hidden">
                 <img
                   src="/assets/Outsourcing.png"
                   alt="IT Outsourcing Solutions"
@@ -409,7 +409,7 @@ export default function Outsourcing() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg bg-card/50"
+                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg"
                   >
                     <img
                       src="/assets/Outsourcing5.png"
@@ -607,7 +607,7 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/app-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden bg-card/50">
+                <div className="w-full h-80 rounded-xl overflow-hidden">
                   <img
                     src="/assets/Outsourcing2.jpg"
                     alt="Application Outsourcing"
@@ -631,7 +631,7 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/infra-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1 bg-card/50">
+                <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
                   <img
                     src="/assets/Outsourcing3.jpg"
                     alt="Infrastructure Outsourcing"
@@ -729,7 +729,7 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/bpo-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden bg-card/50">
+                <div className="w-full h-80 rounded-xl overflow-hidden">
                   <img
                     src="/assets/Outsourcing4.jpg"
                     alt="Business Process Outsourcing"
