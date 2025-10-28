@@ -365,9 +365,11 @@ export default function Outsourcing() {
         </div>
       </section>
 
-      {/* Client Challenges Section */}
-      <section className="relative py-12 md:py-20 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Client Challenges Section - Circular Layout */}
+      <section className="relative py-12 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-card/10 to-background" />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -377,7 +379,7 @@ export default function Outsourcing() {
             <div className="inline-block mb-4">
               <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
                 <span className="text-sm font-semibold text-primary">
-                  Challenges We Solve
+                  Our Focus
                 </span>
               </div>
             </div>
@@ -385,39 +387,135 @@ export default function Outsourcing() {
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Understanding your unique challenges to deliver tailored solutions
+              We tackle the most critical challenges facing modern businesses with proven strategies and innovative solutions
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {challenges.map((challenge, index) => (
+          <div className="relative max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+              {/* Left Side: Large Circle with Icon */}
               <motion.div
-                key={challenge.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group relative"
-                data-testid={`challenge-${challenge.title.toLowerCase().replace(/\s+/g, "-")}`}
+                transition={{ duration: 0.8 }}
+                className="relative flex justify-center lg:justify-end"
               >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative h-[500px] flex items-center gap-6">
+                  {/* GIF Image on the left - Bigger */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-72 h-72 rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src="/assets/Outsourcing5.gif"
+                      alt="Client Challenges"
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
 
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <challenge.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                      {challenge.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {challenge.description}
-                    </p>
+                  {/* Circle - Smaller */}
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
+                    <Target className="w-16 h-16 text-white" />
                   </div>
                 </div>
               </motion.div>
-            ))}
+
+              {/* Right Side: Challenges List with Numbered Circles */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                {/* Connecting Line */}
+                <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 hidden lg:block" />
+
+                {/* Numbered Circles positioned on the right */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  style={{ right: '30px', top: '20px' }}
+                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                >
+                  <span className="text-xl font-bold text-white">01</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  style={{ right: '-76px', top: '94px' }}
+                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                >
+                  <span className="text-xl font-bold text-white">02</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  style={{ right: '-118px', top: '218px' }}
+                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                >
+                  <span className="text-xl font-bold text-white">03</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.6 }}
+                  style={{ right: '-76px', top: '343px' }}
+                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                >
+                  <span className="text-xl font-bold text-white">04</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.7 }}
+                  style={{ right: '32px', top: '416px' }}
+                  className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                >
+                  <span className="text-xl font-bold text-white">05</span>
+                </motion.div>
+
+                {/* Challenges List */}
+                <div className="space-y-6">
+                  {challenges.map((challenge, index) => (
+                    <motion.div
+                      key={challenge.title}
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 + 0.3 }}
+                      className="flex items-start gap-4 group"
+                    >
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                          <challenge.icon className="w-6 h-6 text-primary" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold mb-1">{challenge.title}</h3>
+                        <p className="text-muted-foreground">{challenge.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
