@@ -238,21 +238,12 @@ export default function Consulting() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              {/* 
-                IMAGE PLACEHOLDER 2: Hero Main Image
-                Recommended: Professional consultant, business strategy visualization, or modern technology
-                Size: 600x500
-                Path: /assets/consulting-hero.png
-              */}
-              <div className="w-full h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Building2 className="w-24 h-24 text-primary mx-auto mb-4 opacity-50" />
-                  <p className="text-muted-foreground">
-                    Hero Image Placeholder
-                    <br />
-                    600x500px
-                  </p>
-                </div>
+              <div className="w-full h-96 rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/Consulting-banner.png"
+                  alt="Consulting Services"
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               {/* Floating stats cards */}
