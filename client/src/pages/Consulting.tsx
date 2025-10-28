@@ -56,7 +56,8 @@ const competitiveAdvantages = [
   {
     icon: ClipboardCheck,
     title: "Implementation Excellence",
-    description: "We don't just plan - we execute and deliver measurable results",
+    description:
+      "We don't just plan - we execute and deliver measurable results",
   },
   {
     icon: Globe,
@@ -439,7 +440,8 @@ export default function Consulting() {
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We tackle the most critical challenges facing modern businesses with proven strategies and innovative solutions
+              We tackle the most critical challenges facing modern businesses
+              with proven strategies and innovative solutions
             </p>
           </motion.div>
 
@@ -463,7 +465,7 @@ export default function Consulting() {
                     className="w-72 h-72 rounded-xl overflow-hidden shadow-lg"
                   >
                     <img
-                      src="/assets/Outsourcing5.gif"
+                      src="/assets/Consulting2.png"
                       alt="Client Challenges"
                       className="w-full h-full object-cover"
                     />
@@ -475,7 +477,11 @@ export default function Consulting() {
                   </div>
 
                   {/* Curved Line (SVG) - Perfect semi-circle arc */}
-                  <svg className="absolute -right-20 top-0 w-56 h-full" viewBox="0 0 180 500" style={{ overflow: 'visible' }}>
+                  <svg
+                    className="absolute -right-20 top-0 w-56 h-full"
+                    viewBox="0 0 180 500"
+                    style={{ overflow: "visible" }}
+                  >
                     <path
                       d="M 30 50 A 180 200 0 0 1 30 450"
                       stroke="hsl(var(--primary))"
@@ -492,7 +498,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    style={{ right: '30px', top: '20px' }}
+                    style={{ right: "30px", top: "20px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">01</span>
@@ -503,7 +509,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    style={{ right: '-76px', top: '94px' }}
+                    style={{ right: "-76px", top: "94px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">02</span>
@@ -514,7 +520,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    style={{ right: '-118px', top: '218px' }}
+                    style={{ right: "-118px", top: "218px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">03</span>
@@ -525,7 +531,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    style={{ right: '-76px', top: '343px' }}
+                    style={{ right: "-76px", top: "343px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">04</span>
@@ -536,7 +542,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.7 }}
-                    style={{ right: '32px', top: '416px' }}
+                    style={{ right: "32px", top: "416px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">05</span>
@@ -557,32 +563,37 @@ export default function Consulting() {
                     number: "01",
                     icon: Users,
                     title: "Talent Acquisition & Retention",
-                    description: "Finding and keeping the right talent in a competitive market"
+                    description:
+                      "Finding and keeping the right talent in a competitive market",
                   },
                   {
                     number: "02",
                     icon: TrendingUp,
                     title: "Digital Transformation",
-                    description: "Adapting to rapidly evolving technology and business models"
+                    description:
+                      "Adapting to rapidly evolving technology and business models",
                   },
                   {
                     number: "03",
                     icon: Shield,
                     title: "Operational Efficiency",
-                    description: "Streamlining processes and reducing costs while maintaining quality"
+                    description:
+                      "Streamlining processes and reducing costs while maintaining quality",
                   },
                   {
                     number: "04",
                     icon: Zap,
                     title: "Market Competitiveness",
-                    description: "Staying ahead of competitors in a fast-paced industry"
+                    description:
+                      "Staying ahead of competitors in a fast-paced industry",
                   },
                   {
                     number: "05",
                     icon: Globe,
                     title: "Scalability & Growth",
-                    description: "Building infrastructure that supports sustainable expansion"
-                  }
+                    description:
+                      "Building infrastructure that supports sustainable expansion",
+                  },
                 ].map((challenge, index) => (
                   <motion.div
                     key={challenge.number}
@@ -598,8 +609,12 @@ export default function Consulting() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold mb-1">{challenge.title}</h3>
-                      <p className="text-muted-foreground">{challenge.description}</p>
+                      <h3 className="text-lg font-bold mb-1">
+                        {challenge.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {challenge.description}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -669,10 +684,26 @@ export default function Consulting() {
               {/* Small Images Grid */}
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { num: 1, src: '/assets/consulting4.gif', alt: 'Lean Optimization' },
-                  { num: 2, src: '/assets/Consulting5.gif', alt: 'Technology Integration' },
-                  { num: 3, src: '/assets/Consulting6.gif', alt: 'Trust-Based Partnerships' },
-                  { num: 4, src: '/assets/Consulting7.gif', alt: 'Virtual Operations' }
+                  {
+                    num: 1,
+                    src: "/assets/consulting4.gif",
+                    alt: "Lean Optimization",
+                  },
+                  {
+                    num: 2,
+                    src: "/assets/Consulting5.gif",
+                    alt: "Technology Integration",
+                  },
+                  {
+                    num: 3,
+                    src: "/assets/Consulting6.gif",
+                    alt: "Trust-Based Partnerships",
+                  },
+                  {
+                    num: 4,
+                    src: "/assets/Consulting7.gif",
+                    alt: "Virtual Operations",
+                  },
                 ].map((item) => (
                   <motion.div
                     key={item.num}
@@ -923,8 +954,8 @@ export default function Consulting() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let our consulting experts help you anticipate the future and
-              stay ahead of the competition. Contact us today to get started.
+              Let our consulting experts help you anticipate the future and stay
+              ahead of the competition. Contact us today to get started.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
