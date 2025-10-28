@@ -773,7 +773,7 @@ export default function Consulting() {
       </section>
 
       {/* Competitive Advantages Section */}
-      <section className="relative py-10 md:py-16 pt-32 pb-10 overflow-hidden">
+      <section className="relative py-10 md:py-16 pt-32 pb-16 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -967,7 +967,7 @@ export default function Consulting() {
       </section>
 
       {/* Visual Impact Section with Multiple Images */}
-      <section className="relative pt-0 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
+      <section className="relative pt-24 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
