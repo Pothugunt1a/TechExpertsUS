@@ -920,7 +920,7 @@ export default function Consulting() {
       </section>
 
       {/* Statistics Bar - Overlapping Component */}
-      <section className="relative -mt-20 -mb-20 z-20">
+      <section className="relative -mt-8 mb-8 z-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -968,7 +968,7 @@ export default function Consulting() {
       </section>
 
       {/* Visual Impact Section with Multiple Images */}
-      <section className="relative py-12 md:py-20 pt-32 bg-gradient-to-b from-card/30 to-background overflow-hidden">
+      <section className="relative py-12 md:py-20 pt-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
