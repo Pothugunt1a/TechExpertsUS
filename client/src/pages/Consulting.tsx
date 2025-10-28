@@ -510,7 +510,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    style={{ right: '10px', top: '50px' }}
+                    style={{ right: '30px', top: '20px' }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">01</span>
@@ -521,7 +521,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    style={{ right: '-70px', top: '140px' }}
+                    style={{ right: '-76px', top: '94px' }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">02</span>
@@ -532,7 +532,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    style={{ right: '-110px', top: '250px' }}
+                    style={{ right: '-118px', top: '218px' }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">03</span>
@@ -543,7 +543,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    style={{ right: '-70px', top: '360px' }}
+                    style={{ right: '-76px', top: '343px' }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">04</span>
@@ -554,7 +554,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.7 }}
-                    style={{ right: '10px', top: '450px' }}
+                    style={{ right: '32px', top: '416px' }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">05</span>
