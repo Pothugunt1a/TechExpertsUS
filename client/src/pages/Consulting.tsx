@@ -465,7 +465,7 @@ export default function Consulting() {
                     className="w-80 h-80 rounded-xl overflow-hidden shadow-lg"
                   >
                     <img
-                      src="/assets/Consulting2.png"
+                      src="/assets/Consulting3.png"
                       alt="Client Challenges"
                       className="w-full h-full object-contain"
                     />
