@@ -410,59 +410,76 @@ export default function DMS() {
         </div>
       </section>
 
-      {/* Services Section - Modern Card Grid */}
-      <section className="relative py-20 md:py-32">
+      {/* Services Section - Matching Website Theme */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <span className="text-sm font-semibold text-primary px-4 py-2 bg-primary/10 rounded-full border border-primary/20 inline-block mb-4">
-              What We Offer
-            </span>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Our <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Services</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Our <span className="text-primary">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: service.delay, duration: 0.6 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative"
+                className="group"
                 data-testid={`service-card-${index}`}
               >
-                <div className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 overflow-hidden hover:border-primary/30 transition-all duration-300">
-                  {/* Gradient Overlay on Hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 dark:from-primary/20 dark:to-chart-2/20 rounded-2xl p-8 backdrop-blur-xl border border-primary/20 shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+                  {/* Animated Background Glow */}
+                  <motion.div
+                    className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-chart-2/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 -z-10"
+                    animate={{
+                      opacity: [0.3, 0.6, 0.3],
+                      scale: [1, 1.05, 1]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                  />
                   
                   {/* Icon Container */}
-                  <div className="relative mb-6">
-                    <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${service.color} shadow-lg`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
+                  <motion.div
+                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300 mb-6"
+                    whileHover={{ 
+                      scale: 1.1,
+                      rotate: [0, -10, 10, -10, 0]
+                    }}
+                    animate={{
+                      y: [0, -10, 0],
+                    }}
+                    transition={{
+                      y: {
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      },
+                      rotate: {
+                        duration: 0.6
+                      }
+                    }}
+                  >
+                    <service.icon className="w-8 h-8 text-primary" />
+                  </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
-
-                  {/* Decorative Corner */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </motion.div>
             ))}
@@ -470,57 +487,50 @@ export default function DMS() {
         </div>
       </section>
 
-      {/* IT Services Details Section with Bento Grid */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
+      {/* IT Services Details Section - Matching Website Theme */}
+      <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Comprehensive{" "}
-              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                IT Services
-              </span>
+              Comprehensive <span className="text-primary">IT Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Our IT Services helps you in managing your day to day IT needs through a strong and reliable IT infrastructure. Our Tech Expertsus works on Business Effective model where our customers extracts maximum returns out of their limited investments.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05, duration: 0.5 }}
-                whileHover={{ y: -8 }}
-                className="group relative"
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                whileHover={{ x: 10 }}
+                className="group cursor-pointer"
                 data-testid={`feature-${index}`}
               >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
-                  {/* Icon with Glow Effect */}
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                    className="w-14 h-14 mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all"
+                <div className="flex items-start space-x-4">
+                  <motion.div 
+                    className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors flex-shrink-0"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
                   >
                     <feature.icon className="w-7 h-7 text-primary" />
                   </motion.div>
-
-                  <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
-
-                  {/* Hover Indicator */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-chart-2 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl" />
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2 text-foreground">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
