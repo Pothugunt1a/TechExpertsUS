@@ -504,13 +504,13 @@ export default function Consulting() {
                     />
                   </svg>
 
-                  {/* Numbered Circles along the semi-circle arc - Properly aligned */}
+                  {/* Numbered Circles along the semi-circle arc - Properly aligned with equal spacing */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="absolute right-[-40px] top-[8%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-50px] top-[10%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">01</span>
                   </motion.div>
@@ -520,7 +520,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    className="absolute right-[-110px] top-[23%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-130px] top-[27.5%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">02</span>
                   </motion.div>
@@ -530,7 +530,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    className="absolute right-[-150px] top-[50%] -translate-y-1/2 w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-170px] top-[50%] -translate-y-1/2 w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">03</span>
                   </motion.div>
@@ -540,7 +540,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    className="absolute right-[-115px] top-[77%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-130px] top-[72.5%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">04</span>
                   </motion.div>
@@ -550,7 +550,7 @@ export default function Consulting() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.7 }}
-                    className="absolute right-[-45px] top-[92%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="absolute right-[-50px] top-[90%] w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-white">05</span>
                   </motion.div>
