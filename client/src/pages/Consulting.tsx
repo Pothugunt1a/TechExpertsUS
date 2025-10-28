@@ -677,31 +677,27 @@ export default function Consulting() {
 
               {/* Small Images Grid */}
               <div className="grid grid-cols-2 gap-4">
-                {/* 
-                  IMAGE PLACEHOLDER 4-7: Small Transformation Images
-                  Recommended: Optimization, Virtualization, Technology, Partnership icons/images
-                  Size: 250x200 each
-                  Path: /assets/consulting-transform-1.jpg through consulting-transform-4.jpg
-                */}
-                {[1, 2, 3, 4].map((num) => (
+                {[
+                  { num: 1, src: '/assets/consulting4.gif', alt: 'Lean Optimization' },
+                  { num: 2, src: '/assets/Consulting5.gif', alt: 'Technology Integration' },
+                  { num: 3, src: '/assets/Consulting6.gif', alt: 'Trust-Based Partnerships' },
+                  { num: 4, src: '/assets/Consulting7.gif', alt: 'Virtual Operations' }
+                ].map((item) => (
                   <motion.div
-                    key={num}
+                    key={item.num}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: num * 0.1 }}
+                    transition={{ delay: item.num * 0.1 }}
                     whileHover={{ scale: 1.05, y: -5 }}
-                    className="relative h-40 rounded-xl overflow-hidden bg-gradient-to-br from-card/60 to-card/30 backdrop-blur-sm border border-primary/10 flex items-center justify-center group cursor-pointer"
+                    className="relative h-40 rounded-xl overflow-hidden border border-primary/10 group cursor-pointer"
                   >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="text-center p-4 relative z-10">
-                      <Sparkles className="w-10 h-10 text-primary mx-auto mb-2 opacity-50" />
-                      <p className="text-xs text-muted-foreground">
-                        Image {num}
-                        <br />
-                        250x200px
-                      </p>
-                    </div>
                   </motion.div>
                 ))}
               </div>
