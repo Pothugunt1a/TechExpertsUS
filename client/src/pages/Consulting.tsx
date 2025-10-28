@@ -773,7 +773,7 @@ export default function Consulting() {
       </section>
 
       {/* Competitive Advantages Section */}
-      <section className="relative py-12 md:py-20 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -793,180 +793,151 @@ export default function Consulting() {
           }} />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block mb-4">
-              <div className="px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full">
-                <span className="text-sm font-semibold text-primary">
-                  Why Choose Us
-                </span>
-              </div>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Competitive Advantages
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Tech Expertsus Consulting can give you the business analyses you
-              need and follow through with implementation. We deliver a depth of
-              resources that's unsurpassed by other firms.
-            </p>
-          </motion.div>
-
-          <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              {/* Left Side: Large Circle with Icon */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            {/* Left Column - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              {/* Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative flex justify-center lg:justify-end"
+                transition={{ delay: 0.2 }}
+                className="inline-block"
               >
-                <div className="relative h-[500px] flex items-center gap-0">
-                  {/* Circular image */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white/10"
-                  >
-                    <img
-                      src="/assets/stock_images/professional_busines_78765498.jpg"
-                      alt="Competitive Advantages"
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-
-                  {/* Circle */}
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl ml-4">
-                    <Award className="w-16 h-16 text-white" />
-                  </div>
-
-                  {/* Curved Line (SVG) */}
-                  <svg
-                    className="absolute -right-16 top-0 w-56 h-full"
-                    viewBox="0 0 180 500"
-                    style={{ overflow: "visible" }}
-                  >
-                    <path
-                      d="M 30 50 A 180 200 0 0 1 30 450"
-                      stroke="hsl(var(--primary))"
-                      strokeWidth="4"
-                      fill="none"
-                      strokeLinecap="round"
-                      opacity="0.8"
-                    />
-                  </svg>
-
-                  {/* Numbered Circles */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    style={{ right: "30px", top: "20px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-white">01</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                    style={{ right: "-76px", top: "94px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-white">02</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5 }}
-                    style={{ right: "-118px", top: "218px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-white">03</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6 }}
-                    style={{ right: "-76px", top: "343px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-white">04</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.7 }}
-                    style={{ right: "32px", top: "416px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-white">05</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.8 }}
-                    style={{ right: "150px", top: "460px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-white">06</span>
-                  </motion.div>
+                <div className="px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full inline-block">
+                  <span className="text-sm font-semibold text-primary">Why Choose Us</span>
                 </div>
               </motion.div>
 
-              {/* Right Side: Advantage Descriptions */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+              {/* Heading */}
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="space-y-10 pl-20"
+                transition={{ delay: 0.3 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
               >
-                {competitiveAdvantages.map((advantage, index) => (
+                Competitive Advantages
+              </motion.h2>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-lg text-muted-foreground leading-relaxed"
+              >
+                Tech Expertsus Consulting can give you the business analyses you need and follow through with implementation. We deliver a depth of resources that's unsurpassed by other firms.
+              </motion.p>
+
+              {/* Features Grid - Two columns */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="grid grid-cols-2 gap-4 pt-4"
+              >
+                {[
+                  { icon: BarChart3, text: "Business Analysis" },
+                  { icon: Globe, text: "Global Resources" },
+                  { icon: Zap, text: "Rapid Deployment" },
+                  { icon: Award, text: "Outcome-Based" }
+                ].map((feature, index) => (
                   <motion.div
-                    key={advantage.title}
-                    initial={{ opacity: 0, x: 30 }}
+                    key={feature.text}
+                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 + 0.3 }}
-                    className="flex items-start gap-4 group"
+                    transition={{ delay: 0.6 + index * 0.1 }}
+                    className="flex items-center gap-3 group"
                   >
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                        <advantage.icon className="w-6 h-6 text-primary" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold mb-1">
-                        {advantage.title}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {advantage.description}
-                      </p>
-                    </div>
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="flex-shrink-0"
+                    >
+                      <feature.icon className="w-6 h-6 text-primary" />
+                    </motion.div>
+                    <span className="text-base md:text-lg font-medium">{feature.text}</span>
                   </motion.div>
                 ))}
               </motion.div>
-            </div>
+            </motion.div>
+
+            {/* Right Column - Image and Statistics Combined */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative space-y-8"
+            >
+              {/* Circular Image with curved edge */}
+              <div className="relative flex justify-center">
+                <div className="relative">
+                  {/* Curved blue accent on the left */}
+                  <div className="absolute -left-12 top-0 bottom-0 w-24 bg-blue-600 rounded-l-full" style={{ clipPath: 'ellipse(50% 50% at 100% 50%)' }}></div>
+
+                  {/* Circular image container */}
+                  <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white/10 shadow-2xl">
+                    <img
+                      src="/assets/stock_images/professional_busines_78765498.jpg"
+                      alt="Professional consulting team"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Statistics Bar - Blue rectangular overlay */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="relative -mt-20"
+              >
+                <div className="bg-blue-600 rounded-lg p-6 md:p-8 shadow-2xl relative overflow-hidden">
+                  {/* Dot pattern overlay on the left side */}
+                  <div className="absolute left-0 top-0 bottom-0 w-32 opacity-20">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `radial-gradient(circle at 6px 6px, white 3px, transparent 0)`,
+                      backgroundSize: '20px 20px'
+                    }} />
+                  </div>
+
+                  <div className="grid grid-cols-4 gap-4 md:gap-8 relative z-10">
+                    {[
+                      { value: "3", suffix: "+", label: "" },
+                      { value: "7", suffix: "+", label: "" },
+                      { value: "5", suffix: "+", label: "" },
+                      { value: "6", suffix: "", label: "" }
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 1 + index * 0.1 }}
+                        className="text-center border-r border-white/20 last:border-r-0 px-2"
+                      >
+                        <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+                          {stat.value}{stat.suffix}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -1010,7 +981,7 @@ export default function Consulting() {
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="relative h-64 rounded-xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 group cursor-pointer"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-chart-2/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                   <motion.div
                     whileHover={{ rotate: 360 }}
