@@ -1,22 +1,112 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { Server, Database, Shield, Zap } from "lucide-react";
+import { 
+  Server, 
+  Database, 
+  Shield, 
+  Zap, 
+  Network, 
+  Cloud, 
+  Cpu, 
+  Code,
+  TrendingUp,
+  Lock,
+  Layers,
+  BarChart3,
+  CheckCircle2
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useRef } from "react";
 
 const services = [
-  "IT Services",
-  "Enterprise Solutions",
-  "Business Intelligence and Performance Management",
-  "Engineering and Industrial Services",
+  {
+    icon: Server,
+    title: "IT Services",
+    description: "Comprehensive IT infrastructure management and support services tailored to your business needs.",
+    color: "from-cyan-500 to-blue-600",
+    delay: 0,
+  },
+  {
+    icon: Layers,
+    title: "Enterprise Solutions",
+    description: "Scalable enterprise-grade solutions designed to grow with your organization.",
+    color: "from-blue-500 to-purple-600",
+    delay: 0.1,
+  },
+  {
+    icon: BarChart3,
+    title: "Business Intelligence & Performance",
+    description: "Data-driven insights and analytics to optimize your business performance.",
+    color: "from-purple-500 to-pink-600",
+    delay: 0.2,
+  },
+  {
+    icon: Cpu,
+    title: "Engineering & Industrial Services",
+    description: "Advanced engineering solutions for modern industrial challenges.",
+    color: "from-pink-500 to-red-600",
+    delay: 0.3,
+  },
+];
+
+const features = [
+  {
+    icon: Server,
+    title: "24/7 Monitoring",
+    description: "Continuous server health monitoring and instant alert systems",
+  },
+  {
+    icon: Database,
+    title: "Data Management",
+    description: "Secure and scalable data storage with automated backups",
+  },
+  {
+    icon: Shield,
+    title: "Security First",
+    description: "Enterprise-grade security protocols and compliance standards",
+  },
+  {
+    icon: Zap,
+    title: "High Performance",
+    description: "Optimized infrastructure for maximum speed and efficiency",
+  },
+  {
+    icon: Network,
+    title: "Network Optimization",
+    description: "Advanced networking solutions for seamless connectivity",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Integration",
+    description: "Hybrid and multi-cloud deployment strategies",
+  },
+];
+
+const benefits = [
+  "Streamlined business processes",
+  "Maximized ROI on IT investments",
+  "Reduced operational costs",
+  "Enhanced system reliability",
+  "Future-proof infrastructure",
+  "24/7 expert support",
 ];
 
 export default function DMS() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section - Full Screen Banner */}
+    <div className="min-h-screen overflow-hidden" ref={containerRef}>
+      {/* Hero Section - Modern with Geometric Shapes */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image - High Resolution GIF */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/DataCenterManagement-banner.gif"
@@ -24,300 +114,612 @@ export default function DMS() {
             className="w-full h-full object-cover object-center"
             loading="eager"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
         </div>
 
-        {/* Particle Background Overlay */}
         <ParticleBackground />
 
-        {/* Centered Text Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center min-h-screen py-20">
+        {/* Animated Geometric Shapes */}
+        <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
+          {/* Floating Hexagons */}
           <motion.div
-            className="text-center flex flex-col items-center justify-center w-full"
-          >
-            {/* Animated Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="mb-4 sm:mb-6"
-            >
-              <motion.div
-                animate={{ 
-                  boxShadow: [
-                    "0 0 20px rgba(59, 130, 246, 0.3)",
-                    "0 0 40px rgba(59, 130, 246, 0.5)",
-                    "0 0 20px rgba(59, 130, 246, 0.3)"
-                  ]
-                }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="inline-block px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
-              >
-                <span className="text-xs sm:text-sm font-semibold text-primary">
-                  Next-Gen Infrastructure
-                </span>
-              </motion.div>
-            </motion.div>
+            className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/20"
+            style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+            animate={{
+              y: [0, -30, 0],
+              rotate: [0, 360],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-1/3 right-20 w-24 h-24 border-2 border-chart-2/30"
+            style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+            animate={{
+              y: [0, 40, 0],
+              rotate: [360, 0],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          
+          {/* Glowing Circles */}
+          <motion.div
+            className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/5 blur-3xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/5 blur-3xl"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          />
 
-            {/* Main Title with Staggered Word Animation */}
-            <div className="overflow-hidden mb-3 sm:mb-4 lg:mb-6">
-              <motion.h1 
-                className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                {["Powering", "Your", "Digital", "Future"].map((word, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ 
-                      duration: 0.8, 
-                      delay: 0.2 + index * 0.1,
-                      ease: [0.25, 0.1, 0.25, 1]
-                    }}
-                    className="inline-block mr-3 sm:mr-4 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent"
-                    data-testid={`banner-word-${index}`}
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-              </motion.h1>
-            </div>
-
-            {/* Subtitle with Multiple Animations */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="space-y-2"
-            >
-              <motion.p 
-                className="text-sm sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground"
-                animate={{ 
-                  textShadow: [
-                    "0 0 10px rgba(59, 130, 246, 0.3)",
-                    "0 0 20px rgba(59, 130, 246, 0.5)",
-                    "0 0 10px rgba(59, 130, 246, 0.3)"
-                  ]
-                }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                data-testid="banner-subtitle-main"
-              >
-                Innovation Meets Excellence
-              </motion.p>
-              
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
-                className="h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto max-w-md"
-              />
-              
-              <motion.p 
-                className="text-xs sm:text-base md:text-lg lg:text-xl text-muted-foreground"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 }}
-                data-testid="banner-subtitle-secondary"
-              >
-                Transforming Infrastructure into Intelligent Systems
-              </motion.p>
-            </motion.div>
-
-            {/* Animated CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-              className="mt-6 sm:mt-8"
-            >
-              <Link href="/contact">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  data-testid="button-explore-solutions"
-                >
-                  <Button 
-                    size="lg" 
-                    className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-lg shadow-lg hover:shadow-primary/50 transition-shadow"
-                  >
-                    Explore Solutions
-                  </Button>
-                </motion.div>
-              </Link>
-            </motion.div>
-
-            {/* Floating Icons Animation */}
-            <div className="absolute inset-0 pointer-events-none">
-              <motion.div
-                className="absolute top-1/4 left-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-primary/40 rounded-full blur-sm"
-                animate={{
-                  y: [0, -30, 0],
-                  opacity: [0.4, 1, 0.4],
-                  scale: [1, 1.5, 1]
-                }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <motion.div
-                className="absolute top-1/3 right-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-chart-2/40 rounded-full blur-sm"
-                animate={{
-                  y: [0, 30, 0],
-                  opacity: [0.4, 1, 0.4],
-                  scale: [1, 1.5, 1]
-                }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              />
-              <motion.div
-                className="absolute bottom-1/3 left-1/3 w-2 h-2 sm:w-3 sm:h-3 bg-primary/40 rounded-full blur-sm"
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.4, 1, 0.4],
-                  scale: [1, 1.5, 1]
-                }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-              />
-            </div>
-          </motion.div>
+          {/* Triangles */}
+          <motion.div
+            className="absolute bottom-40 right-1/3 w-20 h-20 border-2 border-primary/20"
+            style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
+            animate={{
+              y: [0, -20, 0],
+              rotate: [0, 180, 0],
+            }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          />
         </div>
+
+        {/* Hero Content */}
+        <motion.div 
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center"
+          style={{ y, opacity }}
+        >
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
+            <motion.div
+              animate={{ 
+                boxShadow: [
+                  "0 0 20px rgba(6, 182, 212, 0.3)",
+                  "0 0 40px rgba(6, 182, 212, 0.6)",
+                  "0 0 20px rgba(6, 182, 212, 0.3)"
+                ]
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="inline-block px-6 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
+            >
+              <span className="text-sm font-semibold text-primary">
+                Data Center Management Services
+              </span>
+            </motion.div>
+          </motion.div>
+
+          {/* Main Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-6"
+          >
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Transform Your
+              </span>
+              <br />
+              <span className="text-foreground">
+                Infrastructure
+              </span>
+            </h1>
+          </motion.div>
+
+          {/* Subtitle with Line */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="max-w-3xl mx-auto space-y-4"
+          >
+            <p className="text-xl md:text-2xl text-muted-foreground">
+              Powering Business Excellence Through Intelligent Data Center Solutions
+            </p>
+            
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto max-w-md"
+            />
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link href="/contact">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-primary/50 transition-all"
+                  data-testid="button-get-started"
+                >
+                  Get Started
+                  <Zap className="ml-2 w-5 h-5" />
+                </Button>
+              </motion.div>
+            </Link>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-lg px-8 py-6 rounded-xl border-primary/30 hover:border-primary/60 transition-all backdrop-blur-sm"
+                data-testid="button-learn-more"
+              >
+                Learn More
+                <TrendingUp className="ml-2 w-5 h-5" />
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
+          >
+            {[
+              { value: "99.9%", label: "Uptime" },
+              { value: "24/7", label: "Support" },
+              { value: "500+", label: "Clients" },
+              { value: "15+", label: "Years" },
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+                className="text-center"
+                data-testid={`stat-${stat.label.toLowerCase()}`}
+              >
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center pt-2"
+          >
+            <motion.div className="w-1 h-2 bg-primary rounded-full" />
+          </motion.div>
+        </motion.div>
       </section>
 
-      {/* Overview Section */}
-      <section className="relative py-10 md:py-16">
+      {/* Overview Section with Image Placeholder */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Image Placeholder with Decorative Elements */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Comprehensive Data Center Solutions</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Data Center Management in general the "Server Room" for all your business needs plays a key and vital capacity in reaching out the needs of your business. The firm or business needs to act faster with maximum accuracy to meet the challenges that were posed in day to day competitive world.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                At Tech Expertsus we do Application Outsourcing which enables to streamline your business processes and maximizes the returns of your investment. Our service modules helps you to reach out all your needs and business goals with your limited investments.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Tech Expertsus provides fineness and positive assurance across all your enterprise's IT needs through comprehensive data center management.
-              </p>
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+                {/* Placeholder Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 via-card to-chart-2/10 flex items-center justify-center">
+                  <div className="text-center space-y-4 p-8">
+                    <Server className="w-24 h-24 mx-auto text-primary/40" />
+                    <p className="text-muted-foreground">Data Center Infrastructure</p>
+                  </div>
+                </div>
+                
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              </div>
+
+              {/* Decorative Shape */}
+              <div className="absolute -top-8 -right-8 w-32 h-32 border-4 border-primary/20 rounded-full blur-sm -z-10" />
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-chart-2/10 rounded-full blur-2xl -z-10" />
             </motion.div>
 
+            {/* Content */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="grid grid-cols-2 gap-6"
+              className="space-y-6"
             >
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
-              >
-                <Server className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2 text-primary">Server Management</h3>
-                <p className="text-sm text-muted-foreground">24/7 monitoring and maintenance</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
-              >
-                <Database className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2 text-primary">Data Storage</h3>
-                <p className="text-sm text-muted-foreground">Scalable storage solutions</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
-              >
-                <Shield className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2 text-primary">Security</h3>
-                <p className="text-sm text-muted-foreground">Enterprise-grade protection</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
-              >
-                <Zap className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2 text-primary">Performance</h3>
-                <p className="text-sm text-muted-foreground">Optimized operations</p>
-              </motion.div>
+              <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="inline-block mb-4"
+                >
+                  <span className="text-sm font-semibold text-primary px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+                    Our Approach
+                  </span>
+                </motion.div>
+                
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  Comprehensive Data Center{" "}
+                  <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                    Solutions
+                  </span>
+                </h2>
+              </div>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Data Center Management in general the "Server Room" for all your business needs plays a key and vital capacity in reaching out the needs of your business. The firm or business needs to act faster with maximum accuracy to meet the challenges that were posed in day to day competitive world.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                At Tech Expertsus we do Application Outsourcing which enables to streamline your business processes and maximizes the returns of your investment. Our service modules helps you to reach out all your needs and business goals with your limited investments.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Tech Expertsus provides fineness and positive assurance across all your enterprise's IT needs through comprehensive data center management.
+              </p>
+
+              {/* Benefits List */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+                {benefits.slice(0, 4).map((benefit, index) => (
+                  <motion.div
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-2"
+                    data-testid={`benefit-${index}`}
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
+      {/* Services Section - Modern Card Grid */}
+      <section className="relative py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h2>
+            <span className="text-sm font-semibold text-primary px-4 py-2 bg-primary/10 rounded-full border border-primary/20 inline-block mb-4">
+              What We Offer
+            </span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              Our <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Services</span>
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
-                key={service}
-                initial={{ opacity: 0, y: 20 }}
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all duration-300"
-                data-testid={`service-${service.toLowerCase().replace(/\s+/g, "-")}`}
+                transition={{ delay: service.delay, duration: 0.6 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group relative"
+                data-testid={`service-card-${index}`}
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
-                  <span className="text-xl font-bold text-primary">{index + 1}</span>
+                <div className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 overflow-hidden hover:border-primary/30 transition-all duration-300">
+                  {/* Gradient Overlay on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                  
+                  {/* Icon Container */}
+                  <div className="relative mb-6">
+                    <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${service.color} shadow-lg`}>
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Decorative Corner */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <p className="font-semibold">{service}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enterprise Computing */}
-      <section className="relative py-10 md:py-16">
+      {/* IT Services Details Section with Bento Grid */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/20 to-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">Enterprise Computing and Cloud Services</h2>
-            <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-lg text-muted-foreground">
-                We @ Tech Expertsus with years of knowledge and experience in IT fields provides strategic technology directions for data center assessment. We by bringing into line your infrastructure to your business goals Tech Expertsus empower you to become more responsive to business needs.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                We @ Tech Expertsus offers leading technology to vitalize your IT infrastructure and improve your return on assets. We helps in making your IT services looks dynamic and in step with changing business process.
-              </p>
-            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Comprehensive{" "}
+              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                IT Services
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our IT Services helps you in managing your day to day IT needs through a strong and reliable IT infrastructure. Our Tech Expertsus works on Business Effective model where our customers extracts maximum returns out of their limited investments.
+            </p>
           </motion.div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05, duration: 0.5 }}
+                whileHover={{ y: -8 }}
+                className="group relative"
+                data-testid={`feature-${index}`}
+              >
+                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-6 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                  {/* Icon with Glow Effect */}
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-14 h-14 mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all"
+                  >
+                    <feature.icon className="w-7 h-7 text-primary" />
+                  </motion.div>
+
+                  <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+
+                  {/* Hover Indicator */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-chart-2 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise Computing Section with Image Placeholder */}
+      <section className="relative py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content First on Desktop */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6 lg:order-1"
+            >
+              <div>
+                <span className="text-sm font-semibold text-primary px-4 py-2 bg-primary/10 rounded-full border border-primary/20 inline-block mb-4">
+                  Cloud Excellence
+                </span>
+                
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  Enterprise Computing and{" "}
+                  <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                    Cloud Services
+                  </span>
+                </h2>
+              </div>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We @ Tech Expertsus with years of knowledge and experience in IT fields provides strategic technology directions for data center assessment. We by bringing into line your infrastructure to your business goals Tech Expertsus empower you to become more responsive to business needs.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We @ Tech Expertsus offers leading technology to vitalize your IT infrastructure and improve your return on assets. We helps in making your IT services looks dynamic and in step with changing business process.
+              </p>
+
+              {/* Additional Benefits */}
+              <div className="space-y-3 pt-4">
+                {benefits.slice(4).map((benefit, index) => (
+                  <motion.div
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-3"
+                    data-testid={`enterprise-benefit-${index}`}
+                  >
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <span className="text-muted-foreground">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="pt-6">
+                <Link href="/contact">
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button 
+                      size="lg" 
+                      className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-primary/50 transition-all"
+                      data-testid="button-contact-enterprise"
+                    >
+                      Start Your Transformation
+                      <TrendingUp className="ml-2 w-5 h-5" />
+                    </Button>
+                  </motion.div>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Image Placeholder with 3D Effect */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative lg:order-2"
+            >
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+                {/* Placeholder Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-chart-2/10 via-card to-primary/10 flex items-center justify-center">
+                  <div className="text-center space-y-4 p-8">
+                    <Cloud className="w-24 h-24 mx-auto text-primary/40" />
+                    <p className="text-muted-foreground">Cloud Infrastructure</p>
+                  </div>
+                </div>
+
+                {/* Overlay with Stats */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-8">
+                  <div className="grid grid-cols-3 gap-4 w-full">
+                    {[
+                      { label: "Uptime", value: "99.9%" },
+                      { label: "Speed", value: "10x" },
+                      { label: "Security", value: "100%" },
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={stat.label}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
+                        className="text-center p-3 bg-card/80 backdrop-blur-sm rounded-lg border border-primary/10"
+                        data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
+                      >
+                        <div className="text-xl font-bold text-primary">{stat.value}</div>
+                        <div className="text-xs text-muted-foreground">{stat.label}</div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Shapes */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-12 -right-12 w-48 h-48 border-4 border-dashed border-primary/20 rounded-full -z-10"
+              />
+              <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/5 rounded-full blur-3xl -z-10" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section with Gradient */}
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-chart-2/10" />
+        
+        {/* Animated Background Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            animate={{ 
+              scale: [1, 1.2, 1],
+              rotate: [0, 90, 0],
+            }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{ 
+              scale: [1, 1.3, 1],
+              rotate: [0, -90, 0],
+            }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="absolute bottom-0 left-0 w-96 h-96 bg-chart-2/5 rounded-full blur-3xl"
+          />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-12 text-center"
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <Link href="/contact">
-              <Button size="lg" className="text-lg px-8" data-testid="button-contact-us">
-                Contact Us Today
-              </Button>
-            </Link>
+            <h2 className="text-4xl md:text-6xl font-bold">
+              Ready to Transform Your{" "}
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Infrastructure?
+              </span>
+            </h2>
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Join hundreds of businesses that trust Tech Expertsus for their data center management needs. Let's build the future together.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Link href="/contact">
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-10 py-6 rounded-xl shadow-2xl hover:shadow-primary/50 transition-all"
+                    data-testid="button-contact-us"
+                  >
+                    Contact Us Today
+                    <Zap className="ml-2 w-5 h-5" />
+                  </Button>
+                </motion.div>
+              </Link>
+              <Link href="/services">
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="text-lg px-10 py-6 rounded-xl border-primary/30 hover:border-primary/60 transition-all backdrop-blur-sm"
+                    data-testid="button-explore-services"
+                  >
+                    Explore All Services
+                    <TrendingUp className="ml-2 w-5 h-5" />
+                  </Button>
+                </motion.div>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
