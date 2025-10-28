@@ -895,7 +895,7 @@ export default function Consulting() {
                   {/* Circular image container */}
                   <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
                     <img
-                      src="/assets/stock_images/professional_busines_78765498.jpg"
+                      src="/assets/Consulting8.png"
                       alt="Professional consulting team"
                       className="w-full h-full object-cover"
                     />
