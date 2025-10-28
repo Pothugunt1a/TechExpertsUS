@@ -690,7 +690,7 @@ export default function Consulting() {
                     viewport={{ once: true }}
                     transition={{ delay: item.num * 0.1 }}
                     whileHover={{ scale: 1.05, y: -5 }}
-                    className="relative h-40 rounded-xl overflow-hidden border border-primary/10 group cursor-pointer"
+                    className="relative h-40 rounded-xl overflow-hidden group cursor-pointer"
                   >
                     <img
                       src={item.src}
