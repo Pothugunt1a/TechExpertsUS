@@ -319,7 +319,7 @@ export default function DMS() {
       </section>
 
       {/* Overview Section with Image Placeholder */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/20">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image Placeholder with Decorative Elements */}
@@ -411,7 +411,7 @@ export default function DMS() {
       </section>
 
       {/* Services Section - Matching Website Theme */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-card/30 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -420,7 +420,7 @@ export default function DMS() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-              Comprehensive <span className="text-primary">IT Services</span>
+              What We <span className="text-primary">Provide</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
@@ -488,7 +488,7 @@ export default function DMS() {
       </section>
 
       {/* IT Services Details Section - Matching Website Theme */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -497,7 +497,7 @@ export default function DMS() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-              Comprehensive <span className="text-primary">IT Services</span>
+              Our <span className="text-primary">Core Capabilities</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Our IT Services helps you in managing your day to day IT needs through a strong and reliable IT infrastructure. Our Tech Expertsus works on Business Effective model where our customers extracts maximum returns out of their limited investments.
@@ -539,7 +539,7 @@ export default function DMS() {
       </section>
 
       {/* Enterprise Computing Section with Image Placeholder */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content First on Desktop */}
@@ -661,7 +661,7 @@ export default function DMS() {
       </section>
 
       {/* Final CTA Section with Gradient */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-chart-2/10" />
 
         {/* Animated Background Shapes */}
