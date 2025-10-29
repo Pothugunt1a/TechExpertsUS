@@ -326,7 +326,7 @@ export default function Outsourcing() {
                 </div>
               </motion.div>
 
-              <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
                 Strategic Outsourcing Solutions
               </h2>
 
@@ -370,7 +370,7 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -538,7 +538,7 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               What Tech Expertsus Provides
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -745,7 +745,7 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Business Value
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -810,7 +810,7 @@ export default function Outsourcing() {
               <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Ready to Optimize Your IT Operations?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">

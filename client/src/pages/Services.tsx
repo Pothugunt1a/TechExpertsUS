@@ -311,7 +311,7 @@ export default function Services() {
             transition={{ duration: 0.9 }}
             className="text-center mb-10"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Our Services
             </h2>
             <motion.p
@@ -398,7 +398,7 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-10"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Why Choose Us
             </h2>
             <p className="text-2xl text-muted-foreground">
@@ -481,7 +481,7 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">Our Clients</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Clients</h2>
             <p className="text-2xl text-muted-foreground">
               Trusted by industry leaders
             </p>
@@ -627,7 +627,7 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-10"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Client Testimonials
             </h2>
             <p className="text-2xl text-muted-foreground">

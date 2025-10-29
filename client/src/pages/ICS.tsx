@@ -83,7 +83,7 @@ export default function ICS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">Building Secure & Resilient Infrastructure</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Building Secure & Resilient Infrastructure</h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground">
               <p>
                 For the successful and to be successful in any field or in any area one has to ensure the safety of it otherwise it leads to faults play. An intelligent Infrastructure consulting services enables a company to grow in digital business and yields high-end results. ICS at Tech Expertsus helps its customers in creating a more secure infrastructure and manages it more effectively.
@@ -109,7 +109,7 @@ export default function ICS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">Wide Range of Solutions</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Wide Range of Solutions</h2>
             <p className="text-xl text-muted-foreground">Comprehensive infrastructure services</p>
           </motion.div>
 
@@ -161,7 +161,7 @@ export default function ICS() {
             transition={{ duration: 0.6 }}
             className="text-center bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-12"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Ready to Secure Your Infrastructure?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
