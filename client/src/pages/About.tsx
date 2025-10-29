@@ -186,7 +186,7 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-20 bg-gradient-to-b from-background to-card/20">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
         <AnimatedGridBackground />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -220,7 +220,7 @@ export default function About() {
       </section>
 
       {/* Why Tech Experts USA */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-chart-2/10 rounded-full blur-[120px]" />
@@ -344,7 +344,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision - Full Width Cards */}
-      <section className="relative py-32 bg-gradient-to-b from-card/10 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/10 to-background">
         <AnimatedGridBackground />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -462,7 +462,7 @@ export default function About() {
       </section>
 
       {/* Core Values - Modern Grid */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         <FloatingShapes />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -510,7 +510,7 @@ export default function About() {
       </section>
 
       {/* What We Do Section */}
-      <section className="relative py-32 bg-gradient-to-b from-card/20 to-background">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
         <AnimatedGridBackground />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -598,7 +598,7 @@ export default function About() {
       </section>
 
       {/* Happy Clients */}
-      <section className="relative py-32">
+      <section className="relative py-10 md:py-16">
         <FloatingShapes />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -638,7 +638,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-chart-2/10" />
         <motion.div
           className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent"
