@@ -1,13 +1,13 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  Network, 
-  Cloud, 
-  Cpu, 
+import {
+  Server,
+  Database,
+  Shield,
+  Zap,
+  Network,
+  Cloud,
+  Cpu,
   Code,
   TrendingUp,
   Lock,
@@ -174,7 +174,7 @@ export default function DMS() {
         </div>
 
         {/* Hero Content */}
-        <motion.div 
+        <motion.div
           className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center"
           style={{ y, opacity }}
         >
@@ -186,7 +186,7 @@ export default function DMS() {
             className="mb-6"
           >
             <motion.div
-              animate={{ 
+              animate={{
                 boxShadow: [
                   "0 0 20px rgba(6, 182, 212, 0.3)",
                   "0 0 40px rgba(6, 182, 212, 0.6)",
@@ -248,8 +248,8 @@ export default function DMS() {
           >
             <Link href="/contact">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-primary/50 transition-all"
                   data-testid="button-get-started"
                 >
@@ -259,8 +259,8 @@ export default function DMS() {
               </motion.div>
             </Link>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 className="text-lg px-8 py-6 rounded-xl border-primary/30 hover:border-primary/60 transition-all backdrop-blur-sm"
                 data-testid="button-learn-more"
@@ -418,7 +418,7 @@ export default function DMS() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Comprehensive <span className="text-primary">IT Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -451,7 +451,7 @@ export default function DMS() {
                   {/* Icon Container */}
                   <motion.div
                     className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300 mb-6"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       rotate: [0, -10, 10, -10, 0]
                     }}
@@ -495,7 +495,7 @@ export default function DMS() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Comprehensive <span className="text-primary">IT Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -516,7 +516,7 @@ export default function DMS() {
                 data-testid={`feature-${index}`}
               >
                 <div className="flex items-start space-x-4">
-                  <motion.div 
+                  <motion.div
                     className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors flex-shrink-0"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
@@ -592,8 +592,8 @@ export default function DMS() {
               <div className="pt-6">
                 <Link href="/contact">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button 
-                      size="lg" 
+                    <Button
+                      size="lg"
                       className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-primary/50 transition-all"
                       data-testid="button-contact-enterprise"
                     >
@@ -666,7 +666,7 @@ export default function DMS() {
         {/* Animated Background Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            animate={{ 
+            animate={{
               scale: [1, 1.2, 1],
               rotate: [0, 90, 0],
             }}
@@ -674,7 +674,7 @@ export default function DMS() {
             className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
           />
           <motion.div
-            animate={{ 
+            animate={{
               scale: [1, 1.3, 1],
               rotate: [0, -90, 0],
             }}
@@ -705,8 +705,8 @@ export default function DMS() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link href="/contact">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="text-lg px-10 py-6 rounded-xl shadow-2xl hover:shadow-primary/50 transition-all"
                     data-testid="button-contact-us"
                   >
@@ -717,8 +717,8 @@ export default function DMS() {
               </Link>
               <Link href="/services">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="text-lg px-10 py-6 rounded-xl border-primary/30 hover:border-primary/60 transition-all backdrop-blur-sm"
                     data-testid="button-explore-services"

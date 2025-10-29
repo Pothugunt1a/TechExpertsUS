@@ -108,7 +108,7 @@ export default function Outsourcing() {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* 
+        {/*
           IMAGE PLACEHOLDER 1: Hero Background
           Recommended: Modern IT outsourcing, cloud infrastructure, or global network visualization
           Size: 1920x1080 or larger
@@ -588,7 +588,7 @@ export default function Outsourcing() {
                     ))}
                   </div>
                 </div>
-                {/* 
+                {/*
                   IMAGE PLACEHOLDER 4: Application Outsourcing
                   Recommended: Application development, coding, software architecture
                   Size: 500x400
@@ -612,7 +612,7 @@ export default function Outsourcing() {
               className="group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-300">
-                {/* 
+                {/*
                   IMAGE PLACEHOLDER 5: Infrastructure Outsourcing
                   Recommended: Data center, servers, network infrastructure
                   Size: 500x400
@@ -710,7 +710,7 @@ export default function Outsourcing() {
                     ))}
                   </div>
                 </div>
-                {/* 
+                {/*
                   IMAGE PLACEHOLDER 6: Business Process Outsourcing
                   Recommended: Business processes, workflow automation, team collaboration
                   Size: 500x400
