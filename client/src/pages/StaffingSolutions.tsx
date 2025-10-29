@@ -1022,7 +1022,7 @@ export default function StaffingSolutions() {
         </div>
       </section>
 
-      {/* CTA Section - Modern with Animation */>
+      {/* CTA Section - Modern with Animation */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
