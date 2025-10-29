@@ -106,7 +106,7 @@ export default function StaffingSolutions() {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* 
+        {/*
           IMAGE PLACEHOLDER 1: Hero Background
           Recommended: Animated GIF or high-quality image of diverse professionals working
           Size: 1920x1080 or larger

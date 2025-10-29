@@ -97,7 +97,7 @@ export default function About() {
     target: heroRef,
     offset: ["start start", "end start"]
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
@@ -107,7 +107,7 @@ export default function About() {
       <section ref={heroRef} className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-card/20 to-background">
         <FloatingShapes />
         <ParticleBackground />
-        
+
         <motion.div 
           className="absolute inset-0"
           style={{
@@ -123,7 +123,7 @@ export default function About() {
             ease: "easeInOut"
           }}
         />
-        
+
         <motion.div 
           className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 text-center"
           style={{ y, opacity }}
@@ -143,7 +143,7 @@ export default function About() {
                 Since 2012
               </span>
             </motion.div>
-            
+
             <motion.h1 
               className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -155,7 +155,7 @@ export default function About() {
                 Tech Expertsus
               </span>
             </motion.h1>
-            
+
             <motion.p 
               className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
@@ -188,7 +188,7 @@ export default function About() {
       {/* Stats Section */}
       <section className="relative py-20 bg-gradient-to-b from-background to-card/20">
         <AnimatedGridBackground />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -225,7 +225,7 @@ export default function About() {
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-chart-2/10 rounded-full blur-[120px]" />
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -346,7 +346,7 @@ export default function About() {
       {/* Mission & Vision - Full Width Cards */}
       <section className="relative py-32 bg-gradient-to-b from-card/10 to-background">
         <AnimatedGridBackground />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
             <motion.div
@@ -436,7 +436,7 @@ export default function About() {
                 backgroundSize: '50px 50px'
               }}
             />
-            
+
             <div className="relative p-16 md:p-20 text-center backdrop-blur-xl border border-primary/30">
               <motion.div
                 initial={{ scale: 0, rotate: -180 }}
@@ -450,7 +450,7 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
                 A Passion for Innovation And<br />A Commitment To Excellence
               </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-8">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
                 The drive of a rapidly evolving team, combined with driven individuals all focused on the final goal with no leeway for a quality dip are vital factors for the delivery of IT projects to meet the demands of the day.
               </p>
               <p className="text-lg text-muted-foreground italic max-w-3xl mx-auto">
@@ -464,7 +464,7 @@ export default function About() {
       {/* Core Values - Modern Grid */}
       <section className="relative py-32 overflow-hidden">
         <FloatingShapes />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -512,7 +512,7 @@ export default function About() {
       {/* What We Do Section */}
       <section className="relative py-32 bg-gradient-to-b from-card/20 to-background">
         <AnimatedGridBackground />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -600,7 +600,7 @@ export default function About() {
       {/* Happy Clients */}
       <section className="relative py-32">
         <FloatingShapes />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -645,7 +645,7 @@ export default function About() {
           animate={{ opacity: [0.3, 0.8, 0.3] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
-        
+
         <div className="relative max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

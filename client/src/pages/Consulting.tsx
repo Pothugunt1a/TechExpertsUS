@@ -325,7 +325,7 @@ export default function Consulting() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
                 Future-Focused Solutions
               </h2>
 
@@ -425,7 +425,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -629,7 +629,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Transformation Is Key
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -969,7 +969,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Excellence in Practice
             </h2>
           </motion.div>
@@ -1073,7 +1073,7 @@ export default function Consulting() {
               <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
