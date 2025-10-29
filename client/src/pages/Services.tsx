@@ -311,11 +311,8 @@ export default function Services() {
             transition={{ duration: 0.9 }}
             className="text-center mb-10"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              Welcome To Our{" "}
-              <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                Tech Expertsus Services
-              </span>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-primary">
+              Our Services
             </h2>
             <motion.p
               className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
