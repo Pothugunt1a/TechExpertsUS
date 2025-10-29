@@ -142,7 +142,7 @@ export default function DMS() {
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
           />
-          
+
           {/* Glowing Circles */}
           <motion.div
             className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/5 blur-3xl"
@@ -230,7 +230,7 @@ export default function DMS() {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Powering Business Excellence Through Intelligent Data Center Solutions
             </p>
-            
+
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -338,7 +338,7 @@ export default function DMS() {
                     <p className="text-muted-foreground">Data Center Infrastructure</p>
                   </div>
                 </div>
-                
+
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
@@ -367,9 +367,8 @@ export default function DMS() {
                     Our Approach
                   </span>
                 </motion.div>
-                
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Comprehensive Data Center{" "}
+
+                <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">Comprehensive Data Center{" "}
                   <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
                     Solutions
                   </span>
@@ -419,8 +418,8 @@ export default function DMS() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-primary">Services</span>
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">
+              Comprehensive <span className="text-primary">IT Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
@@ -448,7 +447,7 @@ export default function DMS() {
                     }}
                     transition={{ duration: 4, repeat: Infinity }}
                   />
-                  
+
                   {/* Icon Container */}
                   <motion.div
                     className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300 mb-6"
@@ -496,7 +495,7 @@ export default function DMS() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">
               Comprehensive <span className="text-primary">IT Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -554,8 +553,8 @@ export default function DMS() {
                 <span className="text-sm font-semibold text-primary px-4 py-2 bg-primary/10 rounded-full border border-primary/20 inline-block mb-4">
                   Cloud Excellence
                 </span>
-                
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+
+                <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                   Enterprise Computing and{" "}
                   <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
                     Cloud Services
@@ -663,7 +662,7 @@ export default function DMS() {
       {/* Final CTA Section with Gradient */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-chart-2/10" />
-        
+
         {/* Animated Background Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -698,7 +697,7 @@ export default function DMS() {
                 Infrastructure?
               </span>
             </h2>
-            
+
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Join hundreds of businesses that trust Tech Expertsus for their data center management needs. Let's build the future together.
             </p>

@@ -77,7 +77,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Tech Experts USA</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">Why Tech Experts USA</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -222,7 +222,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Skills</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">Our Skills</h2>
             <p className="text-xl text-muted-foreground">Excellence in every dimension</p>
           </motion.div>
 
@@ -244,7 +244,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Happy Clients</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">Our Happy Clients</h2>
             <p className="text-xl text-muted-foreground">Trusted by industry leaders</p>
           </motion.div>
 
@@ -266,7 +266,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">
               A Passion for Innovation And A Commitment To Excellence
             </h2>
             <p className="text-lg text-muted-foreground">
