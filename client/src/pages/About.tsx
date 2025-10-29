@@ -233,8 +233,8 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6">
-              Why <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Tech Experts USA</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Why Tech Experts USA
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
           </motion.div>
@@ -371,7 +371,7 @@ export default function About() {
                   >
                     <Target className="w-12 h-12 text-primary" />
                   </motion.div>
-                  <h3 className="text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">Our Mission</h3>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">Our Mission</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients thereby ensuring complete client satisfaction and long-term commitment with them.
                   </p>
@@ -404,7 +404,7 @@ export default function About() {
                   >
                     <Eye className="w-12 h-12 text-chart-2" />
                   </motion.div>
-                  <h3 className="text-5xl font-bold mb-8 bg-gradient-to-r from-chart-2 to-primary bg-clip-text text-transparent">Our Vision</h3>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">Our Vision</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     To explore new opportunities and ideas to enhance quality based contributions that are beneficial for our clients and to get recognized as a global leader in providing IT Services and Technology based solutions.
                   </p>
@@ -447,7 +447,7 @@ export default function About() {
               >
                 <Zap className="w-14 h-14 text-primary" />
               </motion.div>
-              <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
                 A Passion for Innovation And<br />A Commitment To Excellence
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-8">
@@ -472,7 +472,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Core Values</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Principles that guide everything we do
             </p>
@@ -520,7 +520,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white">What We Do</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">What We Do</h2>
             <p className="text-xl text-muted-foreground">Excellence in every dimension</p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
@@ -559,7 +559,7 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h3 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">Our Skills</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-white">Our Skills</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
               {skills.map((skill, index) => (
                 <motion.div
@@ -608,7 +608,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white">Our Happy Clients</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Happy Clients</h2>
             <p className="text-xl text-muted-foreground">Trusted by industry leaders worldwide</p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
@@ -652,7 +652,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
