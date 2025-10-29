@@ -914,7 +914,15 @@ export default function Consulting() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-2xl p-8 md:p-12 overflow-hidden">
+            className="relative bg-blue-700 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            {/* Decorative dot pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
+                backgroundSize: '30px 30px'
+              }} />
+            </div>
+
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 relative z-10">
               {[
@@ -932,10 +940,10 @@ export default function Consulting() {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="text-center"
                 >
-                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
+                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
                     {stat.value}{stat.suffix}
                   </div>
-                  <div className="text-sm md:text-base lg:text-lg text-muted-foreground uppercase tracking-wide font-medium">
+                  <div className="text-sm md:text-base lg:text-lg text-white/90 uppercase tracking-wide font-medium">
                     {stat.label}
                   </div>
                 </motion.div>
