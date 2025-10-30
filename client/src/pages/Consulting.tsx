@@ -972,7 +972,7 @@ export default function Consulting() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0" style={{ marginBottom: '-14px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0 mt-8">
             {[
               {
                 title: "Digital Transformation",
