@@ -903,11 +903,9 @@ export default function Consulting() {
               </motion.div>
           </div>
         </div>
-      </section>
 
-      {/* Statistics Bar - Overlapping between sections */}
-      <section className="relative -mt-20 mb-0 z-30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Statistics Bar - Overlapping at bottom of section */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative -mb-16 z-30">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
