@@ -903,15 +903,19 @@ export default function Consulting() {
               </motion.div>
           </div>
         </div>
+      </section>
 
-        {/* Statistics Bar - Overlapping at bottom of section */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative -mb-16 z-30">
+      {/* Statistics Bar - Bridge between sections */}
+      <div className="relative -mt-20 mb-0 z-40">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-blue-700 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            className="relative bg-blue-700 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden"
+            style={{ transform: 'translateY(-50%)' }}
+          >
             {/* Decorative dot pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -948,10 +952,10 @@ export default function Consulting() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
 
       {/* Visual Impact Section with Multiple Images */}
-      <section className="relative pt-20 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
+      <section className="relative pt-32 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
