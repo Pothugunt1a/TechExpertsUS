@@ -114,13 +114,16 @@ export default function DMS() {
             className="w-full h-full object-cover object-center"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         </div>
 
-        <ParticleBackground />
+        {/* Particle Background Layer */}
+        <div className="absolute inset-0 z-[3] pointer-events-none">
+          <ParticleBackground />
+        </div>
 
         {/* Animated Geometric Shapes */}
-        <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 z-[4] pointer-events-none overflow-hidden">
           {/* Floating Hexagons */}
           <motion.div
             className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/20"
