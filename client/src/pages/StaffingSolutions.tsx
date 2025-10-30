@@ -237,11 +237,13 @@ export default function StaffingSolutions() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <img
-                src="/assets/Staffing-banner.png"
-                alt="Staffing Solutions"
-                className="w-auto h-auto max-w-full"
-              />
+              <div className="w-full h-96 rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/Staffing-banner.png"
+                  alt="Staffing Solutions"
+                  className="w-full h-full object-contain"
+                />
+              </div>
 
               {/* Floating stats cards */}
               <motion.div
