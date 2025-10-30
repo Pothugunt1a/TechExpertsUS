@@ -126,53 +126,54 @@ export default function DMS() {
         <div className="absolute inset-0 z-[4] pointer-events-none overflow-hidden">
           {/* Floating Hexagons */}
           <motion.div
-            className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/20"
+            className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/30"
             style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
             animate={{
               y: [0, -30, 0],
               rotate: [0, 360],
-              opacity: [0.3, 0.6, 0.3],
+              opacity: [0.5, 0.8, 0.5],
             }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
           />
           <motion.div
-            className="absolute top-1/3 right-20 w-24 h-24 border-2 border-chart-2/30"
+            className="absolute top-1/3 right-20 w-24 h-24 border-2 border-chart-2/40"
             style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
             animate={{
               y: [0, 40, 0],
               rotate: [360, 0],
-              opacity: [0.2, 0.5, 0.2],
+              opacity: [0.4, 0.7, 0.4],
             }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
           />
 
           {/* Glowing Circles */}
           <motion.div
-            className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/5 blur-3xl"
+            className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl"
             animate={{
               scale: [1, 1.3, 1],
-              opacity: [0.3, 0.6, 0.3],
+              opacity: [0.5, 0.8, 0.5],
             }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
           />
           <motion.div
-            className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/5 blur-3xl"
+            className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/10 blur-3xl"
             animate={{
               scale: [1, 1.5, 1],
-              opacity: [0.2, 0.5, 0.2],
+              opacity: [0.4, 0.7, 0.4],
             }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", repeatType: "loop", delay: 1 }}
           />
 
           {/* Triangles */}
           <motion.div
-            className="absolute bottom-40 right-1/3 w-20 h-20 border-2 border-primary/20"
+            className="absolute bottom-40 right-1/3 w-20 h-20 border-2 border-primary/30"
             style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
             animate={{
               y: [0, -20, 0],
               rotate: [0, 180, 0],
+              opacity: [0.5, 0.8, 0.5],
             }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
           />
         </div>
 
