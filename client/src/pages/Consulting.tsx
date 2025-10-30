@@ -228,13 +228,11 @@ export default function Consulting() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="w-full h-96 rounded-2xl overflow-hidden">
-                <img
-                  src="/assets/Consulting-banner.png"
-                  alt="Consulting Services"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+              <img
+                src="/assets/Consulting-banner.png"
+                alt="Consulting Services"
+                className="w-auto h-auto max-w-full"
+              />
 
               {/* Floating stats cards */}
               <motion.div
