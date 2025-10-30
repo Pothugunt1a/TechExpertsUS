@@ -442,14 +442,14 @@ export default function Consulting() {
                 transition={{ duration: 0.8 }}
                 className="relative flex justify-center lg:justify-end"
               >
-                <div className="relative h-[500px] flex items-center gap-0">
+                <div className="relative h-[500px] flex items-center gap-6">
                   {/* GIF Image on the left - Bigger */}
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-80 h-80"
+                    className="w-72 h-72"
                   >
                     <img
                       src="/assets/Consulting3.png"
@@ -459,13 +459,13 @@ export default function Consulting() {
                   </motion.div>
 
                   {/* Circle - Smaller */}
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl ml-4">
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
                     <Target className="w-16 h-16 text-white" />
                   </div>
 
                   {/* Curved Line (SVG) - Perfect semi-circle arc */}
                   <svg
-                    className="absolute -right-16 top-0 w-56 h-full"
+                    className="absolute -right-20 top-0 w-56 h-full"
                     viewBox="0 0 180 500"
                     style={{ overflow: "visible" }}
                   >
@@ -972,7 +972,7 @@ export default function Consulting() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0" style={{ marginBottom: '-14px' }}>
             {[
               {
                 title: "Digital Transformation",
