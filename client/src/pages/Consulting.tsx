@@ -899,57 +899,54 @@ export default function Consulting() {
                   />
                 </div>
               </div>
+
+              {/* Statistics Bar - First Half */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="relative bg-blue-700 rounded-2xl p-6 md:p-8 shadow-2xl overflow-hidden"
+              >
+                {/* Decorative dot pattern */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute inset-0" style={{
+                    backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
+                    backgroundSize: '30px 30px'
+                  }} />
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-6 relative z-10">
+                  {[
+                    { value: "200", suffix: "+", label: "Projects" },
+                    { value: "95", suffix: "%", label: "Success Rate" }
+                  ].map((stat, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.4 + index * 0.1 }}
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      className="text-center"
+                    >
+                      <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+                        {stat.value}{stat.suffix}
+                      </div>
+                      <div className="text-sm md:text-base text-white/90 uppercase tracking-wide font-medium">
+                        {stat.label}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Statistics Bar - Overlapping Component */}
-      <section className="relative -mt-10 mb-0 z-20">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative bg-blue-700 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
-            {/* Decorative dot pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
-                backgroundSize: '30px 30px'
-              }} />
-            </div>
-
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 relative z-10">
-              {[
-                { value: "200", suffix: "+", label: "Projects" },
-                { value: "95", suffix: "%", label: "Success Rate" },
-                { value: "50", suffix: "+", label: "Experts" },
-                { value: "24", suffix: "/7", label: "Support" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="text-center"
-                >
-                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
-                    {stat.value}{stat.suffix}
-                  </div>
-                  <div className="text-sm md:text-base lg:text-lg text-white/90 uppercase tracking-wide font-medium">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Visual Impact Section with Multiple Images */}
       <section className="relative pt-0 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
@@ -970,6 +967,48 @@ export default function Consulting() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Excellence in Practice
             </h2>
+          </motion.div>
+
+          {/* Statistics Bar - Second Half */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative bg-blue-700 rounded-2xl p-6 md:p-8 shadow-2xl overflow-hidden mb-12 max-w-2xl mx-auto"
+          >
+            {/* Decorative dot pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 4px 4px, white 2px, transparent 0)`,
+                backgroundSize: '30px 30px'
+              }} />
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-6 relative z-10">
+              {[
+                { value: "50", suffix: "+", label: "Experts" },
+                { value: "24", suffix: "/7", label: "Support" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+                    {stat.value}{stat.suffix}
+                  </div>
+                  <div className="text-sm md:text-base text-white/90 uppercase tracking-wide font-medium">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0 mt-8">
