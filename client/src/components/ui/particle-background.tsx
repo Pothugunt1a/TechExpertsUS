@@ -11,6 +11,7 @@ interface Particle {
 
 export function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationFrameIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -30,7 +31,6 @@ export function ParticleBackground() {
     const particles: Particle[] = [];
     const particleCount = 50;
 
-    // Create particles
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -42,27 +42,27 @@ export function ParticleBackground() {
       });
     }
 
+    let isAnimating = true;
+
     const animate = () => {
+      if (!isAnimating || !canvas || !ctx) return;
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle) => {
-        // Update position
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
-        // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 
-        // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(34, 211, 238, ${particle.opacity})`;
         ctx.fill();
 
-        // Draw connections
         particles.forEach((otherParticle) => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
@@ -79,12 +79,17 @@ export function ParticleBackground() {
         });
       });
 
-      requestAnimationFrame(animate);
+      animationFrameIdRef.current = requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => {
+      isAnimating = false;
+      if (animationFrameIdRef.current !== null) {
+        cancelAnimationFrame(animationFrameIdRef.current);
+        animationFrameIdRef.current = null;
+      }
       window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
