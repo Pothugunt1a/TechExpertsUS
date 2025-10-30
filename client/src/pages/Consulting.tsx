@@ -1030,7 +1030,7 @@ export default function Consulting() {
                 </motion.div>
 
                 {/* Content at bottom with transparent border box */}
-                <div className="absolute bottom-4 inset-x-0 p-2 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
+                <div className="absolute bottom-4 inset-x-0 p-4 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
                   <h3 className="text-xl font-bold mb-3 leading-tight">
                     {item.title}
                   </h3>
