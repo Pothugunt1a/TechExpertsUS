@@ -441,8 +441,8 @@ export default function Contact() {
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="USA Location"
-                  className="absolute w-8 h-8"
-                  style={{ left: '18%', top: '39%' }}
+                  className="absolute w-12 h-12 drop-shadow-lg"
+                  style={{ left: '15%', top: '35%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.6 }}
@@ -452,8 +452,8 @@ export default function Contact() {
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="Canada Location"
-                  className="absolute w-8 h-8"
-                  style={{ left: '20%', top: '31%' }}
+                  className="absolute w-12 h-12 drop-shadow-lg"
+                  style={{ left: '17%', top: '27%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
@@ -463,8 +463,8 @@ export default function Contact() {
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="UK Location"
-                  className="absolute w-8 h-8"
-                  style={{ left: '50%', top: '27%' }}
+                  className="absolute w-12 h-12 drop-shadow-lg"
+                  style={{ left: '47%', top: '23%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.1, duration: 0.6 }}
@@ -474,8 +474,8 @@ export default function Contact() {
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="India Location"
-                  className="absolute w-8 h-8"
-                  style={{ left: '71%', top: '41%' }}
+                  className="absolute w-12 h-12 drop-shadow-lg"
+                  style={{ left: '68%', top: '37%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
