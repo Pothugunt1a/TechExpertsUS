@@ -96,20 +96,6 @@ export default function Contact() {
     <div className="min-h-screen">
       {/* Hero Section with Contact Banner Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <motion.div
-          className="absolute inset-0 z-0"
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <img
-            src="/assets/Contact.jpg"
-            alt="Contact Banner"
-            className="w-full h-full object-contain object-center"
-          />
-        </motion.div>
-
         {/* Particle Background Overlay */}
         <ParticleBackground />
 
@@ -130,13 +116,13 @@ export default function Contact() {
             style={{ marginTop: "-6px" }}
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-              Get In Touch
+              Let's Connect
             </h1>
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-2">
-              We'd love to hear from you.
+              Have a question or ready to start your next project?
             </p>
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
-              Reach out to us and let's start a conversation.
+              Our team is here to help you succeed.
             </p>
           </motion.div>
         </div>
