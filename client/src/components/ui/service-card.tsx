@@ -45,14 +45,14 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
 
       {/* Default Overlay - Bottom gradient with title */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent dark:from-black/80 dark:via-black/40 dark:to-transparent"
         animate={{
           opacity: isHovered ? 0 : 1
         }}
         transition={{ duration: 0.4 }}
       >
         <div className="absolute bottom-0 left-0 right-0 p-6">
-          <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+          <h3 className="text-2xl font-bold text-white dark:text-white mb-2">{title}</h3>
           {logo && (
             <img src={logo} alt={`${title} logo`} className="h-8 object-contain" />
           )}
@@ -61,7 +61,7 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
 
       {/* Hover Overlay - Slides up from bottom */}
       <motion.div
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
+        className="absolute inset-0 bg-white/70 dark:bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
         initial={{ y: "100%" }}
         animate={{ 
           y: isHovered ? "0%" : "100%"
@@ -83,8 +83,8 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
           }}
           className="flex-1 flex flex-col justify-center"
         >
-          <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-          <p className="text-gray-300 mb-6 leading-relaxed">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{title}</h3>
+          <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
             {description}
           </p>
           {link && (
