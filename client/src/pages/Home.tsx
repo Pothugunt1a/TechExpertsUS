@@ -4,7 +4,19 @@ import { ServicesCarousel } from "@/components/ui/services-carousel";
 import { StatCounter } from "@/components/ui/stat-counter";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import { HeroCarousel } from "@/components/ui/hero-carousel";
-import { Server, Network, ClipboardCheck, Users, Code, Shield, Cpu, Database, Cloud, Zap, CheckCircle2 } from "lucide-react";
+import {
+  Server,
+  Network,
+  ClipboardCheck,
+  Users,
+  Code,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Zap,
+  CheckCircle2,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useRef } from "react";
@@ -13,60 +25,69 @@ const services = [
   {
     icon: Users,
     title: "Consulting",
-    description: "At Tech Expertsus Consulting, we help companies think ahead. Business today is evolving faster than at any other time in history.",
+    description:
+      "At Tech Expertsus Consulting, we help companies think ahead. Business today is evolving faster than at any other time in history.",
     link: "/consult/consulting",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80",
+    image: "/assets/Home4.jpeg",
   },
   {
     icon: Server,
     title: "Outsourcing",
-    description: "Today's dynamic business environment mandates a robust IT organization while simultaneously reducing Total Cost of Ownership.",
+    description:
+      "Today's dynamic business environment mandates a robust IT organization while simultaneously reducing Total Cost of Ownership.",
     link: "/consult/outsourcing",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
+    image: "/assets/Home5.jpg",
   },
   {
     icon: Network,
     title: "Staffing Solutions",
-    description: "Your goal is to focus on your core business. Our goal is to help you by offering comprehensive workforce solutions.",
+    description:
+      "Your goal is to focus on your core business. Our goal is to help you by offering comprehensive workforce solutions.",
     link: "/consult/staffing",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&auto=format&fit=crop&q=80",
+    image: "/assets/Home6.jpg",
   },
   {
     icon: ClipboardCheck,
     title: "IT Infrastructure Services",
-    description: "Because of the rapid development of new technologies and infrastructure like openstack, Tech Expertsus helps organizations stay ahead.",
+    description:
+      "Because of the rapid development of new technologies and infrastructure like openstack, Tech Expertsus helps organizations stay ahead.",
     link: "/services",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
+    image: "/assets/Home7.jpg",
   },
   {
     icon: Code,
     title: "Application Management Services",
-    description: "Tech Expertsus's Application Management offers a wide range of proactive support services for various platforms.",
+    description:
+      "Tech Expertsus's Application Management offers a wide range of proactive support services for various platforms.",
     link: "/services",
-    image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=800&auto=format&fit=crop&q=80",
+    image: "/assets/Home8.jpg",
   },
   {
     icon: Shield,
     title: "Testing Services",
-    description: "With the emergence of disruptive technologies, evolution of distributed application landscapes and modern testing approaches.",
+    description:
+      "With the emergence of disruptive technologies, evolution of distributed application landscapes and modern testing approaches.",
     link: "/services",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
+    image: "/assets/Home9.jpg",
   },
 ];
 
 const testimonials = [
   {
-    content: "Tech Expertsus has transformed our IT infrastructure with their innovative solutions. Their team's expertise and dedication are unmatched.",
+    content:
+      "Tech Expertsus has transformed our IT infrastructure with their innovative solutions. Their team's expertise and dedication are unmatched.",
     author: "John Doe",
     role: "Customer",
   },
   {
-    content: "Working with Tech Expertsus has been a game-changer for our business. They deliver exceptional results consistently.",
+    content:
+      "Working with Tech Expertsus has been a game-changer for our business. They deliver exceptional results consistently.",
     author: "Jane Smith",
     role: "Customer",
   },
   {
-    content: "The professionalism and technical excellence of Tech Expertsus team exceeded our expectations. Highly recommended!",
+    content:
+      "The professionalism and technical excellence of Tech Expertsus team exceeded our expectations. Highly recommended!",
     author: "Mike Johnson",
     role: "Customer",
   },
@@ -76,9 +97,9 @@ export default function Home() {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
-  
+
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
 
@@ -99,7 +120,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 px-4"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Our Services
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive IT solutions tailored to your business needs
             </p>
@@ -120,16 +143,25 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Welcome To Our <span className="text-primary">Tech Expertsus</span>
+                Welcome To Our{" "}
+                <span className="text-primary">Tech Expertsus</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Tech Experts us was founded on three basic principles: Technology expertise, Innovative solutions and long lasting partnership with customers.
+                Tech Experts us was founded on three basic principles:
+                Technology expertise, Innovative solutions and long lasting
+                partnership with customers.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Established in the year 2012, Tech Experts us Technologies has grown to be the preferred IT partner for the big players in the industry across various industry verticals. Tech Experts us has partnered with some of the esteemed clients, helping them meet the new challenges of IT innovations.
+                Established in the year 2012, Tech Experts us Technologies has
+                grown to be the preferred IT partner for the big players in the
+                industry across various industry verticals. Tech Experts us has
+                partnered with some of the esteemed clients, helping them meet
+                the new challenges of IT innovations.
               </p>
               <p className="text-lg text-muted-foreground">
-                We have an enviable reputation for delivering independent, practical, value-priced advice and services to our chosen market sectors.
+                We have an enviable reputation for delivering independent,
+                practical, value-priced advice and services to our chosen market
+                sectors.
               </p>
             </motion.div>
 
@@ -145,11 +177,11 @@ export default function Home() {
                 className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-chart-2/20 rounded-3xl blur-2xl"
                 animate={{
                   opacity: [0.3, 0.6, 0.3],
-                  scale: [1, 1.05, 1]
+                  scale: [1, 1.05, 1],
                 }}
                 transition={{ duration: 4, repeat: Infinity }}
               />
-              
+
               <div className="relative bg-gradient-to-br from-card/90 to-card/60 dark:from-primary/20 dark:to-chart-2/20 rounded-2xl p-8 backdrop-blur-xl border border-primary/20 shadow-2xl">
                 <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
                   Why Choose Us?
@@ -159,7 +191,7 @@ export default function Home() {
                     { text: "Technology Expertise", icon: Code },
                     { text: "Innovative Solutions", icon: Zap },
                     { text: "Long-lasting Partnerships", icon: Users },
-                    { text: "Proven Track Record", icon: Shield }
+                    { text: "Proven Track Record", icon: Shield },
                   ].map((item, index) => (
                     <motion.li
                       key={item.text}
@@ -170,7 +202,7 @@ export default function Home() {
                       whileHover={{ x: 10 }}
                       className="flex items-center space-x-3 group cursor-pointer"
                     >
-                      <motion.div 
+                      <motion.div
                         className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
@@ -201,9 +233,9 @@ export default function Home() {
               <div className="flex items-center justify-center gap-4 mb-4">
                 <motion.div
                   className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.1,
-                    rotate: [0, -10, 10, -10, 0]
+                    rotate: [0, -10, 10, -10, 0],
                   }}
                   animate={{
                     y: [0, -10, 0],
@@ -212,11 +244,11 @@ export default function Home() {
                     y: {
                       duration: 3,
                       repeat: Infinity,
-                      ease: "easeInOut"
+                      ease: "easeInOut",
                     },
                     rotate: {
-                      duration: 0.6
-                    }
+                      duration: 0.6,
+                    },
                   }}
                 >
                   <Code className="w-10 h-10 text-primary" />
@@ -241,9 +273,9 @@ export default function Home() {
               <div className="flex items-center justify-center gap-4 mb-4">
                 <motion.div
                   className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.1,
-                    rotate: 360
+                    rotate: 360,
                   }}
                   animate={{
                     scale: [1, 1.05, 1],
@@ -253,11 +285,11 @@ export default function Home() {
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: 0.5
+                      delay: 0.5,
                     },
                     rotate: {
-                      duration: 0.8
-                    }
+                      duration: 0.8,
+                    },
                   }}
                 >
                   <Users className="w-10 h-10 text-primary" />
@@ -282,9 +314,9 @@ export default function Home() {
               <div className="flex items-center justify-center gap-4 mb-4">
                 <motion.div
                   className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.1,
-                    y: [-5, 5, -5]
+                    y: [-5, 5, -5],
                   }}
                   animate={{
                     rotate: [0, 5, -5, 0],
@@ -293,12 +325,12 @@ export default function Home() {
                     rotate: {
                       duration: 4,
                       repeat: Infinity,
-                      ease: "easeInOut"
+                      ease: "easeInOut",
                     },
                     y: {
                       duration: 0.4,
-                      ease: "easeInOut"
-                    }
+                      ease: "easeInOut",
+                    },
                   }}
                 >
                   <Network className="w-10 h-10 text-primary" />
@@ -323,31 +355,31 @@ export default function Home() {
               <div className="flex items-center justify-center gap-4 mb-4">
                 <motion.div
                   className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.1,
-                    rotate: [0, 360]
+                    rotate: [0, 360],
                   }}
                   animate={{
                     y: [0, -8, 0],
-                    rotate: [0, 10, -10, 0]
+                    rotate: [0, 10, -10, 0],
                   }}
                   transition={{
                     y: {
                       duration: 2.5,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: 1
+                      delay: 1,
                     },
                     rotate: {
                       y: {
                         duration: 5,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       },
                       hover: {
-                        duration: 0.8
-                      }
-                    }
+                        duration: 0.8,
+                      },
+                    },
                   }}
                 >
                   <Zap className="w-10 h-10 text-primary" />
@@ -374,8 +406,12 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Client Testimonials</h2>
-            <p className="text-xl text-muted-foreground">What our clients say about us</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Client Testimonials
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              What our clients say about us
+            </p>
           </motion.div>
 
           <TestimonialCarousel testimonials={testimonials} />
@@ -392,7 +428,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Our Core Values
+            </h2>
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-12">
@@ -401,7 +439,7 @@ export default function Home() {
               { name: "Communication", icon: "communication" },
               { name: "Satisfaction", icon: "satisfaction" },
               { name: "Performance", icon: "performance" },
-              { name: "Consciousness", icon: "consciousness" }
+              { name: "Consciousness", icon: "consciousness" },
             ].map((value, index) => (
               <motion.div
                 key={value.name}
@@ -415,7 +453,10 @@ export default function Home() {
               >
                 <div className="relative w-40 h-40 mb-4">
                   {/* Animated circle border with draw effect */}
-                  <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 160 160">
+                  <svg
+                    className="absolute inset-0 w-full h-full -rotate-90"
+                    viewBox="0 0 160 160"
+                  >
                     <circle
                       cx="80"
                       cy="80"
@@ -440,11 +481,11 @@ export default function Home() {
                       transition={{
                         duration: 2,
                         delay: index * 0.2,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
                   </svg>
-                  
+
                   {/* Animated glow effect */}
                   <motion.div
                     className="absolute inset-0 rounded-full bg-primary/5 blur-xl"
@@ -459,7 +500,7 @@ export default function Home() {
                       delay: index * 0.3,
                     }}
                   />
-                  
+
                   {/* Inner content with icon */}
                   <div className="absolute inset-3 rounded-full bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center group-hover:bg-background transition-colors duration-300">
                     <motion.img
@@ -470,7 +511,10 @@ export default function Home() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.2 + 0.5 }}
-                      style={{ filter: 'invert(47%) sepia(96%) saturate(3071%) hue-rotate(190deg) brightness(95%) contrast(101%)' }}
+                      style={{
+                        filter:
+                          "invert(47%) sepia(96%) saturate(3071%) hue-rotate(190deg) brightness(95%) contrast(101%)",
+                      }}
                     />
                     <motion.span
                       className="text-sm font-semibold text-center px-2 text-primary"
