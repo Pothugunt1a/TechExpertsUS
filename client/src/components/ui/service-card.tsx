@@ -61,7 +61,7 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
 
       {/* Hover Overlay - Slides up from bottom */}
       <motion.div
-        className="absolute inset-0 bg-black/95 flex flex-col justify-end p-8"
+        className="absolute inset-0 bg-transparent flex flex-col justify-end p-8"
         initial={{ y: "100%" }}
         animate={{ 
           y: isHovered ? "0%" : "100%"
