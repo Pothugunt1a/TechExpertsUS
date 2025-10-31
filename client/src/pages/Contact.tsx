@@ -445,12 +445,12 @@ export default function Contact() {
                   transition={{ delay: 0.5, duration: 0.6 }}
                 >
                   <motion.path
-                    d="M 230 250 C 230 250, 215 265, 215 277 C 215 285, 221 291, 230 291 C 239 291, 245 285, 245 277 C 245 265, 230 250, 230 250 Z"
+                    d="M 180 195 C 180 195, 165 210, 165 222 C 165 230, 171 236, 180 236 C 189 236, 195 230, 195 222 C 195 210, 180 195, 180 195 Z"
                     className="fill-cyan-400"
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
-                  <circle cx="230" cy="270" r="5" className="fill-background" />
+                  <circle cx="180" cy="215" r="5" className="fill-background" />
                 </motion.g>
 
                 {/* Canada Location - Toronto */}
@@ -460,12 +460,12 @@ export default function Contact() {
                   transition={{ delay: 0.8, duration: 0.6 }}
                 >
                   <motion.path
-                    d="M 255 210 C 255 210, 240 225, 240 237 C 240 245, 246 251, 255 251 C 264 251, 270 245, 270 237 C 270 225, 255 210, 255 210 Z"
+                    d="M 200 155 C 200 155, 185 170, 185 182 C 185 190, 191 196, 200 196 C 209 196, 215 190, 215 182 C 215 170, 200 155, 200 155 Z"
                     className="fill-cyan-400"
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
                   />
-                  <circle cx="255" cy="230" r="5" className="fill-background" />
+                  <circle cx="200" cy="175" r="5" className="fill-background" />
                 </motion.g>
 
                 {/* UK Location - London */}
@@ -475,12 +475,12 @@ export default function Contact() {
                   transition={{ delay: 1.1, duration: 0.6 }}
                 >
                   <motion.path
-                    d="M 510 165 C 510 165, 495 180, 495 192 C 495 200, 501 206, 510 206 C 519 206, 525 200, 525 192 C 525 180, 510 165, 510 165 Z"
+                    d="M 500 135 C 500 135, 485 150, 485 162 C 485 170, 491 176, 500 176 C 509 176, 515 170, 515 162 C 515 150, 500 135, 500 135 Z"
                     className="fill-cyan-400"
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
                   />
-                  <circle cx="510" cy="185" r="5" className="fill-background" />
+                  <circle cx="500" cy="155" r="5" className="fill-background" />
                 </motion.g>
 
                 {/* India Location - Central India */}
@@ -490,17 +490,17 @@ export default function Contact() {
                   transition={{ delay: 1.4, duration: 0.6 }}
                 >
                   <motion.path
-                    d="M 720 240 C 720 240, 705 255, 705 267 C 705 275, 711 281, 720 281 C 729 281, 735 275, 735 267 C 735 255, 720 240, 720 240 Z"
+                    d="M 710 205 C 710 205, 695 220, 695 232 C 695 240, 701 246, 710 246 C 719 246, 725 240, 725 232 C 725 220, 710 205, 710 205 Z"
                     className="fill-cyan-400"
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
                   />
-                  <circle cx="720" cy="260" r="5" className="fill-background" />
+                  <circle cx="710" cy="225" r="5" className="fill-background" />
                 </motion.g>
 
                 {/* Connection Lines */}
                 <motion.path
-                  d="M 230 265 Q 242 245 255 225"
+                  d="M 180 210 Q 190 190 200 170"
                   fill="none"
                   stroke="url(#gradient1)"
                   strokeWidth="2"
@@ -510,7 +510,7 @@ export default function Contact() {
                 />
 
                 <motion.path
-                  d="M 255 225 Q 380 190 510 180"
+                  d="M 200 170 Q 350 130 500 150"
                   fill="none"
                   stroke="url(#gradient2)"
                   strokeWidth="2"
@@ -520,7 +520,7 @@ export default function Contact() {
                 />
 
                 <motion.path
-                  d="M 510 180 Q 615 210 720 255"
+                  d="M 500 150 Q 605 185 710 220"
                   fill="none"
                   stroke="url(#gradient3)"
                   strokeWidth="2"
