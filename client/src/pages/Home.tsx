@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { ServiceCard } from "@/components/ui/service-card";
+import { ServicesCarousel } from "@/components/ui/services-carousel";
 import { StatCounter } from "@/components/ui/stat-counter";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import { HeroCarousel } from "@/components/ui/hero-carousel";
@@ -91,13 +91,13 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-8"
+            className="text-center mb-12 px-4"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -105,11 +105,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard key={service.title} {...service} index={index} />
-            ))}
-          </div>
+          <ServicesCarousel services={services} />
         </div>
       </section>
 
