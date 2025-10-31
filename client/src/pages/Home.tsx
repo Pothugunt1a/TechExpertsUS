@@ -194,9 +194,15 @@ export default function Home() {
                 
                 {/* Content */}
                 <div className="relative p-8">
-                  <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  <motion.h3 
+                    className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                  >
                     Why Choose Us?
-                  </h3>
+                  </motion.h3>
                   <ul className="space-y-4">
                     {[
                       { text: "Technology Expertise", icon: Code },
@@ -206,10 +212,10 @@ export default function Home() {
                     ].map((item, index) => (
                       <motion.li
                         key={item.text}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.15 + 0.2, duration: 0.6 }}
                         whileHover={{ x: 10 }}
                         className="flex items-center space-x-3 group cursor-pointer"
                       >
