@@ -464,7 +464,7 @@ export default function Contact() {
                   src="/assets/map-pointer.gif"
                   alt="UK Location"
                   className="absolute w-12 h-12 drop-shadow-lg"
-                  style={{ left: '47%', top: '23%' }}
+                  style={{ left: '43%', top: '23%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.1, duration: 0.6 }}
@@ -475,7 +475,7 @@ export default function Contact() {
                   src="/assets/map-pointer.gif"
                   alt="India Location"
                   className="absolute w-12 h-12 drop-shadow-lg"
-                  style={{ left: '68%', top: '37%' }}
+                  style={{ left: '64%', top: '37%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
