@@ -182,36 +182,48 @@ export default function Home() {
                 transition={{ duration: 4, repeat: Infinity }}
               />
 
-              <div className="relative bg-gradient-to-br from-card/90 to-card/60 dark:from-primary/20 dark:to-chart-2/20 rounded-2xl p-8 backdrop-blur-xl border border-primary/20 shadow-2xl">
-                <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                  Why Choose Us?
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    { text: "Technology Expertise", icon: Code },
-                    { text: "Innovative Solutions", icon: Zap },
-                    { text: "Long-lasting Partnerships", icon: Users },
-                    { text: "Proven Track Record", icon: Shield },
-                  ].map((item, index) => (
-                    <motion.li
-                      key={item.text}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ x: 10 }}
-                      className="flex items-center space-x-3 group cursor-pointer"
-                    >
-                      <motion.div
-                        className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: 'url(/assets/Home10.jpg)' }}
+                />
+                
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 backdrop-blur-sm" />
+                
+                {/* Content */}
+                <div className="relative p-8">
+                  <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                    Why Choose Us?
+                  </h3>
+                  <ul className="space-y-4">
+                    {[
+                      { text: "Technology Expertise", icon: Code },
+                      { text: "Innovative Solutions", icon: Zap },
+                      { text: "Long-lasting Partnerships", icon: Users },
+                      { text: "Proven Track Record", icon: Shield },
+                    ].map((item, index) => (
+                      <motion.li
+                        key={item.text}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        whileHover={{ x: 10 }}
+                        className="flex items-center space-x-3 group cursor-pointer"
                       >
-                        <item.icon className="w-5 h-5 text-primary" />
-                      </motion.div>
-                      <span className="text-lg">{item.text}</span>
-                    </motion.li>
-                  ))}
-                </ul>
+                        <motion.div
+                          className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                        >
+                          <item.icon className="w-5 h-5 text-primary" />
+                        </motion.div>
+                        <span className="text-lg text-white">{item.text}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </motion.div>
           </div>
