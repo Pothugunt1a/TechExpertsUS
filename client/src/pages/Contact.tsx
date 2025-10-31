@@ -108,7 +108,7 @@ export default function Contact() {
         {/* Particle Background Overlay */}
         <ParticleBackground />
 
-        {/* Centered Text Content */}
+        {/* Left-aligned Text Content */}
         <div
           className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center"
           style={{ height: "85vh" }}
@@ -121,7 +121,7 @@ export default function Contact() {
               delay: 0.3,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="text-center flex flex-col items-center justify-center w-full"
+            className="text-left flex flex-col items-start justify-center w-full lg:w-1/2"
             style={{ marginTop: "-6px" }}
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
