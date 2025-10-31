@@ -15,36 +15,42 @@ const services = [
     title: "Consulting",
     description: "At Tech Expertsus Consulting, we help companies think ahead. Business today is evolving faster than at any other time in history.",
     link: "/consult/consulting",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80",
   },
   {
     icon: Server,
     title: "Outsourcing",
     description: "Today's dynamic business environment mandates a robust IT organization while simultaneously reducing Total Cost of Ownership.",
     link: "/consult/outsourcing",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
   },
   {
     icon: Network,
     title: "Staffing Solutions",
     description: "Your goal is to focus on your core business. Our goal is to help you by offering comprehensive workforce solutions.",
     link: "/consult/staffing",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&auto=format&fit=crop&q=80",
   },
   {
     icon: ClipboardCheck,
     title: "IT Infrastructure Services",
     description: "Because of the rapid development of new technologies and infrastructure like openstack, Tech Expertsus helps organizations stay ahead.",
     link: "/services",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
   },
   {
     icon: Code,
     title: "Application Management Services",
     description: "Tech Expertsus's Application Management offers a wide range of proactive support services for various platforms.",
     link: "/services",
+    image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=800&auto=format&fit=crop&q=80",
   },
   {
     icon: Shield,
     title: "Testing Services",
     description: "With the emergence of disruptive technologies, evolution of distributed application landscapes and modern testing approaches.",
     link: "/services",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
   },
 ];
 
