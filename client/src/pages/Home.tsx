@@ -437,8 +437,17 @@ export default function Home() {
       </section>
 
       {/* Core Values Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/assets/OurCoreValues.jpg)' }}
+        />
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+        
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
