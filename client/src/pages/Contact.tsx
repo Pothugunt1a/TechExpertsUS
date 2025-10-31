@@ -434,158 +434,53 @@ export default function Contact() {
                 alt="World Map"
                 className="w-full h-full object-contain"
               />
-              <svg
-                viewBox="0 0 1000 500"
-                className="absolute inset-0 w-full h-full"
-              >
+              
+              {/* Location Pointers using GIF */}
+              <div className="absolute inset-0 w-full h-full">
                 {/* USA Location - Texas */}
-                <motion.g
+                <motion.img
+                  src="/assets/map-pointer.gif"
+                  alt="USA Location"
+                  className="absolute w-8 h-8"
+                  style={{ left: '18%', top: '39%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.6 }}
-                >
-                  <motion.path
-                    d="M 180 195 C 180 195, 165 210, 165 222 C 165 230, 171 236, 180 236 C 189 236, 195 230, 195 222 C 195 210, 180 195, 180 195 Z"
-                    className="fill-cyan-400"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                  <circle cx="180" cy="215" r="5" className="fill-background" />
-                </motion.g>
+                />
 
                 {/* Canada Location - Toronto */}
-                <motion.g
+                <motion.img
+                  src="/assets/map-pointer.gif"
+                  alt="Canada Location"
+                  className="absolute w-8 h-8"
+                  style={{ left: '20%', top: '31%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
-                >
-                  <motion.path
-                    d="M 200 155 C 200 155, 185 170, 185 182 C 185 190, 191 196, 200 196 C 209 196, 215 190, 215 182 C 215 170, 200 155, 200 155 Z"
-                    className="fill-cyan-400"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                  />
-                  <circle cx="200" cy="175" r="5" className="fill-background" />
-                </motion.g>
+                />
 
                 {/* UK Location - London */}
-                <motion.g
+                <motion.img
+                  src="/assets/map-pointer.gif"
+                  alt="UK Location"
+                  className="absolute w-8 h-8"
+                  style={{ left: '50%', top: '27%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.1, duration: 0.6 }}
-                >
-                  <motion.path
-                    d="M 500 135 C 500 135, 485 150, 485 162 C 485 170, 491 176, 500 176 C 509 176, 515 170, 515 162 C 515 150, 500 135, 500 135 Z"
-                    className="fill-cyan-400"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-                  />
-                  <circle cx="500" cy="155" r="5" className="fill-background" />
-                </motion.g>
+                />
 
                 {/* India Location - Central India */}
-                <motion.g
+                <motion.img
+                  src="/assets/map-pointer.gif"
+                  alt="India Location"
+                  className="absolute w-8 h-8"
+                  style={{ left: '71%', top: '41%' }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
-                >
-                  <motion.path
-                    d="M 710 205 C 710 205, 695 220, 695 232 C 695 240, 701 246, 710 246 C 719 246, 725 240, 725 232 C 725 220, 710 205, 710 205 Z"
-                    className="fill-cyan-400"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
-                  />
-                  <circle cx="710" cy="225" r="5" className="fill-background" />
-                </motion.g>
-
-                {/* Connection Lines */}
-                <motion.path
-                  d="M 180 210 Q 190 190 200 170"
-                  fill="none"
-                  stroke="url(#gradient1)"
-                  strokeWidth="2"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.5 }}
-                  transition={{ delay: 1.7, duration: 1, ease: "easeInOut" }}
                 />
-
-                <motion.path
-                  d="M 200 170 Q 350 130 500 150"
-                  fill="none"
-                  stroke="url(#gradient2)"
-                  strokeWidth="2"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.5 }}
-                  transition={{ delay: 2.4, duration: 1.2, ease: "easeInOut" }}
-                />
-
-                <motion.path
-                  d="M 500 150 Q 605 185 710 220"
-                  fill="none"
-                  stroke="url(#gradient3)"
-                  strokeWidth="2"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.5 }}
-                  transition={{ delay: 3.6, duration: 1.2, ease: "easeInOut" }}
-                />
-
-                <defs>
-                  <linearGradient
-                    id="gradient1"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop
-                      offset="0%"
-                      stopColor="hsl(var(--primary))"
-                      stopOpacity="0.8"
-                    />
-                    <stop
-                      offset="100%"
-                      stopColor="hsl(var(--chart-2))"
-                      stopOpacity="0.8"
-                    />
-                  </linearGradient>
-                  <linearGradient
-                    id="gradient2"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop
-                      offset="0%"
-                      stopColor="hsl(var(--chart-2))"
-                      stopOpacity="0.8"
-                    />
-                    <stop
-                      offset="100%"
-                      stopColor="hsl(var(--chart-3))"
-                      stopOpacity="0.8"
-                    />
-                  </linearGradient>
-                  <linearGradient
-                    id="gradient3"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop
-                      offset="0%"
-                      stopColor="hsl(var(--chart-3))"
-                      stopOpacity="0.8"
-                    />
-                    <stop
-                      offset="100%"
-                      stopColor="hsl(var(--chart-4))"
-                      stopOpacity="0.8"
-                    />
-                  </linearGradient>
-                </defs>
-              </svg>
+              </div>
             </motion.div>
 
             {/* Location Cards in 2x2 Grid */}
