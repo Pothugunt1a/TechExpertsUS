@@ -104,7 +104,7 @@ export default function Contact() {
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <img
-            src="/assets/Contact.png"
+            src="/assets/Contact.jpg"
             alt="Contact Banner"
             className="w-full h-full object-contain object-center"
           />
@@ -199,7 +199,9 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">Send Us a Message</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
+                Send Us a Message
+              </h2>
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
@@ -324,7 +326,9 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">Contact Information</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
+                Contact Information
+              </h2>
               <div className="space-y-6 mb-12">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0">
