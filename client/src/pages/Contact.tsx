@@ -438,132 +438,64 @@ export default function Contact() {
                 viewBox="0 0 1000 500"
                 className="absolute inset-0 w-full h-full"
               >
-                {/* USA Location - Texas (18% from left, 42% from top) */}
+                {/* USA Location - Texas */}
                 <motion.g
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.6 }}
                 >
-                  <motion.circle
-                    cx="180"
-                    cy="210"
-                    r="10"
-                    className="fill-primary"
-                    animate={{ scale: [1, 1.2, 1] }}
+                  <motion.path
+                    d="M 180 195 C 180 195, 165 210, 165 222 C 165 230, 171 236, 180 236 C 189 236, 195 230, 195 222 C 195 210, 180 195, 180 195 Z"
+                    className="fill-cyan-400"
+                    animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
-                  <motion.circle
-                    cx="180"
-                    cy="210"
-                    r="18"
-                    className="fill-primary/30"
-                    animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
-                    transition={{ duration: 2.5, repeat: Infinity }}
-                  />
-                  <motion.circle
-                    cx="180"
-                    cy="210"
-                    r="26"
-                    className="fill-primary/20"
-                    animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
-                    transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-                  />
+                  <circle cx="180" cy="215" r="5" className="fill-background" />
                 </motion.g>
 
-                {/* Canada Location - Toronto (20% from left, 34% from top) */}
+                {/* Canada Location - Toronto */}
                 <motion.g
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
                 >
-                  <motion.circle
-                    cx="200"
-                    cy="170"
-                    r="10"
-                    className="fill-chart-2"
-                    animate={{ scale: [1, 1.2, 1] }}
+                  <motion.path
+                    d="M 200 155 C 200 155, 185 170, 185 182 C 185 190, 191 196, 200 196 C 209 196, 215 190, 215 182 C 215 170, 200 155, 200 155 Z"
+                    className="fill-cyan-400"
+                    animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
                   />
-                  <motion.circle
-                    cx="200"
-                    cy="170"
-                    r="18"
-                    className="fill-chart-2/30"
-                    animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
-                    transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
-                  />
-                  <motion.circle
-                    cx="200"
-                    cy="170"
-                    r="26"
-                    className="fill-chart-2/20"
-                    animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
-                    transition={{ duration: 3, repeat: Infinity, delay: 0.8 }}
-                  />
+                  <circle cx="200" cy="175" r="5" className="fill-background" />
                 </motion.g>
 
-                {/* UK Location - London (50% from left, 30% from top) */}
+                {/* UK Location - London */}
                 <motion.g
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.1, duration: 0.6 }}
                 >
-                  <motion.circle
-                    cx="500"
-                    cy="150"
-                    r="10"
-                    className="fill-chart-3"
-                    animate={{ scale: [1, 1.2, 1] }}
+                  <motion.path
+                    d="M 500 135 C 500 135, 485 150, 485 162 C 485 170, 491 176, 500 176 C 509 176, 515 170, 515 162 C 515 150, 500 135, 500 135 Z"
+                    className="fill-cyan-400"
+                    animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
                   />
-                  <motion.circle
-                    cx="500"
-                    cy="150"
-                    r="18"
-                    className="fill-chart-3/30"
-                    animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
-                    transition={{ duration: 2.5, repeat: Infinity, delay: 0.6 }}
-                  />
-                  <motion.circle
-                    cx="500"
-                    cy="150"
-                    r="26"
-                    className="fill-chart-3/20"
-                    animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
-                    transition={{ duration: 3, repeat: Infinity, delay: 1.1 }}
-                  />
+                  <circle cx="500" cy="155" r="5" className="fill-background" />
                 </motion.g>
 
-                {/* India Location - Central India (71% from left, 44% from top) */}
+                {/* India Location - Central India */}
                 <motion.g
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
                 >
-                  <motion.circle
-                    cx="710"
-                    cy="220"
-                    r="10"
-                    className="fill-chart-4"
-                    animate={{ scale: [1, 1.2, 1] }}
+                  <motion.path
+                    d="M 710 205 C 710 205, 695 220, 695 232 C 695 240, 701 246, 710 246 C 719 246, 725 240, 725 232 C 725 220, 710 205, 710 205 Z"
+                    className="fill-cyan-400"
+                    animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
                   />
-                  <motion.circle
-                    cx="710"
-                    cy="220"
-                    r="18"
-                    className="fill-chart-4/30"
-                    animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
-                    transition={{ duration: 2.5, repeat: Infinity, delay: 0.9 }}
-                  />
-                  <motion.circle
-                    cx="710"
-                    cy="220"
-                    r="26"
-                    className="fill-chart-4/20"
-                    animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
-                    transition={{ duration: 3, repeat: Infinity, delay: 1.4 }}
-                  />
+                  <circle cx="710" cy="225" r="5" className="fill-background" />
                 </motion.g>
 
                 {/* Connection Lines */}
