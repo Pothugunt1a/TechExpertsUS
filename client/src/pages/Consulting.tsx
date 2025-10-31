@@ -323,7 +323,7 @@ export default function Consulting() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
                 Future-Focused Solutions
               </h2>
 
@@ -423,7 +423,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -460,7 +460,7 @@ export default function Consulting() {
 
                   {/* Circle - Smaller */}
                   <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
-                    <Target className="w-16 h-16 text-white" />
+                    <Target className="w-16 h-16 text-gray-900 dark:text-white" />
                   </div>
 
                   {/* Curved Line (SVG) - Perfect semi-circle arc */}
@@ -488,7 +488,7 @@ export default function Consulting() {
                     style={{ right: "30px", top: "20px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-white">01</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">01</span>
                   </motion.div>
 
                   <motion.div
@@ -499,7 +499,7 @@ export default function Consulting() {
                     style={{ right: "-76px", top: "94px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-white">02</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">02</span>
                   </motion.div>
 
                   <motion.div
@@ -510,7 +510,7 @@ export default function Consulting() {
                     style={{ right: "-118px", top: "218px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-white">03</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">03</span>
                   </motion.div>
 
                   <motion.div
@@ -521,7 +521,7 @@ export default function Consulting() {
                     style={{ right: "-76px", top: "343px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-white">04</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">04</span>
                   </motion.div>
 
                   <motion.div
@@ -532,7 +532,7 @@ export default function Consulting() {
                     style={{ right: "32px", top: "416px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-white">05</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">05</span>
                   </motion.div>
                 </div>
               </motion.div>
@@ -627,7 +627,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Transformation Is Key
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -802,7 +802,7 @@ export default function Consulting() {
 
               {/* Heading */}
               <motion.h2
-                className="text-5xl md:text-6xl font-bold leading-tight text-white"
+                className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -937,10 +937,10 @@ export default function Consulting() {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="text-center"
                 >
-                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-2">
                     {stat.value}{stat.suffix}
                   </div>
-                  <div className="text-sm md:text-base lg:text-lg text-white/90 uppercase tracking-wide font-medium">
+                  <div className="text-sm md:text-base lg:text-lg text-gray-900 dark:text-white/90 uppercase tracking-wide font-medium">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -966,7 +966,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Excellence in Practice
             </h2>
           </motion.div>
@@ -1025,15 +1025,15 @@ export default function Consulting() {
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <item.icon className="w-7 h-7 text-white" />
+                  <item.icon className="w-7 h-7 text-gray-900 dark:text-white" />
                 </motion.div>
 
                 {/* Content at bottom with transparent border box */}
-                <div className="absolute bottom-4 inset-x-0 p-4 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
+                <div className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
                   <h3 className="text-xl font-bold mb-3 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-white/80 leading-relaxed">
+                  <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -1070,7 +1070,7 @@ export default function Consulting() {
               <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">

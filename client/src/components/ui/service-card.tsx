@@ -61,7 +61,7 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
 
       {/* Hover Overlay - Slides up from bottom */}
       <motion.div
-        className="absolute inset-0 bg-white/70 dark:bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
         initial={{ y: "100%" }}
         animate={{ 
           y: isHovered ? "0%" : "100%"
@@ -83,8 +83,8 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
           }}
           className="flex-1 flex flex-col justify-center"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{title}</h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+          <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+          <p className="text-gray-300 mb-6 leading-relaxed">
             {description}
           </p>
           {link && (

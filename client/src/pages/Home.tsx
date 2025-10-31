@@ -190,7 +190,7 @@ export default function Home() {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/40 dark:from-black/30 dark:to-black/20 backdrop-blur-sm" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/20 backdrop-blur-sm" />
                 
                 {/* Content */}
                 <div className="relative p-8">
@@ -225,7 +225,7 @@ export default function Home() {
                         >
                           <item.icon className="w-5 h-5 text-primary" />
                         </motion.div>
-                        <span className="text-lg text-gray-900 dark:text-white font-medium">{item.text}</span>
+                        <span className="text-lg text-white font-medium">{item.text}</span>
                       </motion.li>
                     ))}
                   </ul>
@@ -445,7 +445,7 @@ export default function Home() {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-white/70 dark:from-black/40 dark:via-black/30 dark:to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40" />
         
         <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <motion.div
@@ -455,7 +455,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Our Core Values
             </h2>
           </motion.div>

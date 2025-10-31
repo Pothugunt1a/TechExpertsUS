@@ -150,7 +150,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <span className="block text-white mb-2">About</span>
+              <span className="block text-gray-900 dark:text-white mb-2">About</span>
               <span className="block bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                 Tech Expertsus
               </span>
@@ -233,7 +233,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Why Tech Experts USA
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
@@ -258,7 +258,7 @@ export default function About() {
                       <Lightbulb className="w-8 h-8 text-primary" />
                     </motion.div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-4 text-white">Think Outside the Box</h3>
+                      <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Think Outside the Box</h3>
                       <p className="text-muted-foreground leading-relaxed">
                         At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
                       </p>
@@ -278,7 +278,7 @@ export default function About() {
                       <Award className="w-8 h-8 text-chart-2" />
                     </motion.div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-4 text-white">Excellence & Passion</h3>
+                      <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Excellence & Passion</h3>
                       <p className="text-muted-foreground leading-relaxed">
                         We're proud of the outstanding work we deliver and our people who make it happen. It takes extreme talent, passion and an ability to inspire others to excel here.
                       </p>
@@ -322,7 +322,7 @@ export default function About() {
                   data-testid={`info-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <item.icon className="w-10 h-10 text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </motion.div>
               ))}
@@ -371,7 +371,7 @@ export default function About() {
                   >
                     <Target className="w-12 h-12 text-primary" />
                   </motion.div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">Our Mission</h3>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">Our Mission</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients thereby ensuring complete client satisfaction and long-term commitment with them.
                   </p>
@@ -404,7 +404,7 @@ export default function About() {
                   >
                     <Eye className="w-12 h-12 text-chart-2" />
                   </motion.div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">Our Vision</h3>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">Our Vision</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     To explore new opportunities and ideas to enhance quality based contributions that are beneficial for our clients and to get recognized as a global leader in providing IT Services and Technology based solutions.
                   </p>
@@ -447,7 +447,7 @@ export default function About() {
               >
                 <Zap className="w-14 h-14 text-primary" />
               </motion.div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
                 A Passion for Innovation And<br />A Commitment To Excellence
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
@@ -472,7 +472,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Core Values</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Principles that guide everything we do
             </p>
@@ -500,7 +500,7 @@ export default function About() {
                   >
                     <value.icon className="w-8 h-8 text-primary" />
                   </motion.div>
-                  <h4 className="text-xl font-bold mb-3 text-white">{value.title}</h4>
+                  <h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{value.title}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
                 </div>
               </motion.div>
@@ -520,7 +520,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">What We Do</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">What We Do</h2>
             <p className="text-xl text-muted-foreground">Excellence in every dimension</p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
@@ -545,7 +545,7 @@ export default function About() {
                   >
                     <item.icon className="w-10 h-10 text-primary" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">{item.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
               </motion.div>
@@ -559,7 +559,7 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-white">Our Skills</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-gray-900 dark:text-white">Our Skills</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
               {skills.map((skill, index) => (
                 <motion.div
@@ -572,7 +572,7 @@ export default function About() {
                   data-testid={`skill-${skill.label.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-lg font-semibold text-white group-hover:text-primary transition-colors">{skill.label}</span>
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">{skill.label}</span>
                     <span className="text-3xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">{skill.percentage}%</span>
                   </div>
                   <div className="relative h-3 bg-card/50 rounded-full overflow-hidden border border-primary/20">
@@ -608,7 +608,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Happy Clients</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Happy Clients</h2>
             <p className="text-xl text-muted-foreground">Trusted by industry leaders worldwide</p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
@@ -652,7 +652,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
@@ -665,7 +665,7 @@ export default function About() {
             >
               <a
                 href="/contact"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary to-chart-2 text-white text-lg font-semibold rounded-full hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 group"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary to-chart-2 text-gray-900 dark:text-white text-lg font-semibold rounded-full hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 group"
                 data-testid="button-contact"
               >
                 Get in Touch
