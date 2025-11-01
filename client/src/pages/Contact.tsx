@@ -434,15 +434,15 @@ export default function Contact() {
                 alt="World Map"
                 className="w-full h-full object-contain"
               />
-              
+
               {/* Location Pointers using GIF */}
               <div className="absolute inset-0 w-full h-full">
                 {/* USA Location - Texas */}
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="USA Location"
-                  className="absolute w-12 h-12 drop-shadow-lg"
-                  style={{ left: '15%', top: '35%' }}
+                  className="absolute w-16 h-20 drop-shadow-lg"
+                  style={{ left: "12%", top: "21%" }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.6 }}
@@ -452,8 +452,8 @@ export default function Contact() {
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="Canada Location"
-                  className="absolute w-12 h-12 drop-shadow-lg"
-                  style={{ left: '17%', top: '27%' }}
+                  className="absolute w-16 h-20 drop-shadow-lg"
+                  style={{ left: "14%", top: "12%" }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
@@ -463,8 +463,8 @@ export default function Contact() {
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="UK Location"
-                  className="absolute w-12 h-12 drop-shadow-lg"
-                  style={{ left: '43%', top: '23%' }}
+                  className="absolute w-16 h-20 drop-shadow-lg"
+                  style={{ left: "37%", top: "12%" }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.1, duration: 0.6 }}
@@ -474,8 +474,8 @@ export default function Contact() {
                 <motion.img
                   src="/assets/map-pointer.gif"
                   alt="India Location"
-                  className="absolute w-12 h-12 drop-shadow-lg"
-                  style={{ left: '64%', top: '37%' }}
+                  className="absolute w-16 h-20 drop-shadow-lg"
+                  style={{ left: "58%", top: "27%" }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
