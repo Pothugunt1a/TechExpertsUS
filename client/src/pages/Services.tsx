@@ -305,6 +305,31 @@ export default function Services() {
       <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Core Managed Services
+            </h2>
+            <motion.p
+              className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.9 }}
+            >
+              Tech Expertsus provides IT Infrastructure Managed Services to help
+              design secure, Strategize, implement scalable and reliable
+              communications and IT infrastructure. We are specialized in
+              Application management services, Server Management and Storages
+              services.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-10"
             variants={containerVariants}
             initial="hidden"
