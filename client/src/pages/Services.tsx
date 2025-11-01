@@ -312,7 +312,7 @@ export default function Services() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Core Service Offerings
+              Enterprise IT Infrastructure Solutions
             </h2>
             <motion.p
               className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
