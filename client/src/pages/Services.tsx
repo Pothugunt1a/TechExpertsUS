@@ -346,21 +346,6 @@ export default function Services() {
       {/* Interactive Service Categories */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-10"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Technology Platforms & Solutions
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Advanced cloud, enterprise, and emerging technology platforms to power your business
-            </p>
-          </motion.div>
-
           <InteractiveServiceCategories categories={serviceCategories} />
         </div>
       </section>
