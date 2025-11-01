@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { ClipboardCheck, TrendingUp, Shield, Code, Globe, Database, Lock, Smartphone } from "lucide-react";
+import {
+  ClipboardCheck,
+  TrendingUp,
+  Shield,
+  Code,
+  Globe,
+  Database,
+  Lock,
+  Smartphone,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
@@ -8,42 +17,50 @@ const solutions = [
   {
     icon: TrendingUp,
     title: "Process Improvement",
-    description: "Business processes are fundamental to every company's performance. We help establish high-performing processes through systematic assessment and improvement.",
+    description:
+      "Business processes are fundamental to every company's performance. We help establish high-performing processes through systematic assessment and improvement.",
   },
   {
     icon: Shield,
     title: "Risk Analysis",
-    description: "Decades of experience in helping organizations understand formal risk management. We identify, analyze and help objectively manage project risks.",
+    description:
+      "Decades of experience in helping organizations understand formal risk management. We identify, analyze and help objectively manage project risks.",
   },
   {
     icon: Code,
     title: "Custom Software Development",
-    description: "Organizations can create software exactly according to their requirements, reducing the need for multiple software purchases and expensive licenses.",
+    description:
+      "Organizations can create software exactly according to their requirements, reducing the need for multiple software purchases and expensive licenses.",
   },
   {
     icon: Globe,
     title: "Web Application Solutions",
-    description: "From high level strategy to implementation, we offer technically complex yet user-friendly solutions with optimal cost/performance ratio.",
+    description:
+      "From high level strategy to implementation, we offer technically complex yet user-friendly solutions with optimal cost/performance ratio.",
   },
   {
     icon: Lock,
     title: "Secure Internet",
-    description: "Secure scalable solutions for businesses of all sizes. We maximize network security protection against DDoS attacks and threats.",
+    description:
+      "Secure scalable solutions for businesses of all sizes. We maximize network security protection against DDoS attacks and threats.",
   },
   {
     icon: Database,
     title: "Enterprise Database Solutions",
-    description: "Control costs without sacrificing growth with our Enterprise Data Management combining strategic expertise and deep operational understanding.",
+    description:
+      "Control costs without sacrificing growth with our Enterprise Data Management combining strategic expertise and deep operational understanding.",
   },
   {
     icon: Smartphone,
     title: "Responsive Designs",
-    description: "Device-independent UI design that develops and delivers optimized website experience across all devices and resolutions.",
+    description:
+      "Device-independent UI design that develops and delivers optimized website experience across all devices and resolutions.",
   },
   {
     icon: ClipboardCheck,
     title: "Scrum Training",
-    description: "SCRUM training where our highly skilled professionals teach all aspects and modules from the very basic points to advanced concepts.",
+    description:
+      "SCRUM training where our highly skilled professionals teach all aspects and modules from the very basic points to advanced concepts.",
   },
 ];
 
@@ -56,7 +73,7 @@ export default function PMS() {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(/assets/photodune.png)`,
+            backgroundImage: `url(/assets/ProjectManagement-banner.jpg)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -96,13 +113,21 @@ export default function PMS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Comprehensive Project Management</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Comprehensive Project Management
+            </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground">
               <p>
-                Tech Expertsus project management solutions help companies schedule resources and monitor performance to ensure both deadlines and project requirements are met. Automated project execution ensures timely communication across distributed teams by automatically updating schedules and delivering resource assignments as each critical deadline is met.
+                Tech Expertsus project management solutions help companies
+                schedule resources and monitor performance to ensure both
+                deadlines and project requirements are met. Automated project
+                execution ensures timely communication across distributed teams
+                by automatically updating schedules and delivering resource
+                assignments as each critical deadline is met.
               </p>
               <p>
-                Companies can implement a standardized, efficient process to manage projects and enhance communication among product teams.
+                Companies can implement a standardized, efficient process to
+                manage projects and enhance communication among product teams.
               </p>
             </div>
           </motion.div>
@@ -119,8 +144,12 @@ export default function PMS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Solutions</h2>
-            <p className="text-xl text-muted-foreground">End-to-end project management services</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Our Solutions
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              End-to-end project management services
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -137,7 +166,7 @@ export default function PMS() {
               >
                 <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
+
                   <div className="relative z-10">
                     <motion.div
                       whileHover={{ rotate: 360 }}
@@ -171,7 +200,9 @@ export default function PMS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Key Highlights</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Key Highlights
+            </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -182,11 +213,16 @@ export default function PMS() {
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-8"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-primary">Process Excellence</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-primary">
+                Process Excellence
+              </h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Understanding the "voice of the customer" around performance expectations</span>
+                  <span>
+                    Understanding the "voice of the customer" around performance
+                    expectations
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
@@ -194,7 +230,9 @@ export default function PMS() {
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Prioritizing improvements based on benefit potential</span>
+                  <span>
+                    Prioritizing improvements based on benefit potential
+                  </span>
                 </li>
               </ul>
             </motion.div>
@@ -206,11 +244,15 @@ export default function PMS() {
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 rounded-2xl p-8"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-primary">Risk Management</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-primary">
+                Risk Management
+              </h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Assessing composition and performance of your portfolio</span>
+                  <span>
+                    Assessing composition and performance of your portfolio
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
@@ -240,10 +282,15 @@ export default function PMS() {
               Ready to Optimize Your Projects?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let us help you implement efficient project management solutions that deliver results.
+              Let us help you implement efficient project management solutions
+              that deliver results.
             </p>
             <Link href="/contact">
-              <Button size="lg" className="text-lg px-8" data-testid="button-start-project">
+              <Button
+                size="lg"
+                className="text-lg px-8"
+                data-testid="button-start-project"
+              >
                 Start Your Project
               </Button>
             </Link>
