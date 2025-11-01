@@ -363,10 +363,10 @@ export default function Services() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Cloud & Enterprise Ecosystem
+              Technology Platforms & Solutions
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Explore our comprehensive range of cloud, enterprise, and emerging technology solutions
+              Advanced cloud, enterprise, and emerging technology platforms to power your business
             </p>
           </motion.div>
 
