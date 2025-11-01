@@ -252,7 +252,7 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
             >
-              Innovative IT Solutions
+              Technology Platforms & Solutions
             </motion.h1>
             <motion.p
               className="text-xl md:text-3xl text-foreground/90 max-w-3xl mx-auto font-semibold"
@@ -260,16 +260,7 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
             >
-              Empowering Your Business Through Technology Excellence
-            </motion.p>
-            <motion.p
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 1 }}
-            >
-              From infrastructure management to cutting-edge cloud solutions, we
-              deliver comprehensive IT services tailored to your needs
+              Advanced cloud, enterprise, and emerging technology platforms to power your business
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
