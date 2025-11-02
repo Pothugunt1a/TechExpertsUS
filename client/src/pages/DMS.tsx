@@ -374,7 +374,7 @@ export default function DMS() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative w-full h-64 rounded-2xl overflow-hidden">
+              <div className="relative w-full h-96 rounded-2xl overflow-hidden">
                 <img
                   src="/assets/DataCenterManagement1.gif"
                   alt="Data Center Infrastructure"
