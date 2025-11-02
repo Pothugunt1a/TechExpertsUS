@@ -15,7 +15,9 @@ interface InteractiveServiceCategoriesProps {
   categories: ServiceCategory[];
 }
 
-export function InteractiveServiceCategories({ categories }: InteractiveServiceCategoriesProps) {
+export function InteractiveServiceCategories({
+  categories,
+}: InteractiveServiceCategoriesProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectedCategory = categories[selectedIndex];
   const { theme } = useTheme();
@@ -39,7 +41,12 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
             y: [0, 40, 0],
             scale: [1, 1.2, 1],
           }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         />
         <motion.div
           className="absolute bottom-20 left-1/4 w-20 h-20 bg-primary/10 rounded-lg"
@@ -47,7 +54,12 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
             y: [0, -25, 0],
             rotate: [0, -45, 0],
           }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
         />
         <motion.div
           className="absolute bottom-1/3 right-1/3 w-16 h-16 border-2 border-chart-2/30"
@@ -57,7 +69,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
         />
-        
+
         {/* Gradient orbs */}
         <motion.div
           className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-primary/20 to-chart-2/20 rounded-full blur-3xl"
@@ -73,7 +85,12 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
             scale: [1.3, 1, 1.3],
             opacity: [0.6, 0.3, 0.6],
           }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
         />
       </div>
 
@@ -92,7 +109,8 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
               Technology Platforms
             </h3>
             <p className="text-lg text-muted-foreground">
-              Explore our comprehensive technology platforms and discover the perfect solution for your business needs.
+              Explore our comprehensive technology platforms and discover the
+              perfect solution for your business needs.
             </p>
           </div>
 
@@ -100,7 +118,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
             {categories.map((category, index) => {
               const Icon = category.icon;
               const isSelected = selectedIndex === index;
-              
+
               return (
                 <motion.button
                   key={category.title}
@@ -117,22 +135,27 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                     <motion.div
                       className={`
                         w-14 h-14 rounded-lg flex items-center justify-center mb-4
-                        ${isSelected 
-                          ? 'bg-gradient-to-br from-primary to-chart-2' 
-                          : 'bg-primary/10'
+                        ${
+                          isSelected
+                            ? "bg-gradient-to-br from-primary to-chart-2"
+                            : "bg-primary/10"
                         }
                       `}
                       animate={isSelected ? { scale: [1, 1.1, 1] } : {}}
                       transition={{ duration: 0.3 }}
                     >
-                      <Icon className={`w-7 h-7 ${isSelected ? 'text-white' : 'text-primary'}`} />
+                      <Icon
+                        className={`w-7 h-7 ${isSelected ? "text-white" : "text-primary"}`}
+                      />
                     </motion.div>
-                    
+
                     <div className="flex-1">
-                      <h4 className={`
+                      <h4
+                        className={`
                         text-base md:text-lg font-semibold mb-2 whitespace-nowrap overflow-hidden text-ellipsis
-                        ${isSelected ? 'text-foreground' : 'text-foreground/90'}
-                      `}>
+                        ${isSelected ? "text-foreground" : "text-foreground/90"}
+                      `}
+                      >
                         {category.title}
                       </h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">
@@ -140,13 +163,17 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Vertical bar indicator - centered on left border */}
                   {isSelected && (
                     <motion.div
                       layoutId="activeIndicator"
                       className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-12 bg-gradient-to-b from-primary to-chart-2 rounded-r-full"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
                     />
                   )}
                 </motion.button>
@@ -167,204 +194,278 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
           {/* Visual Container - No Card Styling */}
           <div className="relative w-full h-full flex items-center justify-center">
             {/* Top Right 3D Corner Border - Enhanced */}
-            <motion.div 
+            <motion.div
               className="absolute top-0 right-0 w-48 h-48 pointer-events-none z-20"
               initial={{ opacity: 0, scale: 0.8, rotateZ: -15 }}
               animate={{ opacity: 1, scale: 1, rotateZ: 0 }}
-              transition={{ delay: 0.3, duration: 1, type: "spring", stiffness: 100 }}
+              transition={{
+                delay: 0.3,
+                duration: 1,
+                type: "spring",
+                stiffness: 100,
+              }}
             >
               {/* Corner Accent Square */}
               <motion.div
                 className="absolute top-0 right-0 w-3 h-3 bg-gradient-to-br from-primary to-chart-2 rounded-sm"
-                animate={{ 
+                animate={{
                   scale: [1, 1.3, 1],
                   rotate: [0, 90, 0],
                 }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 style={{ transform: "translateZ(20px)" }}
               />
-              
+
               {/* Main Border - Thick Professional */}
               <motion.div
                 className="absolute top-0 right-0 w-full h-full"
                 style={{ transformStyle: "preserve-3d" }}
-                animate={{ 
+                animate={{
                   rotateX: [0, 8, 0],
                   rotateY: [0, -8, 0],
                 }}
-                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: [0.45, 0.05, 0.55, 0.95],
+                }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute top-0 right-0 w-full h-2 bg-gradient-to-l from-primary via-chart-2 to-transparent"
-                  style={{ 
+                  style={{
                     transform: "translateZ(15px)",
-                    boxShadow: "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
+                    boxShadow:
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
                   }}
                   animate={{
                     boxShadow: [
                       "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
                       "0 0 40px rgba(59, 130, 246, 0.8), 0 0 80px rgba(59, 130, 246, 0.5)",
-                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
-                    ]
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
+                    ],
                   }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
-                <motion.div 
+                <motion.div
                   className="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-primary via-chart-2 to-transparent"
-                  style={{ 
+                  style={{
                     transform: "translateZ(15px)",
-                    boxShadow: "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
+                    boxShadow:
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
                   }}
                   animate={{
                     boxShadow: [
                       "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
                       "0 0 40px rgba(59, 130, 246, 0.8), 0 0 80px rgba(59, 130, 246, 0.5)",
-                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)"
-                    ]
+                      "0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)",
+                    ],
                   }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
               </motion.div>
-              
+
               {/* Inner Accent Line */}
               <motion.div
                 className="absolute top-3 right-3 w-full h-full opacity-70"
                 style={{ transformStyle: "preserve-3d" }}
-                animate={{ 
+                animate={{
                   rotateX: [0, -5, 0],
                   rotateY: [0, 5, 0],
                 }}
-                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95], delay: 0.5 }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: [0.45, 0.05, 0.55, 0.95],
+                  delay: 0.5,
+                }}
               >
-                <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-white/80 via-primary/60 to-transparent"
-                     style={{ transform: "translateZ(8px)" }}></div>
-                <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-white/80 via-primary/60 to-transparent"
-                     style={{ transform: "translateZ(8px)" }}></div>
+                <div
+                  className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-white/80 via-primary/60 to-transparent"
+                  style={{ transform: "translateZ(8px)" }}
+                ></div>
+                <div
+                  className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-white/80 via-primary/60 to-transparent"
+                  style={{ transform: "translateZ(8px)" }}
+                ></div>
               </motion.div>
-              
+
               {/* Animated Glow Orb */}
               <motion.div
                 className="absolute -top-4 -right-4 w-24 h-24"
-                animate={{ 
+                animate={{
                   opacity: [0.4, 0.8, 0.4],
                   scale: [1, 1.2, 1],
-                  rotate: [0, 180, 360]
+                  rotate: [0, 180, 360],
                 }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
               >
                 <div className="w-full h-full bg-gradient-to-br from-primary/50 via-chart-2/50 to-transparent blur-2xl rounded-full"></div>
               </motion.div>
-              
+
               {/* Particle Trail Effect */}
               <motion.div
                 className="absolute top-0 right-0"
-                animate={{ 
+                animate={{
                   x: [0, -100],
-                  opacity: [0, 1, 0]
+                  opacity: [0, 1, 0],
                 }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeOut", repeatDelay: 1 }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                  repeatDelay: 1,
+                }}
               >
                 <div className="w-1 h-1 bg-primary rounded-full blur-sm"></div>
               </motion.div>
             </motion.div>
-            
+
             {/* Bottom Left 3D Corner Border - Enhanced */}
-            <motion.div 
+            <motion.div
               className="absolute bottom-0 left-0 w-48 h-48 pointer-events-none z-20"
               initial={{ opacity: 0, scale: 0.8, rotateZ: 15 }}
               animate={{ opacity: 1, scale: 1, rotateZ: 0 }}
-              transition={{ delay: 0.3, duration: 1, type: "spring", stiffness: 100 }}
+              transition={{
+                delay: 0.3,
+                duration: 1,
+                type: "spring",
+                stiffness: 100,
+              }}
             >
               {/* Corner Accent Square */}
               <motion.div
                 className="absolute bottom-0 left-0 w-3 h-3 bg-gradient-to-tl from-chart-2 to-primary rounded-sm"
-                animate={{ 
+                animate={{
                   scale: [1, 1.3, 1],
                   rotate: [0, -90, 0],
                 }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 style={{ transform: "translateZ(20px)" }}
               />
-              
+
               {/* Main Border - Thick Professional */}
               <motion.div
                 className="absolute bottom-0 left-0 w-full h-full"
                 style={{ transformStyle: "preserve-3d" }}
-                animate={{ 
+                animate={{
                   rotateX: [0, -8, 0],
                   rotateY: [0, 8, 0],
                 }}
-                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: [0.45, 0.05, 0.55, 0.95],
+                }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-chart-2 via-primary to-transparent"
-                  style={{ 
+                  style={{
                     transform: "translateZ(15px)",
-                    boxShadow: "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
+                    boxShadow:
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
                   }}
                   animate={{
                     boxShadow: [
                       "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
                       "0 0 40px rgba(147, 51, 234, 0.8), 0 0 80px rgba(147, 51, 234, 0.5)",
-                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
-                    ]
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
+                    ],
                   }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
-                <motion.div 
+                <motion.div
                   className="absolute bottom-0 left-0 w-2 h-full bg-gradient-to-t from-chart-2 via-primary to-transparent"
-                  style={{ 
+                  style={{
                     transform: "translateZ(15px)",
-                    boxShadow: "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
+                    boxShadow:
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
                   }}
                   animate={{
                     boxShadow: [
                       "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
                       "0 0 40px rgba(147, 51, 234, 0.8), 0 0 80px rgba(147, 51, 234, 0.5)",
-                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
-                    ]
+                      "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)",
+                    ],
                   }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
               </motion.div>
-              
+
               {/* Inner Accent Line */}
               <motion.div
                 className="absolute bottom-3 left-3 w-full h-full opacity-70"
                 style={{ transformStyle: "preserve-3d" }}
-                animate={{ 
+                animate={{
                   rotateX: [0, 5, 0],
                   rotateY: [0, -5, 0],
                 }}
-                transition={{ duration: 5, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95], delay: 0.5 }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: [0.45, 0.05, 0.55, 0.95],
+                  delay: 0.5,
+                }}
               >
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-white/80 via-chart-2/60 to-transparent"
-                     style={{ transform: "translateZ(8px)" }}></div>
-                <div className="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-white/80 via-chart-2/60 to-transparent"
-                     style={{ transform: "translateZ(8px)" }}></div>
+                <div
+                  className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-white/80 via-chart-2/60 to-transparent"
+                  style={{ transform: "translateZ(8px)" }}
+                ></div>
+                <div
+                  className="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-white/80 via-chart-2/60 to-transparent"
+                  style={{ transform: "translateZ(8px)" }}
+                ></div>
               </motion.div>
-              
+
               {/* Animated Glow Orb */}
               <motion.div
                 className="absolute -bottom-4 -left-4 w-24 h-24"
-                animate={{ 
+                animate={{
                   opacity: [0.4, 0.8, 0.4],
                   scale: [1, 1.2, 1],
-                  rotate: [0, -180, -360]
+                  rotate: [0, -180, -360],
                 }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
               >
                 <div className="w-full h-full bg-gradient-to-tl from-chart-2/50 via-primary/50 to-transparent blur-2xl rounded-full"></div>
               </motion.div>
-              
+
               {/* Particle Trail Effect */}
               <motion.div
                 className="absolute bottom-0 left-0"
-                animate={{ 
+                animate={{
                   x: [0, 100],
-                  opacity: [0, 1, 0]
+                  opacity: [0, 1, 0],
                 }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeOut", repeatDelay: 1 }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                  repeatDelay: 1,
+                }}
               >
                 <div className="w-1 h-1 bg-chart-2 rounded-full blur-sm"></div>
               </motion.div>
@@ -383,13 +484,16 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                 {(() => {
                   let imageSrc = "";
                   let altText = "";
-                  
+
                   switch (selectedCategory.title) {
-                    case "Software as a Service (SaaS)":
-                      imageSrc = theme === "dark" ? "/assets/Saas.png" : "/assets/Saas1.png";
+                    case "Software as a Service":
+                      imageSrc =
+                        theme === "dark"
+                          ? "/assets/Saas.png"
+                          : "/assets/Saas1.png";
                       altText = "Software as a Service";
                       break;
-                    case "Application Service Providers (ASP)":
+                    case "Application Service Providers":
                       imageSrc = "/assets/ASP.png";
                       altText = "Application Service Providers";
                       break;
@@ -401,7 +505,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                       imageSrc = "/assets/CloudComputing.gif";
                       altText = "Cloud Computing";
                       break;
-                    case "Enterprise Resource Planning (ERP)":
+                    case "Enterprise Resource Planning":
                       imageSrc = "/assets/ERP.gif";
                       altText = "Enterprise Resource Planning";
                       break;
@@ -409,11 +513,11 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                       imageSrc = "/assets/CRM.gif";
                       altText = "Customer Relations Management";
                       break;
-                    case "Infrastructure as a Service (IaaS)":
+                    case "Infrastructure as a Service":
                       imageSrc = "/assets/Iaas.gif";
                       altText = "Infrastructure as a Service";
                       break;
-                    case "Internet of Things (IoT)":
+                    case "Internet of Things":
                       imageSrc = "/assets/IOT.png";
                       altText = "Internet of Things";
                       break;
@@ -422,34 +526,44 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                       altText = "Big Data";
                       break;
                   }
-                  
+
                   if (imageSrc) {
-                    const isERP = selectedCategory.title === "Enterprise Resource Planning (ERP)";
+                    const isERP =
+                      selectedCategory.title ===
+                      "Enterprise Resource Planning (ERP)";
                     return (
                       <div className="w-full flex items-center justify-center px-8">
                         <img
                           src={imageSrc}
                           alt={altText}
                           className="w-full h-auto object-contain"
-                          style={isERP ? {
-                            maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                            maskComposite: 'intersect',
-                            WebkitMaskComposite: 'source-in'
-                          } : undefined}
+                          style={
+                            isERP
+                              ? {
+                                  maskImage:
+                                    "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+                                  WebkitMaskImage:
+                                    "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+                                  maskComposite: "intersect",
+                                  WebkitMaskComposite: "source-in",
+                                }
+                              : undefined
+                          }
                         />
                       </div>
                     );
                   }
-                  
+
                   return (
-                    <div 
+                    <div
                       className="w-full flex items-center justify-center px-8"
-                      dangerouslySetInnerHTML={{ __html: selectedCategory.visual }}
+                      dangerouslySetInnerHTML={{
+                        __html: selectedCategory.visual,
+                      }}
                     />
                   );
                 })()}
-                
+
                 {/* Category label at bottom */}
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}

@@ -50,14 +50,14 @@ const mainServices = [
 
 const serviceCategories = [
   {
-    title: "Software as a Service (SaaS)",
+    title: "Software as a Service",
     description:
       "Applications, Runtime, Data, Middleware, OSes, Virtualization, Servers, Storage and networking. For: Google Apps, Salesforce, Workday, Concur, Citrix, GoToMeeting, Cisco WebEX",
     icon: Cloud,
     visual: serviceVisuals.saas,
   },
   {
-    title: "Application Service Providers (ASP)",
+    title: "Application Service Providers",
     description:
       "Consumer Acquisition, Appnext, Avazu Mobile DSP, StrikeAd by Sizmek, AppLift, Mobusi, Smaato, Liftoff, Trademob, PocketMath, Merchenta, Jampp, Splicky, MobFox DSP by Matomy, Fiksu",
     icon: Server,
@@ -78,7 +78,7 @@ const serviceCategories = [
     visual: serviceVisuals.cloud,
   },
   {
-    title: "Enterprise Resource Planning (ERP)",
+    title: "Enterprise Resource Planning",
     description:
       "WebERP, Openbravo, Postbooks, Tryton, SQL-Ledger,Odoo, Adaxa Suite, HeliumV,LedgerSMB, JFire, Kuali, ERPNEXT, Dolibarr, Compiere, ERP5, FrontAccounting, Scipio ERP",
     icon: Database,
@@ -92,14 +92,14 @@ const serviceCategories = [
     visual: serviceVisuals.crm,
   },
   {
-    title: "Infrastructure as a Service (IaaS)",
+    title: "Infrastructure as a Service",
     description:
       "Amazon Web Services, Windows Azure, Google Compute Engine, Rackspace, IBM SmartCloud, Enterprise, HP Enterprise Converged Infrastructure, Cisco Metapod",
     icon: Shield,
     visual: serviceVisuals.iaas,
   },
   {
-    title: "Internet of Things (IoT)",
+    title: "Internet of Things",
     description:
       "XOBXOB, Lab of Things, Konekt, Temboo, Open Sensors, Smart Living, Google Cloud Platform, RTI, ThingWorx, Cisco, GE Predix, Verizon, ThingSpace, IBM BlueMix",
     icon: Network,
@@ -260,7 +260,8 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
             >
-              Advanced cloud, enterprise, and emerging technology platforms to power your business
+              Advanced cloud, enterprise, and emerging technology platforms to
+              power your business
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -457,7 +458,9 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Clients</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Our Clients
+            </h2>
             <p className="text-2xl text-muted-foreground">
               Trusted by industry leaders
             </p>
