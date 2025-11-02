@@ -113,10 +113,10 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                   className="relative w-full text-left p-6 rounded-xl transition-all duration-300 bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card/80 h-full"
                   data-testid={`category-item-${index}`}
                 >
-                  <div className="flex items-start gap-4 h-full">
+                  <div className="flex flex-col h-full">
                     <motion.div
                       className={`
-                        flex-shrink-0 w-14 h-14 rounded-lg flex items-center justify-center
+                        w-14 h-14 rounded-lg flex items-center justify-center mb-4
                         ${isSelected 
                           ? 'bg-gradient-to-br from-primary to-chart-2' 
                           : 'bg-primary/10'
@@ -130,7 +130,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                     
                     <div className="flex-1">
                       <h4 className={`
-                        text-base md:text-lg font-semibold mb-2
+                        text-base md:text-lg font-semibold mb-2 whitespace-nowrap overflow-hidden text-ellipsis
                         ${isSelected ? 'text-foreground' : 'text-foreground/90'}
                       `}>
                         {category.title}
