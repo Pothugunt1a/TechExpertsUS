@@ -110,10 +110,10 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className="relative w-full text-left p-5 rounded-xl transition-all duration-300 bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card/80"
+                  className="relative w-full text-left p-6 rounded-xl transition-all duration-300 bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card/80 h-full"
                   data-testid={`category-item-${index}`}
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-4 h-full">
                     <motion.div
                       className={`
                         flex-shrink-0 w-14 h-14 rounded-lg flex items-center justify-center
@@ -135,7 +135,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                       `}>
                         {category.title}
                       </h4>
-                      <p className="text-sm text-muted-foreground line-clamp-3">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         {category.description}
                       </p>
                     </div>
