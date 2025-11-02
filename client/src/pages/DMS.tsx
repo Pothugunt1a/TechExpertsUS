@@ -376,14 +376,13 @@ export default function DMS() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                {/* Placeholder Image */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 via-card to-chart-2/10 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <Server className="w-24 h-24 mx-auto text-primary/40" />
-                    <p className="text-muted-foreground">
-                      Data Center Infrastructure
-                    </p>
-                  </div>
+                {/* Data Center Image */}
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/assets/DataCenterManagement1.gif"
+                    alt="Data Center Infrastructure"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Overlay Gradient */}
