@@ -592,11 +592,11 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/app-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden">
+                <div className="w-full h-full min-h-[400px] rounded-xl overflow-hidden">
                   <img
                     src="/assets/Outsourcing2.jpg"
                     alt="Application Outsourcing"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -616,11 +616,11 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/infra-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
+                <div className="w-full h-full min-h-[400px] rounded-xl overflow-hidden order-2 lg:order-1">
                   <img
                     src="/assets/Outsourcing3.jpg"
                     alt="Infrastructure Outsourcing"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="order-1 lg:order-2">
@@ -714,11 +714,11 @@ export default function Outsourcing() {
                   Size: 500x400
                   Path: /assets/bpo-outsourcing.jpg
                 */}
-                <div className="w-full h-80 rounded-xl overflow-hidden">
+                <div className="w-full h-full min-h-[400px] rounded-xl overflow-hidden">
                   <img
                     src="/assets/Outsourcing4.jpg"
                     alt="Business Process Outsourcing"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
