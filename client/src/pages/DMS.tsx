@@ -13,7 +13,7 @@ import {
   Lock,
   Layers,
   BarChart3,
-  CheckCircle2
+  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -23,28 +23,32 @@ const services = [
   {
     icon: Server,
     title: "IT Services",
-    description: "Comprehensive IT infrastructure management and support services tailored to your business needs.",
+    description:
+      "Comprehensive IT infrastructure management and support services tailored to your business needs.",
     color: "from-cyan-500 to-blue-600",
     delay: 0,
   },
   {
     icon: Layers,
     title: "Enterprise Solutions",
-    description: "Scalable enterprise-grade solutions designed to grow with your organization.",
+    description:
+      "Scalable enterprise-grade solutions designed to grow with your organization.",
     color: "from-blue-500 to-purple-600",
     delay: 0.1,
   },
   {
     icon: BarChart3,
     title: "Business Intelligence & Performance",
-    description: "Data-driven insights and analytics to optimize your business performance.",
+    description:
+      "Data-driven insights and analytics to optimize your business performance.",
     color: "from-purple-500 to-pink-600",
     delay: 0.2,
   },
   {
     icon: Cpu,
     title: "Engineering & Industrial Services",
-    description: "Advanced engineering solutions for modern industrial challenges.",
+    description:
+      "Advanced engineering solutions for modern industrial challenges.",
     color: "from-pink-500 to-red-600",
     delay: 0.3,
   },
@@ -54,7 +58,8 @@ const features = [
   {
     icon: Server,
     title: "24/7 Monitoring",
-    description: "Continuous server health monitoring and instant alert systems",
+    description:
+      "Continuous server health monitoring and instant alert systems",
   },
   {
     icon: Database,
@@ -96,7 +101,7 @@ export default function DMS() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -127,23 +132,39 @@ export default function DMS() {
           {/* Floating Hexagons */}
           <motion.div
             className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/30"
-            style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+            style={{
+              clipPath:
+                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            }}
             animate={{
               y: [0, -30, 0],
               rotate: [0, 360],
               opacity: [0.5, 0.8, 0.5],
             }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
           />
           <motion.div
             className="absolute top-1/3 right-20 w-24 h-24 border-2 border-chart-2/40"
-            style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+            style={{
+              clipPath:
+                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            }}
             animate={{
               y: [0, 40, 0],
               rotate: [360, 0],
               opacity: [0.4, 0.7, 0.4],
             }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
           />
 
           {/* Glowing Circles */}
@@ -153,7 +174,12 @@ export default function DMS() {
               scale: [1, 1.3, 1],
               opacity: [0.5, 0.8, 0.5],
             }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
           />
           <motion.div
             className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/10 blur-3xl"
@@ -161,7 +187,13 @@ export default function DMS() {
               scale: [1, 1.5, 1],
               opacity: [0.4, 0.7, 0.4],
             }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", repeatType: "loop", delay: 1 }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+              delay: 1,
+            }}
           />
 
           {/* Triangles */}
@@ -173,7 +205,12 @@ export default function DMS() {
               rotate: [0, 180, 0],
               opacity: [0.5, 0.8, 0.5],
             }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
           />
         </div>
 
@@ -194,8 +231,8 @@ export default function DMS() {
                 boxShadow: [
                   "0 0 20px rgba(6, 182, 212, 0.3)",
                   "0 0 40px rgba(6, 182, 212, 0.6)",
-                  "0 0 20px rgba(6, 182, 212, 0.3)"
-                ]
+                  "0 0 20px rgba(6, 182, 212, 0.3)",
+                ],
               }}
               transition={{ duration: 2, repeat: Infinity }}
               className="inline-block px-6 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
@@ -218,9 +255,7 @@ export default function DMS() {
                 Transform Your
               </span>
               <br />
-              <span className="text-foreground">
-                Infrastructure
-              </span>
+              <span className="text-foreground">Infrastructure</span>
             </h1>
           </motion.div>
 
@@ -232,7 +267,8 @@ export default function DMS() {
             className="max-w-3xl mx-auto space-y-4"
           >
             <p className="text-xl md:text-2xl text-muted-foreground">
-              Powering Business Excellence Through Intelligent Data Center Solutions
+              Powering Business Excellence Through Intelligent Data Center
+              Solutions
             </p>
 
             <motion.div
@@ -251,7 +287,10 @@ export default function DMS() {
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link href="/contact">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   size="lg"
                   className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-primary/50 transition-all"
@@ -299,7 +338,9 @@ export default function DMS() {
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -339,7 +380,9 @@ export default function DMS() {
                 <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 via-card to-chart-2/10 flex items-center justify-center">
                   <div className="text-center space-y-4 p-8">
                     <Server className="w-24 h-24 mx-auto text-primary/40" />
-                    <p className="text-muted-foreground">Data Center Infrastructure</p>
+                    <p className="text-muted-foreground">
+                      Data Center Infrastructure
+                    </p>
                   </div>
                 </div>
 
@@ -381,15 +424,24 @@ export default function DMS() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Data Center Management in general the "Server Room" for all your business needs plays a key and vital capacity in reaching out the needs of your business. The firm or business needs to act faster with maximum accuracy to meet the challenges that were posed in day to day competitive world.
+                Data Center Management in general the "Server Room" for all your
+                business needs plays a key and vital capacity in reaching out
+                the needs of your business. The firm or business needs to act
+                faster with maximum accuracy to meet the challenges that were
+                posed in day to day competitive world.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                At Tech Expertsus we do Application Outsourcing which enables to streamline your business processes and maximizes the returns of your investment. Our service modules helps you to reach out all your needs and business goals with your limited investments.
+                At Tech Expertsus we do Application Outsourcing which enables to
+                streamline your business processes and maximizes the returns of
+                your investment. Our service modules helps you to reach out all
+                your needs and business goals with your limited investments.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Tech Expertsus provides fineness and positive assurance across all your enterprise's IT needs through comprehensive data center management.
+                Tech Expertsus provides fineness and positive assurance across
+                all your enterprise's IT needs through comprehensive data center
+                management.
               </p>
 
               {/* Benefits List */}
@@ -405,7 +457,9 @@ export default function DMS() {
                     data-testid={`benefit-${index}`}
                   >
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{benefit}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {benefit}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -427,7 +481,10 @@ export default function DMS() {
               What We <span className="text-primary">Provide</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
+              We @ Tech Expertsus helps your firm and business or IT
+              organization in re-engineering the data infrastructure and align
+              capacity with business outcomes which helps customers to realize
+              full potential of their investment.
             </p>
           </motion.div>
 
@@ -448,7 +505,7 @@ export default function DMS() {
                     className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-chart-2/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 -z-10"
                     animate={{
                       opacity: [0.3, 0.6, 0.3],
-                      scale: [1, 1.05, 1]
+                      scale: [1, 1.05, 1],
                     }}
                     transition={{ duration: 4, repeat: Infinity }}
                   />
@@ -458,7 +515,7 @@ export default function DMS() {
                     className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300 mb-6"
                     whileHover={{
                       scale: 1.1,
-                      rotate: [0, -10, 10, -10, 0]
+                      rotate: [0, -10, 10, -10, 0],
                     }}
                     animate={{
                       y: [0, -10, 0],
@@ -467,11 +524,11 @@ export default function DMS() {
                       y: {
                         duration: 3,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       },
                       rotate: {
-                        duration: 0.6
-                      }
+                        duration: 0.6,
+                      },
                     }}
                   >
                     <service.icon className="w-8 h-8 text-primary" />
@@ -504,7 +561,10 @@ export default function DMS() {
               Our <span className="text-primary">Core Capabilities</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our IT Services helps you in managing your day to day IT needs through a strong and reliable IT infrastructure. Our Tech Expertsus works on Business Effective model where our customers extracts maximum returns out of their limited investments.
+              Our IT Services helps you in managing your day to day IT needs
+              through a strong and reliable IT infrastructure. Our Tech
+              Expertsus works on Business Effective model where our customers
+              extracts maximum returns out of their limited investments.
             </p>
           </motion.div>
 
@@ -568,11 +628,18 @@ export default function DMS() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We @ Tech Expertsus with years of knowledge and experience in IT fields provides strategic technology directions for data center assessment. We by bringing into line your infrastructure to your business goals Tech Expertsus empower you to become more responsive to business needs.
+                We @ Tech Expertsus with years of knowledge and experience in IT
+                fields provides strategic technology directions for data center
+                assessment. We by bringing into line your infrastructure to your
+                business goals Tech Expertsus empower you to become more
+                responsive to business needs.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We @ Tech Expertsus offers leading technology to vitalize your IT infrastructure and improve your return on assets. We helps in making your IT services looks dynamic and in step with changing business process.
+                We @ Tech Expertsus offers leading technology to vitalize your
+                IT infrastructure and improve your return on assets. We helps in
+                making your IT services looks dynamic and in step with changing
+                business process.
               </p>
 
               {/* Additional Benefits */}
@@ -596,7 +663,10 @@ export default function DMS() {
               {/* CTA */}
               <div className="pt-6">
                 <Link href="/contact">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Button
                       size="lg"
                       className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-primary/50 transition-all"
@@ -623,7 +693,9 @@ export default function DMS() {
                 <div className="aspect-[4/3] bg-gradient-to-br from-chart-2/10 via-card to-primary/10 flex items-center justify-center">
                   <div className="text-center space-y-4 p-8">
                     <Cloud className="w-24 h-24 mx-auto text-primary/40" />
-                    <p className="text-muted-foreground">Cloud Infrastructure</p>
+                    <p className="text-muted-foreground">
+                      Cloud Infrastructure
+                    </p>
                   </div>
                 </div>
 
@@ -644,8 +716,12 @@ export default function DMS() {
                         className="text-center p-3 bg-card/80 backdrop-blur-sm rounded-lg border border-primary/10"
                         data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
                       >
-                        <div className="text-xl font-bold text-primary">{stat.value}</div>
-                        <div className="text-xs text-muted-foreground">{stat.label}</div>
+                        <div className="text-xl font-bold text-primary">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {stat.label}
+                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -704,12 +780,16 @@ export default function DMS() {
             </h2>
 
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join hundreds of businesses that trust Tech Expertsus for their data center management needs. Let's build the future together.
+              Join hundreds of businesses that trust Tech Expertsus for their
+              data center management needs. Let's build the future together.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link href="/contact">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Button
                     size="lg"
                     className="text-lg px-10 py-6 rounded-xl shadow-2xl hover:shadow-primary/50 transition-all"
@@ -721,7 +801,10 @@ export default function DMS() {
                 </motion.div>
               </Link>
               <Link href="/services">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Button
                     size="lg"
                     variant="outline"
