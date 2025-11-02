@@ -373,25 +373,14 @@ export default function DMS() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                {/* Data Center Image */}
-                <div className="aspect-[4/3] relative">
-                  <img
-                    src="/assets/DataCenterManagement1.gif"
-                    alt="Data Center Infrastructure"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              <div className="relative w-full h-64 rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/DataCenterManagement1.gif"
+                  alt="Data Center Infrastructure"
+                  className="w-full h-full object-contain"
+                />
               </div>
-
-              {/* Decorative Shape */}
-              <div className="absolute -top-8 -right-8 w-32 h-32 border-4 border-primary/20 rounded-full blur-sm -z-10" />
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-chart-2/10 rounded-full blur-2xl -z-10" />
             </motion.div>
 
             {/* Content */}
