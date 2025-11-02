@@ -89,10 +89,10 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
         >
           <div className="mb-8">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-              Our Services
+              Technology Platforms
             </h3>
             <p className="text-lg text-muted-foreground">
-              Unlock the full potential of our services with our amazing features and top-notch solutions.
+              Explore our comprehensive technology platforms and discover the perfect solution for your business needs.
             </p>
           </div>
 
