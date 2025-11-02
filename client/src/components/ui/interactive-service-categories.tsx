@@ -532,11 +532,11 @@ export function InteractiveServiceCategories({
                       selectedCategory.title ===
                       "Enterprise Resource Planning (ERP)";
                     return (
-                      <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-full flex items-center justify-center px-8">
                         <img
                           src={imageSrc}
                           alt={altText}
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                           style={
                             isERP
                               ? {
@@ -556,7 +556,7 @@ export function InteractiveServiceCategories({
 
                   return (
                     <div
-                      className="w-full h-full flex items-center justify-center"
+                      className="w-full flex items-center justify-center px-8"
                       dangerouslySetInnerHTML={{
                         __html: selectedCategory.visual,
                       }}
