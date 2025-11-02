@@ -96,7 +96,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {categories.map((category, index) => {
               const Icon = category.icon;
               const isSelected = selectedIndex === index;
@@ -116,7 +116,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                   <div className="flex items-start gap-4">
                     <motion.div
                       className={`
-                        flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center
+                        flex-shrink-0 w-14 h-14 rounded-lg flex items-center justify-center
                         ${isSelected 
                           ? 'bg-gradient-to-br from-primary to-chart-2' 
                           : 'bg-primary/10'
@@ -125,17 +125,17 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                       animate={isSelected ? { scale: [1, 1.1, 1] } : {}}
                       transition={{ duration: 0.3 }}
                     >
-                      <Icon className={`w-6 h-6 ${isSelected ? 'text-white' : 'text-primary'}`} />
+                      <Icon className={`w-7 h-7 ${isSelected ? 'text-white' : 'text-primary'}`} />
                     </motion.div>
                     
                     <div className="flex-1">
                       <h4 className={`
-                        text-base md:text-lg font-semibold mb-1
+                        text-base md:text-lg font-semibold mb-2
                         ${isSelected ? 'text-foreground' : 'text-foreground/90'}
                       `}>
                         {category.title}
                       </h4>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
+                      <p className="text-sm text-muted-foreground line-clamp-3">
                         {category.description}
                       </p>
                     </div>
