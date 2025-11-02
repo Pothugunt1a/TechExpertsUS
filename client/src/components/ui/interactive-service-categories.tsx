@@ -78,7 +78,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
       </div>
 
       {/* Main Content */}
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="relative grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-12 items-start">
         {/* Left Side - Category List */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
