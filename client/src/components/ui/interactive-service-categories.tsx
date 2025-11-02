@@ -96,7 +96,7 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
             </p>
           </div>
 
-          <div className="space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {categories.map((category, index) => {
               const Icon = category.icon;
               const isSelected = selectedIndex === index;
@@ -105,11 +105,11 @@ export function InteractiveServiceCategories({ categories }: InteractiveServiceC
                 <motion.button
                   key={category.title}
                   onClick={() => setSelectedIndex(index)}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  whileHover={{ x: 8, scale: 1.02 }}
+                  whileHover={{ y: -4, scale: 1.02 }}
                   className="relative w-full text-left p-5 rounded-xl transition-all duration-300 bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card/80"
                   data-testid={`category-item-${index}`}
                 >
