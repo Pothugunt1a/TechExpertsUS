@@ -426,12 +426,6 @@ export default function About() {
                       alt={office.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                    <div className="absolute bottom-6 left-6">
-                      <office.icon className="w-10 h-10 text-white mb-3" />
-                      <h3 className="text-2xl font-bold text-white mb-2">{office.title}</h3>
-                      <p className="text-white/90">{office.location}</p>
-                    </div>
                   </div>
                 </div>
               </motion.div>
