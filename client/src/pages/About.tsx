@@ -4,6 +4,7 @@ import { ParticleBackground } from "@/components/ui/particle-background";
 import { AnimatedGridBackground } from "@/components/ui/animated-grid-background";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
 import { ServicesCarousel } from "@/components/ui/services-carousel";
+import { ClientsScrollingCarousel } from "@/components/ui/clients-scrolling-carousel";
 import { 
   Target, Eye, Heart, Users, Lightbulb, Award, 
   TrendingUp, MessageSquare, Star, Shield, Handshake,
@@ -118,11 +119,6 @@ const officeLocations = [
     icon: Globe,
     image: "/assets/Consulting2.png"
   },
-];
-
-const clients = [
-  "Microsoft", "Amazon", "Google", "IBM",
-  "Oracle", "SAP", "Cisco", "Dell"
 ];
 
 export default function About() {
@@ -678,42 +674,146 @@ export default function About() {
         </div>
       </section>
 
-      {/* Happy Clients */}
-      <section className="relative py-10 md:py-16">
-        <FloatingShapes />
-
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Our Clients - Scrolling Carousel */}
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Happy Clients</h2>
-            <p className="text-xl text-muted-foreground">Trusted by industry leaders worldwide</p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Our Clients
+            </h2>
+            <p className="text-2xl text-muted-foreground">
+              Trusted by industry leaders
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {clients.map((client, index) => (
-              <motion.div
-                key={client}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="relative group"
-                data-testid={`client-${client.toLowerCase()}`}
-              >
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-300" />
-                <div className="relative h-32 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-primary/10 rounded-2xl flex items-center justify-center group-hover:border-primary/30 transition-all duration-300">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                    {client}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+          <div className="relative">
+            {/* Top horizontal triangular borders */}
+            <svg
+              className="absolute left-0 right-0 w-full z-10"
+              height="18"
+              viewBox="0 0 1200 18"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ top: "-25px" }}
+            >
+              <defs>
+                <linearGradient
+                  id="topLeftGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                </linearGradient>
+                <linearGradient
+                  id="topRightGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                </linearGradient>
+              </defs>
+              <polygon points="0,0 0,18 600,18" fill="url(#topLeftGradient)" />
+              <polygon
+                points="600,9 1200,18 1200,0"
+                fill="url(#topRightGradient)"
+                opacity="0"
+              />
+            </svg>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <ClientsScrollingCarousel />
+            </motion.div>
+
+            {/* Bottom horizontal triangular borders */}
+            <svg
+              className="absolute left-0 right-0 w-full z-10"
+              height="18"
+              viewBox="0 0 1200 18"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ bottom: "-25px" }}
+            >
+              <defs>
+                <linearGradient
+                  id="bottomLeftGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                </linearGradient>
+                <linearGradient
+                  id="bottomRightGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.7"
+                  />
+                </linearGradient>
+              </defs>
+              <polygon
+                points="0,18 0,0 600,9"
+                fill="url(#bottomLeftGradient)"
+                opacity="0"
+              />
+              <polygon
+                points="600,0 1200,0 1200,18"
+                fill="url(#bottomRightGradient)"
+              />
+            </svg>
           </div>
         </div>
       </section>
