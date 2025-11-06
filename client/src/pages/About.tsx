@@ -820,38 +820,90 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-chart-2/10" />
-        <motion.div
-          className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent"
-          animate={{ opacity: [0.3, 0.8, 0.3] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
+          <ParticleBackground />
+        </div>
 
-        <div className="relative max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-3 lg:px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
-              Real change comes through the right ideas and effective implementation.
-              Let's create something amazing together.
-            </p>
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              animate={{
+                scale: [1, 1.05, 1],
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="inline-block mb-6"
             >
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary to-chart-2 text-gray-900 dark:text-white text-lg font-semibold rounded-full hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 group"
-                data-testid="button-contact"
-              >
-                Get in Touch
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <Shield className="w-16 h-16 text-primary mx-auto" />
+            </motion.div>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Ready to Transform Your{" "}
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Business?
+              </span>
+            </h2>
+
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Real change comes through the right ideas and effective implementation. Let's create something amazing together.
+            </p>
+
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    size="lg"
+                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
+                    data-testid="button-get-started"
+                  >
+                    Get in Touch
+                  </Button>
+                </motion.div>
+              </Link>
+              <Link href="/services">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="text-lg px-10 py-6 rounded-lg"
+                    data-testid="button-explore-services"
+                  >
+                    Explore All Services
+                  </Button>
+                </motion.div>
+              </Link>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
+            >
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-primary" />
+                <span>Innovative Solutions</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-primary" />
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4 text-primary" />
+                <span>Expert Team</span>
+              </div>
             </motion.div>
           </motion.div>
         </div>

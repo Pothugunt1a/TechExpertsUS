@@ -730,49 +730,40 @@ export default function DMS() {
 
       {/* Final CTA Section with Gradient */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-chart-2/10" />
-
-        {/* Animated Background Shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 90, 0],
-            }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
-          />
-          <motion.div
-            animate={{
-              scale: [1, 1.3, 1],
-              rotate: [0, -90, 0],
-            }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            className="absolute bottom-0 left-0 w-96 h-96 bg-chart-2/5 rounded-full blur-3xl"
-          />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
+          <ParticleBackground />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-3 lg:px-4 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-3 lg:px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
           >
-            <h2 className="text-4xl md:text-6xl font-bold">
+            <motion.div
+              animate={{
+                scale: [1, 1.05, 1],
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="inline-block mb-6"
+            >
+              <Shield className="w-16 h-16 text-primary mx-auto" />
+            </motion.div>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Infrastructure?
               </span>
             </h2>
 
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join hundreds of businesses that trust Tech Expertsus for their
-              data center management needs. Let's build the future together.
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Join hundreds of businesses that trust Tech Expertsus for their data center management needs. Let's build the future together.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -780,11 +771,10 @@ export default function DMS() {
                 >
                   <Button
                     size="lg"
-                    className="text-lg px-10 py-6 rounded-xl shadow-2xl hover:shadow-primary/50 transition-all"
-                    data-testid="button-contact-us"
+                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
+                    data-testid="button-get-started"
                   >
-                    Contact Us Today
-                    <Zap className="ml-2 w-5 h-5" />
+                    Get in Touch
                   </Button>
                 </motion.div>
               </Link>
@@ -796,15 +786,35 @@ export default function DMS() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-lg px-10 py-6 rounded-xl border-primary/30 hover:border-primary/60 transition-all backdrop-blur-sm"
+                    className="text-lg px-10 py-6 rounded-lg"
                     data-testid="button-explore-services"
                   >
                     Explore All Services
-                    <TrendingUp className="ml-2 w-5 h-5" />
                   </Button>
                 </motion.div>
               </Link>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
+            >
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-primary" />
+                <span>Secure Infrastructure</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Network className="w-4 h-4 text-primary" />
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Lock className="w-4 h-4 text-primary" />
+                <span>Expert Team</span>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
