@@ -1,21 +1,22 @@
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import { AnimatedGridBackground } from "@/components/ui/animated-grid-background";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
+import { ServicesCarousel } from "@/components/ui/services-carousel";
 import { 
   Target, Eye, Heart, Users, Lightbulb, Award, 
   TrendingUp, MessageSquare, Star, Shield, Handshake,
-  Globe, Calendar, MapPin, CheckCircle2, Zap, ArrowRight
+  Globe, Calendar, MapPin, CheckCircle2, Zap, ArrowRight,
+  Building2, Rocket
 } from "lucide-react";
 import { useRef } from "react";
 
-const skills = [
-  { label: "Client Satisfaction", percentage: 98 },
-  { label: "Performance Orientation", percentage: 96 },
-  { label: "Adaptability", percentage: 97 },
-  { label: "Employee Focus", percentage: 100 },
-  { label: "Resource Consciousness", percentage: 98 },
-  { label: "Staffing Solutions", percentage: 96 },
+const stats = [
+  { number: "2012", label: "Founded", icon: Calendar },
+  { number: "126+", label: "Happy Clients", icon: Users },
+  { number: "320+", label: "Staffing Placed", icon: TrendingUp },
+  { number: "2", label: "Global Offices", icon: Globe },
 ];
 
 const coreValues = [
@@ -56,34 +57,67 @@ const coreValues = [
   },
 ];
 
-const whatWeDo = [
+const whatWeDoServices = [
   {
     icon: MessageSquare,
     title: "Effective Communication",
-    description: "We at Tech Expertsus Inc convey relevant information in an understandable, timely and logical fashion. We understand the needs of the clients, solicit feedback, and are always prepared for every communication need."
+    description: "We at Tech Expertsus Inc convey relevant information in an understandable, timely and logical fashion. We understand the needs of the clients, solicit feedback, and are always prepared for every communication need.",
+    image: "/assets/Home2.png"
   },
   {
     icon: Star,
     title: "Client Satisfaction",
-    description: "Our primary focus is ensuring complete client satisfaction through quality service delivery and long-term commitment."
+    description: "Our primary focus is ensuring complete client satisfaction through quality service delivery and long-term commitment.",
+    image: "/assets/Home3.png"
   },
   {
     icon: TrendingUp,
     title: "Performance Orientation",
-    description: "We maintain high performance standards in all our projects and continuously strive for excellence."
+    description: "We maintain high performance standards in all our projects and continuously strive for excellence.",
+    image: "/assets/Home4.jpeg"
   },
   {
     icon: Users,
     title: "Employee Focus",
-    description: "We believe our people are our greatest asset and invest in their growth and development."
+    description: "We believe our people are our greatest asset and invest in their growth and development.",
+    image: "/assets/Home5.jpg"
+  },
+  {
+    icon: Shield,
+    title: "Resource Consciousness",
+    description: "We optimize resource utilization to deliver maximum value to our clients while maintaining cost-effectiveness.",
+    image: "/assets/Home6.jpg"
+  },
+  {
+    icon: Lightbulb,
+    title: "Adaptability",
+    description: "We quickly adapt to changing market conditions and client requirements with innovative solutions.",
+    image: "/assets/Home7.jpg"
   },
 ];
 
-const stats = [
-  { number: "2012", label: "Founded", icon: Calendar },
-  { number: "126+", label: "Happy Clients", icon: Users },
-  { number: "320+", label: "Staffing Placed", icon: TrendingUp },
-  { number: "2", label: "Global Offices", icon: Globe },
+const skills = [
+  { label: "Client Satisfaction", percentage: 98 },
+  { label: "Performance Orientation", percentage: 96 },
+  { label: "Adaptability", percentage: 97 },
+  { label: "Employee Focus", percentage: 100 },
+  { label: "Resource Consciousness", percentage: 98 },
+  { label: "Staffing Solutions", percentage: 96 },
+];
+
+const officeLocations = [
+  {
+    title: "Corporate Headquarters",
+    location: "Argyle, TX 76226, United States",
+    icon: Building2,
+    image: "/assets/Consulting8.png"
+  },
+  {
+    title: "Offshore Development Center",
+    location: "Hyderabad, India",
+    icon: Globe,
+    image: "/assets/Consulting2.png"
+  },
 ];
 
 const clients = [
@@ -103,7 +137,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      {/* Hero Section with Advanced Animations */}
+      {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-card/20 to-background">
         <FloatingShapes />
         <ParticleBackground />
@@ -219,7 +253,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why Tech Experts USA */}
+      {/* Why Tech Experts USA - With Images */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
@@ -239,7 +273,8 @@ export default function About() {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+            {/* Left Column with Image */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -247,6 +282,19 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
+              <div className="relative h-80 rounded-3xl overflow-hidden">
+                <img
+                  src="/assets/About.png"
+                  alt="Innovation at Tech Expertsus"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-8 left-8 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Innovation & Excellence</h3>
+                  <p className="text-white/90">Empowering ideas through collaboration</p>
+                </div>
+              </div>
+
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 to-chart-2/50 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500" />
                 <div className="relative p-10 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-primary/20 rounded-3xl">
@@ -288,6 +336,7 @@ export default function About() {
               </div>
             </motion.div>
 
+            {/* Right Column */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -298,12 +347,12 @@ export default function About() {
               {[
                 {
                   icon: MapPin,
-                  title: "Where are We",
+                  title: "Where We Are",
                   description: "Having Corporate Headquarters in Argyle, TX 76226, United States we have offshore office located in Hyderabad in India with development team and Technical team supports our clients globally."
                 },
                 {
                   icon: Calendar,
-                  title: "When",
+                  title: "Our Journey",
                   description: "Tech Expertsus started in the year 2012 and supporting clients successfully."
                 },
                 {
@@ -343,10 +392,56 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision - Full Width Cards */}
+      {/* Office Locations with Images */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/10 to-background">
         <AnimatedGridBackground />
 
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Global Presence</h2>
+            <p className="text-xl text-muted-foreground">Supporting clients worldwide from strategic locations</p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {officeLocations.map((office, index) => (
+              <motion.div
+                key={office.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="relative group"
+              >
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-3xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+                <div className="relative bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-primary/20 rounded-3xl overflow-hidden">
+                  <div className="relative h-64">
+                    <img
+                      src={office.image}
+                      alt={office.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-6 left-6">
+                      <office.icon className="w-10 h-10 text-white mb-3" />
+                      <h3 className="text-2xl font-bold text-white mb-2">{office.title}</h3>
+                      <p className="text-white/90">{office.location}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="relative py-10 md:py-16">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
             <motion.div
@@ -358,21 +453,24 @@ export default function About() {
               data-testid="card-mission"
             >
               <div className="absolute -inset-2 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-primary/20 rounded-3xl p-12 overflow-hidden">
-                <motion.div
-                  className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-                  transition={{ duration: 6, repeat: Infinity }}
-                />
-                <div className="relative">
+              <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-primary/20 rounded-3xl overflow-hidden">
+                <div className="relative h-48">
+                  <img
+                    src="/assets/Consulting3.png"
+                    alt="Our Mission"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                </div>
+                <div className="p-12">
                   <motion.div 
                     className="w-24 h-24 rounded-3xl bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center mb-8"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
                     <Target className="w-12 h-12 text-primary" />
                   </motion.div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">Our Mission</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Our Mission</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                     Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients thereby ensuring complete client satisfaction and long-term commitment with them.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
@@ -391,21 +489,24 @@ export default function About() {
               data-testid="card-vision"
             >
               <div className="absolute -inset-2 bg-gradient-to-r from-chart-2/40 to-primary/40 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-chart-2/20 rounded-3xl p-12 overflow-hidden">
-                <motion.div
-                  className="absolute bottom-0 left-0 w-64 h-64 bg-chart-2/10 rounded-full blur-3xl"
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-                  transition={{ duration: 6, repeat: Infinity, delay: 3 }}
-                />
-                <div className="relative">
+              <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-chart-2/20 rounded-3xl overflow-hidden">
+                <div className="relative h-48">
+                  <img
+                    src="/assets/Consulting1.gif"
+                    alt="Our Vision"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                </div>
+                <div className="p-12">
                   <motion.div 
                     className="w-24 h-24 rounded-3xl bg-gradient-to-br from-chart-2/30 to-primary/30 flex items-center justify-center mb-8"
                     whileHover={{ scale: 1.1, rotate: -5 }}
                   >
                     <Eye className="w-12 h-12 text-chart-2" />
                   </motion.div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">Our Vision</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Our Vision</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                     To explore new opportunities and ideas to enhance quality based contributions that are beneficial for our clients and to get recognized as a global leader in providing IT Services and Technology based solutions.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
@@ -461,8 +562,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Core Values - Modern Grid */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
+      {/* Core Values */}
+      <section className="relative py-10 md:py-16 overflow-hidden bg-gradient-to-b from-card/20 to-background">
         <FloatingShapes />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -509,8 +610,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
+      {/* What We Do - Carousel Section */}
+      <section className="relative py-10 md:py-16">
         <AnimatedGridBackground />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -518,41 +619,27 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">What We Do</h2>
             <p className="text-xl text-muted-foreground">Excellence in every dimension</p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            {whatWeDo.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="relative group"
-                data-testid={`what-we-do-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-              >
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-chart-2/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-                <div className="relative h-full p-10 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-primary/10 rounded-3xl group-hover:border-primary/30 transition-all duration-300">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
-                  >
-                    <item.icon className="w-10 h-10 text-primary" />
-                  </motion.div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <ServicesCarousel services={whatWeDoServices} />
+          </motion.div>
+        </div>
+      </section>
 
-          {/* Skills Progress Bars */}
+      {/* Skills Section */}
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
