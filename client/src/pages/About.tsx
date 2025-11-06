@@ -12,6 +12,8 @@ import {
   Building2, Rocket
 } from "lucide-react";
 import { useRef } from "react";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 const stats = [
   { number: "2012", label: "Founded", icon: Calendar },
@@ -854,7 +856,7 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/contact">
+              <Link to="/contact">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -868,7 +870,7 @@ export default function About() {
                   </Button>
                 </motion.div>
               </Link>
-              <Link href="/services">
+              <Link to="/services">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
