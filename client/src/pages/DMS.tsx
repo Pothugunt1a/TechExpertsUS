@@ -131,7 +131,7 @@ export default function DMS() {
         <div className="absolute inset-0 z-[4] pointer-events-none overflow-hidden">
           {/* Floating Hexagons */}
           <motion.div
-            className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/30"
+            className="absolute top-20 left-10 w-32 h-32 border-[3px] border-primary/70"
             style={{
               clipPath:
                 "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
@@ -139,7 +139,7 @@ export default function DMS() {
             animate={{
               y: [0, -30, 0],
               rotate: [0, 360],
-              opacity: [0.5, 0.8, 0.5],
+              opacity: [0.7, 1, 0.7],
             }}
             transition={{
               duration: 8,
@@ -149,7 +149,7 @@ export default function DMS() {
             }}
           />
           <motion.div
-            className="absolute top-1/3 right-20 w-24 h-24 border-2 border-chart-2/40"
+            className="absolute top-1/3 right-20 w-24 h-24 border-[3px] border-chart-2/70"
             style={{
               clipPath:
                 "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
@@ -157,7 +157,7 @@ export default function DMS() {
             animate={{
               y: [0, 40, 0],
               rotate: [360, 0],
-              opacity: [0.4, 0.7, 0.4],
+              opacity: [0.6, 0.9, 0.6],
             }}
             transition={{
               duration: 10,
@@ -167,12 +167,57 @@ export default function DMS() {
             }}
           />
 
+          {/* Dotted Circles */}
+          <motion.div
+            className="absolute top-1/4 left-1/3 w-48 h-48 rounded-full border-[3px] border-dashed border-primary/80"
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.1, 1],
+              opacity: [0.7, 1, 0.7],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 right-1/4 w-56 h-56 rounded-full border-[3px] border-dotted border-chart-2/80"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 1.15, 1],
+              opacity: [0.6, 0.95, 0.6],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/4 w-40 h-40 rounded-full border-[2px] border-dashed border-primary/60"
+            animate={{
+              rotate: [0, -360],
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 0.85, 0.5],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+              delay: 0.5,
+            }}
+          />
+
           {/* Glowing Circles */}
           <motion.div
-            className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl"
+            className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/15 blur-3xl"
             animate={{
               scale: [1, 1.3, 1],
-              opacity: [0.5, 0.8, 0.5],
+              opacity: [0.7, 1, 0.7],
             }}
             transition={{
               duration: 6,
@@ -182,10 +227,10 @@ export default function DMS() {
             }}
           />
           <motion.div
-            className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/10 blur-3xl"
+            className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/15 blur-3xl"
             animate={{
               scale: [1, 1.5, 1],
-              opacity: [0.4, 0.7, 0.4],
+              opacity: [0.6, 0.9, 0.6],
             }}
             transition={{
               duration: 8,
@@ -198,18 +243,64 @@ export default function DMS() {
 
           {/* Triangles */}
           <motion.div
-            className="absolute bottom-40 right-1/3 w-20 h-20 border-2 border-primary/30"
+            className="absolute bottom-40 right-1/3 w-20 h-20 border-[3px] border-primary/70"
             style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
             animate={{
               y: [0, -20, 0],
               rotate: [0, 180, 0],
-              opacity: [0.5, 0.8, 0.5],
+              opacity: [0.7, 1, 0.7],
             }}
             transition={{
               duration: 7,
               repeat: Infinity,
               ease: "easeInOut",
               repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-3/4 left-1/2 w-16 h-16 border-[2px] border-chart-2/60"
+            style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
+            animate={{
+              y: [0, 25, 0],
+              rotate: [180, 0, 180],
+              opacity: [0.6, 0.9, 0.6],
+            }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+              delay: 2,
+            }}
+          />
+
+          {/* Additional Small Dotted Circles */}
+          <motion.div
+            className="absolute top-2/3 right-1/3 w-28 h-28 rounded-full border-[2px] border-dotted border-primary/70"
+            animate={{
+              rotate: [0, 360],
+              opacity: [0.6, 0.95, 0.6],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+              delay: 1.5,
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/2 left-2/3 w-36 h-36 rounded-full border-[2px] border-dashed border-chart-2/70"
+            animate={{
+              rotate: [360, 0],
+              opacity: [0.5, 0.9, 0.5],
+            }}
+            transition={{
+              duration: 11,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+              delay: 0.8,
             }}
           />
         </div>
