@@ -596,52 +596,13 @@ export default function DMS() {
               transition={{ duration: 0.8 }}
               className="relative lg:order-2"
             >
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                {/* Cloud Infrastructure Image */}
-                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96">
-                  <img
-                    src="/assets/cloud.jpeg"
-                    alt="Cloud Infrastructure"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Overlay with Stats */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-8">
-                  <div className="grid grid-cols-3 gap-4 w-full">
-                    {[
-                      { label: "Uptime", value: "99.9%" },
-                      { label: "Speed", value: "10x" },
-                      { label: "Security", value: "100%" },
-                    ].map((stat, index) => (
-                      <motion.div
-                        key={stat.label}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.5 + index * 0.1 }}
-                        className="text-center p-3 bg-card/80 backdrop-blur-sm rounded-lg border border-primary/10"
-                        data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
-                      >
-                        <div className="text-xl font-bold text-primary">
-                          {stat.value}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {stat.label}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
+              <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/cloud.jpeg"
+                  alt="Cloud Infrastructure"
+                  className="w-full h-full object-contain"
+                />
               </div>
-
-              {/* Decorative Shapes */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-12 -right-12 w-48 h-48 border-4 border-dashed border-primary/20 rounded-full -z-10"
-              />
-              <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/5 rounded-full blur-3xl -z-10" />
             </motion.div>
           </div>
         </div>
