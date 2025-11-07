@@ -750,6 +750,7 @@ export default function DMS() {
               );
             })}
           </div>
+          </div>
         </div>
       </section>
 
