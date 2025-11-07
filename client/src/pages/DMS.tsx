@@ -456,86 +456,6 @@ export default function DMS() {
         </div>
       </section>
 
-      {/* Services Section - Matching Website Theme */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              What We <span className="text-primary">Provide</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We @ Tech Expertsus helps your firm and business or IT
-              organization in re-engineering the data infrastructure and align
-              capacity with business outcomes which helps customers to realize
-              full potential of their investment.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: service.delay, duration: 0.6 }}
-                className="group"
-                data-testid={`service-card-${index}`}
-              >
-                <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 dark:from-primary/20 dark:to-chart-2/20 rounded-2xl p-8 backdrop-blur-xl border border-primary/20 shadow-2xl hover:shadow-primary/20 transition-all duration-300">
-                  {/* Animated Background Glow */}
-                  <motion.div
-                    className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-chart-2/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 -z-10"
-                    animate={{
-                      opacity: [0.3, 0.6, 0.3],
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{ duration: 4, repeat: Infinity }}
-                  />
-
-                  {/* Icon Container */}
-                  <motion.div
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all duration-300 mb-6"
-                    whileHover={{
-                      scale: 1.1,
-                      rotate: [0, -10, 10, -10, 0],
-                    }}
-                    animate={{
-                      y: [0, -10, 0],
-                    }}
-                    transition={{
-                      y: {
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      },
-                      rotate: {
-                        duration: 0.6,
-                      },
-                    }}
-                  >
-                    <service.icon className="w-8 h-8 text-primary" />
-                  </motion.div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold mb-3 text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* IT Services Details Section - Matching Website Theme */}
       <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
@@ -724,6 +644,76 @@ export default function DMS() {
               />
               <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/5 rounded-full blur-3xl -z-10" />
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Provide - Excellence in Practice Style */}
+      <section className="relative pt-20 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="inline-block mb-4">
+              <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                <span className="text-sm font-semibold text-primary">
+                  Our Services
+                </span>
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              What We <span className="text-primary">Provide</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0 mt-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer"
+                data-testid={`service-${service.title.toLowerCase().replace(/\s+/g, "-")}`}
+              >
+                {/* Background with gradient overlay */}
+                <div className="absolute inset-0">
+                  <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-chart-2/20" />
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+                </div>
+
+                {/* Icon in top right */}
+                <motion.div
+                  className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <service.icon className="w-7 h-7 text-gray-900 dark:text-white" />
+                </motion.div>
+
+                {/* Content at bottom with transparent border box */}
+                <div className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
+                  <h3 className="text-xl font-bold mb-3 leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect Border */}
+                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
