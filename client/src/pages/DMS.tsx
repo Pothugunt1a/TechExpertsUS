@@ -550,28 +550,20 @@ export default function DMS() {
                 business process.
               </p>
 
-              {/* Stats Grid */}
-              <div className="grid grid-cols-3 gap-4 pt-4">
-                {[
-                  { label: "Uptime", value: "99.9%" },
-                  { label: "Speed", value: "10x" },
-                  { label: "Security", value: "100%" },
-                ].map((stat, index) => (
+              {/* Additional Benefits */}
+              <div className="space-y-3 pt-4">
+                {benefits.slice(4).map((benefit, index) => (
                   <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-primary/10"
-                    data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
+                    className="flex items-center gap-3"
+                    data-testid={`enterprise-benefit-${index}`}
                   >
-                    <div className="text-2xl font-bold text-primary">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {stat.label}
-                    </div>
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <span className="text-muted-foreground">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
@@ -596,7 +588,7 @@ export default function DMS() {
               </div>
             </motion.div>
 
-            {/* Image Placeholder */}
+            {/* Image Placeholder with 3D Effect */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -604,13 +596,53 @@ export default function DMS() {
               transition={{ duration: 0.8 }}
               className="relative lg:order-2"
             >
-              <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
-                <img
-                  src="/assets/cloud.webp"
-                  alt="Cloud Infrastructure"
-                  className="w-full h-full object-contain"
-                />
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+                {/* Placeholder Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-chart-2/10 via-card to-primary/10 flex items-center justify-center">
+                  <div className="text-center space-y-4 p-8">
+                    <Cloud className="w-24 h-24 mx-auto text-primary/40" />
+                    <p className="text-muted-foreground">
+                      Cloud Infrastructure
+                    </p>
+                  </div>
+                </div>
+
+                {/* Overlay with Stats */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-8">
+                  <div className="grid grid-cols-3 gap-4 w-full">
+                    {[
+                      { label: "Uptime", value: "99.9%" },
+                      { label: "Speed", value: "10x" },
+                      { label: "Security", value: "100%" },
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={stat.label}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
+                        className="text-center p-3 bg-card/80 backdrop-blur-sm rounded-lg border border-primary/10"
+                        data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
+                      >
+                        <div className="text-xl font-bold text-primary">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {stat.label}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </div>
+
+              {/* Decorative Shapes */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-12 -right-12 w-48 h-48 border-4 border-dashed border-primary/20 rounded-full -z-10"
+              />
+              <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/5 rounded-full blur-3xl -z-10" />
             </motion.div>
           </div>
         </div>
@@ -636,10 +668,7 @@ export default function DMS() {
               What We <span className="text-primary">Provide</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We @ Tech Expertsus helps your firm and business or IT
-              organization in re-engineering the data infrastructure and align
-              capacity with business outcomes which helps customers to realize
-              full potential of their investment.
+              We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
             </p>
           </motion.div>
 
@@ -647,23 +676,23 @@ export default function DMS() {
             {services.map((service, index) => {
               // Map service titles to images
               let imageSrc = "";
-              switch (service.title) {
+              switch(service.title) {
                 case "IT Services":
-                  imageSrc = "/assets/ITServices.jpg";
+                  imageSrc = "/assets/Home5.jpg";
                   break;
                 case "Enterprise Solutions":
-                  imageSrc = "/assets/EnterpriseSolutions.jpg";
+                  imageSrc = "/assets/Home6.jpg";
                   break;
                 case "Business Intelligence & Performance":
-                  imageSrc = "/assets/BusinessIntelligence.webp";
+                  imageSrc = "/assets/Home7.jpg";
                   break;
                 case "Engineering & Industrial Services":
-                  imageSrc = "/assets/EngineeringIndustrialServices.jpg";
+                  imageSrc = "/assets/Home8.jpg";
                   break;
                 default:
                   imageSrc = "/assets/Home5.jpg";
               }
-
+              
               return (
                 <motion.div
                   key={service.title}
@@ -686,32 +715,29 @@ export default function DMS() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
                   </div>
 
-                  {/* Icon in top right */}
-                  <motion.div
-                    className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <service.icon className="w-7 h-7 text-gray-900 dark:text-white" />
-                  </motion.div>
-
-                  {/* Content at bottom with transparent border box */}
-                  <div
-                    className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl"
-                    style={{ marginBottom: "-14px" }}
-                  >
-                    <h3 className="text-xl font-bold mb-3 leading-tight">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  {/* Hover Effect Border */}
-                  <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
+                {/* Icon in top right */}
+                <motion.div
+                  className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <service.icon className="w-7 h-7 text-gray-900 dark:text-white" />
                 </motion.div>
-              );
+
+                {/* Content at bottom with transparent border box */}
+                <div className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
+                  <h3 className="text-xl font-bold mb-3 leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect Border */}
+                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
+              </motion.div>
+            );
             })}
           </div>
         </div>
@@ -749,8 +775,7 @@ export default function DMS() {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Join hundreds of businesses that trust Tech Expertsus for their
-              data center management needs. Let's build the future together.
+              Join hundreds of businesses that trust Tech Expertsus for their data center management needs. Let's build the future together.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
