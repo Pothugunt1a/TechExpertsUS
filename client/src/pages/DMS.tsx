@@ -673,23 +673,47 @@ export default function DMS() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 px-0 mt-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer"
-                data-testid={`service-${service.title.toLowerCase().replace(/\s+/g, "-")}`}
-              >
-                {/* Background with gradient overlay */}
-                <div className="absolute inset-0">
-                  <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-chart-2/20" />
-                  {/* Dark Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
-                </div>
+            {services.map((service, index) => {
+              // Map service titles to images
+              let imageSrc = "";
+              switch(service.title) {
+                case "IT Services":
+                  imageSrc = "/assets/Home5.jpg";
+                  break;
+                case "Enterprise Solutions":
+                  imageSrc = "/assets/Home6.jpg";
+                  break;
+                case "Business Intelligence & Performance":
+                  imageSrc = "/assets/Home7.jpg";
+                  break;
+                case "Engineering & Industrial Services":
+                  imageSrc = "/assets/Home8.jpg";
+                  break;
+                default:
+                  imageSrc = "/assets/Home5.jpg";
+              }
+              
+              return (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -8 }}
+                  className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer"
+                  data-testid={`service-${service.title.toLowerCase().replace(/\s+/g, "-")}`}
+                >
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <img
+                      src={imageSrc}
+                      alt={service.title}
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+                  </div>
 
                 {/* Icon in top right */}
                 <motion.div
@@ -713,7 +737,8 @@ export default function DMS() {
                 {/* Hover Effect Border */}
                 <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
               </motion.div>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
