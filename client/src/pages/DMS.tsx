@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import {
   Server,
@@ -98,17 +98,8 @@ const benefits = [
 ];
 
 export default function DMS() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-
   return (
-    <div className="min-h-screen overflow-hidden" ref={containerRef}>
+    <div className="min-h-screen overflow-hidden">
       {/* Hero Section - Modern with Geometric Shapes */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -127,98 +118,8 @@ export default function DMS() {
           <ParticleBackground />
         </div>
 
-        {/* Animated Geometric Shapes */}
-        <div className="absolute inset-0 z-[4] pointer-events-none overflow-hidden">
-          {/* Floating Hexagons */}
-          <motion.div
-            className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/30"
-            style={{
-              clipPath:
-                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-            }}
-            animate={{
-              y: [0, -30, 0],
-              rotate: [0, 360],
-              opacity: [0.5, 0.8, 0.5],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-          <motion.div
-            className="absolute top-1/3 right-20 w-24 h-24 border-2 border-chart-2/40"
-            style={{
-              clipPath:
-                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-            }}
-            animate={{
-              y: [0, 40, 0],
-              rotate: [360, 0],
-              opacity: [0.4, 0.7, 0.4],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-
-          {/* Glowing Circles */}
-          <motion.div
-            className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.5, 0.8, 0.5],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/10 blur-3xl"
-            animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.4, 0.7, 0.4],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-              delay: 1,
-            }}
-          />
-
-          {/* Triangles */}
-          <motion.div
-            className="absolute bottom-40 right-1/3 w-20 h-20 border-2 border-primary/30"
-            style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 180, 0],
-              opacity: [0.5, 0.8, 0.5],
-            }}
-            transition={{
-              duration: 7,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-        </div>
-
         {/* Hero Content */}
-        <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center"
-          style={{ y, opacity }}
-        >
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -343,8 +244,8 @@ export default function DMS() {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Scroll Indicator */}
         <motion.div
@@ -364,8 +265,35 @@ export default function DMS() {
       </section>
 
       {/* Overview Section with Image Placeholder */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.5, 0.3],
+              x: [0, 50, 0],
+              y: [0, -30, 0],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1.3, 1, 1.3],
+              opacity: [0.5, 0.3, 0.5],
+              x: [0, -50, 0],
+              y: [0, 30, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image Placeholder with Decorative Elements */}
             <motion.div
@@ -457,8 +385,35 @@ export default function DMS() {
       </section>
 
       {/* IT Services Details Section - Matching Website Theme */}
-      <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.5, 0.3],
+              x: [0, 50, 0],
+              y: [0, -30, 0],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1.3, 1, 1.3],
+              opacity: [0.5, 0.3, 0.5],
+              x: [0, -50, 0],
+              y: [0, 30, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -511,8 +466,35 @@ export default function DMS() {
       </section>
 
       {/* Enterprise Computing Section with Image Placeholder */}
-      <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.5, 0.3],
+              x: [0, 50, 0],
+              y: [0, -30, 0],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1.3, 1, 1.3],
+              opacity: [0.5, 0.3, 0.5],
+              x: [0, -50, 0],
+              y: [0, 30, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content First on Desktop */}
             <motion.div
@@ -596,13 +578,48 @@ export default function DMS() {
               transition={{ duration: 0.8 }}
               className="relative lg:order-2"
             >
-              <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
-                <img
-                  src="/assets/cloud.jpeg"
-                  alt="Cloud Infrastructure"
-                  className="w-full h-full object-contain"
-                />
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+                {/* Cloud Infrastructure Image */}
+                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96">
+                  <img
+                    src="/assets/Cloud.webp"
+                    alt="Cloud Infrastructure"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Overlay with Stats */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-8">
+                  <div className="grid grid-cols-3 gap-4 w-full">
+                    {[
+                      { label: "Uptime", value: "99.9%" },
+                      { label: "Speed", value: "10x" },
+                      { label: "Security", value: "100%" },
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={stat.label}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
+                        className="text-center p-3 bg-card/80 backdrop-blur-sm rounded-lg border border-primary/10"
+                        data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
+                      >
+                        <div className="text-xl font-bold text-primary">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {stat.label}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </div>
+
+              {/* Decorative Shapes */}
+              <div className="absolute -top-12 -right-12 w-48 h-48 border-4 border-dashed border-primary/20 rounded-full -z-10" />
+              <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/5 rounded-full blur-3xl -z-10" />
             </motion.div>
           </div>
         </div>
@@ -610,7 +627,34 @@ export default function DMS() {
 
       {/* What We Provide - Excellence in Practice Style */}
       <section className="relative pt-20 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.5, 0.3],
+              x: [0, 50, 0],
+              y: [0, -30, 0],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1.3, 1, 1.3],
+              opacity: [0.5, 0.3, 0.5],
+              x: [0, -50, 0],
+              y: [0, 30, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
