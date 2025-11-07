@@ -550,20 +550,28 @@ export default function DMS() {
                 business process.
               </p>
 
-              {/* Additional Benefits */}
-              <div className="space-y-3 pt-4">
-                {benefits.slice(4).map((benefit, index) => (
+              {/* Stats Grid */}
+              <div className="grid grid-cols-3 gap-4 pt-4">
+                {[
+                  { label: "Uptime", value: "99.9%" },
+                  { label: "Speed", value: "10x" },
+                  { label: "Security", value: "100%" },
+                ].map((stat, index) => (
                   <motion.div
-                    key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-3"
-                    data-testid={`enterprise-benefit-${index}`}
+                    className="text-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-primary/10"
+                    data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
                   >
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-muted-foreground">{benefit}</span>
+                    <div className="text-2xl font-bold text-primary">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {stat.label}
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -588,7 +596,7 @@ export default function DMS() {
               </div>
             </motion.div>
 
-            {/* Image Placeholder with 3D Effect */}
+            {/* Image Placeholder */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -598,7 +606,7 @@ export default function DMS() {
             >
               <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
                 <img
-                  src="/assets/cloud.jpeg"
+                  src="/assets/cloud.webp"
                   alt="Cloud Infrastructure"
                   className="w-full h-full object-contain"
                 />
