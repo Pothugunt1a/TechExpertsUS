@@ -127,184 +127,6 @@ export default function DMS() {
           <ParticleBackground />
         </div>
 
-        {/* Animated Geometric Shapes */}
-        <div className="absolute inset-0 z-[4] pointer-events-none overflow-hidden">
-          {/* Floating Hexagons */}
-          <motion.div
-            className="absolute top-20 left-10 w-32 h-32 border-[3px] border-primary/70"
-            style={{
-              clipPath:
-                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-            }}
-            animate={{
-              y: [0, -30, 0],
-              rotate: [0, 360],
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-          <motion.div
-            className="absolute top-1/3 right-20 w-24 h-24 border-[3px] border-chart-2/70"
-            style={{
-              clipPath:
-                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-            }}
-            animate={{
-              y: [0, 40, 0],
-              rotate: [360, 0],
-              opacity: [0.6, 0.9, 0.6],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-
-          {/* Dotted Circles */}
-          <motion.div
-            className="absolute top-1/4 left-1/3 w-48 h-48 rounded-full border-[3px] border-dashed border-primary/80"
-            animate={{
-              rotate: [0, 360],
-              scale: [1, 1.1, 1],
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/3 right-1/4 w-56 h-56 rounded-full border-[3px] border-dotted border-chart-2/80"
-            animate={{
-              rotate: [360, 0],
-              scale: [1, 1.15, 1],
-              opacity: [0.6, 0.95, 0.6],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-            }}
-          />
-          <motion.div
-            className="absolute top-1/2 left-1/4 w-40 h-40 rounded-full border-[2px] border-dashed border-primary/60"
-            animate={{
-              rotate: [0, -360],
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0.85, 0.5],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-              delay: 0.5,
-            }}
-          />
-
-          {/* Glowing Circles */}
-          <motion.div
-            className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/15 blur-3xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-chart-2/15 blur-3xl"
-            animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.6, 0.9, 0.6],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-              delay: 1,
-            }}
-          />
-
-          {/* Triangles */}
-          <motion.div
-            className="absolute bottom-40 right-1/3 w-20 h-20 border-[3px] border-primary/70"
-            style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 180, 0],
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{
-              duration: 7,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-          <motion.div
-            className="absolute top-3/4 left-1/2 w-16 h-16 border-[2px] border-chart-2/60"
-            style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
-            animate={{
-              y: [0, 25, 0],
-              rotate: [180, 0, 180],
-              opacity: [0.6, 0.9, 0.6],
-            }}
-            transition={{
-              duration: 9,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-              delay: 2,
-            }}
-          />
-
-          {/* Additional Small Dotted Circles */}
-          <motion.div
-            className="absolute top-2/3 right-1/3 w-28 h-28 rounded-full border-[2px] border-dotted border-primary/70"
-            animate={{
-              rotate: [0, 360],
-              opacity: [0.6, 0.95, 0.6],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-              delay: 1.5,
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/2 left-2/3 w-36 h-36 rounded-full border-[2px] border-dashed border-chart-2/70"
-            animate={{
-              rotate: [360, 0],
-              opacity: [0.5, 0.9, 0.5],
-            }}
-            transition={{
-              duration: 11,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-              delay: 0.8,
-            }}
-          />
-        </div>
-
         {/* Hero Content */}
         <motion.div
           className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center"
@@ -455,8 +277,57 @@ export default function DMS() {
       </section>
 
       {/* Overview Section with Image Placeholder */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20 overflow-hidden">
+        {/* Animated Background Shapes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-20 right-1/4 w-40 h-40 rounded-full border-[3px] border-dashed border-primary/70"
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.1, 1],
+              opacity: [0.7, 1, 0.7],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 left-1/4 w-48 h-48 rounded-full border-[3px] border-dotted border-chart-2/70"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 1.15, 1],
+              opacity: [0.6, 0.95, 0.6],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-10 w-24 h-24 border-[3px] border-primary/70"
+            style={{
+              clipPath:
+                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            }}
+            animate={{
+              y: [0, -30, 0],
+              rotate: [0, 360],
+              opacity: [0.7, 1, 0.7],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image Placeholder with Decorative Elements */}
             <motion.div
@@ -548,8 +419,66 @@ export default function DMS() {
       </section>
 
       {/* IT Services Details Section - Matching Website Theme */}
-      <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        {/* Animated Background Shapes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-1/4 left-1/3 w-36 h-36 rounded-full border-[2px] border-dashed border-primary/60"
+            animate={{
+              rotate: [0, -360],
+              scale: [1, 1.2, 1],
+              opacity: [0.6, 0.9, 0.6],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/3 w-28 h-28 rounded-full border-[2px] border-dotted border-chart-2/70"
+            animate={{
+              rotate: [0, 360],
+              opacity: [0.6, 0.95, 0.6],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-2/3 right-20 w-20 h-20 border-[3px] border-primary/70"
+            style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
+            animate={{
+              y: [0, -20, 0],
+              rotate: [0, 180, 0],
+              opacity: [0.7, 1, 0.7],
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-1/3 left-20 w-32 h-32 rounded-full bg-primary/10 blur-2xl"
+            animate={{
+              scale: [1, 1.4, 1],
+              opacity: [0.6, 0.9, 0.6],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -602,8 +531,70 @@ export default function DMS() {
       </section>
 
       {/* Enterprise Computing Section with Image Placeholder */}
-      <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        {/* Animated Background Shapes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-1/4 right-1/3 w-52 h-52 rounded-full border-[3px] border-dashed border-primary/80"
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.1, 1],
+              opacity: [0.7, 1, 0.7],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 left-1/4 w-44 h-44 rounded-full border-[3px] border-dotted border-chart-2/75"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 1.15, 1],
+              opacity: [0.6, 0.95, 0.6],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 right-10 w-32 h-32 border-[3px] border-chart-2/70"
+            style={{
+              clipPath:
+                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            }}
+            animate={{
+              y: [0, 40, 0],
+              rotate: [360, 0],
+              opacity: [0.6, 0.9, 0.6],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/2 right-1/2 w-40 h-40 rounded-full bg-chart-2/10 blur-3xl"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.6, 0.9, 0.6],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content First on Desktop */}
             <motion.div
@@ -728,11 +719,30 @@ export default function DMS() {
 
               {/* Decorative Shapes */}
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-12 -right-12 w-48 h-48 border-4 border-dashed border-primary/20 rounded-full -z-10"
+                animate={{ 
+                  rotate: 360,
+                  scale: [1, 1.1, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{ 
+                  rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                  scale: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+                  opacity: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+                }}
+                className="absolute -top-12 -right-12 w-48 h-48 border-4 border-dashed border-primary/80 rounded-full -z-10"
               />
-              <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/5 rounded-full blur-3xl -z-10" />
+              <motion.div 
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.6, 0.9, 0.6]
+                }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/15 rounded-full blur-3xl -z-10"
+              />
             </motion.div>
           </div>
         </div>
@@ -740,7 +750,84 @@ export default function DMS() {
 
       {/* What We Provide - Excellence in Practice Style */}
       <section className="relative pt-20 pb-12 md:pb-20 bg-gradient-to-b from-card/30 to-background overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Animated Background Shapes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute top-1/3 left-1/4 w-44 h-44 rounded-full border-[3px] border-dotted border-primary/75"
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.12, 1],
+              opacity: [0.6, 0.95, 0.6],
+            }}
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/3 w-40 h-40 rounded-full border-[3px] border-dashed border-chart-2/80"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 1.15, 1],
+              opacity: [0.7, 1, 0.7],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-1/4 right-1/4 w-28 h-28 border-[3px] border-primary/70"
+            style={{
+              clipPath:
+                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            }}
+            animate={{
+              y: [0, -30, 0],
+              rotate: [0, 360],
+              opacity: [0.7, 1, 0.7],
+            }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 left-1/3 w-24 h-24 border-[2px] border-chart-2/60"
+            style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
+            animate={{
+              y: [0, 25, 0],
+              rotate: [180, 0, 180],
+              opacity: [0.6, 0.9, 0.6],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+          <motion.div
+            className="absolute top-2/3 right-20 w-36 h-36 rounded-full bg-primary/12 blur-2xl"
+            animate={{
+              scale: [1, 1.4, 1],
+              opacity: [0.6, 0.9, 0.6],
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "loop",
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
