@@ -1,7 +1,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { SectionBackgroundAnimations } from "@/components/ui/section-background-animations";
 import { AnimatedGridBackground } from "@/components/ui/animated-grid-background";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
 import { ServicesCarousel } from "@/components/ui/services-carousel";
@@ -219,37 +218,10 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.5, 0.3],
-              x: [0, 50, 0],
-              y: [0, -30, 0],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1.3, 1, 1.3],
-              opacity: [0.5, 0.3, 0.5],
-              x: [0, -50, 0],
-              y: [0, 30, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          />
-        </div>
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
         <AnimatedGridBackground />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -281,13 +253,12 @@ export default function About() {
 
       {/* Why Tech Experts USA - With Images */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <SectionBackgroundAnimations />
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-chart-2/10 rounded-full blur-[120px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -420,37 +391,10 @@ export default function About() {
       </section>
 
       {/* Office Locations with Images */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/10 to-background overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.5, 0.3],
-              x: [0, 50, 0],
-              y: [0, -30, 0],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1.3, 1, 1.3],
-              opacity: [0.5, 0.3, 0.5],
-              x: [0, -50, 0],
-              y: [0, 30, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          />
-        </div>
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/10 to-background">
         <AnimatedGridBackground />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -489,9 +433,8 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <SectionBackgroundAnimations />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+      <section className="relative py-10 md:py-16">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -613,10 +556,9 @@ export default function About() {
 
       {/* Core Values */}
       <section className="relative py-10 md:py-16 overflow-hidden bg-gradient-to-b from-card/20 to-background">
-        <SectionBackgroundAnimations />
         <FloatingShapes />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -661,37 +603,10 @@ export default function About() {
       </section>
 
       {/* What We Do - Carousel Section */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.5, 0.3],
-              x: [0, 50, 0],
-              y: [0, -30, 0],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1.3, 1, 1.3],
-              opacity: [0.5, 0.3, 0.5],
-              x: [0, -50, 0],
-              y: [0, 30, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          />
-        </div>
+      <section className="relative py-10 md:py-16">
         <AnimatedGridBackground />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -715,9 +630,8 @@ export default function About() {
       </section>
 
       {/* Skills Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background overflow-hidden">
-        <SectionBackgroundAnimations />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -764,34 +678,7 @@ export default function About() {
 
       {/* Our Clients - Scrolling Carousel */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.5, 0.3],
-              x: [0, 50, 0],
-              y: [0, -30, 0],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1.3, 1, 1.3],
-              opacity: [0.5, 0.3, 0.5],
-              x: [0, -50, 0],
-              y: [0, 30, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -935,7 +822,6 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <SectionBackgroundAnimations />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
           <ParticleBackground />

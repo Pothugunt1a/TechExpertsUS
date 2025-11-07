@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { SectionBackgroundAnimations } from "@/components/ui/section-background-animations";
 import { ServiceCard } from "@/components/ui/service-card";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import { ClientsScrollingCarousel } from "@/components/ui/clients-scrolling-carousel";

@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { SectionBackgroundAnimations } from "@/components/ui/section-background-animations";
 import { ServicesCarousel } from "@/components/ui/services-carousel";
 import { StatCounter } from "@/components/ui/stat-counter";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
@@ -112,9 +111,8 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30 overflow-hidden">
-        <SectionBackgroundAnimations />
-        <div className="w-full relative z-10">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -135,9 +133,8 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <SectionBackgroundAnimations />
-        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
+      <section className="relative py-10 md:py-16">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -240,9 +237,8 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background overflow-hidden">
-        <SectionBackgroundAnimations />
-        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -419,9 +415,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <SectionBackgroundAnimations />
-        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
+      <section className="relative py-10 md:py-16">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -443,7 +438,6 @@ export default function Home() {
 
       {/* Core Values Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <SectionBackgroundAnimations />
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"

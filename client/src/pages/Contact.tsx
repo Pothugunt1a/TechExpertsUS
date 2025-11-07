@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { SectionBackgroundAnimations } from "@/components/ui/section-background-animations";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
