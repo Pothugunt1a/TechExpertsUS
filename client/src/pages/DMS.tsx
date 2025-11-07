@@ -600,7 +600,7 @@ export default function DMS() {
                 {/* Cloud Infrastructure Image */}
                 <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96">
                   <img
-                    src="/assets/cloud.jpeg"
+                    src="/assets/Cloud.webp"
                     alt="Cloud Infrastructure"
                     className="w-full h-full object-cover"
                   />
