@@ -597,14 +597,13 @@ export default function DMS() {
               className="relative lg:order-2"
             >
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                {/* Placeholder Image */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-chart-2/10 via-card to-primary/10 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <Cloud className="w-24 h-24 mx-auto text-primary/40" />
-                    <p className="text-muted-foreground">
-                      Cloud Infrastructure
-                    </p>
-                  </div>
+                {/* Cloud Infrastructure Image */}
+                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96">
+                  <img
+                    src="/assets/cloud.jpeg"
+                    alt="Cloud Infrastructure"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Overlay with Stats */}
