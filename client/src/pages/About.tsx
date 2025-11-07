@@ -1,6 +1,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
+import { SectionBackgroundAnimations } from "@/components/ui/section-background-animations";
 import { AnimatedGridBackground } from "@/components/ui/animated-grid-background";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
 import { ServicesCarousel } from "@/components/ui/services-carousel";
