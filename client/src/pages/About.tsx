@@ -594,42 +594,97 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision - Interactive Hover Cards */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/10 to-background">
+      {/* Mission & Vision - Side-by-Side Layout */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-b from-card/10 to-background">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Our Commitment to You
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column: Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8"
+            >
+              <div>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="text-primary text-sm font-semibold tracking-widest uppercase mb-4"
+                >
+                  Our Commitment
+                </motion.p>
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
+                >
+                  Driving excellence through innovation and expertise
+                </motion.h2>
+              </div>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-lg text-muted-foreground leading-relaxed"
+              >
+                We are dedicated to providing professional consulting services and viable technology solutions that ensure complete client satisfaction and long-term commitment.
+              </motion.p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Mission Card */}
-            <MissionVisionCard
-              title="Our Mission"
-              icon={Target}
-              description1="Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment."
-              description2="We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values."
-              image="/assets/Consulting3.png"
-              dataTestId="card-mission"
-            />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+              >
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="group"
+                  data-testid="link-learn-more-commitment"
+                  onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
+                >
+                  Learn More About Us
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </motion.div>
+            </motion.div>
 
-            {/* Vision Card */}
-            <MissionVisionCard
-              title="Our Vision"
-              icon={Eye}
-              description1="To explore new opportunities and ideas to enhance quality-based contributions that benefit our clients and to be recognized as a global leader in IT Services and Technology solutions."
-              description2="We fulfill customer needs while utilizing our knowledge and experience with a great sense of urgency every time."
-              image="/assets/Consulting2.png"
-              dataTestId="card-vision"
-              delay={0.2}
-            />
+            {/* Right Column: Image Cards */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            >
+              {/* Mission Card */}
+              <MissionVisionCard
+                title="Our Mission"
+                icon={Target}
+                description1="Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment."
+                description2="We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values."
+                image="/assets/Consulting3.png"
+                dataTestId="card-mission"
+              />
+
+              {/* Vision Card */}
+              <MissionVisionCard
+                title="Our Vision"
+                icon={Eye}
+                description1="To explore new opportunities and ideas to enhance quality-based contributions that benefit our clients and to be recognized as a global leader in IT Services and Technology solutions."
+                description2="We fulfill customer needs while utilizing our knowledge and experience with a great sense of urgency every time."
+                image="/assets/Consulting2.png"
+                dataTestId="card-vision"
+                delay={0.2}
+              />
+            </motion.div>
           </div>
         </div>
       </section>
