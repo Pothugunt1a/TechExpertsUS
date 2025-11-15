@@ -588,7 +588,7 @@ export default function DMS() {
               </div>
             </motion.div>
 
-            {/* Image Placeholder with 3D Effect */}
+            {/* Image with Stats Overlay */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -597,17 +597,14 @@ export default function DMS() {
               className="relative lg:order-2"
             >
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
-                {/* Placeholder Image */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-chart-2/10 via-card to-primary/10 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <Cloud className="w-24 h-24 mx-auto text-primary/40" />
-                    <p className="text-muted-foreground">
-                      Cloud Infrastructure
-                    </p>
-                  </div>
-                </div>
+                {/* Cloud Image */}
+                <img
+                  src="/assets/Cloud.webp"
+                  alt="Cloud Infrastructure"
+                  className="w-full h-full object-cover aspect-[4/3]"
+                />
 
-                {/* Overlay with Stats */}
+                {/* Stats Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-8">
                   <div className="grid grid-cols-3 gap-4 w-full">
                     {[
@@ -621,7 +618,7 @@ export default function DMS() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.5 + index * 0.1 }}
-                        className="text-center p-3 bg-card/80 backdrop-blur-sm rounded-lg border border-primary/10"
+                        className="text-center"
                         data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
                       >
                         <div className="text-xl font-bold text-primary">
