@@ -205,7 +205,7 @@ export default function Services() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/assets/Services.png)" }}
+          style={{ backgroundImage: "url(/assets/Services-banner.jpg)" }}
         />
 
         {/* Subtle overlay */}
@@ -660,7 +660,8 @@ export default function Services() {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Real change comes through the right ideas and effective implementation. Let's create something amazing together.
+              Real change comes through the right ideas and effective
+              implementation. Let's create something amazing together.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
