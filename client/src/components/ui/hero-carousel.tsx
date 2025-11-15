@@ -15,11 +15,16 @@ export function HeroCarousel() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url(/assets/Home-banner.png)" }}
-      />
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/assets/Home.mp4" type="video/mp4" />
+      </video>
 
       {/* Particle Background */}
       <ParticleBackground />
