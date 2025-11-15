@@ -455,51 +455,115 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Third Row - Timeline Style */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Third Row - Service Card Style Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
                 icon: MapPin,
                 title: "Where We Are",
                 description: "Corporate Headquarters in Argyle, TX 76226, United States with offshore office in Hyderabad, India. Our development and technical teams support clients globally.",
-                gradient: "from-blue-500 to-cyan-500"
+                image: "/assets/Home5.jpg"
               },
               {
                 icon: Calendar,
                 title: "Our Journey",
                 description: "Tech Expertsus started in 2012 and has been successfully supporting clients ever since, growing to become a preferred IT partner across various industry verticals.",
-                gradient: "from-purple-500 to-pink-500"
+                image: "/assets/Home6.jpg"
               },
               {
                 icon: Rocket,
                 title: "Our Foundation",
                 description: "Founded on three basic principles: Technology expertise, Innovative solutions, and long-lasting partnership with customers - the pillars of our success.",
-                gradient: "from-orange-500 to-red-500"
+                image: "/assets/Home7.jpg"
               }
-            ].map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.15 }}
-                className="relative group"
-                data-testid={`info-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-              >
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-chart-2/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-                <div className="relative h-full p-8 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-primary/10 rounded-3xl hover:border-primary/30 transition-all duration-300">
-                  <motion.div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.gradient} bg-opacity-20 flex items-center justify-center mb-6`}
-                    whileHover={{ scale: 1.1, rotate: 360 }}
-                    transition={{ duration: 0.6 }}
+            ].map((item, idx) => {
+              const [isHovered, setIsHovered] = useState(false);
+              
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.15, duration: 0.7 }}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
+                  data-testid={`info-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Default Overlay - Bottom gradient with title */}
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+                    animate={{
+                      opacity: isHovered ? 0 : 1
+                    }}
+                    transition={{ duration: 0.4 }}
                   >
-                    <item.icon className="w-8 h-8 text-primary" />
+                    <div className="absolute bottom-0 left-0 right-0 p-8">
+                      <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+                    </div>
                   </motion.div>
-                  <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
+
+                  {/* Hover Overlay - Slides up from bottom */}
+                  <motion.div
+                    className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
+                    initial={{ y: "100%" }}
+                    animate={{ 
+                      y: isHovered ? "0%" : "100%"
+                    }}
+                    transition={{ 
+                      duration: 0.5,
+                      ease: [0.4, 0.0, 0.2, 1]
+                    }}
+                  >
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ 
+                        opacity: isHovered ? 1 : 0,
+                        y: isHovered ? 0 : 20
+                      }}
+                      transition={{ 
+                        duration: 0.3,
+                        delay: isHovered ? 0.2 : 0
+                      }}
+                      className="flex-1 flex flex-col justify-center"
+                    >
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
+                      >
+                        <item.icon className="w-8 h-8 text-primary" />
+                      </motion.div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                      <p className="text-gray-200 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Glow effect on hover */}
+                  <motion.div
+                    className="absolute -inset-2 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-2xl blur-2xl"
+                    animate={{
+                      opacity: isHovered ? 1 : 0
+                    }}
+                    transition={{ duration: 0.5 }}
+                    style={{ zIndex: -1 }}
+                  />
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Heritage Statement - Full Width Banner */}
