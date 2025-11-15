@@ -376,7 +376,7 @@ export default function DMS() {
             >
               <div className="relative w-full h-96 rounded-2xl overflow-hidden">
                 <img
-                  src="/assets/DataCenterManagement1.gif"
+                  src="/assets/DMS1.gif"
                   alt="Data Center Infrastructure"
                   className="w-full h-full object-contain"
                 />
@@ -599,7 +599,7 @@ export default function DMS() {
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
                 {/* Cloud Image */}
                 <img
-                  src="/assets/Cloud.webp"
+                  src="/assets/DMS2.webp"
                   alt="Cloud Infrastructure"
                   className="w-full h-full object-cover aspect-[4/3]"
                 />
@@ -665,7 +665,10 @@ export default function DMS() {
               What We <span className="text-primary">Provide</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We @ Tech Expertsus helps your firm and business or IT organization in re-engineering the data infrastructure and align capacity with business outcomes which helps customers to realize full potential of their investment.
+              We @ Tech Expertsus helps your firm and business or IT
+              organization in re-engineering the data infrastructure and align
+              capacity with business outcomes which helps customers to realize
+              full potential of their investment.
             </p>
           </motion.div>
 
@@ -673,23 +676,23 @@ export default function DMS() {
             {services.map((service, index) => {
               // Map service titles to images
               let imageSrc = "";
-              switch(service.title) {
+              switch (service.title) {
                 case "IT Services":
-                  imageSrc = "/assets/Home5.jpg";
+                  imageSrc = "/assets/DMS3.webp";
                   break;
                 case "Enterprise Solutions":
-                  imageSrc = "/assets/Home6.jpg";
+                  imageSrc = "/assets/DMS4.jpg";
                   break;
                 case "Business Intelligence & Performance":
-                  imageSrc = "/assets/Home7.jpg";
+                  imageSrc = "/assets/DMS5.webp";
                   break;
                 case "Engineering & Industrial Services":
-                  imageSrc = "/assets/Home8.jpg";
+                  imageSrc = "/assets/DMS6.jpg";
                   break;
                 default:
                   imageSrc = "/assets/Home5.jpg";
               }
-              
+
               return (
                 <motion.div
                   key={service.title}
@@ -712,29 +715,32 @@ export default function DMS() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
                   </div>
 
-                {/* Icon in top right */}
-                <motion.div
-                  className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <service.icon className="w-7 h-7 text-gray-900 dark:text-white" />
+                  {/* Icon in top right */}
+                  <motion.div
+                    className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <service.icon className="w-7 h-7 text-gray-900 dark:text-white" />
+                  </motion.div>
+
+                  {/* Content at bottom with transparent border box */}
+                  <div
+                    className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl"
+                    style={{ marginBottom: "-14px" }}
+                  >
+                    <h3 className="text-xl font-bold mb-3 leading-tight">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* Hover Effect Border */}
+                  <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
                 </motion.div>
-
-                {/* Content at bottom with transparent border box */}
-                <div className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
-                  <h3 className="text-xl font-bold mb-3 leading-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-
-                {/* Hover Effect Border */}
-                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
-              </motion.div>
-            );
+              );
             })}
           </div>
         </div>
@@ -772,7 +778,8 @@ export default function DMS() {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Join hundreds of businesses that trust Tech Expertsus for their data center management needs. Let's build the future together.
+              Join hundreds of businesses that trust Tech Expertsus for their
+              data center management needs. Let's build the future together.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
