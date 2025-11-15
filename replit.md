@@ -99,7 +99,13 @@ A stunning modern website for Tech Experts US with **both light and dark mode** 
 - ⏳ Contact form integration pending
 
 ## Recent Updates (Latest Session)
-1. ✅ Created **Interactive Service Categories** component with:
+1. ✅ Updated **"Our Commitment to You"** section on About page with side-by-side layout:
+   - Left column: Section heading, descriptive text, and CTA button
+   - Right column: Interactive Mission & Vision cards displayed side-by-side
+   - Slide-in animations from left (content) and right (cards)
+   - Fully responsive (stacks on mobile, side-by-side on desktop)
+   - Interactive hover cards with smooth overlay reveal
+2. ✅ Created **Interactive Service Categories** component with:
    - Left-side clickable list of service categories
    - Right-side dynamic SVG visualizations that change on click
    - Animated background with floating geometric shapes and gradient orbs
@@ -107,8 +113,8 @@ A stunning modern website for Tech Experts US with **both light and dark mode** 
    - 9 unique SVG illustrations for each service category (SaaS, ASP, Virtualization, Cloud, ERP, CRM, IaaS, IoT, Big Data)
    - Fully responsive design for mobile and desktop
    - Test IDs for automation
-2. ✅ Migrated REST API project from Replit Agent to Replit environment
-3. ✅ All previous features: ThemeProvider, animated theme toggle, floating banner, parallax effects, animated tech icons, enhanced "Why Choose Us" section
+3. ✅ Migrated REST API project from Replit Agent to Replit environment
+4. ✅ All previous features: ThemeProvider, animated theme toggle, floating banner, parallax effects, animated tech icons, enhanced "Why Choose Us" section
 
 ## How to Use
 - **Theme Toggle**: Click the sun/moon icon in the navigation bar to switch between light and dark modes
