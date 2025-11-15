@@ -19,6 +19,8 @@ import {
   Zap,
   Target,
   Award,
+  TrendingUp,
+  CheckCircle2,
 } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "wouter";
@@ -294,6 +296,141 @@ export default function Services() {
             />
           </div>
         </motion.div>
+      </section>
+
+      {/* Company Information Cards */}
+      <section className="relative py-10 md:py-16">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-10"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {/* Where We Are */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.02,
+                y: -8,
+              }}
+            >
+              <div className="group relative h-full overflow-hidden rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative p-8 h-full flex flex-col">
+                  <div className="mb-6">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-4"
+                    >
+                      <Globe className="w-8 h-8 text-primary" />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                      Where We Are
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-4 text-muted-foreground flex-1">
+                    <p>
+                      Corporate Headquarters in <span className="font-semibold text-foreground">Argyle, TX 76226, United States</span> with offshore office in <span className="font-semibold text-foreground">Hyderabad, India</span>.
+                    </p>
+                    <p>
+                      Our development and technical teams support clients globally.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Our Journey */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.02,
+                y: -8,
+              }}
+            >
+              <div className="group relative h-full overflow-hidden rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative p-8 h-full flex flex-col">
+                  <div className="mb-6">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-4"
+                    >
+                      <TrendingUp className="w-8 h-8 text-primary" />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                      Our Journey
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-4 text-muted-foreground flex-1">
+                    <p>
+                      Tech Expertsus started in <span className="font-semibold text-foreground">2012</span> and has been successfully supporting clients ever since, growing to become a preferred IT partner across various industry verticals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Our Foundation */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.02,
+                y: -8,
+              }}
+            >
+              <div className="group relative h-full overflow-hidden rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-primary/10 transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative p-8 h-full flex flex-col">
+                  <div className="mb-6">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-4"
+                    >
+                      <Award className="w-8 h-8 text-primary" />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                      Our Foundation
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-4 text-muted-foreground flex-1">
+                    <p>
+                      Founded on three basic principles:
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span><span className="font-semibold text-foreground">Technology expertise</span></span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span><span className="font-semibold text-foreground">Innovative solutions</span></span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span><span className="font-semibold text-foreground">Long-lasting partnership</span> with customers</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm italic">
+                      The pillars of our success.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Services Overview with 3D Transform */}
