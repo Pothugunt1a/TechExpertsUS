@@ -216,67 +216,61 @@ export default function DMS() {
 
         {/* Hero Content */}
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center"
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full"
           style={{ y, opacity }}
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6"
-          >
-            <motion.div
-              animate={{
-                boxShadow: [
-                  "0 0 20px rgba(6, 182, 212, 0.3)",
-                  "0 0 40px rgba(6, 182, 212, 0.6)",
-                  "0 0 20px rgba(6, 182, 212, 0.3)",
-                ],
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="inline-block px-6 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
-            >
-              <span className="text-sm font-semibold text-primary">
-                Data Center Management Services
-              </span>
-            </motion.div>
-          </motion.div>
-
-          {/* Main Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6"
+            className="text-center"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Transform Your
-              </span>
-              <br />
-              <span className="text-foreground">Infrastructure</span>
-            </h1>
-          </motion.div>
-
-          {/* Subtitle with Line */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-3xl mx-auto space-y-4"
-          >
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Powering Business Excellence Through Intelligent Data Center
-              Solutions
-            </p>
-
+            {/* Badge */}
             <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto max-w-md"
-            />
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block mb-4"
+            >
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                    "0 0 40px rgba(59, 130, 246, 0.6)",
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                  ],
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
+              >
+                <span className="text-sm font-semibold text-primary">
+                  Data Center Management Services
+                </span>
+              </motion.div>
+            </motion.div>
+
+            {/* Main Title */}
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <span className="block mb-2">Transform Your</span>
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Infrastructure
+              </span>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              Powering Business Excellence Through Intelligent Data Center Solutions
+            </motion.p>
           </motion.div>
 
           {/* CTA Buttons */}

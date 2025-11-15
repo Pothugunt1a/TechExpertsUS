@@ -213,85 +213,115 @@ export default function About() {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-card/20 to-background">
-        <FloatingShapes />
+      {/* Hero Section - Matching Consulting Page Banner Style */}
+      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/About-banner.jpg"
+            alt="About Tech Expertsus"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+        </div>
+
         <ParticleBackground />
 
-        <motion.div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.1) 0%, transparent 50%)',
-          }}
+        {/* Animated gradient orbs */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/30 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            x: [0, -50, 0],
+            y: [0, 30, 0],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
+            delay: 1,
           }}
         />
 
-        <motion.div 
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 text-center"
+        <motion.div
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full"
           style={{ y, opacity }}
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center"
           >
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mb-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block mb-4"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
-                Since 2012
-              </span>
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                    "0 0 40px rgba(59, 130, 246, 0.6)",
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                  ],
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
+              >
+                <span className="text-sm font-semibold text-primary">
+                  Since 2012
+                </span>
+              </motion.div>
             </motion.div>
 
-            <motion.h1 
-              className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block text-gray-900 dark:text-white mb-2">About</span>
-              <span className="block bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+              <span className="block mb-2">About</span>
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Tech Expertsus
               </span>
             </motion.h1>
 
-            <motion.p 
-              className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+            <motion.p
+              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
             >
               Technology Expertise • Innovative Solutions • Lasting Partnerships
             </motion.p>
           </motion.div>
         </motion.div>
 
-        <motion.div 
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10"
-          animate={{ y: [0, 12, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
         >
-          <div className="flex flex-col items-center gap-2 text-primary/60">
-            <span className="text-xs font-semibold tracking-widest">SCROLL</span>
-            <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex items-start justify-center p-2">
-              <motion.div 
-                className="w-1.5 h-1.5 bg-primary rounded-full"
-                animate={{ y: [0, 16, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              />
-            </div>
-          </div>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center pt-2"
+          >
+            <motion.div className="w-1 h-2 bg-primary rounded-full" />
+          </motion.div>
         </motion.div>
       </section>
 
@@ -391,13 +421,12 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative h-96 rounded-3xl overflow-hidden">
+              <div className="relative h-96 rounded-3xl overflow-hidden bg-gradient-to-br from-card/30 to-background/30 backdrop-blur-sm flex items-center justify-center">
                 <img
-                  src="/assets/About.png"
+                  src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
                   alt="Innovation at Tech Expertsus"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
             </motion.div>
           </div>

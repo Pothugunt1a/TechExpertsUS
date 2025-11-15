@@ -83,24 +83,58 @@ export default function PMS() {
         <ParticleBackground />
 
         {/* Centered Text Content */}
-        <div
-          className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center"
-          style={{ height: "85vh" }}
+        <motion.div
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center flex flex-col items-center justify-center w-full"
-          >
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-              Project Management Solutions
-            </h1>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block mb-4"
+            >
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                    "0 0 40px rgba(59, 130, 246, 0.6)",
+                    "0 0 20px rgba(59, 130, 246, 0.3)",
+                  ],
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="px-4 py-2 bg-primary/10 backdrop-blur-md border border-primary/30 rounded-full"
+              >
+                <span className="text-sm font-semibold text-primary">
+                  Project Management
+                </span>
+              </motion.div>
+            </motion.div>
+
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <span className="block mb-2">Project Management</span>
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </motion.h1>
+
+            <motion.p
+              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
               We Are Professional
-            </p>
-          </motion.div>
-        </div>
+            </motion.p>
+          </div>
+        </motion.div>
       </section>
 
       {/* Overview Section */}
