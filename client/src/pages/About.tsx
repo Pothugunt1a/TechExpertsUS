@@ -9,7 +9,7 @@ import {
   Globe, Calendar, MapPin, CheckCircle2, Zap, ArrowRight,
   Building2, Rocket, Sparkles, Briefcase, Code
 } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
@@ -99,6 +99,107 @@ const skills = [
   { label: "Resource Consciousness", percentage: 98, icon: Briefcase },
   { label: "Staffing Solutions", percentage: 96, icon: Code },
 ];
+
+interface MissionVisionCardProps {
+  title: string;
+  icon: React.ComponentType<{ className?: string }>;
+  description1: string;
+  description2: string;
+  image: string;
+  dataTestId: string;
+  delay?: number;
+}
+
+function MissionVisionCard({ 
+  title, 
+  icon: Icon, 
+  description1, 
+  description2, 
+  image, 
+  dataTestId,
+  delay = 0 
+}: MissionVisionCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer"
+      data-testid={dataTestId}
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Default Overlay - Bottom gradient with title */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+        animate={{
+          opacity: isHovered ? 0 : 1
+        }}
+        transition={{ duration: 0.4 }}
+      >
+        <div className="absolute bottom-0 left-0 right-0 p-8">
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{title}</h3>
+        </div>
+      </motion.div>
+
+      {/* Hover Overlay - Slides up from bottom */}
+      <motion.div
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center p-10"
+        initial={{ y: "100%" }}
+        animate={{ 
+          y: isHovered ? "0%" : "100%"
+        }}
+        transition={{ 
+          duration: 0.5,
+          ease: [0.4, 0.0, 0.2, 1]
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: isHovered ? 1 : 0,
+            y: isHovered ? 0 : 20
+          }}
+          transition={{ 
+            duration: 0.3,
+            delay: isHovered ? 0.2 : 0
+          }}
+          className="space-y-6"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold text-white">{title}</h3>
+          <p className="text-gray-200 text-lg leading-relaxed">
+            {description1}
+          </p>
+          <p className="text-gray-200 text-lg leading-relaxed">
+            {description2}
+          </p>
+        </motion.div>
+      </motion.div>
+
+      {/* Glow effect on hover */}
+      <motion.div
+        className="absolute -inset-2 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-3xl blur-2xl"
+        animate={{
+          opacity: isHovered ? 1 : 0
+        }}
+        transition={{ duration: 0.5 }}
+        style={{ zIndex: -1 }}
+      />
+    </motion.div>
+  );
+}
 
 export default function About() {
   const heroRef = useRef(null);
@@ -429,7 +530,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision - Large Side-by-Side Cards with Background Images */}
+      {/* Mission & Vision - Interactive Hover Cards */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/10 to-background">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -445,77 +546,26 @@ export default function About() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative group"
-              data-testid="card-mission"
-            >
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-primary/20 rounded-3xl overflow-hidden">
-                <div className="relative h-48">
-                  <img
-                    src="/assets/Consulting3.png"
-                    alt="Our Mission"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                </div>
-                <div className="p-12">
-                  <motion.div 
-                    className="w-24 h-24 rounded-3xl bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center mb-8"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                  >
-                    <Target className="w-12 h-12 text-primary" />
-                  </motion.div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Our Mission</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                    Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            {/* Mission Card */}
+            <MissionVisionCard
+              title="Our Mission"
+              icon={Target}
+              description1="Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment."
+              description2="We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values."
+              image="/assets/Consulting3.png"
+              dataTestId="card-mission"
+            />
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative group"
-              data-testid="card-vision"
-            >
-              <div className="absolute -inset-2 bg-gradient-to-r from-chart-2/40 to-primary/40 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative h-full bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-chart-2/20 rounded-3xl overflow-hidden">
-                <div className="relative h-48">
-                  <img
-                    src="/assets/Consulting2.png"
-                    alt="Our Vision"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                </div>
-                <div className="p-12">
-                  <motion.div 
-                    className="w-24 h-24 rounded-3xl bg-gradient-to-br from-chart-2/30 to-primary/30 flex items-center justify-center mb-8"
-                    whileHover={{ scale: 1.1, rotate: -5 }}
-                  >
-                    <Eye className="w-12 h-12 text-chart-2" />
-                  </motion.div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Our Vision</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                    To explore new opportunities and ideas to enhance quality-based contributions that benefit our clients and to be recognized as a global leader in IT Services and Technology solutions.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    We fulfill customer needs while utilizing our knowledge and experience with a great sense of urgency every time.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            {/* Vision Card */}
+            <MissionVisionCard
+              title="Our Vision"
+              icon={Eye}
+              description1="To explore new opportunities and ideas to enhance quality-based contributions that benefit our clients and to be recognized as a global leader in IT Services and Technology solutions."
+              description2="We fulfill customer needs while utilizing our knowledge and experience with a great sense of urgency every time."
+              image="/assets/Consulting2.png"
+              dataTestId="card-vision"
+              delay={0.2}
+            />
           </div>
         </div>
       </section>
