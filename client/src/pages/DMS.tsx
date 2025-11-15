@@ -511,72 +511,137 @@ export default function DMS() {
       </section>
 
       {/* Enterprise Computing Section with Image Placeholder */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
+      <section className="relative py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Enterprise Computing and Cloud Services
-            </h2>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content First on Desktop */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6 lg:order-1"
+            >
+              <div>
+                <span className="text-sm font-semibold text-primary px-4 py-2 bg-primary/10 rounded-full border border-primary/20 inline-block mb-4">
+                  Cloud Excellence
+                </span>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden"
-          >
-            {/* Background Image */}
-            <img
-              src="/assets/Cloud.webp"
-              alt="Cloud Services"
-              className="w-full h-auto object-cover"
-            />
-
-            {/* Stats Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl px-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-6xl font-bold text-white drop-shadow-lg mb-2">
-                    99.9%
-                  </div>
-                  <div className="text-xl font-semibold text-white drop-shadow-md">Uptime</div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="text-center"
-                >
-                  <div className="text-6xl font-bold text-white drop-shadow-lg mb-2">10x</div>
-                  <div className="text-xl font-semibold text-white drop-shadow-md">Speed</div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="text-center"
-                >
-                  <div className="text-6xl font-bold text-white drop-shadow-lg mb-2">100%</div>
-                  <div className="text-xl font-semibold text-white drop-shadow-md">Security</div>
-                </motion.div>
+                <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+                  Enterprise Computing and{" "}
+                  <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                    Cloud Services
+                  </span>
+                </h2>
               </div>
-            </div>
-          </motion.div>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We @ Tech Expertsus with years of knowledge and experience in IT
+                fields provides strategic technology directions for data center
+                assessment. We by bringing into line your infrastructure to your
+                business goals Tech Expertsus empower you to become more
+                responsive to business needs.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We @ Tech Expertsus offers leading technology to vitalize your
+                IT infrastructure and improve your return on assets. We helps in
+                making your IT services looks dynamic and in step with changing
+                business process.
+              </p>
+
+              {/* Additional Benefits */}
+              <div className="space-y-3 pt-4">
+                {benefits.slice(4).map((benefit, index) => (
+                  <motion.div
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-3"
+                    data-testid={`enterprise-benefit-${index}`}
+                  >
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <span className="text-muted-foreground">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="pt-6">
+                <Link href="/contact">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Button
+                      size="lg"
+                      className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-primary/50 transition-all"
+                      data-testid="button-contact-enterprise"
+                    >
+                      Start Your Transformation
+                      <TrendingUp className="ml-2 w-5 h-5" />
+                    </Button>
+                  </motion.div>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Image with Stats Overlay */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative lg:order-2"
+            >
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+                {/* Cloud Image */}
+                <img
+                  src="/assets/DMS2.webp"
+                  alt="Cloud Infrastructure"
+                  className="w-full h-full object-cover aspect-[4/3]"
+                />
+
+                {/* Stats Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-8">
+                  <div className="grid grid-cols-3 gap-4 w-full">
+                    {[
+                      { label: "Uptime", value: "99.9%" },
+                      { label: "Speed", value: "10x" },
+                      { label: "Security", value: "100%" },
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={stat.label}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
+                        className="text-center"
+                        data-testid={`cloud-stat-${stat.label.toLowerCase()}`}
+                      >
+                        <div className="text-xl font-bold text-primary">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {stat.label}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Shapes */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-12 -right-12 w-48 h-48 border-4 border-dashed border-primary/20 rounded-full -z-10"
+              />
+              <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-primary/5 rounded-full blur-3xl -z-10" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
