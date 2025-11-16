@@ -620,8 +620,8 @@ export default function About() {
       {/* Mission & Vision - Side-by-Side Layout */}
       <section className="relative py-20 md:py-28 bg-gradient-to-b from-card/10 to-background">
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
-            {/* Left Column: Content - Takes 1 column (1/4) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            {/* Left Column: Content - Takes 1 column (1/3) */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -679,13 +679,13 @@ export default function About() {
               </motion.div>
             </motion.div>
 
-            {/* Right Column: Image Cards - Takes 3 columns (3/4) */}
+            {/* Right Column: Image Cards - Takes 2 columns (2/3) */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-3"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2"
             >
               {/* Mission Card */}
               <MissionVisionCard
@@ -798,7 +798,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* What We Do - Diagonal Split Layout (like Staffing page) */}
+      {/* What We Do - Skills with Bars */}
       <section className="relative py-10 md:py-16">
         <AnimatedGridBackground />
 
@@ -814,231 +814,47 @@ export default function About() {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
 
-          <div className="space-y-0">
-            {/* Row 1 - Image Left, Two Content Right */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative -mx-6 lg:-mx-8"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-0 overflow-hidden">
-                <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                      clipPath: "polygon(0 0, 100% 0, 75% 100%, 0 100%)",
-                      backgroundImage: "url(/assets/Staffing3.png)",
-                    }}
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  {/* Content Item 1 */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+          <div className="max-w-4xl mx-auto space-y-8">
+            {whatWeDoServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="space-y-3"
+                data-testid={`what-we-do-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
-                      animate={{ x: ["-100%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                    />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
-                      >
-                        <MessageSquare className="w-6 h-6 text-primary" />
-                      </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Effective Communication</h3>
-                        <p className="text-muted-foreground text-sm">
-                          We convey relevant information in an understandable, timely and logical fashion, understanding client needs and soliciting feedback.
-                        </p>
-                      </div>
-                    </div>
+                      className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
+                      whileHover={{ scale: 1.1, rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <service.icon className="w-5 h-5 text-primary" />
+                    </motion.div>
+                    <h3 className="text-base font-semibold text-gray-900 dark:text-white">{service.title}</h3>
                   </div>
-
-                  {/* Content Item 2 */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
-                      animate={{ x: ["100%", "-100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 0.5 }}
-                    />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: -5 }}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }}
-                      >
-                        <Star className="w-6 h-6 text-chart-2" />
-                      </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Client Satisfaction</h3>
-                        <p className="text-muted-foreground text-sm">
-                          Our primary focus is ensuring complete client satisfaction through quality service delivery and long-term commitment.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <span className="text-2xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">98%</span>
                 </div>
-              </div>
-            </motion.div>
-
-            {/* Row 2 - Two Content Left, Image Right */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative -mx-6 lg:-mx-8"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-0 overflow-hidden">
-                <div className="flex flex-col">
-                  {/* Content Item 3 */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
+                <div className="relative h-2 bg-card/50 rounded-full overflow-hidden border border-primary/20">
+                  <motion.div
+                    className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary to-chart-2 rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "98%" }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 + 0.3, duration: 1.5, ease: "easeOut" }}
+                  >
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
-                      animate={{ x: ["-100%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      className="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent"
+                      animate={{ x: ['-100%', '200%'] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
                     />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
-                      >
-                        <TrendingUp className="w-6 h-6 text-primary" />
-                      </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Performance Orientation</h3>
-                        <p className="text-muted-foreground text-sm">
-                          We maintain high performance standards in all our projects and continuously strive for excellence.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Content Item 4 */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
-                      animate={{ x: ["100%", "-100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 0.5 }}
-                    />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: -5 }}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }}
-                      >
-                        <Briefcase className="w-6 h-6 text-chart-2" />
-                      </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Resource Consciousness</h3>
-                        <p className="text-muted-foreground text-sm">
-                          We optimize resource utilization to deliver maximum value to our clients while maintaining cost-effectiveness.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  </motion.div>
                 </div>
-
-                <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                      clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%)",
-                      backgroundImage: "url(/assets/Consulting8.png)",
-                    }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Row 3 - Image Left, Two Content Right */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative -mx-6 lg:-mx-8"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-0 overflow-hidden">
-                <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                      clipPath: "polygon(0 0, 100% 0, 75% 100%, 0 100%)",
-                      backgroundImage: "url(/assets/Outsourcing.gif)",
-                    }}
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  {/* Content Item 5 */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
-                      animate={{ x: ["-100%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                    />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
-                      >
-                        <Users className="w-6 h-6 text-primary" />
-                      </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Employee Focus</h3>
-                        <p className="text-muted-foreground text-sm">
-                          We believe our people are our greatest asset and invest in their growth and development.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Content Item 6 */}
-                  <div className="relative overflow-hidden bg-white dark:bg-card/50 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center flex-1 group">
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
-                      animate={{ x: ["100%", "-100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 0.5 }}
-                    />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: -5 }}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }}
-                      >
-                        <Lightbulb className="w-6 h-6 text-chart-2" />
-                      </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Adaptability</h3>
-                        <p className="text-muted-foreground text-sm">
-                          We quickly adapt to changing market conditions and client requirements with innovative solutions.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
