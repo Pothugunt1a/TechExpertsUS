@@ -4,10 +4,28 @@ import { AnimatedGridBackground } from "@/components/ui/animated-grid-background
 import { FloatingShapes } from "@/components/ui/floating-shapes";
 import { ClientsScrollingCarousel } from "@/components/ui/clients-scrolling-carousel";
 import {
-  Target, Eye, Heart, Users, Lightbulb, Award,
-  TrendingUp, MessageSquare, Star, Shield, Handshake,
-  Globe, Calendar, MapPin, CheckCircle2, Zap, ArrowRight,
-  Building2, Rocket, Sparkles, Briefcase, Code
+  Target,
+  Eye,
+  Heart,
+  Users,
+  Lightbulb,
+  Award,
+  TrendingUp,
+  MessageSquare,
+  Star,
+  Shield,
+  Handshake,
+  Globe,
+  Calendar,
+  MapPin,
+  CheckCircle2,
+  Zap,
+  ArrowRight,
+  Building2,
+  Rocket,
+  Sparkles,
+  Briefcase,
+  Code,
 } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link } from "wouter";
@@ -24,37 +42,37 @@ const coreValues = [
   {
     icon: Handshake,
     title: "Commitment",
-    description: "Dedicated to excellence in everything we do"
+    description: "Dedicated to excellence in everything we do",
   },
   {
     icon: Shield,
     title: "Integrity",
-    description: "Operating with honesty and transparency"
+    description: "Operating with honesty and transparency",
   },
   {
     icon: Award,
     title: "Reputation",
-    description: "Building trust through consistent delivery"
+    description: "Building trust through consistent delivery",
   },
   {
     icon: CheckCircle2,
     title: "Honesty",
-    description: "Open and truthful in all our dealings"
+    description: "Open and truthful in all our dealings",
   },
   {
     icon: Heart,
     title: "Quality Relationships",
-    description: "Fostering lasting partnerships"
+    description: "Fostering lasting partnerships",
   },
   {
     icon: Users,
     title: "Helping Society",
-    description: "Making a positive impact"
+    description: "Making a positive impact",
   },
   {
     icon: Star,
     title: "Trust",
-    description: "Earning confidence through reliability"
+    description: "Earning confidence through reliability",
   },
 ];
 
@@ -62,32 +80,38 @@ const whatWeDoServices = [
   {
     icon: MessageSquare,
     title: "Effective Communication",
-    description: "We convey relevant information in an understandable, timely and logical fashion. We understand the needs of the clients, solicit feedback, and are always prepared for every communication need."
+    description:
+      "We convey relevant information in an understandable, timely and logical fashion. We understand the needs of the clients, solicit feedback, and are always prepared for every communication need.",
   },
   {
     icon: Star,
     title: "Client Satisfaction",
-    description: "Our primary focus is ensuring complete client satisfaction through quality service delivery and long-term commitment."
+    description:
+      "Our primary focus is ensuring complete client satisfaction through quality service delivery and long-term commitment.",
   },
   {
     icon: TrendingUp,
     title: "Performance Orientation",
-    description: "We maintain high performance standards in all our projects and continuously strive for excellence."
+    description:
+      "We maintain high performance standards in all our projects and continuously strive for excellence.",
   },
   {
     icon: Briefcase,
     title: "Resource Consciousness",
-    description: "We optimize resource utilization to deliver maximum value to our clients while maintaining cost-effectiveness."
+    description:
+      "We optimize resource utilization to deliver maximum value to our clients while maintaining cost-effectiveness.",
   },
   {
     icon: Users,
     title: "Employee Focus",
-    description: "We believe our people are our greatest asset and invest in their growth and development."
+    description:
+      "We believe our people are our greatest asset and invest in their growth and development.",
   },
   {
     icon: Lightbulb,
     title: "Adaptability",
-    description: "We quickly adapt to changing market conditions and client requirements with innovative solutions."
+    description:
+      "We quickly adapt to changing market conditions and client requirements with innovative solutions.",
   },
 ];
 
@@ -117,7 +141,7 @@ function MissionVisionCard({
   description2,
   image,
   dataTestId,
-  delay = 0
+  delay = 0,
 }: MissionVisionCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -134,23 +158,21 @@ function MissionVisionCard({
     >
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+        <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
 
       {/* Default Overlay - Bottom gradient with title */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
         animate={{
-          opacity: isHovered ? 0 : 1
+          opacity: isHovered ? 0 : 1,
         }}
         transition={{ duration: 0.4 }}
       >
         <div className="absolute bottom-0 left-0 right-0 p-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{title}</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+            {title}
+          </h3>
         </div>
       </motion.div>
 
@@ -159,22 +181,22 @@ function MissionVisionCard({
         className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center p-10"
         initial={{ y: "100%" }}
         animate={{
-          y: isHovered ? "0%" : "100%"
+          y: isHovered ? "0%" : "100%",
         }}
         transition={{
           duration: 0.5,
-          ease: [0.4, 0.0, 0.2, 1]
+          ease: [0.4, 0.0, 0.2, 1],
         }}
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{
             opacity: isHovered ? 1 : 0,
-            y: isHovered ? 0 : 20
+            y: isHovered ? 0 : 20,
           }}
           transition={{
             duration: 0.3,
-            delay: isHovered ? 0.2 : 0
+            delay: isHovered ? 0.2 : 0,
           }}
           className="space-y-6"
         >
@@ -192,7 +214,7 @@ function MissionVisionCard({
       <motion.div
         className="absolute -inset-2 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-3xl blur-2xl"
         animate={{
-          opacity: isHovered ? 1 : 0
+          opacity: isHovered ? 1 : 0,
         }}
         transition={{ duration: 0.5 }}
         style={{ zIndex: -1 }}
@@ -205,7 +227,7 @@ export default function About() {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
@@ -214,7 +236,10 @@ export default function About() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section - Matching Consulting Page Banner Style */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -339,7 +364,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="text-center group"
-                data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, '-')}`}
+                data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 <motion.div
                   className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 mb-6 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
@@ -389,16 +414,21 @@ export default function About() {
               className="space-y-6"
             >
               <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
-                <span className="text-sm font-semibold text-primary">Our Culture</span>
+                <span className="text-sm font-semibold text-primary">
+                  Our Culture
+                </span>
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 Think Outside the Box
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
+                At Tech Expertsus, you are encouraged to think out of the box.
+                We enable our colleagues to explore their ideas by creating a
+                collaborative and entrepreneurial environment.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                If you consider yourself ready for a challenging but rewarding career, at Tech Expertsus, you will feel right at home.
+                If you consider yourself ready for a challenging but rewarding
+                career, at Tech Expertsus, you will feel right at home.
               </p>
               <div className="flex items-center gap-4 pt-4">
                 <motion.div
@@ -408,8 +438,12 @@ export default function About() {
                   <Lightbulb className="w-8 h-8 text-primary" />
                 </motion.div>
                 <div>
-                  <p className="font-bold text-gray-900 dark:text-white">Innovation First</p>
-                  <p className="text-sm text-muted-foreground">Collaborative Environment</p>
+                  <p className="font-bold text-gray-900 dark:text-white">
+                    Innovation First
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Collaborative Environment
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -458,16 +492,23 @@ export default function About() {
               className="space-y-6 order-1 lg:order-2"
             >
               <div className="inline-block px-4 py-2 bg-chart-2/10 border border-chart-2/20 rounded-full mb-4">
-                <span className="text-sm font-semibold text-chart-2">Our Team</span>
+                <span className="text-sm font-semibold text-chart-2">
+                  Our Team
+                </span>
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 Excellence & Passion
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We're proud of the outstanding work that we deliver to our clients, and most importantly, we're proud of our people who make it happen.
+                We're proud of the outstanding work that we deliver to our
+                clients, and most importantly, we're proud of our people who
+                make it happen.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                It takes extreme talent, passion for your work and an ability to inspire others to excel here. The drive of a rapidly evolving team, combined with driven individuals all focused on the final goal are vital factors for delivering exceptional IT projects.
+                It takes extreme talent, passion for your work and an ability to
+                inspire others to excel here. The drive of a rapidly evolving
+                team, combined with driven individuals all focused on the final
+                goal are vital factors for delivering exceptional IT projects.
               </p>
               <div className="flex items-center gap-4 pt-4">
                 <motion.div
@@ -477,8 +518,12 @@ export default function About() {
                   <Award className="w-8 h-8 text-chart-2" />
                 </motion.div>
                 <div>
-                  <p className="font-bold text-gray-900 dark:text-white">Talent & Passion</p>
-                  <p className="text-sm text-muted-foreground">Inspiring Excellence</p>
+                  <p className="font-bold text-gray-900 dark:text-white">
+                    Talent & Passion
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Inspiring Excellence
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -490,21 +535,24 @@ export default function About() {
               {
                 icon: MapPin,
                 title: "Where We Are",
-                description: "Corporate Headquarters in Argyle, TX 76226, United States with offshore office in Hyderabad, India. Our development and technical teams support clients globally.",
-                image: "/assets/Home5.jpg"
+                description:
+                  "Corporate Headquarters in Argyle, TX 76226, United States with offshore office in Hyderabad, India. Our development and technical teams support clients globally.",
+                image: "/assets/Home5.jpg",
               },
               {
                 icon: Calendar,
                 title: "Our Journey",
-                description: "Tech Expertsus started in 2012 and has been successfully supporting clients ever since, growing to become a preferred IT partner across various industry verticals.",
-                image: "/assets/Home6.jpg"
+                description:
+                  "Tech Expertsus started in 2012 and has been successfully supporting clients ever since, growing to become a preferred IT partner across various industry verticals.",
+                image: "/assets/Home6.jpg",
               },
               {
                 icon: Rocket,
                 title: "Our Foundation",
-                description: "Founded on three basic principles: Technology expertise, Innovative solutions, and long-lasting partnership with customers - the pillars of our success.",
-                image: "/assets/Home7.jpg"
-              }
+                description:
+                  "Founded on three basic principles: Technology expertise, Innovative solutions, and long-lasting partnership with customers - the pillars of our success.",
+                image: "/assets/Home7.jpg",
+              },
             ].map((item, idx) => {
               const [isHovered, setIsHovered] = useState(false);
 
@@ -519,7 +567,7 @@ export default function About() {
                   onMouseLeave={() => setIsHovered(false)}
                   whileHover={{ y: -8, scale: 1.02 }}
                   className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
-                  data-testid={`info-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  data-testid={`info-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -534,12 +582,14 @@ export default function About() {
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     animate={{
-                      opacity: isHovered ? 0 : 1
+                      opacity: isHovered ? 0 : 1,
                     }}
                     transition={{ duration: 0.4 }}
                   >
                     <div className="absolute bottom-0 left-0 right-0 p-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {item.title}
+                      </h3>
                     </div>
                   </motion.div>
 
@@ -548,22 +598,22 @@ export default function About() {
                     className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
                     initial={{ y: "100%" }}
                     animate={{
-                      y: isHovered ? "0%" : "100%"
+                      y: isHovered ? "0%" : "100%",
                     }}
                     transition={{
                       duration: 0.5,
-                      ease: [0.4, 0.0, 0.2, 1]
+                      ease: [0.4, 0.0, 0.2, 1],
                     }}
                   >
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{
                         opacity: isHovered ? 1 : 0,
-                        y: isHovered ? 0 : 20
+                        y: isHovered ? 0 : 20,
                       }}
                       transition={{
                         duration: 0.3,
-                        delay: isHovered ? 0.2 : 0
+                        delay: isHovered ? 0.2 : 0,
                       }}
                       className="flex-1 flex flex-col justify-center"
                     >
@@ -575,7 +625,9 @@ export default function About() {
                       >
                         <item.icon className="w-7 h-7 text-gray-900 dark:text-white" />
                       </motion.div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                      <h3 className="text-2xl font-bold text-white mb-4">
+                        {item.title}
+                      </h3>
                       <p className="text-gray-200 leading-relaxed">
                         {item.description}
                       </p>
@@ -599,18 +651,27 @@ export default function About() {
             <motion.div
               className="absolute inset-0 opacity-5"
               animate={{
-                backgroundPosition: ['0% 0%', '100% 100%'],
+                backgroundPosition: ["0% 0%", "100% 100%"],
               }}
-              transition={{ duration: 20, repeat: Infinity, repeatType: 'reverse' }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
               style={{
-                backgroundImage: 'radial-gradient(circle, rgba(34, 211, 238, 0.3) 1px, transparent 1px)',
-                backgroundSize: '50px 50px'
+                backgroundImage:
+                  "radial-gradient(circle, rgba(34, 211, 238, 0.3) 1px, transparent 1px)",
+                backgroundSize: "50px 50px",
               }}
             />
             <div className="relative z-10">
               <Building2 className="w-16 h-16 text-primary mx-auto mb-6" />
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-5xl mx-auto">
-                Established in 2012, Tech Expertsus Technologies has grown to be the preferred IT partner for industry leaders across various verticals. We have an enviable reputation for delivering independent, practical, value-priced advice and services to our chosen market sectors.
+                Established in 2012, Tech Expertsus Technologies has grown to be
+                the preferred IT partner for industry leaders across various
+                verticals. We have an enviable reputation for delivering
+                independent, practical, value-priced advice and services to our
+                chosen market sectors.
               </p>
             </div>
           </motion.div>
@@ -657,7 +718,9 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 className="text-base text-muted-foreground leading-relaxed"
               >
-                We are dedicated to providing professional consulting services and viable technology solutions that ensure complete client satisfaction and long-term commitment.
+                We are dedicated to providing professional consulting services
+                and viable technology solutions that ensure complete client
+                satisfaction and long-term commitment.
               </motion.p>
 
               <motion.div
@@ -671,7 +734,12 @@ export default function About() {
                   size="lg"
                   className="group"
                   data-testid="link-learn-more-commitment"
-                  onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({
+                      top: document.body.scrollHeight,
+                      behavior: "smooth",
+                    })
+                  }
                 >
                   Learn More About Us
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -693,7 +761,7 @@ export default function About() {
                 icon={Target}
                 description1="Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment."
                 description2="We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values."
-                image="/assets/Consulting3.png"
+                image="/assets/About6.jpg"
                 dataTestId="card-mission"
               />
 
@@ -703,7 +771,7 @@ export default function About() {
                 icon={Eye}
                 description1="To explore new opportunities and ideas to enhance quality-based contributions that benefit our clients and to be recognized as a global leader in IT Services and Technology solutions."
                 description2="We fulfill customer needs while utilizing our knowledge and experience with a great sense of urgency every time."
-                image="/assets/Consulting2.png"
+                image="/assets/About7.jpg"
                 dataTestId="card-vision"
                 delay={0.2}
               />
@@ -716,7 +784,7 @@ export default function About() {
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/assets/OurCoreValues.jpg)' }}
+          style={{ backgroundImage: "url(/assets/OurCoreValues.jpg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
 
@@ -738,13 +806,19 @@ export default function About() {
               <Zap className="w-14 h-14 text-white" />
             </motion.div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
-              A Passion for Innovation<br />A Commitment to Excellence
+              A Passion for Innovation
+              <br />A Commitment to Excellence
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              The drive of a rapidly evolving team, combined with driven individuals all focused on the final goal with no leeway for a quality dip are vital factors for the delivery of IT projects to meet the demands of the day.
+              The drive of a rapidly evolving team, combined with driven
+              individuals all focused on the final goal with no leeway for a
+              quality dip are vital factors for the delivery of IT projects to
+              meet the demands of the day.
             </p>
             <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
-              At Tech Expertsus we passionately believe that real change only comes about through a combination of the right ideas and effective implementation.
+              At Tech Expertsus we passionately believe that real change only
+              comes about through a combination of the right ideas and effective
+              implementation.
             </p>
           </motion.div>
         </div>
@@ -753,9 +827,9 @@ export default function About() {
       {/* Core Values - 2x2 Grid on Left with Background */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/assets/About9.jpeg)' }}
+          style={{ backgroundImage: "url(/assets/About9.jpeg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
 
@@ -766,7 +840,9 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Our Core Values
+            </h2>
             <p className="text-xl text-white/90">
               Principles that guide everything we do
             </p>
@@ -785,7 +861,7 @@ export default function About() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   whileHover={{ y: -10, scale: 1.02 }}
                   className="relative group"
-                  data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
                   <div className="relative h-full p-6 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-xl border border-primary/20 rounded-2xl group-hover:border-primary/40 transition-all duration-300">
@@ -796,8 +872,12 @@ export default function About() {
                     >
                       <value.icon className="w-7 h-7 text-primary" />
                     </motion.div>
-                    <h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{value.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                    <h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
+                      {value.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -814,7 +894,7 @@ export default function About() {
                   transition={{ delay: (index + 4) * 0.1, duration: 0.5 }}
                   whileHover={{ y: -10, scale: 1.02 }}
                   className="relative group"
-                  data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
                   <div className="relative h-full p-6 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-xl border border-primary/20 rounded-2xl group-hover:border-primary/40 transition-all duration-300">
@@ -827,8 +907,12 @@ export default function About() {
                         <value.icon className="w-7 h-7 text-primary" />
                       </motion.div>
                       <div>
-                        <h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{value.title}</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                        <h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
+                          {value.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {value.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -850,8 +934,12 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">What We Do</h2>
-            <p className="text-xl text-muted-foreground">Excellence in every dimension</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              What We Do
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Excellence in every dimension
+            </p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
 
@@ -881,7 +969,11 @@ export default function About() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
                       animate={{ x: ["-100%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     />
 
                     <div className="relative z-10 flex items-start gap-4">
@@ -889,13 +981,21 @@ export default function About() {
                         className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
+                        transition={{
+                          y: {
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          },
+                        }}
                       >
                         <MessageSquare className="w-6 h-6 text-primary" />
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg lg:text-xl font-bold">Effective Communication</h3>
+                          <h3 className="text-lg lg:text-xl font-bold">
+                            Effective Communication
+                          </h3>
                           <div className="flex items-center gap-2 ml-auto">
                             <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
                               <motion.div
@@ -906,11 +1006,15 @@ export default function About() {
                                 transition={{ duration: 1.5, ease: "easeOut" }}
                               />
                             </div>
-                            <span className="text-xs font-bold text-primary">98%</span>
+                            <span className="text-xs font-bold text-primary">
+                              98%
+                            </span>
                           </div>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          We convey relevant information in an understandable, timely and logical fashion, understanding client needs and soliciting feedback.
+                          We convey relevant information in an understandable,
+                          timely and logical fashion, understanding client needs
+                          and soliciting feedback.
                         </p>
                       </div>
                     </div>
@@ -921,7 +1025,12 @@ export default function About() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
                       animate={{ x: ["100%", "-100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 0.5 }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5,
+                      }}
                     />
 
                     <div className="relative z-10 flex items-start gap-4">
@@ -929,13 +1038,22 @@ export default function About() {
                         className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
                         whileHover={{ scale: 1.1, rotate: -5 }}
                         animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }}
+                        transition={{
+                          y: {
+                            duration: 2.5,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.3,
+                          },
+                        }}
                       >
                         <Star className="w-6 h-6 text-chart-2" />
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg lg:text-xl font-bold">Client Satisfaction</h3>
+                          <h3 className="text-lg lg:text-xl font-bold">
+                            Client Satisfaction
+                          </h3>
                           <div className="flex items-center gap-2 ml-auto">
                             <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
                               <motion.div
@@ -943,14 +1061,22 @@ export default function About() {
                                 initial={{ width: 0 }}
                                 whileInView={{ width: "98%" }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
+                                transition={{
+                                  duration: 1.5,
+                                  ease: "easeOut",
+                                  delay: 0.1,
+                                }}
                               />
                             </div>
-                            <span className="text-xs font-bold text-primary">98%</span>
+                            <span className="text-xs font-bold text-primary">
+                              98%
+                            </span>
                           </div>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          Our primary focus is ensuring complete client satisfaction through quality service delivery and long-term commitment.
+                          Our primary focus is ensuring complete client
+                          satisfaction through quality service delivery and
+                          long-term commitment.
                         </p>
                       </div>
                     </div>
@@ -974,7 +1100,11 @@ export default function About() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
                       animate={{ x: ["-100%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     />
 
                     <div className="relative z-10 flex items-start gap-4">
@@ -982,13 +1112,21 @@ export default function About() {
                         className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
+                        transition={{
+                          y: {
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          },
+                        }}
                       >
                         <TrendingUp className="w-6 h-6 text-primary" />
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg lg:text-xl font-bold">Performance Orientation</h3>
+                          <h3 className="text-lg lg:text-xl font-bold">
+                            Performance Orientation
+                          </h3>
                           <div className="flex items-center gap-2 ml-auto">
                             <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
                               <motion.div
@@ -999,11 +1137,14 @@ export default function About() {
                                 transition={{ duration: 1.5, ease: "easeOut" }}
                               />
                             </div>
-                            <span className="text-xs font-bold text-primary">96%</span>
+                            <span className="text-xs font-bold text-primary">
+                              96%
+                            </span>
                           </div>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          We maintain high performance standards in all our projects and continuously strive for excellence.
+                          We maintain high performance standards in all our
+                          projects and continuously strive for excellence.
                         </p>
                       </div>
                     </div>
@@ -1014,7 +1155,12 @@ export default function About() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
                       animate={{ x: ["100%", "-100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 0.5 }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5,
+                      }}
                     />
 
                     <div className="relative z-10 flex items-start gap-4">
@@ -1022,13 +1168,22 @@ export default function About() {
                         className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
                         whileHover={{ scale: 1.1, rotate: -5 }}
                         animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }}
+                        transition={{
+                          y: {
+                            duration: 2.5,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.3,
+                          },
+                        }}
                       >
                         <Briefcase className="w-6 h-6 text-chart-2" />
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg lg:text-xl font-bold">Resource Consciousness</h3>
+                          <h3 className="text-lg lg:text-xl font-bold">
+                            Resource Consciousness
+                          </h3>
                           <div className="flex items-center gap-2 ml-auto">
                             <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
                               <motion.div
@@ -1036,14 +1191,22 @@ export default function About() {
                                 initial={{ width: 0 }}
                                 whileInView={{ width: "98%" }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
+                                transition={{
+                                  duration: 1.5,
+                                  ease: "easeOut",
+                                  delay: 0.1,
+                                }}
                               />
                             </div>
-                            <span className="text-xs font-bold text-primary">98%</span>
+                            <span className="text-xs font-bold text-primary">
+                              98%
+                            </span>
                           </div>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          We optimize resource utilization to deliver maximum value to our clients while maintaining cost-effectiveness.
+                          We optimize resource utilization to deliver maximum
+                          value to our clients while maintaining
+                          cost-effectiveness.
                         </p>
                       </div>
                     </div>
@@ -1087,7 +1250,11 @@ export default function About() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-primary/5 via-chart-2/5 to-primary/5 opacity-0 group-hover:opacity-100"
                       animate={{ x: ["-100%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     />
 
                     <div className="relative z-10 flex items-start gap-4">
@@ -1095,13 +1262,21 @@ export default function About() {
                         className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
+                        transition={{
+                          y: {
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          },
+                        }}
                       >
                         <Users className="w-6 h-6 text-primary" />
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg lg:text-xl font-bold">Employee Focus</h3>
+                          <h3 className="text-lg lg:text-xl font-bold">
+                            Employee Focus
+                          </h3>
                           <div className="flex items-center gap-2 ml-auto">
                             <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
                               <motion.div
@@ -1112,11 +1287,14 @@ export default function About() {
                                 transition={{ duration: 1.5, ease: "easeOut" }}
                               />
                             </div>
-                            <span className="text-xs font-bold text-primary">100%</span>
+                            <span className="text-xs font-bold text-primary">
+                              100%
+                            </span>
                           </div>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          We believe our people are our greatest asset and invest in their growth and development.
+                          We believe our people are our greatest asset and
+                          invest in their growth and development.
                         </p>
                       </div>
                     </div>
@@ -1127,7 +1305,12 @@ export default function About() {
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-l from-chart-2/5 via-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100"
                       animate={{ x: ["100%", "-100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 0.5 }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5,
+                      }}
                     />
 
                     <div className="relative z-10 flex items-start gap-4">
@@ -1135,13 +1318,22 @@ export default function About() {
                         className="w-12 h-12 rounded-lg bg-gradient-to-br from-chart-2/20 to-primary/20 flex items-center justify-center flex-shrink-0"
                         whileHover={{ scale: 1.1, rotate: -5 }}
                         animate={{ y: [0, -5, 0] }}
-                        transition={{ y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 } }}
+                        transition={{
+                          y: {
+                            duration: 2.5,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.3,
+                          },
+                        }}
                       >
                         <Lightbulb className="w-6 h-6 text-chart-2" />
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg lg:text-xl font-bold">Adaptability</h3>
+                          <h3 className="text-lg lg:text-xl font-bold">
+                            Adaptability
+                          </h3>
                           <div className="flex items-center gap-2 ml-auto">
                             <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
                               <motion.div
@@ -1149,14 +1341,21 @@ export default function About() {
                                 initial={{ width: 0 }}
                                 whileInView={{ width: "97%" }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
+                                transition={{
+                                  duration: 1.5,
+                                  ease: "easeOut",
+                                  delay: 0.1,
+                                }}
                               />
                             </div>
-                            <span className="text-xs font-bold text-primary">97%</span>
+                            <span className="text-xs font-bold text-primary">
+                              97%
+                            </span>
                           </div>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          We quickly adapt to changing market conditions and client requirements with innovative solutions.
+                          We quickly adapt to changing market conditions and
+                          client requirements with innovative solutions.
                         </p>
                       </div>
                     </div>
@@ -1344,7 +1543,8 @@ export default function About() {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Real change comes through the right ideas and effective implementation. Let's create something amazing together.
+              Real change comes through the right ideas and effective
+              implementation. Let's create something amazing together.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
