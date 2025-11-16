@@ -124,9 +124,14 @@ export default function Contact() {
             className="text-left flex flex-col items-start justify-center w-full lg:w-1/2"
             style={{ marginTop: "-6px" }}
           >
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               Let's Connect
-            </h1>
+            </motion.h1>
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-2">
               Have a question or ready to start your next project?
             </p>
