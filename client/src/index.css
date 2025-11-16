@@ -249,40 +249,6 @@
     pointer-events: none;
   }
 
-  /* Responsive gradient text utilities - adjusts based on text size */
-  .gradient-text-sm {
-    @apply bg-gradient-to-r from-white/90 via-primary/80 to-chart-2/70 bg-clip-text text-transparent;
-  }
-
-  .gradient-text-base {
-    @apply bg-gradient-to-r from-white/95 via-primary/85 to-chart-2/75 bg-clip-text text-transparent;
-  }
-
-  .gradient-text-lg {
-    @apply bg-gradient-to-r from-white via-primary/90 to-chart-2/80 bg-clip-text text-transparent;
-  }
-
-  .gradient-text-xl {
-    @apply bg-gradient-to-r from-white via-primary/95 to-chart-2/85 bg-clip-text text-transparent;
-  }
-
-  .gradient-text-2xl {
-    @apply bg-gradient-to-r from-white via-primary to-chart-2/90 bg-clip-text text-transparent;
-  }
-
-  .gradient-text-3xl {
-    @apply bg-gradient-to-r from-white via-primary to-chart-2/95 bg-clip-text text-transparent;
-  }
-
-  .gradient-text-4xl {
-    @apply bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent;
-  }
-
-  /* For hero/display headings (5xl and above) - full intensity */
-  .gradient-text-hero {
-    @apply bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent;
-  }
-
   /* .no-default-hover-elevate/no-default-active-elevate is an escape hatch so consumers of
    * buttons/badges can remove the automatic brightness adjustment on interactions
    * and program their own. */
