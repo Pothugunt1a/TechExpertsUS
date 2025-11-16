@@ -135,7 +135,7 @@ export default function ICS() {
             className="text-center mb-8"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Building Secure & Resilient <span className="text-primary">Infrastructure</span>
+              Building Secure & Resilient Infrastructure
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground">
               <p>
