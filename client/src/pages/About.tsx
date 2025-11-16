@@ -856,8 +856,6 @@ export default function About() {
 
       {/* What We Do - Diagonal Split Layout (like Staffing page) */}
       <section className="relative py-10 md:py-16">
-        <AnimatedGridBackground />
-
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
