@@ -808,7 +808,7 @@ export default function Outsourcing() {
               <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Optimize Your IT Operations?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">

@@ -407,7 +407,7 @@ export default function DMS() {
                 </h2>
               </div>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Data Center Management in general the "Server Room" for all your
                 business needs plays a key and vital capacity in reaching out
                 the needs of your business. The firm or business needs to act
@@ -415,14 +415,14 @@ export default function DMS() {
                 posed in day to day competitive world.
               </p>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 At Tech Expertsus we do Application Outsourcing which enables to
                 streamline your business processes and maximizes the returns of
                 your investment. Our service modules helps you to reach out all
                 your needs and business goals with your limited investments.
               </p>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Tech Expertsus provides fineness and positive assurance across
                 all your enterprise's IT needs through comprehensive data center
                 management.
@@ -441,7 +441,7 @@ export default function DMS() {
                     data-testid={`benefit-${index}`}
                   >
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-sm md:text-lg text-muted-foreground">
                       {benefit}
                     </span>
                   </motion.div>
@@ -464,7 +464,7 @@ export default function DMS() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Our <span className="text-primary">Core Capabilities</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Our IT Services helps you in managing your day to day IT needs
               through a strong and reliable IT infrastructure. Our Tech
               Expertsus works on Business Effective model where our customers
@@ -495,7 +495,7 @@ export default function DMS() {
                     <h3 className="text-lg font-bold mb-2 text-foreground">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -523,7 +523,7 @@ export default function DMS() {
                   Cloud Excellence
                 </span>
 
-                <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
                   Enterprise Computing and{" "}
                   <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
                     Cloud Services
@@ -531,7 +531,7 @@ export default function DMS() {
                 </h2>
               </div>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 We @ Tech Expertsus with years of knowledge and experience in IT
                 fields provides strategic technology directions for data center
                 assessment. We by bringing into line your infrastructure to your
@@ -539,7 +539,7 @@ export default function DMS() {
                 responsive to business needs.
               </p>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 We @ Tech Expertsus offers leading technology to vitalize your
                 IT infrastructure and improve your return on assets. We helps in
                 making your IT services looks dynamic and in step with changing
@@ -559,7 +559,7 @@ export default function DMS() {
                     data-testid={`enterprise-benefit-${index}`}
                   >
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-muted-foreground">{benefit}</span>
+                    <span className="text-muted-foreground text-lg md:text-xl">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
@@ -660,7 +660,7 @@ export default function DMS() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               What We <span className="text-primary">Provide</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               We @ Tech Expertsus helps your firm and business or IT
               organization in re-engineering the data infrastructure and align
               capacity with business outcomes which helps customers to realize
@@ -728,7 +728,7 @@ export default function DMS() {
                     <h3 className="text-xl font-bold mb-3 leading-tight">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
+                    <p className="text-sm md:text-lg text-gray-900 dark:text-white/80 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -773,7 +773,7 @@ export default function DMS() {
               </span>
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Join hundreds of businesses that trust Tech Expertsus for their
               data center management needs. Let's build the future together.
             </p>
@@ -786,7 +786,7 @@ export default function DMS() {
                 >
                   <Button
                     size="lg"
-                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
+                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50 transition-all"
                     data-testid="button-get-started"
                   >
                     Get in Touch
@@ -801,7 +801,7 @@ export default function DMS() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-lg px-10 py-6 rounded-lg"
+                    className="text-lg px-10 py-6 rounded-lg border-primary/30 hover:border-primary/60 transition-all"
                     data-testid="button-explore-services"
                   >
                     Explore All Services

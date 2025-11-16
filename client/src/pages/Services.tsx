@@ -320,7 +320,7 @@ export default function Services() {
               Core Managed Services
             </h2>
             <motion.p
-              className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -391,7 +391,7 @@ export default function Services() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Why Choose Us
             </h2>
-            <p className="text-2xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Excellence in every aspect of our service
             </p>
           </motion.div>
@@ -474,7 +474,7 @@ export default function Services() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Our Clients
             </h2>
-            <p className="text-2xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Trusted by industry leaders
             </p>
           </motion.div>
@@ -622,7 +622,7 @@ export default function Services() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Client Testimonials
             </h2>
-            <p className="text-2xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               What our clients say about us
             </p>
           </motion.div>
@@ -669,7 +669,7 @@ export default function Services() {
               </span>
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Real change comes through the right ideas and effective
               implementation. Let's create something amazing together.
             </p>
