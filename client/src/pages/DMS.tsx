@@ -14,6 +14,8 @@ import {
   Layers,
   BarChart3,
   CheckCircle2,
+  Lightbulb,
+  Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
