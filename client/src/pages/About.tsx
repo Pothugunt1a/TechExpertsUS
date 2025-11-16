@@ -129,7 +129,7 @@ function MissionVisionCard({
       transition={{ duration: 0.8, delay }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer"
+      className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer"
       data-testid={dataTestId}
     >
       {/* Background Image */}
@@ -150,7 +150,7 @@ function MissionVisionCard({
         transition={{ duration: 0.4 }}
       >
         <div className="absolute bottom-0 left-0 right-0 p-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{title}</h3>
+          <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
         </div>
       </motion.div>
 
@@ -176,13 +176,13 @@ function MissionVisionCard({
             duration: 0.3,
             delay: isHovered ? 0.2 : 0
           }}
-          className="space-y-6"
+          className="space-y-4"
         >
-          <h3 className="text-3xl md:4xl font-bold text-white">{title}</h3>
-          <p className="text-gray-200 text-lg leading-relaxed">
+          <h3 className="text-2xl font-bold text-white">{title}</h3>
+          <p className="text-gray-300 leading-relaxed">
             {description1}
           </p>
-          <p className="text-gray-200 text-lg leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             {description2}
           </p>
         </motion.div>
