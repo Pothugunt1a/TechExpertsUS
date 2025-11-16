@@ -388,87 +388,29 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="inline-block mb-4"
-              >
-                <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                  <span className="text-sm font-semibold text-primary">
-                    Our Culture
-                  </span>
-                </div>
-              </motion.div>
-
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-                Think Outside the Box
-              </h2>
-
-              <div className="space-y-4 text-lg text-muted-foreground">
-                <p>
-                  At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
-                </p>
-                <p>
-                  If you consider yourself ready for a challenging but rewarding career, at Tech Expertsus, you will feel right at home.
-                </p>
+              <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+                <span className="text-sm font-semibold text-primary">Our Culture</span>
               </div>
-
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {[
-                  {
-                    icon: Lightbulb,
-                    label: "Strategic",
-                    value: "Planning",
-                  },
-                  {
-                    icon: Rocket,
-                    label: "Future",
-                    value: "Thinking",
-                  },
-                  {
-                    icon: TrendingUp,
-                    label: "Innovation",
-                    value: "Focus",
-                  },
-                  {
-                    icon: Target,
-                    label: "Digital",
-                    value: "Transformation",
-                  },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-                    data-testid={`stat-${item.label.toLowerCase().replace(/\//g, "-")}`}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                        className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
-                      >
-                        <item.icon className="w-6 h-6 text-primary" />
-                      </motion.div>
-
-                      <div>
-                        <p className="text-2xl font-bold text-primary mb-1">
-                          {item.label}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {item.value}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                Think Outside the Box
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                If you consider yourself ready for a challenging but rewarding career, at Tech Expertsus, you will feel right at home.
+              </p>
+              <div className="flex items-center gap-4 pt-4">
+                <motion.div
+                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center"
+                  whileHover={{ scale: 1.1, rotate: 10 }}
+                >
+                  <Lightbulb className="w-8 h-8 text-primary" />
+                </motion.div>
+                <div>
+                  <p className="font-bold text-gray-900 dark:text-white">Innovation First</p>
+                  <p className="text-sm text-muted-foreground">Collaborative Environment</p>
+                </div>
               </div>
             </motion.div>
 
@@ -479,7 +421,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
+              <div className="relative h-96 rounded-3xl overflow-hidden bg-gradient-to-br from-card/30 to-background/30 backdrop-blur-sm flex items-center justify-center">
                 <img
                   src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
                   alt="Innovation at Tech Expertsus"
@@ -746,148 +688,25 @@ export default function About() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2"
             >
               {/* Mission Card */}
-              {(() => {
-                const [isHovered, setIsHovered] = useState(false);
-
-                return (
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0, duration: 0.7 }}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    whileHover={{ y: -8, scale: 1.02 }}
-                    className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
-                    data-testid="card-mission"
-                  >
-                    {/* Background Image */}
-                    <div className="absolute inset-0">
-                      <img
-                        src="/assets/Consulting3.png"
-                        alt="Our Mission"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Default Overlay */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-                      animate={{ opacity: isHovered ? 0 : 1 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <div className="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 className="text-2xl font-bold text-white mb-2">Our Mission</h3>
-                      </div>
-                    </motion.div>
-
-                    {/* Hover Overlay */}
-                    <motion.div
-                      className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center p-8"
-                      initial={{ y: "100%" }}
-                      animate={{ y: isHovered ? "0%" : "100%" }}
-                      transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-                    >
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{
-                          opacity: isHovered ? 1 : 0,
-                          y: isHovered ? 0 : 20
-                        }}
-                        transition={{ duration: 0.3, delay: isHovered ? 0.2 : 0 }}
-                        className="flex-1 flex flex-col justify-center"
-                      >
-                        <motion.div
-                          className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
-                          whileHover={{ rotate: 360, scale: 1.1 }}
-                          transition={{ duration: 0.6 }}
-                        >
-                          <Target className="w-7 h-7 text-gray-900 dark:text-white" />
-                        </motion.div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-                        <p className="text-gray-200 leading-relaxed text-sm">
-                          Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment. We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values.
-                        </p>
-                      </motion.div>
-                    </motion.div>
-
-                    {/* Hover Effect Border */}
-                    <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
-                  </motion.div>
-                );
-              })()}
+              <MissionVisionCard
+                title="Our Mission"
+                icon={Target}
+                description1="Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment."
+                description2="We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values."
+                image="/assets/Consulting3.png"
+                dataTestId="card-mission"
+              />
 
               {/* Vision Card */}
-              {(() => {
-                const [isHovered, setIsHovered] = useState(false);
-
-                return (
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.7 }}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    whileHover={{ y: -8, scale: 1.02 }}
-                    className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
-                    data-testid="card-vision"
-                  >
-                    {/* Background Image */}
-                    <div className="absolute inset-0">
-                      <img
-                        src="/assets/Consulting2.png"
-                        alt="Our Vision"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Default Overlay */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-                      animate={{ opacity: isHovered ? 0 : 1 }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <div className="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 className="text-2xl font-bold text-white mb-2">Our Vision</h3>
-                      </div>
-                    </motion.div>
-
-                    {/* Hover Overlay */}
-                    <motion.div
-                      className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center p-8"
-                      initial={{ y: "100%" }}
-                      animate={{ y: isHovered ? "0%" : "100%" }}
-                      transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-                    >
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{
-                          opacity: isHovered ? 1 : 0,
-                          y: isHovered ? 0 : 20
-                        }}
-                        transition={{ duration: 0.3, delay: isHovered ? 0.2 : 0 }}
-                        className="flex-1 flex flex-col justify-center"
-                      >
-                        <motion.div
-                          className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
-                          whileHover={{ rotate: 360, scale: 1.1 }}
-                          transition={{ duration: 0.6 }}
-                        >
-                          <Eye className="w-7 h-7 text-gray-900 dark:text-white" />
-                        </motion.div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                        <p className="text-gray-200 leading-relaxed text-sm">
-                          To explore new opportunities and ideas to enhance quality-based contributions that benefit our clients and to be recognized as a global leader in IT Services and Technology solutions. We fulfill customer needs while utilizing our knowledge and experience with a great sense of urgency every time.
-                        </p>
-                      </motion.div>
-                    </motion.div>
-
-                    {/* Hover Effect Border */}
-                    <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
-                  </motion.div>
-                );
-              })()}
+              <MissionVisionCard
+                title="Our Vision"
+                icon={Eye}
+                description1="To explore new opportunities and ideas to enhance quality-based contributions that benefit our clients and to be recognized as a global leader in IT Services and Technology solutions."
+                description2="We fulfill customer needs while utilizing our knowledge and experience with a great sense of urgency every time."
+                image="/assets/Consulting2.png"
+                dataTestId="card-vision"
+                delay={0.2}
+              />
             </motion.div>
           </div>
         </div>
