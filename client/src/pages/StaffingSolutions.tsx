@@ -331,7 +331,7 @@ export default function StaffingSolutions() {
               </motion.div>
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-                Full Service IT & Business Solutions
+                Full Service IT & <span className="text-primary">Business Solutions</span>
               </h2>
 
               <div className="space-y-4 text-lg text-muted-foreground">

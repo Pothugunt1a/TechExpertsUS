@@ -325,7 +325,7 @@ export default function Outsourcing() {
               </motion.div>
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-                Strategic Outsourcing Solutions
+                Strategic <span className="text-primary">Outsourcing Solutions</span>
               </h2>
 
               <div className="space-y-4 text-lg text-muted-foreground">
@@ -369,7 +369,7 @@ export default function Outsourcing() {
               </div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Client Challenges We Address
+              Client Challenges We <span className="text-primary">Address</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We tackle the most critical challenges facing modern businesses

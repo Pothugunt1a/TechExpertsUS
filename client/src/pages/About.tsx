@@ -392,8 +392,8 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Why Tech Experts USA
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Why <span className="text-primary">Tech Experts USA</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
           </motion.div>

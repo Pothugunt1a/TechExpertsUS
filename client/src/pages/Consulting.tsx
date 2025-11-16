@@ -323,8 +323,8 @@ export default function Consulting() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-                Future-Focused Solutions
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+                Future-Focused <span className="text-primary">Solutions</span>
               </h2>
 
               <div className="space-y-4 text-lg text-muted-foreground">
@@ -423,8 +423,8 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Client Challenges We Address
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Client Challenges We <span className="text-primary">Address</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We tackle the most critical challenges facing modern businesses
@@ -627,8 +627,8 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Transformation Is Key
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Transformation Is <span className="text-primary">Key</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Everyone talks about transformation, but transformation into what?

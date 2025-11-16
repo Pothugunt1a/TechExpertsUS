@@ -401,7 +401,7 @@ export default function DMS() {
 
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
                   Comprehensive Data Center{" "}
-                  <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                  <span className="text-primary">
                     Solutions
                   </span>
                 </h2>
