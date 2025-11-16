@@ -620,8 +620,8 @@ export default function About() {
       {/* Mission & Vision - Side-by-Side Layout */}
       <section className="relative py-20 md:py-28 bg-gradient-to-b from-card/10 to-background">
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
-            {/* Left Column: Content - Takes 1 column (1/4) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            {/* Left Column: Content - Takes 1 column (1/3) */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -679,13 +679,13 @@ export default function About() {
               </motion.div>
             </motion.div>
 
-            {/* Right Column: Image Cards - Takes 3 columns (3/4) */}
+            {/* Right Column: Image Cards - Takes 2 columns (2/3) */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-3"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2"
             >
               {/* Mission Card */}
               <MissionVisionCard
@@ -852,8 +852,22 @@ export default function About() {
                       >
                         <MessageSquare className="w-6 h-6 text-primary" />
                       </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Effective Communication</h3>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-lg lg:text-xl font-bold">Effective Communication</h3>
+                          <div className="flex items-center gap-2 ml-auto">
+                            <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-primary to-chart-2 rounded-full"
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "98%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.5, ease: "easeOut" }}
+                              />
+                            </div>
+                            <span className="text-xs font-bold text-primary">98%</span>
+                          </div>
+                        </div>
                         <p className="text-muted-foreground text-sm">
                           We convey relevant information in an understandable, timely and logical fashion, understanding client needs and soliciting feedback.
                         </p>
@@ -878,8 +892,22 @@ export default function About() {
                       >
                         <Star className="w-6 h-6 text-chart-2" />
                       </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Client Satisfaction</h3>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-lg lg:text-xl font-bold">Client Satisfaction</h3>
+                          <div className="flex items-center gap-2 ml-auto">
+                            <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-primary to-chart-2 rounded-full"
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "98%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
+                              />
+                            </div>
+                            <span className="text-xs font-bold text-primary">98%</span>
+                          </div>
+                        </div>
                         <p className="text-muted-foreground text-sm">
                           Our primary focus is ensuring complete client satisfaction through quality service delivery and long-term commitment.
                         </p>
@@ -917,8 +945,22 @@ export default function About() {
                       >
                         <TrendingUp className="w-6 h-6 text-primary" />
                       </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Performance Orientation</h3>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-lg lg:text-xl font-bold">Performance Orientation</h3>
+                          <div className="flex items-center gap-2 ml-auto">
+                            <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-primary to-chart-2 rounded-full"
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "96%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.5, ease: "easeOut" }}
+                              />
+                            </div>
+                            <span className="text-xs font-bold text-primary">96%</span>
+                          </div>
+                        </div>
                         <p className="text-muted-foreground text-sm">
                           We maintain high performance standards in all our projects and continuously strive for excellence.
                         </p>
@@ -943,8 +985,22 @@ export default function About() {
                       >
                         <Briefcase className="w-6 h-6 text-chart-2" />
                       </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Resource Consciousness</h3>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-lg lg:text-xl font-bold">Resource Consciousness</h3>
+                          <div className="flex items-center gap-2 ml-auto">
+                            <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-primary to-chart-2 rounded-full"
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "98%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
+                              />
+                            </div>
+                            <span className="text-xs font-bold text-primary">98%</span>
+                          </div>
+                        </div>
                         <p className="text-muted-foreground text-sm">
                           We optimize resource utilization to deliver maximum value to our clients while maintaining cost-effectiveness.
                         </p>
@@ -1002,8 +1058,22 @@ export default function About() {
                       >
                         <Users className="w-6 h-6 text-primary" />
                       </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Employee Focus</h3>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-lg lg:text-xl font-bold">Employee Focus</h3>
+                          <div className="flex items-center gap-2 ml-auto">
+                            <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-primary to-chart-2 rounded-full"
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "100%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.5, ease: "easeOut" }}
+                              />
+                            </div>
+                            <span className="text-xs font-bold text-primary">100%</span>
+                          </div>
+                        </div>
                         <p className="text-muted-foreground text-sm">
                           We believe our people are our greatest asset and invest in their growth and development.
                         </p>
@@ -1028,8 +1098,22 @@ export default function About() {
                       >
                         <Lightbulb className="w-6 h-6 text-chart-2" />
                       </motion.div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold mb-2">Adaptability</h3>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-lg lg:text-xl font-bold">Adaptability</h3>
+                          <div className="flex items-center gap-2 ml-auto">
+                            <div className="w-16 h-1.5 bg-card/50 rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-primary to-chart-2 rounded-full"
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "97%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
+                              />
+                            </div>
+                            <span className="text-xs font-bold text-primary">97%</span>
+                          </div>
+                        </div>
                         <p className="text-muted-foreground text-sm">
                           We quickly adapt to changing market conditions and client requirements with innovative solutions.
                         </p>
