@@ -801,50 +801,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* A Passion for Innovation - Full Width with Background */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/assets/About9.jpg)" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-            data-testid="section-innovation"
-          >
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", duration: 1 }}
-              className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/40 to-chart-2/40 mb-8"
-            >
-              <Zap className="w-14 h-14 text-white" />
-            </motion.div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
-              A Passion for Innovation
-              <br />A Commitment to Excellence
-            </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              The drive of a rapidly evolving team, combined with driven
-              individuals all focused on the final goal with no leeway for a
-              quality dip are vital factors for the delivery of IT projects to
-              meet the demands of the day.
-            </p>
-            <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
-              At Tech Expertsus we passionately believe that real change only
-              comes about through a combination of the right ideas and effective
-              implementation.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Core Values - 2x2 Grid on Left with Background */}
       <section className="relative py-12 md:py-16 overflow-hidden">
         {/* Background Image */}
@@ -1350,6 +1306,50 @@ export default function About() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* A Passion for Innovation - Full Width with Background */}
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/assets/About9.jpg)" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+            data-testid="section-innovation"
+          >
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1 }}
+              className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/40 to-chart-2/40 mb-8"
+            >
+              <Zap className="w-14 h-14 text-white" />
+            </motion.div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
+              A Passion for Innovation
+              <br />A Commitment to Excellence
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+              The drive of a rapidly evolving team, combined with driven
+              individuals all focused on the final goal with no leeway for a
+              quality dip are vital factors for the delivery of IT projects to
+              meet the demands of the day.
+            </p>
+            <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
+              At Tech Expertsus we passionately believe that real change only
+              comes about through a combination of the right ideas and effective
+              implementation.
+            </p>
+          </motion.div>
         </div>
       </section>
 
