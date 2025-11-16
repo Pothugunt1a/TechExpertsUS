@@ -1067,19 +1067,15 @@ export default function Consulting() {
               transition={{ duration: 2, repeat: Infinity }}
               className="inline-block mb-6"
             >
-              <Shield className="w-16 h-16 text-primary mx-auto" />
+              <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Ready to Transform Your{" "}
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Business?
-              </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Ready to Transform Your Business?
             </h2>
-
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Real change comes through the right ideas and effective
-              implementation. Let's create something amazing together.
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let our consulting experts help you anticipate the future and stay
+              ahead of the competition. Contact us today to get started.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -1091,7 +1087,7 @@ export default function Consulting() {
                   <Button
                     size="lg"
                     className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
-                    data-testid="button-get-started"
+                    data-testid="button-contact-consulting"
                   >
                     Get in Touch
                   </Button>
@@ -1106,9 +1102,9 @@ export default function Consulting() {
                     size="lg"
                     variant="outline"
                     className="text-lg px-10 py-6 rounded-lg"
-                    data-testid="button-explore-services"
+                    data-testid="button-view-services"
                   >
-                    Explore All Services
+                    View All Services
                   </Button>
                 </motion.div>
               </Link>
@@ -1122,15 +1118,15 @@ export default function Consulting() {
               className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-primary" />
-                <span>Innovative Solutions</span>
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>Future Thinking</span>
               </div>
               <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-primary" />
-                <span>24/7 Support</span>
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>Proven Results</span>
               </div>
               <div className="flex items-center gap-2">
-                <Award className="w-4 h-4 text-primary" />
+                <CheckCircle className="w-4 h-4 text-primary" />
                 <span>Expert Team</span>
               </div>
             </motion.div>

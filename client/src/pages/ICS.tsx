@@ -220,7 +220,7 @@ export default function ICS() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Modern with Animation */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
@@ -247,13 +247,12 @@ export default function ICS() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Business?
+                Infrastructure?
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Real change comes through the right ideas and effective
-              implementation. Let's create something amazing together.
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let our experts help you build a resilient and secure IT infrastructure that drives your business forward. Contact us today to get started.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -297,14 +296,14 @@ export default function ICS() {
             >
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-primary" />
-                <span>Innovative Solutions</span>
+                <span>Secure Infrastructure</span>
               </div>
               <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-primary" />
+                <Network className="w-4 h-4 text-primary" />
                 <span>24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
-                <Award className="w-4 h-4 text-primary" />
+                <Lock className="w-4 h-4 text-primary" />
                 <span>Expert Team</span>
               </div>
             </motion.div>

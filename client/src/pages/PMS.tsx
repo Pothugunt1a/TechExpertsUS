@@ -329,13 +329,12 @@ export default function PMS() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Business?
+                Projects?
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Real change comes through the right ideas and effective
-              implementation. Let's create something amazing together.
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let us help you implement efficient project management solutions that deliver results.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -379,14 +378,14 @@ export default function PMS() {
             >
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-primary" />
-                <span>Innovative Solutions</span>
+                <span>Efficient Solutions</span>
               </div>
               <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-primary" />
+                <ClipboardCheck className="w-4 h-4 text-primary" />
                 <span>24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
-                <Award className="w-4 h-4 text-primary" />
+                <TrendingUp className="w-4 h-4 text-primary" />
                 <span>Expert Team</span>
               </div>
             </motion.div>
