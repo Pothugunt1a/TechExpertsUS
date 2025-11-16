@@ -323,7 +323,7 @@ export default function Consulting() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                 Future-Focused Solutions
               </h2>
 
@@ -423,7 +423,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -627,7 +627,7 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
               Transformation Is Key
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -802,7 +802,7 @@ export default function Consulting() {
 
               {/* Heading */}
               <motion.h2
-                className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white"
+                className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

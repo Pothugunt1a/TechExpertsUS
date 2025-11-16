@@ -330,7 +330,7 @@ export default function StaffingSolutions() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                 Full Service IT & Business Solutions
               </h2>
 
@@ -426,7 +426,7 @@ export default function StaffingSolutions() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
               Comprehensive Workforce Solutions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -771,7 +771,7 @@ export default function StaffingSolutions() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
               Why Partner With Us
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

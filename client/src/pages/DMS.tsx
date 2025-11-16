@@ -399,11 +399,8 @@ export default function DMS() {
                   </span>
                 </motion.div>
 
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
-                  Comprehensive Data Center{" "}
-                  <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                    Solutions
-                  </span>
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Comprehensive Data Center Solutions
                 </h2>
               </div>
 
@@ -461,8 +458,8 @@ export default function DMS() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Our <span className="text-primary">Core Capabilities</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+              Our Core Capabilities
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Our IT Services helps you in managing your day to day IT needs
@@ -523,11 +520,8 @@ export default function DMS() {
                   Cloud Excellence
                 </span>
 
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-                  Enterprise Computing and{" "}
-                  <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
-                    Cloud Services
-                  </span>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Enterprise Computing and Cloud Services
                 </h2>
               </div>
 
@@ -657,8 +651,8 @@ export default function DMS() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              What We <span className="text-primary">Provide</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+              What We Provide
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               We @ Tech Expertsus helps your firm and business or IT

@@ -392,7 +392,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
               Why Tech Experts USA
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
@@ -444,7 +444,7 @@ export default function About() {
                     </div>
                   </motion.div>
 
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                     Think Outside the Box
                   </h2>
 
@@ -527,7 +527,7 @@ export default function About() {
                   Our Team
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                 Excellence & Passion
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -726,7 +726,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white"
+                  className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
                 >
                   Driving excellence through innovation and expertise
                 </motion.h2>
@@ -817,7 +817,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
               Our Core Values
             </h2>
             <p className="text-lg text-white/90">
@@ -876,7 +876,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
               What We Do
             </h2>
             <p className="text-xl text-muted-foreground">
