@@ -71,7 +71,7 @@ export default function ICS() {
 
         {/* Centered Text Content */}
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full"
+          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 w-full"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

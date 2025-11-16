@@ -200,7 +200,7 @@ export default function Services() {
       {/* Hero Section with Parallax */}
       <section
         ref={heroRef}
-        className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
         {/* Background Image */}
         <div
@@ -241,9 +241,15 @@ export default function Services() {
         />
 
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 py-32 text-center"
+          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 w-full"
           style={{ opacity, scale, y }}
         >
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center"
+          >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -280,6 +286,7 @@ export default function Services() {
               }}
               className="mt-8 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
             />
+          </motion.div>
           </motion.div>
         </motion.div>
 
