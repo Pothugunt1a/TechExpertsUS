@@ -751,90 +751,61 @@ export default function About() {
       </section>
 
       {/* Core Values - 2x2 Grid on Left with Background */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
+      <section className="relative py-12 md:py-16 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/About9.jpeg)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Our Core Values</h2>
-            <p className="text-xl text-white/90">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">Our Core Values</h2>
+            <p className="text-lg text-white/90">
               Principles that guide everything we do
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Left Side - 2x2 Grid of Core Values */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {coreValues.slice(0, 4).map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className="relative group"
-                  data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-                  <div className="relative h-full p-6 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-xl border border-primary/20 rounded-2xl group-hover:border-primary/40 transition-all duration-300">
-                    <motion.div
-                      className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <value.icon className="w-7 h-7 text-primary" />
-                    </motion.div>
-                    <h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{value.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left Side - 2x2 Grid of All 7 Core Values (takes 1/3) */}
+            <div className="lg:col-span-1">
+              <div className="grid grid-cols-2 gap-3">
+                {coreValues.map((value, index) => (
+                  <motion.div
+                    key={value.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.08, duration: 0.5 }}
+                    whileHover={{ y: -5, scale: 1.05 }}
+                    className="relative group"
+                    data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
+                    <div className="relative h-full p-4 bg-gradient-to-br from-card/95 to-card/80 backdrop-blur-xl border border-primary/30 rounded-lg group-hover:border-primary/50 transition-all duration-300">
+                      <motion.div
+                        className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center mb-3 group-hover:from-primary/40 group-hover:to-chart-2/40 transition-colors mx-auto"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <value.icon className="w-5 h-5 text-primary" />
+                      </motion.div>
+                      <h4 className="text-sm font-bold mb-1.5 text-gray-900 dark:text-white text-center">{value.title}</h4>
+                      <p className="text-xs text-muted-foreground leading-snug text-center">{value.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
-            {/* Right Side - Remaining 3 Values in Column */}
-            <div className="grid grid-cols-1 gap-6">
-              {coreValues.slice(4).map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (index + 4) * 0.1, duration: 0.5 }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className="relative group"
-                  data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-chart-2/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-                  <div className="relative h-full p-6 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-xl border border-primary/20 rounded-2xl group-hover:border-primary/40 transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <motion.div
-                        className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center flex-shrink-0 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <value.icon className="w-7 h-7 text-primary" />
-                      </motion.div>
-                      <div>
-                        <h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{value.title}</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            {/* Right Side - Empty space for background image visibility (takes 2/3) */}
+            <div className="lg:col-span-2 hidden lg:block" />
           </div>
         </div>
       </section>
