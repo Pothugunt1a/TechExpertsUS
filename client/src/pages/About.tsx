@@ -129,7 +129,7 @@ function MissionVisionCard({
       transition={{ duration: 0.8, delay }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer"
+      className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
       data-testid={dataTestId}
     >
       {/* Background Image */}
@@ -149,14 +149,14 @@ function MissionVisionCard({
         }}
         transition={{ duration: 0.4 }}
       >
-        <div className="absolute bottom-0 left-0 right-0 p-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{title}</h3>
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+          <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
         </div>
       </motion.div>
 
       {/* Hover Overlay - Slides up from bottom */}
       <motion.div
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center p-10"
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
         initial={{ y: "100%" }}
         animate={{
           y: isHovered ? "0%" : "100%"
@@ -176,27 +176,17 @@ function MissionVisionCard({
             duration: 0.3,
             delay: isHovered ? 0.2 : 0
           }}
-          className="space-y-6"
+          className="flex-1 flex flex-col justify-center"
         >
-          <h3 className="text-3xl md:4xl font-bold text-white">{title}</h3>
-          <p className="text-gray-200 text-lg leading-relaxed">
+          <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+          <p className="text-gray-300 mb-6 leading-relaxed">
             {description1}
           </p>
-          <p className="text-gray-200 text-lg leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             {description2}
           </p>
         </motion.div>
       </motion.div>
-
-      {/* Glow effect on hover */}
-      <motion.div
-        className="absolute -inset-2 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-3xl blur-2xl"
-        animate={{
-          opacity: isHovered ? 1 : 0
-        }}
-        transition={{ duration: 0.5 }}
-        style={{ zIndex: -1 }}
-      />
     </motion.div>
   );
 }
@@ -386,30 +376,15 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="order-2 lg:order-1"
             >
-              <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
-                <span className="text-sm font-semibold text-primary">Our Culture</span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                Think Outside the Box
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                If you consider yourself ready for a challenging but rewarding career, at Tech Expertsus, you will feel right at home.
-              </p>
-              <div className="flex items-center gap-4 pt-4">
-                <motion.div
-                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center"
-                  whileHover={{ scale: 1.1, rotate: 10 }}
-                >
-                  <Lightbulb className="w-8 h-8 text-primary" />
-                </motion.div>
-                <div>
-                  <p className="font-bold text-gray-900 dark:text-white">Innovation First</p>
-                  <p className="text-sm text-muted-foreground">Collaborative Environment</p>
+              <div className="relative">
+                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
+                    alt="Innovation at Tech Expertsus"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -419,14 +394,78 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="order-1 lg:order-2"
             >
-              <div className="relative h-96 rounded-3xl overflow-hidden bg-gradient-to-br from-card/30 to-background/30 backdrop-blur-sm flex items-center justify-center">
-                <img
-                  src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
-                  alt="Innovation at Tech Expertsus"
-                  className="w-full h-full object-contain"
-                />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-block mb-4"
+              >
+                <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                  <span className="text-sm font-semibold text-primary">
+                    Our Culture
+                  </span>
+                </div>
+              </motion.div>
+
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+                Think Outside the Box
+              </h2>
+
+              <div className="space-y-4 text-lg text-muted-foreground">
+                <p>
+                  At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
+                </p>
+                <p>
+                  If you consider yourself ready for a challenging but rewarding career, at Tech Expertsus, you will feel right at home.
+                </p>
+              </div>
+
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                {[
+                  {
+                    icon: Lightbulb,
+                    label: "Innovation",
+                    value: "First",
+                  },
+                  {
+                    icon: Users,
+                    label: "Collaborative",
+                    value: "Environment",
+                  },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ y: -5, scale: 1.02 }}
+                    className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+
+                    <div className="relative z-10 flex items-start gap-4">
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
+                      >
+                        <item.icon className="w-6 h-6 text-primary" />
+                      </motion.div>
+
+                      <div>
+                        <p className="text-2xl font-bold text-primary mb-1">
+                          {item.label}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.value}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
