@@ -438,14 +438,14 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="mt-8">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0 }}
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                  className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 max-w-sm"
                   data-testid="stat-innovation"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
@@ -465,37 +465,6 @@ export default function About() {
                       </p>
                       <p className="text-sm text-muted-foreground">
                         First
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-                  data-testid="stat-collaborative"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-
-                  <div className="relative z-10 flex items-start gap-4">
-                    <motion.div
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                      className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
-                    >
-                      <Users className="w-6 h-6 text-primary" />
-                    </motion.div>
-
-                    <div>
-                      <p className="text-2xl font-bold text-primary mb-1">
-                        Collaborative
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        Environment
                       </p>
                     </div>
                   </div>
