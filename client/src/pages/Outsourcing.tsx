@@ -784,7 +784,7 @@ export default function Outsourcing() {
         </div>
       </section>
 
-      {/* CTA Section - Modern with Animation */}
+      {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
@@ -805,16 +805,19 @@ export default function Outsourcing() {
               transition={{ duration: 2, repeat: Infinity }}
               className="inline-block mb-6"
             >
-              <Sparkles className="w-16 h-16 text-primary mx-auto" />
+              <Shield className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Ready to Optimize Your IT Operations?
+              Ready to Transform Your{" "}
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Business?
+              </span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let us help you transform your IT investments into reliable and
-              future-proof Business Service Infrastructures. Contact us today to
-              get started.
+
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Real change comes through the right ideas and effective
+              implementation. Let's create something amazing together.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -826,7 +829,7 @@ export default function Outsourcing() {
                   <Button
                     size="lg"
                     className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
-                    data-testid="button-contact-outsourcing"
+                    data-testid="button-get-started"
                   >
                     Get in Touch
                   </Button>
@@ -841,9 +844,9 @@ export default function Outsourcing() {
                     size="lg"
                     variant="outline"
                     className="text-lg px-10 py-6 rounded-lg"
-                    data-testid="button-view-services"
+                    data-testid="button-explore-services"
                   >
-                    View All Services
+                    Explore All Services
                   </Button>
                 </motion.div>
               </Link>
@@ -857,16 +860,16 @@ export default function Outsourcing() {
               className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
-                <span>Global Delivery Model</span>
+                <Shield className="w-4 h-4 text-primary" />
+                <span>Innovative Solutions</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
-                <span>Proven Track Record</span>
+                <Users className="w-4 h-4 text-primary" />
+                <span>24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
-                <span>Transparent Pricing</span>
+                <Award className="w-4 h-4 text-primary" />
+                <span>Expert Team</span>
               </div>
             </motion.div>
           </motion.div>
