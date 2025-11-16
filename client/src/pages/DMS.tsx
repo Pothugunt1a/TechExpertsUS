@@ -397,7 +397,7 @@ export default function DMS() {
                   </span>
                 </motion.div>
 
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
                   Comprehensive Data Center{" "}
                   <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
                     Solutions
@@ -459,7 +459,7 @@ export default function DMS() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Our <span className="text-primary">Core Capabilities</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -655,7 +655,7 @@ export default function DMS() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               What We <span className="text-primary">Provide</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -764,7 +764,7 @@ export default function DMS() {
               <Shield className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Infrastructure?

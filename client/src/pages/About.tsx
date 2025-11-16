@@ -644,7 +644,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight"
+                  className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight"
                 >
                   Driving excellence through innovation and expertise
                 </motion.h2>

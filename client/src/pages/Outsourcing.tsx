@@ -324,7 +324,7 @@ export default function Outsourcing() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
                 Strategic Outsourcing Solutions
               </h2>
 
@@ -368,7 +368,7 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Client Challenges We Address
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -536,7 +536,7 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               What Tech Expertsus Provides
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -743,7 +743,7 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Business Value
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

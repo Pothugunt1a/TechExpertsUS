@@ -147,7 +147,7 @@ export default function PMS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Comprehensive Project Management
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground">
@@ -178,7 +178,7 @@ export default function PMS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Our Solutions
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -234,7 +234,7 @@ export default function PMS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Key Highlights
             </h2>
           </motion.div>
@@ -326,7 +326,7 @@ export default function PMS() {
               <Shield className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Projects?

@@ -316,7 +316,7 @@ export default function Services() {
             transition={{ duration: 0.9 }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Core Managed Services
             </h2>
             <motion.p
@@ -388,7 +388,7 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Why Choose Us
             </h2>
             <p className="text-2xl text-muted-foreground">
@@ -471,7 +471,7 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Our Clients
             </h2>
             <p className="text-2xl text-muted-foreground">
@@ -619,7 +619,7 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Client Testimonials
             </h2>
             <p className="text-2xl text-muted-foreground">
@@ -662,7 +662,7 @@ export default function Services() {
               <Shield className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Business?
