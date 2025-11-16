@@ -360,23 +360,20 @@ export default function DMS() {
       {/* Overview Section with Image Placeholder */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image Placeholder with Decorative Elements */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-2 lg:order-1"
             >
-              <div className="relative">
-                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
-                  <img
-                    src="/assets/DMS1.gif"
-                    alt="Data Center Infrastructure"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+              <div className="relative w-full h-96 rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/DMS1.gif"
+                  alt="Data Center Infrastructure"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </motion.div>
 
@@ -386,99 +383,65 @@ export default function DMS() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-1 lg:order-2"
+              className="space-y-6"
             >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="inline-block mb-4"
-              >
-                <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                  <span className="text-sm font-semibold text-primary">
+              <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="inline-block mb-4"
+                >
+                  <span className="text-sm font-semibold text-primary px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
                     Our Approach
                   </span>
-                </div>
-              </motion.div>
+                </motion.div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-                Comprehensive Data Center Solutions
-              </h2>
-
-              <div className="space-y-4 text-lg text-muted-foreground">
-                <p>
-                  Data Center Management in general the "Server Room" for all your
-                  business needs plays a key and vital capacity in reaching out
-                  the needs of your business. The firm or business needs to act
-                  faster with maximum accuracy to meet the challenges that were
-                  posed in day to day competitive world.
-                </p>
-                <p>
-                  At Tech Expertsus we do Application Outsourcing which enables to
-                  streamline your business processes and maximizes the returns of
-                  your investment. Our service modules helps you to reach out all
-                  your needs and business goals with your limited investments.
-                </p>
-                <p>
-                  Tech Expertsus provides fineness and positive assurance across
-                  all your enterprise's IT needs through comprehensive data center
-                  management.
-                </p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                  Comprehensive Data Center{" "}
+                  <span className="bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent">
+                    Solutions
+                  </span>
+                </h2>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {[
-                  {
-                    icon: Shield,
-                    label: "Streamlined",
-                    value: "Processes",
-                  },
-                  {
-                    icon: Zap,
-                    label: "Maximum",
-                    value: "ROI",
-                  },
-                  {
-                    icon: TrendingUp,
-                    label: "Reduced",
-                    value: "Costs",
-                  },
-                  {
-                    icon: Lock,
-                    label: "Enhanced",
-                    value: "Reliability",
-                  },
-                ].map((item, index) => (
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Data Center Management in general the "Server Room" for all your
+                business needs plays a key and vital capacity in reaching out
+                the needs of your business. The firm or business needs to act
+                faster with maximum accuracy to meet the challenges that were
+                posed in day to day competitive world.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                At Tech Expertsus we do Application Outsourcing which enables to
+                streamline your business processes and maximizes the returns of
+                your investment. Our service modules helps you to reach out all
+                your needs and business goals with your limited investments.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Tech Expertsus provides fineness and positive assurance across
+                all your enterprise's IT needs through comprehensive data center
+                management.
+              </p>
+
+              {/* Benefits List */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+                {benefits.slice(0, 4).map((benefit, index) => (
                   <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-                    data-testid={`stat-${item.label.toLowerCase().replace(/\//g, "-")}`}
+                    className="flex items-center gap-2"
+                    data-testid={`benefit-${index}`}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <motion.div
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                        className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
-                      >
-                        <item.icon className="w-6 h-6 text-primary" />
-                      </motion.div>
-
-                      <div>
-                        <p className="text-2xl font-bold text-primary mb-1">
-                          {item.label}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {item.value}
-                        </p>
-                      </div>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">
+                      {benefit}
+                    </span>
                   </motion.div>
                 ))}
               </div>
