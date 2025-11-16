@@ -146,7 +146,7 @@ export default function Outsourcing() {
         />
 
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full"
+          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 w-full"
           style={{ opacity, scale }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

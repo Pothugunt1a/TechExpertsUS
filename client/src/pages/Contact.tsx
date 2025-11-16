@@ -110,7 +110,7 @@ export default function Contact() {
 
         {/* Left-aligned Text Content */}
         <div
-          className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex items-center"
+          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 w-full flex items-center"
           style={{ height: "85vh" }}
         >
           <motion.div
@@ -185,7 +185,7 @@ export default function Contact() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div

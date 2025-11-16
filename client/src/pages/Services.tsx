@@ -241,7 +241,7 @@ export default function Services() {
         />
 
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center"
+          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 py-32 text-center"
           style={{ opacity, scale, y }}
         >
           <motion.div
@@ -250,15 +250,18 @@ export default function Services() {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
             >
-              Technology Platforms & Solutions
+              <span className="block mb-2">Technology Platforms</span>
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                & Solutions
+              </span>
             </motion.h1>
             <motion.p
-              className="text-xl md:text-3xl text-foreground/90 max-w-3xl mx-auto font-semibold"
+              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}

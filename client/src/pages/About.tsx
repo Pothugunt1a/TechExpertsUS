@@ -3,8 +3,8 @@ import { ParticleBackground } from "@/components/ui/particle-background";
 import { AnimatedGridBackground } from "@/components/ui/animated-grid-background";
 import { FloatingShapes } from "@/components/ui/floating-shapes";
 import { ClientsScrollingCarousel } from "@/components/ui/clients-scrolling-carousel";
-import { 
-  Target, Eye, Heart, Users, Lightbulb, Award, 
+import {
+  Target, Eye, Heart, Users, Lightbulb, Award,
   TrendingUp, MessageSquare, Star, Shield, Handshake,
   Globe, Calendar, MapPin, CheckCircle2, Zap, ArrowRight,
   Building2, Rocket, Sparkles, Briefcase, Code
@@ -21,39 +21,39 @@ const stats = [
 ];
 
 const coreValues = [
-  { 
-    icon: Handshake, 
-    title: "Commitment", 
+  {
+    icon: Handshake,
+    title: "Commitment",
     description: "Dedicated to excellence in everything we do"
   },
-  { 
-    icon: Shield, 
-    title: "Integrity", 
+  {
+    icon: Shield,
+    title: "Integrity",
     description: "Operating with honesty and transparency"
   },
-  { 
-    icon: Award, 
-    title: "Reputation", 
+  {
+    icon: Award,
+    title: "Reputation",
     description: "Building trust through consistent delivery"
   },
-  { 
-    icon: CheckCircle2, 
-    title: "Honesty", 
+  {
+    icon: CheckCircle2,
+    title: "Honesty",
     description: "Open and truthful in all our dealings"
   },
-  { 
-    icon: Heart, 
-    title: "Quality Relationships", 
+  {
+    icon: Heart,
+    title: "Quality Relationships",
     description: "Fostering lasting partnerships"
   },
-  { 
-    icon: Users, 
-    title: "Helping Society", 
+  {
+    icon: Users,
+    title: "Helping Society",
     description: "Making a positive impact"
   },
-  { 
-    icon: Star, 
-    title: "Trust", 
+  {
+    icon: Star,
+    title: "Trust",
     description: "Earning confidence through reliability"
   },
 ];
@@ -110,14 +110,14 @@ interface MissionVisionCardProps {
   delay?: number;
 }
 
-function MissionVisionCard({ 
-  title, 
-  icon: Icon, 
-  description1, 
-  description2, 
-  image, 
+function MissionVisionCard({
+  title,
+  icon: Icon,
+  description1,
+  description2,
+  image,
   dataTestId,
-  delay = 0 
+  delay = 0
 }: MissionVisionCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -134,15 +134,15 @@ function MissionVisionCard({
     >
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Default Overlay - Bottom gradient with title */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
         animate={{
           opacity: isHovered ? 0 : 1
@@ -158,27 +158,27 @@ function MissionVisionCard({
       <motion.div
         className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center p-10"
         initial={{ y: "100%" }}
-        animate={{ 
+        animate={{
           y: isHovered ? "0%" : "100%"
         }}
-        transition={{ 
+        transition={{
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1]
         }}
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ 
+          animate={{
             opacity: isHovered ? 1 : 0,
             y: isHovered ? 0 : 20
           }}
-          transition={{ 
+          transition={{
             duration: 0.3,
             delay: isHovered ? 0.2 : 0
           }}
           className="space-y-6"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-white">{title}</h3>
+          <h3 className="text-3xl md:4xl font-bold text-white">{title}</h3>
           <p className="text-gray-200 text-lg leading-relaxed">
             {description1}
           </p>
@@ -253,7 +253,7 @@ export default function About() {
         />
 
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full"
+          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 w-full"
           style={{ y, opacity }}
         >
           <motion.div
@@ -329,7 +329,7 @@ export default function About() {
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
         <AnimatedGridBackground />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -366,7 +366,7 @@ export default function About() {
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-chart-2/10 rounded-full blur-[120px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -507,7 +507,7 @@ export default function About() {
               }
             ].map((item, idx) => {
               const [isHovered, setIsHovered] = useState(false);
-              
+
               return (
                 <motion.div
                   key={item.title}
@@ -523,15 +523,15 @@ export default function About() {
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
-                    <img 
-                      src={item.image} 
+                    <img
+                      src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
 
                   {/* Default Overlay - Bottom gradient with title */}
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     animate={{
                       opacity: isHovered ? 0 : 1
@@ -547,21 +547,21 @@ export default function About() {
                   <motion.div
                     className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
                     initial={{ y: "100%" }}
-                    animate={{ 
+                    animate={{
                       y: isHovered ? "0%" : "100%"
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 0.5,
                       ease: [0.4, 0.0, 0.2, 1]
                     }}
                   >
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
-                      animate={{ 
+                      animate={{
                         opacity: isHovered ? 1 : 0,
                         y: isHovered ? 0 : 20
                       }}
-                      transition={{ 
+                      transition={{
                         duration: 0.3,
                         delay: isHovered ? 0.2 : 0
                       }}
@@ -625,7 +625,7 @@ export default function About() {
 
       {/* Mission & Vision - Side-by-Side Layout */}
       <section className="relative py-20 md:py-28 bg-gradient-to-b from-card/10 to-background">
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Column: Content */}
             <motion.div
@@ -655,7 +655,7 @@ export default function About() {
                   Driving excellence through innovation and expertise
                 </motion.h2>
               </div>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -672,8 +672,8 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="lg"
                   className="group"
                   data-testid="link-learn-more-commitment"
@@ -720,13 +720,13 @@ export default function About() {
 
       {/* A Passion for Innovation - Full Width with Background */}
       <section className="relative py-10 md:py-16 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/OurCoreValues.jpg)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -760,7 +760,7 @@ export default function About() {
       <section className="relative py-10 md:py-16 overflow-hidden bg-gradient-to-b from-background to-card/20">
         <FloatingShapes />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -768,7 +768,7 @@ export default function About() {
             className="text-center mb-20"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Core Values</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground">
               Principles that guide everything we do
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
@@ -808,7 +808,7 @@ export default function About() {
       <section className="relative py-10 md:py-16">
         <AnimatedGridBackground />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1051,7 +1051,7 @@ export default function About() {
 
       {/* Skills Section - Enhanced with Icons */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/20 to-background">
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
