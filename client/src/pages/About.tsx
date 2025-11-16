@@ -567,12 +567,13 @@ export default function About() {
                       }}
                       className="flex-1 flex flex-col justify-center"
                     >
+                      {/* Icon in top right */}
                       <motion.div
-                        whileHover={{ rotate: 360 }}
+                        className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
+                        whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6 }}
-                        className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
                       >
-                        <item.icon className="w-8 h-8 text-primary" />
+                        <item.icon className="w-7 h-7 text-gray-900 dark:text-white" />
                       </motion.div>
                       <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                       <p className="text-gray-200 leading-relaxed">
@@ -581,15 +582,8 @@ export default function About() {
                     </motion.div>
                   </motion.div>
 
-                  {/* Glow effect on hover */}
-                  <motion.div
-                    className="absolute -inset-2 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-2xl blur-2xl"
-                    animate={{
-                      opacity: isHovered ? 1 : 0
-                    }}
-                    transition={{ duration: 0.5 }}
-                    style={{ zIndex: -1 }}
-                  />
+                  {/* Hover Effect Border */}
+                  <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
                 </motion.div>
               );
             })}
@@ -626,14 +620,14 @@ export default function About() {
       {/* Mission & Vision - Side-by-Side Layout */}
       <section className="relative py-20 md:py-28 bg-gradient-to-b from-card/10 to-background">
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column: Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
+            {/* Left Column: Content - Takes 1 column (1/4) */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-8"
+              className="space-y-6 lg:col-span-1"
             >
               <div>
                 <motion.p
@@ -650,7 +644,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
+                  className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight"
                 >
                   Driving excellence through innovation and expertise
                 </motion.h2>
@@ -661,7 +655,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="text-lg text-muted-foreground leading-relaxed"
+                className="text-base text-muted-foreground leading-relaxed"
               >
                 We are dedicated to providing professional consulting services and viable technology solutions that ensure complete client satisfaction and long-term commitment.
               </motion.p>
@@ -685,13 +679,13 @@ export default function About() {
               </motion.div>
             </motion.div>
 
-            {/* Right Column: Image Cards */}
+            {/* Right Column: Image Cards - Takes 3 columns (3/4) */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-3"
             >
               {/* Mission Card */}
               <MissionVisionCard
