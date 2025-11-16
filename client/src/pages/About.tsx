@@ -379,57 +379,132 @@ export default function About() {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
           </motion.div>
 
-          {/* First Row - Image Right */}
+          {/* Our Culture Section - Matching Consulting Page Layout */}
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
+
+        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            {/* Image Placeholder */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="order-2 lg:order-1"
             >
-              <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
-                <span className="text-sm font-semibold text-primary">Our Culture</span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                Think Outside the Box
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                If you consider yourself ready for a challenging but rewarding career, at Tech Expertsus, you will feel right at home.
-              </p>
-              <div className="flex items-center gap-4 pt-4">
-                <motion.div
-                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center"
-                  whileHover={{ scale: 1.1, rotate: 10 }}
-                >
-                  <Lightbulb className="w-8 h-8 text-primary" />
-                </motion.div>
-                <div>
-                  <p className="font-bold text-gray-900 dark:text-white">Innovation First</p>
-                  <p className="text-sm text-muted-foreground">Collaborative Environment</p>
+              <div className="relative">
+                <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
+                  <img
+                    src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
+                    alt="Innovation at Tech Expertsus"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </motion.div>
 
+            {/* Content */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="order-1 lg:order-2"
             >
-              <div className="relative h-96 rounded-3xl overflow-hidden bg-gradient-to-br from-card/30 to-background/30 backdrop-blur-sm flex items-center justify-center">
-                <img
-                  src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
-                  alt="Innovation at Tech Expertsus"
-                  className="w-full h-full object-contain"
-                />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-block mb-4"
+              >
+                <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                  <span className="text-sm font-semibold text-primary">
+                    Our Culture
+                  </span>
+                </div>
+              </motion.div>
+
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+                Think Outside the Box
+              </h2>
+
+              <div className="space-y-4 text-lg text-muted-foreground">
+                <p>
+                  At Tech Expertsus, you are encouraged to think out of the box. We enable our colleagues to explore their ideas by creating a collaborative and entrepreneurial environment.
+                </p>
+                <p>
+                  If you consider yourself ready for a challenging but rewarding career, at Tech Expertsus, you will feel right at home.
+                </p>
+              </div>
+
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0 }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                  data-testid="stat-innovation"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+
+                  <div className="relative z-10 flex items-start gap-4">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
+                    >
+                      <Lightbulb className="w-6 h-6 text-primary" />
+                    </motion.div>
+
+                    <div>
+                      <p className="text-2xl font-bold text-primary mb-1">
+                        Innovation
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        First
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                  data-testid="stat-collaborative"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+
+                  <div className="relative z-10 flex items-start gap-4">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
+                    >
+                      <Users className="w-6 h-6 text-primary" />
+                    </motion.div>
+
+                    <div>
+                      <p className="text-2xl font-bold text-primary mb-1">
+                        Collaborative
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Environment
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
 
           {/* Second Row - Image Left */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
