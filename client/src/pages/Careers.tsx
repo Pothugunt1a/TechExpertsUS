@@ -23,6 +23,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import ConsultingImage from "@assets/Consulting1__1_-removebg-preview_1761620472526.png";
+import teamCollabImage from "@assets/stock_images/diverse_team_collabo_2d12e2b3.jpg";
+import remoteWorkImage from "@assets/stock_images/professional_woman_w_0d590630.jpg";
+import officeWorkspaceImage from "@assets/stock_images/modern_office_worksp_4f27422a.jpg";
+import teamCelebrationImage from "@assets/stock_images/team_celebration_suc_ed7a51e1.jpg";
 
 export default function Careers() {
   const { scrollY } = useScroll();
@@ -279,8 +283,8 @@ export default function Careers() {
         />
       </section>
 
-      {/* Why Join Us - Benefits Grid */}
-      <section className="relative py-16 md:py-24">
+      {/* Why Join Us - Bento Box Layout with Images */}
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -298,33 +302,237 @@ export default function Careers() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+          {/* Bento Grid - Asymmetric Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {/* Large Featured Card - Health & Wellness with Background Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="md:col-span-2 lg:row-span-2"
+            >
+              <Card
+                className="relative h-full min-h-[400px] overflow-hidden hover-elevate active-elevate-2 group"
+                data-testid="card-benefit-featured"
               >
-                <Card
-                  className="h-full hover-elevate active-elevate-2 overflow-visible"
-                  data-testid={`card-benefit-${index}`}
-                >
-                  <CardContent className="p-6">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      <benefit.icon className="h-6 w-6 text-primary" />
+                {/* Background Image with Gradient Overlay */}
+                <div className="absolute inset-0">
+                  <img
+                    src={teamCollabImage}
+                    alt="Team collaboration"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-chart-2/80" />
+                </div>
+
+                <CardContent className="relative z-10 p-8 h-full flex flex-col justify-end text-white">
+                  <div className="bg-white/10 backdrop-blur-sm w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border border-white/20">
+                    <Heart className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    Health & Wellness
+                  </h3>
+                  <p className="text-white/90 text-lg mb-4">
+                    Comprehensive health insurance, mental health support, and wellness programs designed to keep you at your best
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
+                      Medical Coverage
+                    </Badge>
+                    <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
+                      Dental & Vision
+                    </Badge>
+                    <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
+                      Wellness Programs
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Medium Card - Competitive Salary */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="lg:col-span-2"
+            >
+              <Card className="h-full hover-elevate active-elevate-2" data-testid="card-benefit-1">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-gradient-to-br from-primary/20 to-chart-2/20 w-14 h-14 rounded-xl flex items-center justify-center shrink-0">
+                      <DollarSign className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2">
+                        Competitive Salary
+                      </h3>
+                      <p className="text-muted-foreground">
+                        Market-leading compensation packages with annual reviews and performance bonuses
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Tall Card with Image - Flexible Hours */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="lg:row-span-2"
+            >
+              <Card
+                className="relative h-full min-h-[300px] overflow-hidden hover-elevate active-elevate-2 group"
+                data-testid="card-benefit-2"
+              >
+                <div className="absolute inset-0">
+                  <img
+                    src={officeWorkspaceImage}
+                    alt="Modern workspace"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                </div>
+                <CardContent className="relative z-10 p-6 h-full flex flex-col justify-end">
+                  <div className="bg-primary/10 backdrop-blur-sm w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-primary/20">
+                    <Clock className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Flexible Hours
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Work-life balance with flexible scheduling that fits your lifestyle
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Tall Card with Image - Remote Options */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="lg:row-span-2"
+            >
+              <Card
+                className="relative h-full min-h-[300px] overflow-hidden hover-elevate active-elevate-2 group"
+                data-testid="card-benefit-3"
+              >
+                <div className="absolute inset-0">
+                  <img
+                    src={remoteWorkImage}
+                    alt="Remote work"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                </div>
+                <CardContent className="relative z-10 p-6 h-full flex flex-col justify-end">
+                  <div className="bg-chart-2/10 backdrop-blur-sm w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-chart-2/20">
+                    <Laptop className="h-6 w-6 text-chart-2" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Remote Options
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Hybrid and fully remote work opportunities from anywhere in the world
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Wide Card - Learning & Development */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="lg:col-span-2"
+            >
+              <Card
+                className="relative h-full overflow-hidden hover-elevate active-elevate-2 group"
+                data-testid="card-benefit-4"
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-gradient-to-br from-chart-3/20 to-primary/20 w-14 h-14 rounded-xl flex items-center justify-center shrink-0">
+                      <GraduationCap className="h-7 w-7 text-chart-3" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2">
+                        Learning & Development
+                      </h3>
+                      <p className="text-muted-foreground">
+                        Continuous training, certifications, and skill enhancement programs to advance your career
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Small Card with Image - Great Perks */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="md:col-span-2"
+            >
+              <Card
+                className="relative h-full min-h-[200px] overflow-hidden hover-elevate active-elevate-2 group"
+                data-testid="card-benefit-5"
+              >
+                <div className="absolute inset-0">
+                  <img
+                    src={teamCelebrationImage}
+                    alt="Team celebration"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-chart-4/90 via-chart-4/70 to-primary/80" />
+                </div>
+                <CardContent className="relative z-10 p-6 h-full flex items-center">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-white/10 backdrop-blur-sm w-12 h-12 rounded-lg flex items-center justify-center shrink-0 border border-white/20">
+                      <Coffee className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1 text-white">
+                      <h3 className="text-xl font-semibold mb-2">
+                        Amazing Perks
+                      </h3>
+                      <p className="text-white/90">
+                        Free meals, gym memberships, team events, and much more to make work enjoyable
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
+
+        {/* Floating Background Elements */}
+        <motion.div
+          className="absolute top-10 right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"
+          animate={{
+            y: [0, -30, 0],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-10 w-60 h-60 bg-chart-2/5 rounded-full blur-3xl"
+          animate={{
+            y: [0, 30, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
       </section>
 
       {/* Our Culture - Side by Side with Image */}
