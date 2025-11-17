@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
-import { AnimatedGridBackground } from "@/components/ui/animated-grid-background";
 import {
   Briefcase,
   Users,
@@ -330,8 +329,6 @@ export default function Careers() {
 
       {/* Our Culture - Side by Side with Image */}
       <section id="our-culture" className="relative py-16 md:py-24 overflow-hidden">
-        <AnimatedGridBackground />
-        
         <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content Left */}
@@ -565,8 +562,6 @@ export default function Careers() {
 
       {/* Application Process - Timeline */}
       <section className="relative py-16 md:py-24">
-        <AnimatedGridBackground />
-        
         <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
