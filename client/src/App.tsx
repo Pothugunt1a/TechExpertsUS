@@ -18,6 +18,7 @@ import PMS from "@/pages/PMS";
 import Consulting from "@/pages/Consulting";
 import Outsourcing from "@/pages/Outsourcing";
 import StaffingSolutions from "@/pages/StaffingSolutions";
+import Careers from "@/pages/Careers";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/consult/consulting" component={Consulting} />
       <Route path="/consult/outsourcing" component={Outsourcing} />
       <Route path="/consult/staffing" component={StaffingSolutions} />
+      <Route path="/careers" component={Careers} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

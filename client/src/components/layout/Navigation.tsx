@@ -26,6 +26,7 @@ const navItems = [
       { name: "Staffing Solutions", path: "/consult/staffing" },
     ],
   },
+  { name: "Careers", path: "/careers" },
   { name: "Contact", path: "/contact" },
 ];
 
