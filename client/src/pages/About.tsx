@@ -500,7 +500,7 @@ export default function About() {
             >
               <div className="relative h-96 rounded-3xl overflow-hidden">
                 <img
-                  src="/assets/Consulting1.gif"
+                  src="/assets/About2.jpg"
                   alt="Excellence at Tech Expertsus"
                   className="w-full h-full object-cover"
                 />
@@ -755,7 +755,7 @@ export default function About() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/assets/About9.jpeg)" }}
+          style={{ backgroundImage: "url(/assets/About10.png)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
 
@@ -849,7 +849,7 @@ export default function About() {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                       clipPath: "polygon(0 0, 100% 0, 75% 100%, 0 100%)",
-                      backgroundImage: "url(/assets/Staffing3.png)",
+                      backgroundImage: "url(/assets/About11.jpg)",
                     }}
                   />
                 </div>
@@ -1109,7 +1109,7 @@ export default function About() {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                       clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%)",
-                      backgroundImage: "url(/assets/Consulting8.png)",
+                      backgroundImage: "url(/assets/About12.jpg)",
                     }}
                   />
                 </div>
@@ -1130,7 +1130,7 @@ export default function About() {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                       clipPath: "polygon(0 0, 100% 0, 75% 100%, 0 100%)",
-                      backgroundImage: "url(/assets/Outsourcing.gif)",
+                      backgroundImage: "url(/assets/About13.jpg)",
                     }}
                   />
                 </div>
