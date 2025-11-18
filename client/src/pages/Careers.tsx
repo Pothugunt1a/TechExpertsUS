@@ -37,7 +37,7 @@ export default function Careers() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -78,7 +78,8 @@ export default function Careers() {
     {
       icon: Target,
       title: "Innovation First",
-      description: "We embrace cutting-edge technologies and creative solutions",
+      description:
+        "We embrace cutting-edge technologies and creative solutions",
       gradient: "from-primary/20 to-chart-2/20",
     },
     {
@@ -178,19 +179,22 @@ export default function Careers() {
     {
       name: "Sarah Johnson",
       role: "Senior Developer",
-      quote: "Best decision of my career. The team is incredibly supportive and the projects are challenging and rewarding.",
+      quote:
+        "Best decision of my career. The team is incredibly supportive and the projects are challenging and rewarding.",
       avatar: "SJ",
     },
     {
       name: "Michael Chen",
       role: "UX Designer",
-      quote: "The creative freedom and collaborative environment here allow me to do my best work every day.",
+      quote:
+        "The creative freedom and collaborative environment here allow me to do my best work every day.",
       avatar: "MC",
     },
     {
       name: "Emily Rodriguez",
       role: "Project Manager",
-      quote: "Tech Experts invests in their people. I've grown more here in two years than I did in five at my previous company.",
+      quote:
+        "Tech Experts invests in their people. I've grown more here in two years than I did in five at my previous company.",
       avatar: "ER",
     },
   ];
@@ -204,12 +208,12 @@ export default function Careers() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/assets/Careers-banner.jpeg)" }}
         />
-        
+
         {/* Subtle overlay */}
         <div className="absolute inset-0 bg-background/40" />
-        
+
         <ParticleBackground />
-        
+
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
           className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 text-center"
@@ -245,8 +249,9 @@ export default function Careers() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Join a team of passionate innovators shaping the future of technology.
-            We're looking for talented individuals ready to make an impact.
+            Join a team of passionate innovators shaping the future of
+            technology. We're looking for talented individuals ready to make an
+            impact.
           </motion.p>
 
           <motion.div
@@ -258,7 +263,7 @@ export default function Careers() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90"
-              onClick={() => scrollToSection('open-positions')}
+              onClick={() => scrollToSection("open-positions")}
               data-testid="button-view-positions"
             >
               View Open Positions <Briefcase className="ml-2 h-4 w-4" />
@@ -266,7 +271,7 @@ export default function Careers() {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection('our-culture')}
+              onClick={() => scrollToSection("our-culture")}
               data-testid="button-learn-culture"
             >
               Learn About Our Culture
@@ -342,11 +347,10 @@ export default function Careers() {
                   <div className="bg-white/10 backdrop-blur-sm w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border border-white/20">
                     <Heart className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold mb-3">
-                    Health & Wellness
-                  </h3>
+                  <h3 className="text-3xl font-bold mb-3">Health & Wellness</h3>
                   <p className="text-white/90 text-lg mb-4">
-                    Comprehensive health insurance, mental health support, and wellness programs designed to keep you at your best
+                    Comprehensive health insurance, mental health support, and
+                    wellness programs designed to keep you at your best
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
@@ -371,7 +375,10 @@ export default function Careers() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="lg:col-span-2"
             >
-              <Card className="h-full hover-elevate active-elevate-2" data-testid="card-benefit-1">
+              <Card
+                className="h-full hover-elevate active-elevate-2"
+                data-testid="card-benefit-1"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-gradient-to-br from-primary/20 to-chart-2/20 w-14 h-14 rounded-xl flex items-center justify-center shrink-0">
@@ -382,7 +389,8 @@ export default function Careers() {
                         Competitive Salary
                       </h3>
                       <p className="text-muted-foreground">
-                        Market-leading compensation packages with annual reviews and performance bonuses
+                        Market-leading compensation packages with annual reviews
+                        and performance bonuses
                       </p>
                     </div>
                   </div>
@@ -414,11 +422,10 @@ export default function Careers() {
                   <div className="bg-primary/10 backdrop-blur-sm w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-primary/20">
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Flexible Hours
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">Flexible Hours</h3>
                   <p className="text-muted-foreground">
-                    Work-life balance with flexible scheduling that fits your lifestyle
+                    Work-life balance with flexible scheduling that fits your
+                    lifestyle
                   </p>
                 </CardContent>
               </Card>
@@ -448,11 +455,10 @@ export default function Careers() {
                   <div className="bg-chart-2/10 backdrop-blur-sm w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-chart-2/20">
                     <Laptop className="h-6 w-6 text-chart-2" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Remote Options
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">Remote Options</h3>
                   <p className="text-muted-foreground">
-                    Hybrid and fully remote work opportunities from anywhere in the world
+                    Hybrid and fully remote work opportunities from anywhere in
+                    the world
                   </p>
                 </CardContent>
               </Card>
@@ -480,7 +486,8 @@ export default function Careers() {
                         Learning & Development
                       </h3>
                       <p className="text-muted-foreground">
-                        Continuous training, certifications, and skill enhancement programs to advance your career
+                        Continuous training, certifications, and skill
+                        enhancement programs to advance your career
                       </p>
                     </div>
                   </div>
@@ -518,7 +525,8 @@ export default function Careers() {
                         Amazing Perks
                       </h3>
                       <p className="text-white/90">
-                        Free meals, gym memberships, team events, and much more to make work enjoyable
+                        Free meals, gym memberships, team events, and much more
+                        to make work enjoyable
                       </p>
                     </div>
                   </div>
@@ -548,7 +556,10 @@ export default function Careers() {
       </section>
 
       {/* Our Culture - Side by Side with Image */}
-      <section id="our-culture" className="relative py-16 md:py-24 overflow-hidden">
+      <section
+        id="our-culture"
+        className="relative py-16 md:py-24 overflow-hidden"
+      >
         <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content Left */}
@@ -558,7 +569,7 @@ export default function Careers() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Badge 
+              <Badge
                 className="mb-4 bg-primary/10 text-primary border-primary/20"
                 data-testid="badge-culture"
               >
@@ -572,8 +583,8 @@ export default function Careers() {
               <p className="text-lg text-muted-foreground mb-8">
                 At Tech Experts, we foster a culture of creativity, continuous
                 learning, and mutual respect. Our team members are empowered to
-                take ownership of their work and make meaningful contributions to
-                projects that shape industries.
+                take ownership of their work and make meaningful contributions
+                to projects that shape industries.
               </p>
 
               <div className="space-y-4">
@@ -636,7 +647,9 @@ export default function Careers() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold">500+</div>
-                    <div className="text-sm text-muted-foreground">Team Members</div>
+                    <div className="text-sm text-muted-foreground">
+                      Team Members
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -747,11 +760,13 @@ export default function Careers() {
             </p>
           </motion.div>
 
-          <TestimonialCarousel testimonials={testimonials.map(t => ({
-            content: t.quote,
-            author: t.name,
-            role: t.role
-          }))} />
+          <TestimonialCarousel
+            testimonials={testimonials.map((t) => ({
+              content: t.quote,
+              author: t.name,
+              role: t.role,
+            }))}
+          />
         </div>
       </section>
 
@@ -856,7 +871,7 @@ export default function Careers() {
                 <Button
                   size="lg"
                   className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
-                  onClick={() => scrollToSection('open-positions')}
+                  onClick={() => scrollToSection("open-positions")}
                   data-testid="button-browse-jobs"
                 >
                   Browse All Jobs
