@@ -445,31 +445,14 @@ export default function About() {
             </div>
           </section>
 
-          {/* Second Row - Image Left */}
+          {/* Second Row - Content Left, Image Right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative order-2 lg:order-1"
-            >
-              <div className="relative h-96 rounded-3xl overflow-hidden">
-                <img
-                  src="/assets/Consulting1.gif"
-                  alt="Excellence at Tech Expertsus"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6 order-1 lg:order-2"
+              className="space-y-6 order-1 lg:order-1"
             >
               <div className="inline-block px-4 py-2 bg-chart-2/10 border border-chart-2/20 rounded-full mb-4">
                 <span className="text-sm font-semibold text-chart-2">
@@ -505,6 +488,23 @@ export default function About() {
                     Inspiring Excellence
                   </p>
                 </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative order-2 lg:order-2"
+            >
+              <div className="relative h-96 rounded-3xl overflow-hidden">
+                <img
+                  src="/assets/Consulting1.gif"
+                  alt="Excellence at Tech Expertsus"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
             </motion.div>
           </div>
