@@ -344,40 +344,6 @@ export default function About() {
         </motion.div>
       </section>
 
-      {/* Stats Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
-        <AnimatedGridBackground />
-
-        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="text-center group"
-                data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, "-")}`}
-              >
-                <motion.div
-                  className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 mb-6 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                >
-                  <stat.icon className="w-10 h-10 text-primary" />
-                </motion.div>
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </div>
-                <p className="text-muted-foreground font-semibold tracking-wide">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why Tech Experts USA - Alternating Image/Text Layout */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
