@@ -19,7 +19,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import heroImage from "@assets/ProjectManagement_1760669441810.png";
 import processImage from "@assets/stock_images/business_process_imp_401b7a1a.jpg";
-import softwareDevImage from "@assets/stock_images/software_development_b3e036ce.jpg";
 
 export default function PMS() {
   const { scrollY } = useScroll();
@@ -309,96 +308,7 @@ export default function PMS() {
         </div>
       </section>
 
-      {/* Custom Software Development - Split Background (Security Solutions Style) */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 flex">
-          <div className="w-1/2 bg-gradient-to-br from-primary/10 to-chart-2/10" />
-          <div className="w-1/2" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content Left */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-block mb-4">
-                <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20" data-testid="badge-software-solutions">
-                  <Code className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-semibold text-primary">Software Solutions</span>
-                </div>
-              </div>
-
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="heading-custom-software">
-                Custom Software <span className="text-primary">Development</span>
-              </h2>
-
-              <p className="text-lg text-muted-foreground mb-6" data-testid="text-software-description">
-                Tech Expertsus delivers fully customized software solutions built precisely around your business requirements. Our tailored systems eliminate the need for multiple third-party tools, remove costly licensing fees, and reduce maintenance overhead.
-              </p>
-
-              <div className="space-y-3">
-                {[
-                  "Requirements gathering",
-                  "Predefined frameworks and methodologies",
-                  "Process-oriented development",
-                  "Quality assurance and testing",
-                  "Installation, training, and onboarding",
-                  "Ongoing support and troubleshooting"
-                ].map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center gap-3"
-                    data-testid={`feature-software-${index}`}
-                  >
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-muted-foreground">{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Image Right */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="relative rounded-2xl overflow-hidden">
-                <img 
-                  src={softwareDevImage} 
-                  alt="Software development"
-                  className="w-full h-[400px] object-cover"
-                  data-testid="img-software-development"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
-                
-                {/* Floating Code Badge */}
-                <motion.div
-                  animate={{
-                    scale: [1, 1.05, 1],
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-primary/20 backdrop-blur-xl border-4 border-primary/30 flex flex-col items-center justify-center shadow-2xl"
-                  data-testid="badge-custom-code"
-                >
-                  <Code className="w-12 h-12 text-primary mb-1" />
-                  <span className="text-xs font-semibold text-primary">Custom</span>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Our Core Services - Carousel Style */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
