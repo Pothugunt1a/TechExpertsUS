@@ -702,14 +702,14 @@ export default function About() {
       {/* Mission & Vision - Side-by-Side Layout */}
       <section className="relative py-20 md:py-28 bg-gradient-to-b from-card/10 to-background">
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            {/* Left Column: Content - Takes 1 column (1/3) */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1.65fr] gap-8 items-center">
+            {/* Left Column: Content - Takes more space */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-6 lg:col-span-1"
+              className="space-y-6"
             >
               <div>
                 <motion.p
@@ -768,13 +768,13 @@ export default function About() {
               </motion.div>
             </motion.div>
 
-            {/* Right Column: Image Cards - Takes 2 columns (2/3) */}
+            {/* Right Column: Image Cards - Takes less space */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
               {/* Mission Card */}
               <MissionVisionCard
@@ -1309,48 +1309,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* A Passion for Innovation - Full Width with Background */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/assets/About9.jpg)" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-            data-testid="section-innovation"
-          >
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", duration: 1 }}
-              className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/40 to-chart-2/40 mb-8"
-            >
-              <Zap className="w-14 h-14 text-white" />
-            </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Innovation Driven
-              <br />Excellence Delivered
-            </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Our dynamic team combines expertise with unwavering focus on quality, 
-              ensuring every IT project meets today's demanding standards.
-            </p>
-            <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
-              At Tech Expertsus, we believe meaningful transformation requires both 
-              innovative thinking and flawless execution.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Our Clients - Scrolling Carousel - KEEP EXACTLY THE SAME */}
+      {/* Our Clients - Scrolling Carousel */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
@@ -1491,6 +1450,47 @@ export default function About() {
               />
             </svg>
           </div>
+        </div>
+      </section>
+
+      {/* A Passion for Innovation - Full Width with Background */}
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/assets/About9.jpg)" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+            data-testid="section-innovation"
+          >
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1 }}
+              className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/40 to-chart-2/40 mb-8"
+            >
+              <Zap className="w-14 h-14 text-white" />
+            </motion.div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Innovation Driven
+              <br />Excellence Delivered
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Our dynamic team combines expertise with unwavering focus on quality, 
+              ensuring every IT project meets today's demanding standards.
+            </p>
+            <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
+              At Tech Expertsus, we believe meaningful transformation requires both 
+              innovative thinking and flawless execution.
+            </p>
+          </motion.div>
         </div>
       </section>
 
