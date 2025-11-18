@@ -8,6 +8,8 @@ import {
   Database,
   Lock,
   Shield,
+  Sparkles,
+  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -220,7 +222,7 @@ export default function ICS() {
         </div>
       </section>
 
-      {/* CTA Section - Modern with Animation */}
+      {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
@@ -241,16 +243,12 @@ export default function ICS() {
               transition={{ duration: 2, repeat: Infinity }}
               className="inline-block mb-6"
             >
-              <Shield className="w-16 h-16 text-primary mx-auto" />
+              <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Ready to Transform Your{" "}
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Infrastructure?
-              </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Ready to Transform Your Infrastructure?
             </h2>
-
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Let our experts help you build a resilient and secure IT infrastructure that drives your business forward. Contact us today to get started.
             </p>
@@ -295,15 +293,15 @@ export default function ICS() {
               className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Secure Infrastructure</span>
               </div>
               <div className="flex items-center gap-2">
-                <Network className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
-                <Lock className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Expert Team</span>
               </div>
             </motion.div>

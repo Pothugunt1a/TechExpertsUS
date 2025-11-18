@@ -833,53 +833,77 @@ export default function Careers() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
-        
-        <motion.div
-          className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
+          <ParticleBackground />
+        </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-3 lg:px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Make an{" "}
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Impact?
-              </span>
+            <motion.div
+              animate={{
+                scale: [1, 1.05, 1],
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="inline-block mb-6"
+            >
+              <Sparkles className="w-16 h-16 text-primary mx-auto" />
+            </motion.div>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Ready to Make an Impact?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Join our team of innovators and help us build the future of
               technology. Your next career move starts here.
             </p>
+
             <div className="flex flex-wrap gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90"
+                className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
                 onClick={() => scrollToSection('open-positions')}
                 data-testid="button-browse-jobs"
               >
-                Browse All Jobs <Zap className="ml-2 h-4 w-4" />
+                Browse All Jobs
               </Button>
               <Button
                 size="lg"
                 variant="outline"
+                className="text-lg px-10 py-6 rounded-lg"
                 asChild
                 data-testid="button-contact-hr"
               >
                 <Link href="/contact">Contact HR Team</Link>
               </Button>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
+            >
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Innovative Culture</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Career Growth</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Great Benefits</span>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

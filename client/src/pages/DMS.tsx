@@ -16,6 +16,7 @@ import {
   CheckCircle2,
   Lightbulb,
   Users,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -736,7 +737,7 @@ export default function DMS() {
         </div>
       </section>
 
-      {/* Final CTA Section with Gradient */}
+      {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
@@ -757,17 +758,13 @@ export default function DMS() {
               transition={{ duration: 2, repeat: Infinity }}
               className="inline-block mb-6"
             >
-              <Shield className="w-16 h-16 text-primary mx-auto" />
+              <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Ready to Transform Your{" "}
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Infrastructure?
-              </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Ready to Transform Your Infrastructure?
             </h2>
-
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Join hundreds of businesses that trust Tech Expertsus for their
               data center management needs. Let's build the future together.
             </p>
@@ -780,7 +777,7 @@ export default function DMS() {
                 >
                   <Button
                     size="lg"
-                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50 transition-all"
+                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
                     data-testid="button-get-started"
                   >
                     Get in Touch
@@ -795,7 +792,7 @@ export default function DMS() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-lg px-10 py-6 rounded-lg border-primary/30 hover:border-primary/60 transition-all"
+                    className="text-lg px-10 py-6 rounded-lg"
                     data-testid="button-explore-services"
                   >
                     Explore All Services
@@ -812,15 +809,15 @@ export default function DMS() {
               className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Secure Infrastructure</span>
               </div>
               <div className="flex items-center gap-2">
-                <Network className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
-                <Lock className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Expert Team</span>
               </div>
             </motion.div>
