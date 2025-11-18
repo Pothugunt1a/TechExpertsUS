@@ -1,3 +1,4 @@
+
 import { ParticleBackground } from "./particle-background";
 
 export function HeroCarousel() {
@@ -9,10 +10,9 @@ export function HeroCarousel() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
         style={{
-          minWidth: '100%',
-          minHeight: '100%',
+          objectPosition: 'center center',
         }}
       >
         <source src="/assets/Home.mp4" type="video/mp4" />
