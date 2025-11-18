@@ -5,6 +5,7 @@ import {
   Cloud,
   Briefcase,
   TrendingDown,
+  TrendingUp,
   Users,
   CheckCircle,
   Target,
