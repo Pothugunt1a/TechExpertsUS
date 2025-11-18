@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
+import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import {
   Briefcase,
   Users,
@@ -726,61 +727,31 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Employee Testimonials - Horizontal Scroll */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
+      {/* Employee Testimonials */}
+      <section className="relative py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                 What Our Team Says
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground">
               Hear from the people who make Tech Experts a great place to work
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card
-                  className="h-full hover-elevate overflow-visible"
-                  data-testid={`card-testimonial-${index}`}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center text-white font-semibold">
-                        {testimonial.avatar}
-                      </div>
-                      <div>
-                        <div className="font-semibold">{testimonial.name}</div>
-                        <div className="text-sm text-muted-foreground">
-                          {testimonial.role}
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground italic">
-                      "{testimonial.quote}"
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <TestimonialCarousel testimonials={testimonials.map(t => ({
+            content: t.quote,
+            author: t.name,
+            role: t.role
+          }))} />
         </div>
       </section>
 
