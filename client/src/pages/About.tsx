@@ -868,39 +868,7 @@ export default function About() {
       </section>
 
       {/* What We Do - Diagonal Split Layout (like Staffing page) */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30 overflow-hidden">
-        {/* Animated Background Effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Animated gradient orbs */}
-          <motion.div
-            className="absolute top-20 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, 50, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, -80, 0],
-              y: [0, -50, 0],
-              scale: [1, 1.3, 1],
-            }}
-            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          />
-          <motion.div
-            className="absolute top-1/2 left-1/2 w-80 h-80 bg-primary/15 rounded-full blur-3xl"
-            animate={{
-              x: [0, -60, 0],
-              y: [0, 60, 0],
-              scale: [1, 1.15, 1],
-            }}
-            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          />
-        </div>
-
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
