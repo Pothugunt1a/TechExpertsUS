@@ -324,8 +324,10 @@ export default function Outsourcing() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Strategic Outsourcing Solutions
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Strategic Outsourcing Solutions
+                </span>
               </h2>
 
               <div className="space-y-4 text-lg text-muted-foreground">
@@ -368,8 +370,10 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Client Challenges We Address
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Client Challenges We Address
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We tackle the most critical challenges facing modern businesses
@@ -536,8 +540,10 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              What Tech Expertsus Provides
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                What Tech Expertsus Provides
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Transparent, flexible and scalable full service offerings
@@ -743,8 +749,10 @@ export default function Outsourcing() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Business Value
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Business Value
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Measurable outcomes that drive your business forward

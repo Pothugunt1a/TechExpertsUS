@@ -199,8 +199,10 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Send Us a Message
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Send Us a Message
+                </span>
               </h2>
               <Form {...form}>
                 <form
@@ -326,8 +328,10 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Contact Information
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Contact Information
+                </span>
               </h2>
               <div className="space-y-6 mb-12">
                 <div className="flex items-start space-x-4">
@@ -417,8 +421,10 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Our Global Presence
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Our Global Presence
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Serving clients worldwide

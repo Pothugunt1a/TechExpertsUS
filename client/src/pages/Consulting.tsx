@@ -323,8 +323,10 @@ export default function Consulting() {
                 </div>
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Future-Focused Solutions
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Future-Focused Solutions
+                </span>
               </h2>
 
               <div className="space-y-4 text-lg text-muted-foreground">
@@ -423,8 +425,10 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Client Challenges We Address
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Client Challenges We Address
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We tackle the most critical challenges facing modern businesses
@@ -627,8 +631,10 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Transformation Is Key
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Transformation Is Key
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Everyone talks about transformation, but transformation into what?
@@ -802,13 +808,15 @@ export default function Consulting() {
 
               {/* Heading */}
               <motion.h2
-                className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
+                className="text-3xl md:text-4xl font-bold mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                Competitive Advantages
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Competitive Advantages
+                </span>
               </motion.h2>
 
               {/* Description */}
@@ -966,8 +974,10 @@ export default function Consulting() {
                 </span>
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Excellence in Practice
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Excellence in Practice
+              </span>
             </h2>
           </motion.div>
 

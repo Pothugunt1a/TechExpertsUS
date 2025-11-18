@@ -302,8 +302,10 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Why Join <span className="text-primary">Tech Experts?</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Why Join Tech Experts?
+              </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We believe in investing in our people and creating an environment
@@ -561,9 +563,10 @@ export default function Careers() {
               >
                 Our Culture
               </Badge>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Where Innovation Meets{" "}
-                <span className="text-primary">Collaboration</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Where Innovation Meets Collaboration
+                </span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 At Tech Experts, we foster a culture of creativity, continuous
@@ -651,8 +654,10 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Open <span className="text-primary">Positions</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Open Positions
+              </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Explore opportunities across various departments and find your
@@ -733,8 +738,10 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              What Our Team <span className="text-primary">Says</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                What Our Team Says
+              </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Hear from the people who make Tech Experts a great place to work
@@ -787,8 +794,10 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Our Application <span className="text-primary">Process</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Our Application Process
+              </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               A simple, transparent hiring process designed to find the best fit
