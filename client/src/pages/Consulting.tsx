@@ -1071,7 +1071,10 @@ export default function Consulting() {
             </motion.div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Ready to Transform Your Business?
+              Ready to Transform Your{" "}
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Business?
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Let our consulting experts help you anticipate the future and stay
