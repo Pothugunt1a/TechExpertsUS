@@ -451,58 +451,113 @@ export default function DMS() {
         </div>
       </section>
 
-      {/* IT Services Details Section - Matching Website Theme */}
-      <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Our Core Capabilities
-              </span>
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our IT Services helps you in managing your day to day IT needs
-              through a strong and reliable IT infrastructure. Our Tech
-              Expertsus works on Business Effective model where our customers
-              extracts maximum returns out of their limited investments.
-            </p>
-          </motion.div>
+      {/* IT Services Details Section - Diagonal Split with Image */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-chart-2/5" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+        {/* Diagonal Background Split */}
+        <div className="absolute inset-0">
+          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-br from-primary/10 to-chart-2/10 transform skew-x-12 origin-top-right" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-block mb-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+                  <Shield className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-semibold text-primary">
+                    Core Capabilities
+                  </span>
+                </div>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Our Core <span className="text-primary">Capabilities</span>
+              </h2>
+
+              <p className="text-lg text-muted-foreground mb-8">
+                Our IT Services helps you in managing your day to day IT needs
+                through a strong and reliable IT infrastructure. Our Tech
+                Expertsus works on Business Effective model where our customers
+                extracts maximum returns out of their limited investments.
+              </p>
+
+              <div className="space-y-6">
+                {features.slice(0, 5).map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-start gap-4"
+                    data-testid={`feature-${index}`}
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <feature.icon className="w-6 h-6 text-primary" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Image Right with Floating Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/DMS2.webp"
+                  alt="Core Capabilities"
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              </div>
+
+              {/* Floating Stats Card */}
               <motion.div
-                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                whileHover={{ x: 10 }}
-                className="group cursor-pointer"
-                data-testid={`feature-${index}`}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="absolute -bottom-8 -left-8 bg-background/95 backdrop-blur-xl border border-primary/20 rounded-2xl p-6 shadow-2xl"
               >
-                <div className="flex items-start space-x-4">
-                  <motion.div
-                    className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-chart-2/30 transition-colors flex-shrink-0"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                  >
-                    <feature.icon className="w-7 h-7 text-primary" />
-                  </motion.div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-2 text-foreground">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
+                    <TrendingUp className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-primary">
+                      24/7
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Monitoring
+                    </div>
                   </div>
                 </div>
               </motion.div>
-            ))}
+            </motion.div>
           </div>
         </div>
       </section>
