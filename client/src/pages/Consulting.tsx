@@ -1049,7 +1049,7 @@ export default function Consulting() {
       {/* CTA Section */}
       <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
-        
+
         <motion.div
           className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
           animate={{
@@ -1085,7 +1085,7 @@ export default function Consulting() {
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-primary/90"
-                    data-testid="button-contact-consulting"
+                    data-testid="button-get-started"
                   >
                     Get in Touch
                   </Button>
@@ -1099,9 +1099,9 @@ export default function Consulting() {
                   <Button
                     size="lg"
                     variant="outline"
-                    data-testid="button-view-services"
+                    data-testid="button-explore-services"
                   >
-                    View All Services
+                    Explore All Services
                   </Button>
                 </motion.div>
               </Link>
