@@ -15,7 +15,6 @@ import {
   Headphones,
   GraduationCap,
   Trophy,
-  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -1023,7 +1022,7 @@ export default function StaffingSolutions() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Modern with Animation */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
@@ -1051,8 +1050,8 @@ export default function StaffingSolutions() {
               Ready to Build Your Dream Team?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Partner with us to find the perfect talent for your organization.
-              Let's build something amazing together.
+              Let us help you find the perfect talent with our comprehensive
+              staffing solutions. Contact us today to get started.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -1064,7 +1063,7 @@ export default function StaffingSolutions() {
                   <Button
                     size="lg"
                     className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
-                    data-testid="button-get-started"
+                    data-testid="button-contact-staffing"
                   >
                     Get in Touch
                   </Button>
@@ -1079,9 +1078,9 @@ export default function StaffingSolutions() {
                     size="lg"
                     variant="outline"
                     className="text-lg px-10 py-6 rounded-lg"
-                    data-testid="button-explore-services"
+                    data-testid="button-view-services"
                   >
-                    Explore All Services
+                    View All Services
                   </Button>
                 </motion.div>
               </Link>
@@ -1095,16 +1094,16 @@ export default function StaffingSolutions() {
               className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                <span>Expert Recruitment</span>
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>No Hidden Fees</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                <span>Quality Talent</span>
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>Quick Turnaround</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                <span>Fast Turnaround</span>
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span>Satisfaction Guaranteed</span>
               </div>
             </motion.div>
           </motion.div>
