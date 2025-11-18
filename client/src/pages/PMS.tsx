@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
+import { ServicesCarousel } from "@/components/ui/services-carousel";
 import {
   TrendingUp,
   Shield,
@@ -30,41 +31,49 @@ export default function PMS() {
       icon: Code,
       title: "Custom Software Development",
       description: "Tech Expertsus delivers fully customized software solutions built precisely around your business requirements. Our tailored systems eliminate the need for multiple third-party tools, remove costly licensing fees, and reduce maintenance overhead.",
+      image: "/assets/Consulting2.png",
     },
     {
       icon: Globe,
       title: "Web Application Development",
       description: "As digital interactions continue to expand, businesses increasingly rely on sophisticated web applications for everything from collaboration to commerce. We deliver full-cycle web application development—from strategy and planning to design, development, testing, and deployment.",
+      image: "/assets/Consulting3.png",
     },
     {
       icon: Shield,
       title: "Secure Internet Solutions",
       description: "Tech Expertsus provides secure, scalable U.S.-based solutions built for small and medium enterprises. Our private-cloud and security technologies reduce your IT burden, lower ownership costs, and give you unmatched flexibility.",
+      image: "/assets/Consulting8.png",
     },
     {
       icon: Lock,
       title: "Secure Intranet Solutions",
       description: "Our secure intranet platform enhances collaboration and communication within your organization through features such as enterprise social networking, business email, online document management, project management tools, and 256-bit encryption.",
+      image: "/assets/Consulting10.jpg",
     },
     {
       icon: Smartphone,
       title: "Responsive Web Design",
       description: "Responsive Web Design (RWD) delivers an optimized experience across all devices—desktops, laptops, tablets, and smartphones. Our designers ensure your site adapts gracefully to any screen size using fluid grids and CSS media queries.",
+      image: "/assets/Consulting11.jpg",
     },
     {
       icon: Layers,
       title: "3rd Party Integrations",
       description: "Every business can benefit from strategic third-party integrations. Tech Expertsus specializes in seamless integration with powerful external applications using APIs, XML, and white-labeling methods.",
+      image: "/assets/Consulting12.jpg",
     },
     {
       icon: Database,
       title: "Enterprise Database Solutions",
       description: "Modern organizations generate massive volumes of data, creating challenges in storage, management, and analysis. Tech Expertsus provides enterprise-grade database solutions designed to boost productivity and reduce operating costs.",
+      image: "/assets/Consulting13.jpg",
     },
     {
       icon: Users,
       title: "Scrum Training",
       description: "Scrum is a lightweight, agile framework that enables teams to deliver high-quality software efficiently. At Tech Expertsus, we offer comprehensive Scrum training led by industry professionals.",
+      image: "/assets/Staffing1.gif",
     },
   ];
 
@@ -391,17 +400,17 @@ export default function PMS() {
         </div>
       </section>
 
-      {/* Our Core Services - Matching Home Page Style */}
-      <section className="relative py-24 bg-gradient-to-b from-background to-card/30">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      {/* Our Core Services - Carousel Style */}
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-12 px-3 lg:px-4"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="heading-core-services">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" data-testid="heading-core-services">
               <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                 Our Core Services
               </span>
@@ -411,33 +420,7 @@ export default function PMS() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {coreServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group relative rounded-2xl overflow-hidden bg-gradient-to-br from-background/80 to-card/80 border border-primary/10 hover:border-primary/30 transition-all duration-300 p-6 h-full"
-                data-testid={`card-service-${index}`}
-              >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-chart-2/30 transition-all"
-                  data-testid={`icon-service-${index}`}
-                >
-                  <service.icon className="w-7 h-7 text-primary" />
-                </motion.div>
-                <h3 className="text-xl font-semibold mb-3" data-testid={`heading-service-${index}`}>{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed" data-testid={`text-service-desc-${index}`}>
-                  {service.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          <ServicesCarousel services={coreServices} />
         </div>
       </section>
 
