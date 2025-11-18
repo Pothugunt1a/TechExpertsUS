@@ -438,7 +438,9 @@ export default function Outsourcing() {
                     style={{ right: "30px", top: "20px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">01</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">
+                      01
+                    </span>
                   </motion.div>
 
                   <motion.div
@@ -449,7 +451,9 @@ export default function Outsourcing() {
                     style={{ right: "-76px", top: "94px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">02</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">
+                      02
+                    </span>
                   </motion.div>
 
                   <motion.div
@@ -460,7 +464,9 @@ export default function Outsourcing() {
                     style={{ right: "-118px", top: "218px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">03</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">
+                      03
+                    </span>
                   </motion.div>
 
                   <motion.div
@@ -471,7 +477,9 @@ export default function Outsourcing() {
                     style={{ right: "-76px", top: "343px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">04</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">
+                      04
+                    </span>
                   </motion.div>
 
                   <motion.div
@@ -482,7 +490,9 @@ export default function Outsourcing() {
                     style={{ right: "32px", top: "416px" }}
                     className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
                   >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">05</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">
+                      05
+                    </span>
                   </motion.div>
                 </div>
               </motion.div>
@@ -753,7 +763,9 @@ export default function Outsourcing() {
               <div className="inline-block mb-4">
                 <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
                   <Shield className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-semibold text-primary">Value Delivered</span>
+                  <span className="text-sm font-semibold text-primary">
+                    Value Delivered
+                  </span>
                 </div>
               </div>
 
@@ -762,7 +774,8 @@ export default function Outsourcing() {
               </h2>
 
               <p className="text-lg text-muted-foreground mb-6">
-                Measurable outcomes that drive your business forward through strategic outsourcing partnerships.
+                Measurable outcomes that drive your business forward through
+                strategic outsourcing partnerships.
               </p>
 
               <div className="space-y-6">
@@ -782,8 +795,12 @@ export default function Outsourcing() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">{value.title}</h3>
-                      <p className="text-muted-foreground">{value.description}</p>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {value.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {value.description}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -799,13 +816,13 @@ export default function Outsourcing() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden">
-                <img 
-                  src="/assets/Outsourcing5.png" 
+                <img
+                  src="/assets/Outsourcing10.jpg"
                   alt="Business Value"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
-                
+
                 {/* Floating Value Badge */}
                 <motion.div
                   animate={{
@@ -815,7 +832,9 @@ export default function Outsourcing() {
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-primary/20 backdrop-blur-xl border-4 border-primary/30 flex flex-col items-center justify-center shadow-2xl"
                 >
                   <TrendingUp className="w-12 h-12 text-primary mb-1" />
-                  <span className="text-xs font-semibold text-primary">Value</span>
+                  <span className="text-xs font-semibold text-primary">
+                    Value
+                  </span>
                 </motion.div>
               </div>
             </motion.div>
