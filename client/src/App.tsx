@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/CustomCursor";
+// import { CustomCursor } from "@/components/CustomCursor";
 
 // Pages
 import Home from "@/pages/Home";
@@ -49,7 +49,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
-          <CustomCursor />
+          {/* <CustomCursor /> */}
           <div className="min-h-screen bg-background text-foreground">
             <Navigation />
             <main className="pt-20">
