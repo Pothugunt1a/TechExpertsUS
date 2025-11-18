@@ -29,50 +29,58 @@ export default function PMS() {
     {
       icon: Code,
       title: "Custom Software Development",
-      description: "Tech Expertsus delivers fully customized software solutions built precisely around your business requirements. Our tailored systems eliminate the need for multiple third-party tools, remove costly licensing fees, and reduce maintenance overhead.",
-      image: "/assets/Consulting2.png",
+      description:
+        "Tech Expertsus delivers fully customized software solutions built precisely around your business requirements. Our tailored systems eliminate the need for multiple third-party tools, remove costly licensing fees, and reduce maintenance overhead.",
+      image: "/assets/PMS2.jpg",
     },
     {
       icon: Globe,
       title: "Web Application Development",
-      description: "As digital interactions continue to expand, businesses increasingly rely on sophisticated web applications for everything from collaboration to commerce. We deliver full-cycle web application development—from strategy and planning to design, development, testing, and deployment.",
-      image: "/assets/Consulting3.png",
+      description:
+        "As digital interactions continue to expand, businesses increasingly rely on sophisticated web applications for everything from collaboration to commerce. We deliver full-cycle web application development—from strategy and planning to design, development, testing, and deployment.",
+      image: "/assets/PMS3.jpg",
     },
     {
       icon: Shield,
       title: "Secure Internet Solutions",
-      description: "Tech Expertsus provides secure, scalable U.S.-based solutions built for small and medium enterprises. Our private-cloud and security technologies reduce your IT burden, lower ownership costs, and give you unmatched flexibility.",
-      image: "/assets/Consulting8.png",
+      description:
+        "Tech Expertsus provides secure, scalable U.S.-based solutions built for small and medium enterprises. Our private-cloud and security technologies reduce your IT burden, lower ownership costs, and give you unmatched flexibility.",
+      image: "/assets/PMS4.jpg",
     },
     {
       icon: Lock,
       title: "Secure Intranet Solutions",
-      description: "Our secure intranet platform enhances collaboration and communication within your organization through features such as enterprise social networking, business email, online document management, project management tools, and 256-bit encryption.",
-      image: "/assets/Consulting10.jpg",
+      description:
+        "Our secure intranet platform enhances collaboration and communication within your organization through features such as enterprise social networking, business email, online document management, project management tools, and 256-bit encryption.",
+      image: "/assets/PMS5.jpg",
     },
     {
       icon: Smartphone,
       title: "Responsive Web Design",
-      description: "Responsive Web Design (RWD) delivers an optimized experience across all devices—desktops, laptops, tablets, and smartphones. Our designers ensure your site adapts gracefully to any screen size using fluid grids and CSS media queries.",
-      image: "/assets/Consulting11.jpg",
+      description:
+        "Responsive Web Design (RWD) delivers an optimized experience across all devices—desktops, laptops, tablets, and smartphones. Our designers ensure your site adapts gracefully to any screen size using fluid grids and CSS media queries.",
+      image: "/assets/PMS6.jpg",
     },
     {
       icon: Layers,
       title: "3rd Party Integrations",
-      description: "Every business can benefit from strategic third-party integrations. Tech Expertsus specializes in seamless integration with powerful external applications using APIs, XML, and white-labeling methods.",
-      image: "/assets/Consulting12.jpg",
+      description:
+        "Every business can benefit from strategic third-party integrations. Tech Expertsus specializes in seamless integration with powerful external applications using APIs, XML, and white-labeling methods.",
+      image: "/assets/PMS7.jpg",
     },
     {
       icon: Database,
       title: "Enterprise Database Solutions",
-      description: "Modern organizations generate massive volumes of data, creating challenges in storage, management, and analysis. Tech Expertsus provides enterprise-grade database solutions designed to boost productivity and reduce operating costs.",
-      image: "/assets/Consulting13.jpg",
+      description:
+        "Modern organizations generate massive volumes of data, creating challenges in storage, management, and analysis. Tech Expertsus provides enterprise-grade database solutions designed to boost productivity and reduce operating costs.",
+      image: "/assets/PMS8.jpg",
     },
     {
       icon: Users,
       title: "Scrum Training",
-      description: "Scrum is a lightweight, agile framework that enables teams to deliver high-quality software efficiently. At Tech Expertsus, we offer comprehensive Scrum training led by industry professionals.",
-      image: "/assets/Staffing1.gif",
+      description:
+        "Scrum is a lightweight, agile framework that enables teams to deliver high-quality software efficiently. At Tech Expertsus, we offer comprehensive Scrum training led by industry professionals.",
+      image: "/assets/PMS9.jpg",
     },
   ];
 
@@ -80,10 +88,7 @@ export default function PMS() {
     <div className="min-h-screen">
       {/* Hero Section - Parallax Effect */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <motion.div
-          className="absolute inset-0"
-          style={{ y: heroY }}
-        >
+        <motion.div className="absolute inset-0" style={{ y: heroY }}>
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -100,14 +105,16 @@ export default function PMS() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               data-testid="heading-hero"
             >
-              <span className="block mb-2 text-foreground">Project Management</span>
+              <span className="block mb-2 text-foreground">
+                Project Management
+              </span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient">
                 Solutions
               </span>
@@ -119,7 +126,8 @@ export default function PMS() {
               transition={{ duration: 0.8, delay: 0.4 }}
               data-testid="text-hero-description"
             >
-              Streamline resources, monitor performance, and deliver projects on time with automated execution
+              Streamline resources, monitor performance, and deliver projects on
+              time with automated execution
             </motion.p>
           </motion.div>
         </motion.div>
@@ -130,7 +138,7 @@ export default function PMS() {
       {/* Process Improvement - Diagonal Split with Image */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-chart-2/5" />
-        
+
         {/* Diagonal Background Split */}
         <div className="absolute inset-0">
           <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-br from-primary/10 to-chart-2/10 transform skew-x-12 origin-top-right" />
@@ -146,19 +154,33 @@ export default function PMS() {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-block mb-4">
-                <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20" data-testid="badge-process-excellence">
+                <div
+                  className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
+                  data-testid="badge-process-excellence"
+                >
                   <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-semibold text-primary">Process Excellence</span>
+                  <span className="text-sm font-semibold text-primary">
+                    Process Excellence
+                  </span>
                 </div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="heading-process-improvement">
-                Business Process <span className="text-primary">Improvement</span>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6"
+                data-testid="heading-process-improvement"
+              >
+                Business Process{" "}
+                <span className="text-primary">Improvement</span>
               </h2>
 
-              <p className="text-lg text-muted-foreground mb-8" data-testid="text-process-description">
-                Processes are the key mechanism by which businesses deliver value. We help establish high-performing 
-                processes through systematic assessment, prioritization, and continuous improvement based on strategic imperatives.
+              <p
+                className="text-lg text-muted-foreground mb-8"
+                data-testid="text-process-description"
+              >
+                Processes are the key mechanism by which businesses deliver
+                value. We help establish high-performing processes through
+                systematic assessment, prioritization, and continuous
+                improvement based on strategic imperatives.
               </p>
 
               <div className="space-y-4">
@@ -166,7 +188,7 @@ export default function PMS() {
                   "Understanding customer performance expectations",
                   "Leveraging qualitative and quantitative analytics",
                   "Targeting improvements with highest value impact",
-                  "Building momentum for organizational change"
+                  "Building momentum for organizational change",
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -195,8 +217,8 @@ export default function PMS() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden">
-                <img 
-                  src={processImage} 
+                <img
+                  src={processImage}
                   alt="Process improvement"
                   className="w-full h-[400px] object-cover"
                   data-testid="img-process-improvement"
@@ -218,8 +240,15 @@ export default function PMS() {
                     <Target className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary" data-testid="text-success-rate">95%</div>
-                    <div className="text-sm text-muted-foreground">Success Rate</div>
+                    <div
+                      className="text-3xl font-bold text-primary"
+                      data-testid="text-success-rate"
+                    >
+                      95%
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Success Rate
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -244,17 +273,30 @@ export default function PMS() {
             className="text-center mb-16"
           >
             <div className="inline-block mb-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20" data-testid="badge-risk-management">
+              <div
+                className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
+                data-testid="badge-risk-management"
+              >
                 <Shield className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Risk Management</span>
+                <span className="text-sm font-semibold text-primary">
+                  Risk Management
+                </span>
               </div>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="heading-risk-analysis">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              data-testid="heading-risk-analysis"
+            >
               Comprehensive <span className="text-primary">Risk Analysis</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-risk-description">
-              With decades of experience across multiple industries, Tech Expertsus helps organizations adopt formal risk-management practices tailored to their unique environments.
+            <p
+              className="text-lg text-muted-foreground max-w-3xl mx-auto"
+              data-testid="text-risk-description"
+            >
+              With decades of experience across multiple industries, Tech
+              Expertsus helps organizations adopt formal risk-management
+              practices tailored to their unique environments.
             </p>
           </motion.div>
 
@@ -263,18 +305,18 @@ export default function PMS() {
               {
                 icon: Shield,
                 title: "Portfolio Assessment",
-                description: "Portfolio composition and performance assessment"
+                description: "Portfolio composition and performance assessment",
               },
               {
                 icon: TrendingUp,
                 title: "Cost & Schedule Analysis",
-                description: "Cost and schedule risk analysis"
+                description: "Cost and schedule risk analysis",
               },
               {
                 icon: Target,
                 title: "Risk Optimization",
-                description: "Risk management and simulation optimization"
-              }
+                description: "Risk management and simulation optimization",
+              },
             ].map((service, index) => (
               <motion.div
                 key={index}
@@ -299,16 +341,24 @@ export default function PMS() {
                   >
                     <service.icon className="w-8 h-8 text-primary" />
                   </motion.div>
-                  <h3 className="text-xl font-semibold mb-3" data-testid={`heading-risk-${index}`}>{service.title}</h3>
-                  <p className="text-muted-foreground" data-testid={`text-risk-desc-${index}`}>{service.description}</p>
+                  <h3
+                    className="text-xl font-semibold mb-3"
+                    data-testid={`heading-risk-${index}`}
+                  >
+                    {service.title}
+                  </h3>
+                  <p
+                    className="text-muted-foreground"
+                    data-testid={`text-risk-desc-${index}`}
+                  >
+                    {service.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      
 
       {/* Our Core Services - Carousel Style */}
       <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
@@ -320,13 +370,20 @@ export default function PMS() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 px-3 lg:px-4"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" data-testid="heading-core-services">
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-6"
+              data-testid="heading-core-services"
+            >
               <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                 Our Core Services
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-services-description">
-              Comprehensive project management solutions tailored to your business needs
+            <p
+              className="text-xl text-muted-foreground max-w-3xl mx-auto"
+              data-testid="text-services-description"
+            >
+              Comprehensive project management solutions tailored to your
+              business needs
             </p>
           </motion.div>
 
@@ -363,20 +420,30 @@ export default function PMS() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-testid="heading-cta">
+            <h2
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+              data-testid="heading-cta"
+            >
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Projects?
               </span>
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto" data-testid="text-cta-description">
-              Let us help you implement efficient project management solutions that deliver measurable results
+            <p
+              className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
+              data-testid="text-cta-description"
+            >
+              Let us help you implement efficient project management solutions
+              that deliver measurable results
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact" data-testid="link-contact">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Button
                     size="lg"
                     className="text-lg px-8 bg-primary hover:bg-primary/90"
@@ -387,7 +454,10 @@ export default function PMS() {
                 </motion.div>
               </Link>
               <Link href="/services" data-testid="link-services">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Button
                     size="lg"
                     variant="outline"
