@@ -256,12 +256,12 @@ export default function Services() {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
             >
-              <span className="block mb-2">Technology Platforms</span>
+              <span className="block mb-2 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">Technology Platforms</span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 & Solutions
               </span>
@@ -316,8 +316,10 @@ export default function Services() {
             transition={{ duration: 0.9 }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Core Managed Services
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Core Managed Services
+              </span>
             </h2>
             <motion.p
               className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
@@ -388,8 +390,10 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Why Choose Us
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Why Choose Us
+              </span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
               Excellence in every aspect of our service
@@ -471,8 +475,10 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Our Clients
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Our Clients
+              </span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
               Trusted by industry leaders
@@ -619,8 +625,10 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Client Testimonials
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Client Testimonials
+              </span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
               What our clients say about us

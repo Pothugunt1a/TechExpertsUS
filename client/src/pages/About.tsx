@@ -388,8 +388,10 @@ export default function About() {
                     </div>
                   </motion.div>
 
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                    Think Outside the Box
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                    <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                      Think Outside the Box
+                    </span>
                   </h2>
 
                   <div className="space-y-4 text-lg text-muted-foreground">
@@ -454,8 +456,10 @@ export default function About() {
                   Our Team
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Excellence & Passion
+              <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Excellence & Passion
+                </span>
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We're proud of the outstanding work that we deliver to our
@@ -670,9 +674,11 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
+                  className="text-3xl md:text-4xl font-bold mb-6"
                 >
-                  Driving excellence through innovation and expertise
+                  <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                    Driving excellence through innovation and expertise
+                  </span>
                 </motion.h2>
               </div>
 
@@ -761,8 +767,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Our Core Values
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Our Core Values
+              </span>
             </h2>
             <p className="text-lg text-white/90">
               Principles that guide everything we do
@@ -814,8 +822,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              What We Do
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                What We Do
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Excellence in every dimension

@@ -120,8 +120,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 px-3 lg:px-4"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Our Services
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Our Services
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive IT solutions tailored to your business needs
@@ -423,8 +425,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Client Testimonials
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Client Testimonials
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground">
               What our clients say about us
@@ -454,8 +458,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Our Core Values
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Our Core Values
+              </span>
             </h2>
           </motion.div>
 
