@@ -198,6 +198,15 @@ export default function Careers() {
     <div className="min-h-screen">
       {/* Hero Section with Parallax */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url(/assets/Careers-banner.jpeg)" }}
+        />
+        
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-background/40" />
+        
         <ParticleBackground />
         
         <motion.div
