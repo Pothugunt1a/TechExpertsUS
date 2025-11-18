@@ -9,7 +9,11 @@ export function HeroCarousel() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        style={{
+          minWidth: '100%',
+          minHeight: '100%',
+        }}
       >
         <source src="/assets/Home.mp4" type="video/mp4" />
       </video>

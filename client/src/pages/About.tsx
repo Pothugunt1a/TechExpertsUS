@@ -378,338 +378,19 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why Tech Experts USA - Alternating Image/Text Layout */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-chart-2/10 rounded-full blur-[120px]" />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-              Why Tech Experts USA
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto" />
-          </motion.div>
-
-          {/* Our Culture Section - Matching Consulting Page Layout */}
-          <section className="relative py-10 md:py-16 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
-
-            <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-                {/* Image Placeholder */}
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                  className="order-2 lg:order-1"
-                >
-                  <div className="relative">
-                    <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
-                      <img
-                        src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
-                        alt="Innovation at Tech Expertsus"
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Content */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                  className="order-1 lg:order-2"
-                >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="inline-block mb-4"
-                  >
-                    <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                      <span className="text-sm font-semibold text-primary">
-                        Our Culture
-                      </span>
-                    </div>
-                  </motion.div>
-
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                    Think Outside the Box
-                  </h2>
-
-                  <div className="space-y-4 text-lg text-muted-foreground">
-                    <p>
-                      At Tech Expertsus, you are encouraged to think out of the
-                      box. We enable our colleagues to explore their ideas by
-                      creating a collaborative and entrepreneurial environment.
-                    </p>
-                    <p>
-                      If you consider yourself ready for a challenging but
-                      rewarding career, at Tech Expertsus, you will feel right
-                      at home.
-                    </p>
-                  </div>
-
-                  <div className="mt-8">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0 }}
-                      whileHover={{ y: -5, scale: 1.02 }}
-                      className="group relative p-6 bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 max-w-sm"
-                      data-testid="stat-innovation"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-
-                      <div className="relative z-10 flex items-start gap-4">
-                        <motion.div
-                          whileHover={{ rotate: 360 }}
-                          transition={{ duration: 0.6 }}
-                          className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
-                        >
-                          <Lightbulb className="w-6 h-6 text-primary" />
-                        </motion.div>
-
-                        <div>
-                          <p className="text-2xl font-bold text-primary mb-1">
-                            Innovation
-                          </p>
-                          <p className="text-sm text-muted-foreground">First</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </section>
-
-          {/* Second Row - Image Left */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative order-2 lg:order-1"
-            >
-              <div className="relative h-96 rounded-3xl overflow-hidden">
-                <img
-                  src="/assets/Consulting1.gif"
-                  alt="Excellence at Tech Expertsus"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6 order-1 lg:order-2"
-            >
-              <div className="inline-block px-4 py-2 bg-chart-2/10 border border-chart-2/20 rounded-full mb-4">
-                <span className="text-sm font-semibold text-chart-2">
-                  Our Team
-                </span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Excellence & Passion
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We're proud of the outstanding work that we deliver to our
-                clients, and most importantly, we're proud of our people who
-                make it happen.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                It takes extreme talent, passion for your work and an ability to
-                inspire others to excel here. The drive of a rapidly evolving
-                team, combined with driven individuals all focused on the final
-                goal are vital factors for delivering exceptional IT projects.
-              </p>
-              <div className="flex items-center gap-4 pt-4">
-                <motion.div
-                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-2/30 to-primary/30 flex items-center justify-center"
-                  whileHover={{ scale: 1.1, rotate: -10 }}
-                >
-                  <Award className="w-8 h-8 text-chart-2" />
-                </motion.div>
-                <div>
-                  <p className="font-bold text-gray-900 dark:text-white">
-                    Talent & Passion
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Inspiring Excellence
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Third Row - Service Card Style Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                icon: MapPin,
-                title: "Where We Are",
-                description:
-                  "Corporate Headquarters in Argyle, TX 76226, United States with offshore office in Hyderabad, India. Our development and technical teams support clients globally.",
-                image: "/assets/About3.jpg",
-              },
-              {
-                icon: Calendar,
-                title: "Our Journey",
-                description:
-                  "Tech Expertsus started in 2012 and has been successfully supporting clients ever since, growing to become a preferred IT partner across various industry verticals.",
-                image: "/assets/About4.jpg",
-              },
-              {
-                icon: Rocket,
-                title: "Our Foundation",
-                description:
-                  "Founded on three basic principles: Technology expertise, Innovative solutions, and long-lasting partnership with customers - the pillars of our success.",
-                image: "/assets/About5.jpg",
-              },
-            ].map((item, idx) => {
-              const [isHovered, setIsHovered] = useState(false);
-
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.15, duration: 0.7 }}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
-                  data-testid={`info-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
-                >
-                  {/* Background Image */}
-                  <div className="absolute inset-0">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  {/* Default Overlay - Bottom gradient with title */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-                    animate={{
-                      opacity: isHovered ? 0 : 1,
-                    }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <div className="absolute bottom-0 left-0 right-0 p-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {item.title}
-                      </h3>
-                    </div>
-                  </motion.div>
-
-                  {/* Hover Overlay - Slides up from bottom */}
-                  <motion.div
-                    className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-between p-8"
-                    initial={{ y: "100%" }}
-                    animate={{
-                      y: isHovered ? "0%" : "100%",
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      ease: [0.4, 0.0, 0.2, 1],
-                    }}
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{
-                        opacity: isHovered ? 1 : 0,
-                        y: isHovered ? 0 : 20,
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        delay: isHovered ? 0.2 : 0,
-                      }}
-                      className="flex-1 flex flex-col justify-center"
-                    >
-                      {/* Icon in top right */}
-                      <motion.div
-                        className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
-                        whileHover={{ rotate: 360, scale: 1.1 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <item.icon className="w-7 h-7 text-gray-900 dark:text-white" />
-                      </motion.div>
-                      <h3 className="text-2xl font-bold text-white mb-4">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-200 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </motion.div>
-                  </motion.div>
-
-                  {/* Hover Effect Border */}
-                  <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Heritage Statement - Full Width Banner */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative mt-20 p-12 md:p-16 rounded-3xl text-center overflow-hidden"
-          >
-            {/* Background Image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url(/assets/About6.jpg)" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
-            <div className="relative z-10">
-              <Building2 className="w-16 h-16 text-primary mx-auto mb-6" />
-              <p className="text-xl md:text-2xl text-white leading-relaxed max-w-5xl mx-auto">
-                Established in 2012, Tech Expertsus Technologies has grown to be
-                the preferred IT partner for industry leaders across various
-                verticals. We have an enviable reputation for delivering
-                independent, practical, value-priced advice and services to our
-                chosen market sectors.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Mission & Vision - Side-by-Side Layout */}
       <section className="relative py-20 md:py-28 bg-gradient-to-b from-card/10 to-background">
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            {/* Left Column: Content - Takes 1 column (1/3) */}
+          <div className="grid grid-cols-1 lg:grid-cols-[34%_66%] gap-8 items-center">
+            {/* Left Column: Content - Takes 34% */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-6 lg:col-span-1"
+              className="space-y-6"
             >
               <div>
                 <motion.p
@@ -768,13 +449,13 @@ export default function About() {
               </motion.div>
             </motion.div>
 
-            {/* Right Column: Image Cards - Takes 2 columns (2/3) */}
+            {/* Right Column: Image Cards - Takes 66% */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:col-span-2"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
               {/* Mission Card */}
               <MissionVisionCard
@@ -1309,48 +990,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* A Passion for Innovation - Full Width with Background */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/assets/About9.jpg)" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-            data-testid="section-innovation"
-          >
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", duration: 1 }}
-              className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/40 to-chart-2/40 mb-8"
-            >
-              <Zap className="w-14 h-14 text-white" />
-            </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Innovation Driven
-              <br />Excellence Delivered
-            </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Our dynamic team combines expertise with unwavering focus on quality, 
-              ensuring every IT project meets today's demanding standards.
-            </p>
-            <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
-              At Tech Expertsus, we believe meaningful transformation requires both 
-              innovative thinking and flawless execution.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Our Clients - Scrolling Carousel - KEEP EXACTLY THE SAME */}
+      {/* Our Clients - Scrolling Carousel */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 lg:px-4">
           <motion.div
@@ -1491,6 +1131,47 @@ export default function About() {
               />
             </svg>
           </div>
+        </div>
+      </section>
+
+      {/* A Passion for Innovation - Full Width with Background */}
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/assets/About9.jpg)" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+            data-testid="section-innovation"
+          >
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1 }}
+              className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/40 to-chart-2/40 mb-8"
+            >
+              <Zap className="w-14 h-14 text-white" />
+            </motion.div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Innovation Driven
+              <br />Excellence Delivered
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Our dynamic team combines expertise with unwavering focus on quality, 
+              ensuring every IT project meets today's demanding standards.
+            </p>
+            <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
+              At Tech Expertsus, we believe meaningful transformation requires both 
+              innovative thinking and flawless execution.
+            </p>
+          </motion.div>
         </div>
       </section>
 
