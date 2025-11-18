@@ -181,9 +181,9 @@ export default function ICS() {
                   to come out from outages and disasters.
                 </p>
                 <p>
-                  eLan technology ensures your organization from security breaches
-                  with well-prepared plans and focuses on the risks that were
-                  troubling the company's safety and security.
+                  eLan technology ensures your organization from security
+                  breaches with well-prepared plans and focuses on the risks
+                  that were troubling the company's safety and security.
                 </p>
               </div>
             </motion.div>
@@ -198,7 +198,7 @@ export default function ICS() {
             >
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/assets/Home5.jpg"
+                  src="/assets/ICS1.jpg"
                   alt="Secure Infrastructure"
                   className="w-full h-[400px] object-cover"
                 />
@@ -218,9 +218,7 @@ export default function ICS() {
                     <Shield className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary">
-                      99.9%
-                    </div>
+                    <div className="text-3xl font-bold text-primary">99.9%</div>
                     <div className="text-sm text-muted-foreground">
                       Uptime Guarantee
                     </div>
@@ -248,7 +246,8 @@ export default function ICS() {
               </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive infrastructure services tailored to your business needs
+              Comprehensive infrastructure services tailored to your business
+              needs
             </p>
           </motion.div>
 
@@ -288,7 +287,9 @@ export default function ICS() {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let our experts help you build a resilient and secure IT infrastructure that drives your business forward. Contact us today to get started.
+              Let our experts help you build a resilient and secure IT
+              infrastructure that drives your business forward. Contact us today
+              to get started.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
