@@ -1047,7 +1047,10 @@ export default function StaffingSolutions() {
             </motion.div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Ready to Build Your Dream Team?
+              Ready to Build Your{" "}
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                Dream Team?
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Let us help you find the perfect talent with our comprehensive
