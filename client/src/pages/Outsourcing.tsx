@@ -7,6 +7,7 @@ import {
   TrendingDown,
   Users,
   CheckCircle,
+  CheckCircle2,
   Target,
   Zap,
   Shield,
@@ -784,7 +785,7 @@ export default function Outsourcing() {
         </div>
       </section>
 
-      {/* CTA Section - Modern with Animation */}
+      {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
@@ -808,7 +809,7 @@ export default function Outsourcing() {
               <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Optimize Your IT Operations?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
@@ -826,7 +827,7 @@ export default function Outsourcing() {
                   <Button
                     size="lg"
                     className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
-                    data-testid="button-contact-outsourcing"
+                    data-testid="button-get-started"
                   >
                     Get in Touch
                   </Button>
@@ -841,9 +842,9 @@ export default function Outsourcing() {
                     size="lg"
                     variant="outline"
                     className="text-lg px-10 py-6 rounded-lg"
-                    data-testid="button-view-services"
+                    data-testid="button-explore-services"
                   >
-                    View All Services
+                    Explore All Services
                   </Button>
                 </motion.div>
               </Link>
@@ -857,15 +858,15 @@ export default function Outsourcing() {
               className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Global Delivery Model</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Proven Track Record</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Transparent Pricing</span>
               </div>
             </motion.div>

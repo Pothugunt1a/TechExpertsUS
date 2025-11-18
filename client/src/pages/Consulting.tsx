@@ -1118,15 +1118,15 @@ export default function Consulting() {
               className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Future Thinking</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Proven Results</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>Expert Team</span>
               </div>
             </motion.div>
