@@ -869,7 +869,7 @@ export default function Careers() {
                 onClick={() => scrollToSection('open-positions')}
                 data-testid="button-browse-jobs"
               >
-                Browse All Jobs <Zap className="ml-2 h-4 w-4" />
+                Browse All Jobs
               </Button>
               <Button
                 size="lg"
