@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ParticleBackground } from "@/components/ui/particle-background";
+import { ServicesCarousel } from "@/components/ui/services-carousel";
 import {
   Network,
   Monitor,
@@ -166,61 +167,27 @@ export default function ICS() {
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
+      {/* Solutions Section - Carousel Style */}
+      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/30">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-8"
+            className="text-center mb-12 px-3 lg:px-4"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
                 Wide Range of Solutions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Comprehensive infrastructure services
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive infrastructure services tailored to your business needs
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
-              <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative"
-                data-testid={`solution-${solution.title.toLowerCase().replace(/\s+/g, "-")}`}
-              >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center mb-6"
-                    >
-                      <solution.icon className="w-8 h-8 text-primary" />
-                    </motion.div>
-
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
-                      {solution.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {solution.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <ServicesCarousel services={solutions} />
         </div>
       </section>
 
