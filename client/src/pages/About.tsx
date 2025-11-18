@@ -345,7 +345,9 @@ export default function About() {
       </section>
 
       {/* Why Tech Experts USA - Alternating Image/Text Layout */}
-      <section className="relative py-10 md:py-16 overflow-hidden bg-black">
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
+        
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           {/* Our Culture Section - Matching Consulting Page Layout */}
           <section className="relative overflow-hidden">
