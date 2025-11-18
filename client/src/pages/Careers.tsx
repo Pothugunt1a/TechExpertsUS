@@ -624,7 +624,7 @@ export default function Careers() {
             >
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
                 <img
-                  src={ConsultingImage}
+                  src="/assets/Careers5.jpg"
                   alt="Team collaboration"
                   className="w-full h-auto"
                   data-testid="img-culture"
