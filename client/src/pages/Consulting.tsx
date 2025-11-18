@@ -277,51 +277,6 @@ export default function Consulting() {
         </motion.div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-background to-card/20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {[
-              { value: "200", suffix: "+", label: "Projects", icon: Rocket },
-              { value: "95", suffix: "%", label: "Success Rate", icon: Award },
-              { value: "50", suffix: "+", label: "Experts", icon: Users },
-              { value: "24", suffix: "/7", label: "Support", icon: Shield }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="text-center group"
-              >
-                <div className="relative bg-card/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-chart-2/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                  
-                  <div className="relative z-10">
-                    <motion.div
-                      className="w-16 h-16 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <stat.icon className="w-8 h-8 text-primary" />
-                    </motion.div>
-                    
-                    <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent mb-2">
-                      {stat.value}{stat.suffix}
-                    </div>
-                    <div className="text-sm md:text-base text-muted-foreground uppercase tracking-wide font-medium">
-                      {stat.label}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* About Section with Image */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
