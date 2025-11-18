@@ -131,45 +131,104 @@ export default function ICS() {
         </motion.div>
       </section>
 
-      {/* Overview Section */}
-      <section className="relative py-10 md:py-16">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Building Secure & Resilient Infrastructure
-              </span>
-            </h2>
-            <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground">
-              <p>
-                For the successful and to be successful in any field or in any
-                area one has to ensure the safety of it otherwise it leads to
-                faults play. An intelligent Infrastructure consulting services
-                enables a company to grow in digital business and yields
-                high-end results. ICS at Tech Expertsus helps its customers in
-                creating a more secure infrastructure and manages it more
-                effectively.
-              </p>
-              <p>
-                eLan enables your firm to come out from risks that involved in
-                different stages of the work. By creating and implementing
-                structures plans eLan Technology offers more secure and
-                resilient infrastructure which in turn helps your organization
-                to come out from outages and disasters.
-              </p>
-              <p>
-                eLan technology ensures your organization from security breaches
-                with well-prepared plans and focuses on the risks that were
-                troubling the company's safety and security.
-              </p>
-            </div>
-          </motion.div>
+      {/* Overview Section - Diagonal Split with Image */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-chart-2/5" />
+
+        {/* Diagonal Background Split */}
+        <div className="absolute inset-0">
+          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-br from-primary/10 to-chart-2/10 transform skew-x-12 origin-top-right" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-block mb-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+                  <Shield className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-semibold text-primary">
+                    Infrastructure Excellence
+                  </span>
+                </div>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Building Secure &{" "}
+                <span className="text-primary">Resilient Infrastructure</span>
+              </h2>
+
+              <div className="space-y-4 text-lg text-muted-foreground mb-8">
+                <p>
+                  For the successful and to be successful in any field or in any
+                  area one has to ensure the safety of it otherwise it leads to
+                  faults play. An intelligent Infrastructure consulting services
+                  enables a company to grow in digital business and yields
+                  high-end results. ICS at Tech Expertsus helps its customers in
+                  creating a more secure infrastructure and manages it more
+                  effectively.
+                </p>
+                <p>
+                  eLan enables your firm to come out from risks that involved in
+                  different stages of the work. By creating and implementing
+                  structures plans eLan Technology offers more secure and
+                  resilient infrastructure which in turn helps your organization
+                  to come out from outages and disasters.
+                </p>
+                <p>
+                  eLan technology ensures your organization from security breaches
+                  with well-prepared plans and focuses on the risks that were
+                  troubling the company's safety and security.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Image Right with Floating Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden">
+                <img
+                  src="/assets/Home5.jpg"
+                  alt="Secure Infrastructure"
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              </div>
+
+              {/* Floating Stats Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="absolute -bottom-8 -left-8 bg-background/95 backdrop-blur-xl border border-primary/20 rounded-2xl p-6 shadow-2xl"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-primary">
+                      99.9%
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Uptime Guarantee
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
