@@ -734,60 +734,90 @@ export default function Outsourcing() {
       </section>
 
       {/* Business Value Section */}
-      <section className="relative py-10 md:py-16 bg-gradient-to-b from-card/30 to-background">
-        <div className="max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block mb-4">
-              <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                <span className="text-sm font-semibold text-primary">
-                  Value Delivered
-                </span>
-              </div>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Business Value
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Measurable outcomes that drive your business forward
-            </p>
-          </motion.div>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 flex">
+          <div className="w-1/2 bg-gradient-to-br from-primary/10 to-chart-2/10" />
+          <div className="w-1/2" />
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {businessValues.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group"
-                data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, "-")}`}
-              >
-                <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                  <div className="relative z-10">
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <value.icon className="w-7 h-7 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                      {value.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-block mb-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+                  <Shield className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-semibold text-primary">Value Delivered</span>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Business <span className="text-primary">Value</span>
+              </h2>
+
+              <p className="text-lg text-muted-foreground mb-6">
+                Measurable outcomes that drive your business forward through strategic outsourcing partnerships.
+              </p>
+
+              <div className="space-y-6">
+                {businessValues.map((value, index) => (
+                  <motion.div
+                    key={value.title}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-start gap-4"
+                    data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <value.icon className="w-6 h-6 text-primary" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">{value.title}</h3>
+                      <p className="text-muted-foreground">{value.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Image Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden">
+                <img 
+                  src="/assets/Outsourcing5.png" 
+                  alt="Business Value"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                
+                {/* Floating Value Badge */}
+                <motion.div
+                  animate={{
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-primary/20 backdrop-blur-xl border-4 border-primary/30 flex flex-col items-center justify-center shadow-2xl"
+                >
+                  <TrendingUp className="w-12 h-12 text-primary mb-1" />
+                  <span className="text-xs font-semibold text-primary">Value</span>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
