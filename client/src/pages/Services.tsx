@@ -639,52 +639,41 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
-        
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.3, 0.5],
-            x: [0, -50, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
+      <section className="relative py-10 md:py-16 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
+          <ParticleBackground />
+        </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-3 lg:px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <motion.div
+              animate={{
+                scale: [1, 1.05, 1],
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="inline-block mb-6"
+            >
+              <Shield className="w-16 h-16 text-primary mx-auto" />
+            </motion.div>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Business?
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Real change comes through the right ideas and effective
               implementation. Let's create something amazing together.
             </p>
+
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
                 <motion.div
@@ -693,7 +682,7 @@ export default function Services() {
                 >
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-primary/90"
+                    className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-primary/50"
                     data-testid="button-get-started"
                   >
                     Get in Touch
@@ -708,6 +697,7 @@ export default function Services() {
                   <Button
                     size="lg"
                     variant="outline"
+                    className="text-lg px-10 py-6 rounded-lg"
                     data-testid="button-explore-services"
                   >
                     Explore All Services
@@ -715,6 +705,27 @@ export default function Services() {
                 </motion.div>
               </Link>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-10 flex flex-wrap gap-8 justify-center text-sm text-muted-foreground"
+            >
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-primary" />
+                <span>Innovative Solutions</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-primary" />
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4 text-primary" />
+                <span>Expert Team</span>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
