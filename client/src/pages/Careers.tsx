@@ -770,63 +770,6 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Application Process - Timeline */}
-      <section className="relative py-16 md:py-24">
-        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Our Application Process
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A simple, transparent hiring process designed to find the best fit
-              for both you and us
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {applicationSteps.map((step, index) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
-                data-testid={`card-step-${index}`}
-              >
-                <div className="bg-card border border-primary/20 rounded-lg p-6 h-full">
-                  <div className="text-4xl font-bold text-primary/30 mb-3">
-                    {step.number}
-                  </div>
-                  <h3 className="font-semibold mb-2">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {step.description}
-                  </p>
-                </div>
-                {index < applicationSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2">
-                    <motion.div
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      <Rocket className="h-5 w-5 text-primary/50 rotate-90" />
-                    </motion.div>
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0">
