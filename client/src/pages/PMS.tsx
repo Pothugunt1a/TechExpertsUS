@@ -91,7 +91,7 @@ export default function PMS() {
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroImage})` }}
+            style={{ backgroundImage: `url(/assets/ProjectManagement-banner.jpg)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-primary/30" />
         </motion.div>
