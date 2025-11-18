@@ -271,7 +271,8 @@ export default function DMS() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Powering Business Excellence Through Intelligent Data Center Solutions
+              Powering Business Excellence Through Intelligent Data Center
+              Solutions
             </motion.p>
           </motion.div>
 
@@ -528,7 +529,7 @@ export default function DMS() {
             >
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/assets/DMS2.webp"
+                  src="/assets/DMS7.jpeg"
                   alt="Core Capabilities"
                   className="w-full h-[400px] object-cover"
                 />
@@ -548,9 +549,7 @@ export default function DMS() {
                     <TrendingUp className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary">
-                      24/7
-                    </div>
+                    <div className="text-3xl font-bold text-primary">24/7</div>
                     <div className="text-sm text-muted-foreground">
                       Monitoring
                     </div>
@@ -614,7 +613,9 @@ export default function DMS() {
                     data-testid={`enterprise-benefit-${index}`}
                   >
                     <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-muted-foreground text-lg md:text-xl">{benefit}</span>
+                    <span className="text-muted-foreground text-lg md:text-xl">
+                      {benefit}
+                    </span>
                   </motion.div>
                 ))}
               </div>
