@@ -1267,10 +1267,12 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Our Clients
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Our Clients
+              </span>
             </h2>
-            <p className="text-2xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Trusted by industry leaders
             </p>
           </motion.div>
