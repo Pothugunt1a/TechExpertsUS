@@ -305,11 +305,11 @@ export default function About() {
             </motion.div>
 
             <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               <span className="block mb-2">About</span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Tech Expertsus
@@ -347,7 +347,7 @@ export default function About() {
       {/* Why Tech Experts USA - Alternating Image/Text Layout */}
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
-        
+
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           {/* Our Culture Section - Matching Consulting Page Layout */}
           <section className="relative overflow-hidden">
@@ -364,7 +364,7 @@ export default function About() {
                   <div className="relative">
                     <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
                       <img
-                        src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
+                        src="/assets/About1.png"
                         alt="Innovation at Tech Expertsus"
                         className="w-full h-full object-contain"
                       />
@@ -1429,15 +1429,17 @@ export default function About() {
             </motion.div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Innovation Driven
-              <br />Excellence Delivered
+              <br />
+              Excellence Delivered
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Our dynamic team combines expertise with unwavering focus on quality, 
-              ensuring every IT project meets today's demanding standards.
+              Our dynamic team combines expertise with unwavering focus on
+              quality, ensuring every IT project meets today's demanding
+              standards.
             </p>
             <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
-              At Tech Expertsus, we believe meaningful transformation requires both 
-              innovative thinking and flawless execution.
+              At Tech Expertsus, we believe meaningful transformation requires
+              both innovative thinking and flawless execution.
             </p>
           </motion.div>
         </div>
