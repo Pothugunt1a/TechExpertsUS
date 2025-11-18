@@ -345,7 +345,7 @@ export default function About() {
       </section>
 
       {/* Why Tech Experts USA - Alternating Image/Text Layout */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-chart-2/10 rounded-full blur-[120px]" />
@@ -353,7 +353,7 @@ export default function About() {
 
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
           {/* Our Culture Section - Matching Consulting Page Layout */}
-          <section className="relative py-10 md:py-16 overflow-hidden">
+          <section className="relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
 
             <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
