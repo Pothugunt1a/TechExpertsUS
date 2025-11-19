@@ -445,26 +445,29 @@
     color: hsl(215 25% 10%) !important;
   }
 
-  /* Light mode banner and heading text colors */
+  /* Light mode text colors - use black for better readability */
   .light section h1:not(.text-on-image *),
   .light section h2:not(.text-on-image *),
   .light section h3:not(.text-on-image *),
-  .light section h4:not(.text-on-image *) {
-    color: hsl(215 25% 15%) !important;
+  .light section h4:not(.text-on-image *),
+  .light section h5:not(.text-on-image *),
+  .light section h6:not(.text-on-image *) {
+    color: #000000 !important;
   }
 
   .light section p:not(.text-on-image *),
-  .light section span:not(.text-on-image *) {
-    color: hsl(215 25% 25%) !important;
+  .light section span:not(.text-on-image *),
+  .light section div:not(.text-on-image *) {
+    color: #000000 !important;
   }
 
-  /* Override gradient text for light mode */
+  /* Override gradient text for light mode to use black */
   .light .bg-gradient-to-r.from-white {
-    background: linear-gradient(to right, hsl(215 25% 15%), hsl(var(--primary)), hsl(var(--chart-2))) !important;
+    background: linear-gradient(to right, #000000, hsl(var(--primary)), hsl(var(--chart-2))) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
   }
 
   .light .bg-gradient-to-r.from-primary {
-    color: hsl(215 25% 15%) !important;
+    color: #000000 !important;
   }
