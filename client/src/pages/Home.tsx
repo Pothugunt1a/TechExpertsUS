@@ -196,7 +196,7 @@ export default function Home() {
                 {/* Content */}
                 <div className="relative p-8">
                   <motion.h3 
-                    className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent"
+                    className="text-2xl font-semibold mb-6 !text-white"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
