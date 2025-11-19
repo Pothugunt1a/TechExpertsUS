@@ -467,15 +467,3 @@
     -webkit-background-clip: text !important;
     background-clip: text !important;
   }
-
-  /* Mobile video responsiveness */
-  @media (max-width: 768px) {
-    video {
-      min-height: 100vh;
-      min-width: 100vw;
-      width: auto;
-      height: auto;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
