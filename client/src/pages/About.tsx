@@ -472,26 +472,20 @@ export default function About() {
                 team, combined with driven individuals all focused on the final
                 goal are vital factors for delivering exceptional IT projects.
               </p>
-              <div className="flex items-start gap-4 pt-4">
+              <div className="flex items-center gap-4 pt-4">
                 <motion.div
-                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-2/30 to-primary/30 flex items-center justify-center flex-shrink-0"
+                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-2/30 to-primary/30 flex items-center justify-center"
                   whileHover={{ scale: 1.1, rotate: -10 }}
                 >
                   <Award className="w-8 h-8 text-chart-2" />
                 </motion.div>
-                <div className="relative flex-1">
-                  {/* Decorative border boxes - matching Consulting page style */}
-                  <div className="absolute -inset-3 border-2 border-primary/30 rounded-lg" />
-                  <div className="absolute -inset-3 border-2 border-primary/20 rounded-lg translate-x-1 translate-y-1" />
-                  
-                  <div className="relative bg-card/30 backdrop-blur-sm p-4 rounded-lg">
-                    <p className="font-bold text-gray-900 dark:text-white mb-1">
-                      Talent & Passion
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Inspiring Excellence
-                    </p>
-                  </div>
+                <div>
+                  <p className="font-bold text-gray-900 dark:text-white">
+                    Talent & Passion
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Inspiring Excellence
+                  </p>
                 </div>
               </div>
             </motion.div>
