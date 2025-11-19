@@ -462,11 +462,6 @@ export default function Consulting() {
                     />
                   </motion.div>
 
-                  {/* Circle - Smaller */}
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
-                    <Target className="w-16 h-16 text-gray-900 dark:text-white" />
-                  </div>
-
                   {/* Curved Line (SVG) - Perfect semi-circle arc */}
                   <svg
                     className="absolute -right-20 top-0 w-56 h-full"
