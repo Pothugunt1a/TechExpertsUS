@@ -471,9 +471,15 @@
   /* Minimize spacing between sections on mobile and tablet */
   @media (max-width: 1024px) {
     section {
-      padding-top: 0.5rem !important;
-      padding-bottom: 0.5rem !important;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
+    }
+    
+    /* Ensure banner sections have no extra spacing */
+    section:first-of-type {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
     }
   }
