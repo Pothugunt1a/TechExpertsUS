@@ -300,19 +300,19 @@ export default function About() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent dark:from-white light:from-foreground"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block mb-2 text-gray-900 dark:text-white">About</span>
+              <span className="block mb-2 text-white">About</span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Tech Expertsus
               </span>
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-gray-900 dark:text-white mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -599,7 +599,7 @@ export default function About() {
                       {/* Icon in top right */}
                       <motion.div
                         className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
-                        whileHover={{ rotate: 360, scale: 1.1 }}
+                        whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         <item.icon className="w-7 h-7 text-gray-900 dark:text-white" />

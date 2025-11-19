@@ -234,18 +234,17 @@ export default function Services() {
           >
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              data-testid="heading-hero"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 1 }}
             >
-              <span className="block mb-2 text-gray-900 dark:text-white">Technology Platforms</span>
+              <span className="block mb-2 text-white">Technology Platforms</span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 & Solutions
               </span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-gray-900 dark:text-white mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
@@ -443,7 +442,7 @@ export default function Services() {
         </div>
       </section>
 
-
+      
 
       {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">

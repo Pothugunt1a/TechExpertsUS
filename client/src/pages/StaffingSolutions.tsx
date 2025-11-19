@@ -966,8 +966,10 @@ export default function StaffingSolutions() {
                 </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-                Professional Recruiting Services
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Professional Recruiting Services
+                </span>
               </h2>
 
               <div className="space-y-4 text-lg text-muted-foreground mb-8">

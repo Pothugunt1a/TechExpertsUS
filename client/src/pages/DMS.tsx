@@ -253,12 +253,12 @@ export default function DMS() {
 
             {/* Main Title */}
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent dark:from-white light:from-foreground"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block mb-2 text-gray-900 dark:text-white">Transform Your</span>
+              <span className="block mb-2 text-white">Transform Your</span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Infrastructure
               </span>
@@ -266,7 +266,7 @@ export default function DMS() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-lg md:text-xl text-gray-900 dark:text-white mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
