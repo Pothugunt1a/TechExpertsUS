@@ -1,5 +1,7 @@
-import { type User, type InsertUser, type ContactSubmission, type InsertContact } from "@shared/schema";
+import { type User, type InsertUser, type ContactSubmission, type InsertContact, users, contactSubmissions } from "@shared/schema";
 import { randomUUID } from "crypto";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -51,4 +53,30 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export class DatabaseStorage implements IStorage {
+  async getUser(id: string): Promise<User | undefined> {
+    const result = await db.select().from(users).where(eq(users.id, id)).limit(1);
+    return result[0];
+  }
+
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    const result = await db.select().from(users).where(eq(users.username, username)).limit(1);
+    return result[0];
+  }
+
+  async createUser(insertUser: InsertUser): Promise<User> {
+    const result = await db.insert(users).values(insertUser).returning();
+    return result[0];
+  }
+
+  async createContactSubmission(insertContact: InsertContact): Promise<ContactSubmission> {
+    const result = await db.insert(contactSubmissions).values(insertContact).returning();
+    return result[0];
+  }
+
+  async getAllContactSubmissions(): Promise<ContactSubmission[]> {
+    return await db.select().from(contactSubmissions);
+  }
+}
+
+export const storage = new DatabaseStorage();
