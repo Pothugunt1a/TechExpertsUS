@@ -438,27 +438,82 @@ export default function Consulting() {
 
           <div className="relative max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
-              {/* Left Side: Centered Image - Hidden on mobile */}
+              {/* Left Side: Large Circle with Icon - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative hidden lg:flex justify-center items-center"
+                className="relative hidden lg:flex justify-center lg:justify-end"
               >
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="w-96 h-96"
-                >
-                  <img
-                    src="/assets/Consulting3.png"
-                    alt="Client Challenges"
-                    className="w-full h-full object-contain"
-                  />
-                </motion.div>
+                <div className="relative h-[500px] flex items-center gap-6">
+                  {/* Image */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative w-96 h-96"
+                  >
+                    <img
+                      src="/assets/Consulting3.png"
+                      alt="Client Challenges"
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
+
+                  {/* Central circle */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-gradient-to-br from-primary/30 to-chart-2/30 backdrop-blur-md border-4 border-primary/40 flex items-center justify-center shadow-2xl"
+                  >
+                    <Target className="w-16 h-16 text-primary" />
+                  </motion.div>
+
+                  {/* Curved line path */}
+                  <svg
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none"
+                    viewBox="0 0 400 500"
+                  >
+                    <path
+                      d="M 200 50 A 150 150 0 0 1 350 250 A 150 150 0 0 1 200 450"
+                      fill="none"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth="2"
+                      strokeDasharray="8,8"
+                      opacity="0.3"
+                    />
+                  </svg>
+
+                  {/* Numbered circles positioned around the arc */}
+                  {[
+                    { number: "01", top: "10%", right: "5%", delay: 0.6 },
+                    { number: "02", top: "25%", right: "-5%", delay: 0.7 },
+                    { number: "03", top: "50%", right: "-8%", delay: 0.8 },
+                    { number: "04", top: "75%", right: "-5%", delay: 0.9 },
+                    { number: "05", top: "90%", right: "5%", delay: 1.0 },
+                  ].map((item, index) => (
+                    <motion.div
+                      key={item.number}
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: item.delay }}
+                      className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-lg border-4 border-background"
+                      style={{
+                        top: item.top,
+                        right: item.right,
+                      }}
+                    >
+                      <span className="text-white font-bold text-lg">
+                        {item.number}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
 
               {/* Right Side: Challenge Descriptions */}
