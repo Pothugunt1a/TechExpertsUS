@@ -431,7 +431,7 @@ export default function Services() {
                     <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground text-lg">
+                    <p className="text-base text-muted-foreground">
                       {item.description}
                     </p>
                   </div>

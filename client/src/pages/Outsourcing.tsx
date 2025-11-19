@@ -20,6 +20,7 @@ import {
   Layers,
   Settings,
   Sparkles,
+  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -670,9 +671,9 @@ export default function Outsourcing() {
                         className="flex items-center gap-3"
                       >
                         <div className="w-6 h-6 rounded-full bg-chart-2/20 flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-4 h-4 text-chart-2" />
+                          <CheckCircle2 className="w-4 h-4 text-chart-2" />
                         </div>
-                        <p className="text-base">{item}</p>
+                        <p className="text-base text-muted-foreground">{item}</p>
                       </motion.div>
                     ))}
                   </div>
@@ -719,9 +720,9 @@ export default function Outsourcing() {
                         className="flex items-center gap-3"
                       >
                         <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <CheckCircle2 className="w-4 h-4 text-primary" />
                         </div>
-                        <p className="text-base">{item}</p>
+                        <p className="text-base text-muted-foreground">{item}</p>
                       </motion.div>
                     ))}
                   </div>
