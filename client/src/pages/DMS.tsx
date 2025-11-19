@@ -775,18 +775,18 @@ export default function DMS() {
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <service.icon className="w-7 h-7 text-gray-900 dark:text-white" />
+                    <service.icon className="w-7 h-7 !text-white" />
                   </motion.div>
 
                   {/* Content at bottom with transparent border box */}
                   <div
-                    className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl"
+                    className="absolute bottom-4 inset-x-0 p-4 !text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl"
                     style={{ marginBottom: "-14px" }}
                   >
-                    <h3 className="text-xl font-bold mb-3 leading-tight">
+                    <h3 className="text-xl font-bold mb-3 leading-tight !text-white">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
+                    <p className="text-sm !text-white/90 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
