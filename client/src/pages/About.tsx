@@ -1428,17 +1428,17 @@ export default function About() {
             >
               <Zap className="w-14 h-14 text-white" />
             </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 !text-white">
               Innovation Driven
               <br />
               Excellence Delivered
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl !text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
               Our dynamic team combines expertise with unwavering focus on
               quality, ensuring every IT project meets today's demanding
               standards.
             </p>
-            <p className="text-lg text-white/80 italic max-w-3xl mx-auto">
+            <p className="text-lg !text-white/80 italic max-w-3xl mx-auto">
               At Tech Expertsus, we believe meaningful transformation requires
               both innovative thinking and flawless execution.
             </p>
