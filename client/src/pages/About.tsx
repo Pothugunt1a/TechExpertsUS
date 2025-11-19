@@ -778,7 +778,7 @@ export default function About() {
           </motion.div>
 
           <div className="flex justify-start ml-8 md:ml-16 lg:ml-24">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl">
               {coreValues.map((value, index) => (
                 <motion.div
                   key={value.title}
@@ -791,18 +791,18 @@ export default function About() {
                   data-testid={`value-${value.title.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/40 to-chart-2/40 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
-                  <div className="relative h-full p-6 bg-gradient-to-br from-card/95 to-card/80 backdrop-blur-xl border border-primary/30 rounded-lg group-hover:border-primary/50 transition-all duration-300">
+                  <div className="relative h-full p-4 bg-gradient-to-br from-card/95 to-card/80 backdrop-blur-xl border border-primary/30 rounded-lg group-hover:border-primary/50 transition-all duration-300">
                     <motion.div
-                      className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center mb-4 group-hover:from-primary/40 group-hover:to-chart-2/40 transition-colors mx-auto"
+                      className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/30 to-chart-2/30 flex items-center justify-center mb-3 group-hover:from-primary/40 group-hover:to-chart-2/40 transition-colors mx-auto"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <value.icon className="w-6 h-6 text-primary" />
+                      <value.icon className="w-5 h-5 text-primary" />
                     </motion.div>
-                    <h4 className="text-base font-bold mb-2 text-gray-900 dark:text-white text-center">
+                    <h4 className="text-sm font-bold mb-1.5 text-gray-900 dark:text-white text-center">
                       {value.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground leading-snug text-center">
+                    <p className="text-xs text-muted-foreground leading-snug text-center">
                       {value.description}
                     </p>
                   </div>
