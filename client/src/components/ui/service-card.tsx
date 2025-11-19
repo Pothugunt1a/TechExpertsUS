@@ -52,7 +52,7 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
         transition={{ duration: 0.4 }}
       >
         <div className="absolute bottom-0 left-0 right-0 p-6">
-          <h3 className="text-2xl font-bold text-white dark:text-white mb-2">{title}</h3>
+          <h3 className="text-2xl font-bold !text-white mb-2">{title}</h3>
           {logo && (
             <img src={logo} alt={`${title} logo`} className="h-8 object-contain" />
           )}
@@ -83,8 +83,8 @@ export function ServiceCard({ icon: Icon, title, description, link, index = 0, i
           }}
           className="flex-1 flex flex-col justify-center"
         >
-          <h3 className="text-2xl font-bold text-white dark:text-white mb-4">{title}</h3>
-          <p className="text-white dark:text-gray-300 mb-6 leading-relaxed">
+          <h3 className="text-2xl font-bold !text-white mb-4">{title}</h3>
+          <p className="!text-white mb-6 leading-relaxed">
             {description}
           </p>
           {link && (
