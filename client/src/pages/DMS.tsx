@@ -443,7 +443,7 @@ export default function DMS() {
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-sm md:text-lg text-muted-foreground">
+                    <span className="text-sm md:text-lg text-muted-foreground text-base">
                       {benefit}
                     </span>
                   </motion.div>
@@ -619,7 +619,7 @@ export default function DMS() {
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-muted-foreground text-lg md:text-xl">
+                    <span className="text-muted-foreground text-lg md:text-xl text-base">
                       {benefit}
                     </span>
                   </motion.div>
