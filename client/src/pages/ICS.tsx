@@ -64,17 +64,20 @@ export default function ICS() {
       {/* Hero Section - Full Screen Banner */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(/assets/InfrastructureConsultingServices-banner.jpg)`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/InfrastructureConsultingServices-banner.jpg"
+            alt="Infrastructure Consulting Services Banner"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+        </div>
 
         {/* Particle Background Overlay */}
-        <ParticleBackground />
+        <div className="absolute inset-0 z-[3] pointer-events-none">
+          <ParticleBackground />
+        </div>
 
         {/* Centered Text Content */}
         <motion.div
