@@ -406,3 +406,68 @@
 .border-variable-width-bottom::before {
   bottom: -10px;
 }
+
+/* Card improvements for light mode */
+  .light .bg-card\/50 {
+    background-color: hsl(0 0% 98% / 0.8) !important;
+  }
+
+  /* Text color utilities for sections with background images */
+  .text-on-image {
+    color: white !important;
+  }
+
+  .text-on-image h1,
+  .text-on-image h2,
+  .text-on-image h3,
+  .text-on-image h4,
+  .text-on-image h5,
+  .text-on-image h6,
+  .text-on-image p,
+  .text-on-image span,
+  .text-on-image li {
+    color: white !important;
+  }
+
+  /* Ensure proper contrast in light mode for sections without images */
+  .light .text-on-background {
+    color: hsl(215 25% 10%) !important;
+  }
+
+  .light .text-on-background h1,
+  .light .text-on-background h2,
+  .light .text-on-background h3,
+  .light .text-on-background h4,
+  .light .text-on-background h5,
+  .light .text-on-background h6,
+  .light .text-on-background p,
+  .light .text-on-background span {
+    color: hsl(215 25% 10%) !important;
+  }
+
+  /* Light mode text colors - use black for better readability */
+  .light section h1:not(.text-on-image *),
+  .light section h2:not(.text-on-image *),
+  .light section h3:not(.text-on-image *),
+  .light section h4:not(.text-on-image *),
+  .light section h5:not(.text-on-image *),
+  .light section h6:not(.text-on-image *) {
+    color: #000000 !important;
+  }
+
+  .light section p:not(.text-on-image *),
+  .light section span:not(.text-on-image *),
+  .light section div:not(.text-on-image *) {
+    color: #000000 !important;
+  }
+
+  /* Override gradient text for light mode to use black */
+  .light .bg-gradient-to-r.from-white {
+    background: linear-gradient(to right, #000000, hsl(var(--primary)), hsl(var(--chart-2))) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  .light .bg-gradient-to-r.from-primary {
+    color: #000000 !important;
+  }
