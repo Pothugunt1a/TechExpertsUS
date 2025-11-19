@@ -919,7 +919,7 @@ export default function Consulting() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-blue-700 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            className="relative bg-primary rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
             {/* Decorative dot pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -945,10 +945,10 @@ export default function Consulting() {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="text-center"
                 >
-                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-2">
+                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
                     {stat.value}{stat.suffix}
                   </div>
-                  <div className="text-sm md:text-base lg:text-lg text-gray-900 dark:text-white/90 uppercase tracking-wide font-medium">
+                  <div className="text-sm md:text-base lg:text-lg text-white/90 uppercase tracking-wide font-medium">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -1039,11 +1039,11 @@ export default function Consulting() {
                 </motion.div>
 
                 {/* Content at bottom with transparent border box */}
-                <div className="absolute bottom-4 inset-x-0 p-4 text-gray-900 dark:text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
-                  <h3 className="text-xl font-bold mb-3 leading-tight">
+                <div className="absolute bottom-4 inset-x-0 p-4 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
+                  <h3 className="text-xl font-bold mb-3 leading-tight text-white">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
+                  <p className="text-sm text-white/80 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -1080,7 +1080,7 @@ export default function Consulting() {
               <Sparkles className="w-16 h-16 text-primary mx-auto" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
               Ready to Transform Your{" "}
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Business?
