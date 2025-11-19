@@ -390,7 +390,7 @@ export default function Contact() {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute inset-0 bg-background/30 dark:bg-background/30" />
+                <div className="absolute inset-0 bg-background/10 dark:bg-background/10" />
                 <div className="relative z-10">
                   <h3 className="text-xl font-semibold mb-4 text-primary">
                     Business Hours
