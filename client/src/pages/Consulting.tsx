@@ -437,23 +437,23 @@ export default function Consulting() {
           </motion.div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
-              {/* Left Side: Large Circle with Icon - Hidden on mobile */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+              {/* Left Side: Large Circle with Icon */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative hidden lg:flex justify-center lg:justify-end"
+                className="relative flex justify-center lg:justify-end"
               >
-                <div className="relative h-[500px] flex items-center justify-center">
-                  {/* Main Image */}
+                <div className="relative h-[500px] flex items-center gap-6">
+                  {/* GIF Image on the left - Bigger */}
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-80 h-80 z-10"
+                    className="w-72 h-72"
                   >
                     <img
                       src="/assets/Consulting3.png"
@@ -462,72 +462,82 @@ export default function Consulting() {
                     />
                   </motion.div>
 
-                  {/* Numbered circles in semi-circle */}
-                  {[
-                    { number: "01", angle: -60, delay: 0.3 },
-                    { number: "02", angle: -30, delay: 0.4 },
-                    { number: "03", angle: 0, delay: 0.5 },
-                    { number: "04", angle: 30, delay: 0.6 },
-                    { number: "05", angle: 60, delay: 0.7 },
-                  ].map((item) => {
-                    const radius = 220;
-                    const x = Math.cos((item.angle * Math.PI) / 180) * radius;
-                    const y = Math.sin((item.angle * Math.PI) / 180) * radius;
-                    
-                    return (
-                      <motion.div
-                        key={item.number}
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: item.delay, duration: 0.5 }}
-                        className="absolute z-20"
-                        style={{
-                          left: `calc(50% + ${x}px)`,
-                          top: `calc(50% + ${y}px)`,
-                          transform: 'translate(-50%, -50%)'
-                        }}
-                      >
-                        <motion.div
-                          whileHover={{ scale: 1.2 }}
-                          className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-lg cursor-pointer"
-                        >
-                          <span className="text-white font-bold text-lg">{item.number}</span>
-                        </motion.div>
-                      </motion.div>
-                    );
-                  })}
+                  {/* Circle - Smaller */}
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
+                    <Target className="w-16 h-16 text-gray-900 dark:text-white" />
+                  </div>
 
-                  {/* Curved connecting line - Semi-circular arc */}
+                  {/* Curved Line (SVG) - Perfect semi-circle arc */}
                   <svg
-                    className="absolute inset-0 w-full h-full pointer-events-none"
-                    style={{ zIndex: 5 }}
+                    className="absolute -right-20 top-0 w-56 h-full"
+                    viewBox="0 0 180 500"
+                    style={{ overflow: "visible" }}
                   >
-                    {/* Main connecting arc */}
-                    <motion.path
-                      d="M 90 320 A 180 180 0 0 1 410 320"
+                    <path
+                      d="M 30 50 A 180 200 0 0 1 30 450"
                       stroke="hsl(var(--primary))"
-                      strokeWidth="3"
+                      strokeWidth="4"
                       fill="none"
-                      strokeDasharray="8,8"
-                      initial={{ pathLength: 0, opacity: 0 }}
-                      whileInView={{ pathLength: 1, opacity: 0.6 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, delay: 0.8 }}
-                    />
-                    {/* Solid background arc for better visibility */}
-                    <motion.path
-                      d="M 90 320 A 180 180 0 0 1 410 320"
-                      stroke="hsl(var(--primary))"
-                      strokeWidth="1"
-                      fill="none"
-                      opacity="0.2"
-                      initial={{ pathLength: 0 }}
-                      whileInView={{ pathLength: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, delay: 0.8 }}
+                      strokeLinecap="round"
+                      opacity="0.8"
                     />
                   </svg>
+
+                  {/* Numbered Circles along the semi-circle arc - Precisely calculated positions */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    style={{ right: "30px", top: "20px" }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">01</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                    style={{ right: "-76px", top: "94px" }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">02</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    style={{ right: "-118px", top: "218px" }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">03</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 }}
+                    style={{ right: "-76px", top: "343px" }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">04</span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.7 }}
+                    style={{ right: "32px", top: "416px" }}
+                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                  >
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">05</span>
+                  </motion.div>
                 </div>
               </motion.div>
 
@@ -537,7 +547,7 @@ export default function Consulting() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-6 md:space-y-10 pl-0 lg:pl-20"
+                className="space-y-10 pl-20"
               >
                 {[
                   {
@@ -590,10 +600,10 @@ export default function Consulting() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-base md:text-lg font-bold mb-1">
+                      <h3 className="text-lg font-bold mb-1">
                         {challenge.title}
                       </h3>
-                      <p className="text-sm md:text-base text-muted-foreground">
+                      <p className="text-muted-foreground">
                         {challenge.description}
                       </p>
                     </div>
