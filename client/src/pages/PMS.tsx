@@ -200,8 +200,8 @@ export default function PMS() {
                     className="flex items-start gap-3"
                     data-testid={`feature-process-${index}`}
                   >
-                    <div className="mt-1">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
                     <span className="text-muted-foreground">{item}</span>
                   </motion.div>

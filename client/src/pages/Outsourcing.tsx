@@ -592,7 +592,9 @@ export default function Outsourcing() {
                         transition={{ delay: index * 0.1 }}
                         className="flex items-center gap-3"
                       >
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                        <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                        </div>
                         <p className="text-base">{service}</p>
                       </motion.div>
                     ))}
@@ -667,7 +669,9 @@ export default function Outsourcing() {
                         transition={{ delay: index * 0.1 }}
                         className="flex items-center gap-3"
                       >
-                        <CheckCircle className="w-5 h-5 text-chart-2 flex-shrink-0" />
+                        <div className="w-6 h-6 rounded-full bg-chart-2/20 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-4 h-4 text-chart-2" />
+                        </div>
                         <p className="text-base">{item}</p>
                       </motion.div>
                     ))}
@@ -714,7 +718,9 @@ export default function Outsourcing() {
                         transition={{ delay: index * 0.1 }}
                         className="flex items-center gap-3"
                       >
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                        <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                        </div>
                         <p className="text-base">{item}</p>
                       </motion.div>
                     ))}

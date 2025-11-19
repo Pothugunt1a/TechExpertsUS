@@ -437,10 +437,12 @@ export default function DMS() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-3"
                     data-testid={`benefit-${index}`}
                   >
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
                     <span className="text-sm md:text-lg text-muted-foreground">
                       {benefit}
                     </span>
@@ -611,10 +613,12 @@ export default function DMS() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-3"
                     data-testid={`enterprise-benefit-${index}`}
                   >
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
                     <span className="text-muted-foreground text-lg md:text-xl">
                       {benefit}
                     </span>
