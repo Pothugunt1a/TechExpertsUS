@@ -467,3 +467,16 @@
     -webkit-background-clip: text !important;
     background-clip: text !important;
   }
+
+  /* Mobile video responsiveness - use contain instead of cover */
+  @media (max-width: 768px) {
+    .object-contain {
+      object-fit: contain !important;
+    }
+    
+    /* Remove extra spacing on mobile */
+    video {
+      margin: 0;
+      padding: 0;
+    }
+  }

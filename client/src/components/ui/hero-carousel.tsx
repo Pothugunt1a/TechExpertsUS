@@ -2,14 +2,14 @@ import { ParticleBackground } from "./particle-background";
 
 export function HeroCarousel() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
       {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
       >
         <source src="/assets/Home.mp4" type="video/mp4" />
       </video>
