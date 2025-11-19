@@ -479,8 +479,10 @@ export default function DMS() {
                 </div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Our Core <span className="text-primary">Capabilities</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Our Core Capabilities
+                </span>
               </h2>
 
               <p className="text-lg text-muted-foreground mb-8">
