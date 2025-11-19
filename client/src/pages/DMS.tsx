@@ -437,15 +437,13 @@ export default function DMS() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     data-testid={`benefit-${index}`}
                   >
-                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-4 h-4 text-primary" />
-                    </div>
-                    <p className="text-sm md:text-lg text-muted-foreground">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="text-sm md:text-lg text-muted-foreground">
                       {benefit}
-                    </p>
+                    </span>
                   </motion.div>
                 ))}
               </div>

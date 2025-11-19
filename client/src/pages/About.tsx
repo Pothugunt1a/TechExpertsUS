@@ -26,7 +26,6 @@ import {
   Sparkles,
   Briefcase,
   Code,
-  CheckCircle, // Imported CheckCircle for the changes
 } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link } from "wouter";
