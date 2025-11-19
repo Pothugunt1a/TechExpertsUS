@@ -112,7 +112,7 @@ export default function PMS() {
               transition={{ duration: 0.8, delay: 0.2 }}
               data-testid="heading-hero"
             >
-              <span className="block mb-2 text-white">
+              <span className="block mb-2 text-gray-900 dark:text-white">
                 Project Management
               </span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient">
@@ -120,7 +120,7 @@ export default function PMS() {
               </span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8 leading-relaxed"
+              className="text-lg md:text-xl text-gray-900 dark:text-white max-w-3xl mx-auto mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
