@@ -479,19 +479,13 @@ export default function About() {
                 >
                   <Award className="w-8 h-8 text-chart-2" />
                 </motion.div>
-                <div className="relative">
-                  {/* Decorative border box */}
-                  <div className="absolute -inset-3 border-2 border-primary/30 rounded-lg" />
-                  <div className="absolute -inset-3 border-2 border-primary/20 rounded-lg" style={{ transform: 'translate(4px, 4px)' }} />
-                  
-                  <div className="relative">
-                    <p className="font-bold text-gray-900 dark:text-white">
-                      Talent & Passion
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Inspiring Excellence
-                    </p>
-                  </div>
+                <div>
+                  <p className="font-bold text-gray-900 dark:text-white">
+                    Talent & Passion
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Inspiring Excellence
+                  </p>
                 </div>
               </div>
             </motion.div>
