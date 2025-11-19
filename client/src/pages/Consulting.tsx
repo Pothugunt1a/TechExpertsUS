@@ -438,107 +438,27 @@ export default function Consulting() {
 
           <div className="relative max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
-              {/* Left Side: Large Circle with Icon - Hidden on mobile */}
+              {/* Left Side: Centered Image - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative hidden lg:flex justify-center lg:justify-end"
+                className="relative hidden lg:flex justify-center items-center"
               >
-                <div className="relative h-[500px] flex items-center gap-6">
-                  {/* GIF Image on the left - Bigger */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-72 h-72"
-                  >
-                    <img
-                      src="/assets/Consulting3.png"
-                      alt="Client Challenges"
-                      className="w-full h-full object-contain"
-                    />
-                  </motion.div>
-
-                  {/* Circle - Smaller */}
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
-                    <Target className="w-16 h-16 text-gray-900 dark:text-white" />
-                  </div>
-
-                  {/* Curved Line (SVG) - Perfect semi-circle arc */}
-                  <svg
-                    className="absolute -right-20 top-0 w-56 h-full"
-                    viewBox="0 0 180 500"
-                    style={{ overflow: "visible" }}
-                  >
-                    <path
-                      d="M 30 50 A 180 200 0 0 1 30 450"
-                      stroke="hsl(var(--primary))"
-                      strokeWidth="4"
-                      fill="none"
-                      strokeLinecap="round"
-                      opacity="0.8"
-                    />
-                  </svg>
-
-                  {/* Numbered Circles along the semi-circle arc - Precisely calculated positions */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    style={{ right: "30px", top: "20px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">01</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                    style={{ right: "-76px", top: "94px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">02</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5 }}
-                    style={{ right: "-118px", top: "218px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">03</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6 }}
-                    style={{ right: "-76px", top: "343px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">04</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.7 }}
-                    style={{ right: "32px", top: "416px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
-                  >
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">05</span>
-                  </motion.div>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="w-96 h-96"
+                >
+                  <img
+                    src="/assets/Consulting3.png"
+                    alt="Client Challenges"
+                    className="w-full h-full object-contain"
+                  />
+                </motion.div>
               </motion.div>
 
               {/* Right Side: Challenge Descriptions */}
