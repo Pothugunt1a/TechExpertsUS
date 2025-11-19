@@ -609,10 +609,10 @@ export default function DMS() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     data-testid={`enterprise-benefit-${index}`}
                   >
-                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="text-muted-foreground text-lg md:text-xl">
                       {benefit}
                     </span>
