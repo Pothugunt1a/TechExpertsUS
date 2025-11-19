@@ -480,14 +480,22 @@
       padding: 0;
     }
 
-    /* Remove extra spacing between sections on mobile */
+    /* Minimize spacing between sections on mobile */
     section {
-      padding-top: 2rem !important;
-      padding-bottom: 2rem !important;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
     }
 
     /* Adjust hero section height on mobile */
     .relative.min-h-screen {
       min-height: auto;
+      margin-bottom: 0 !important;
+    }
+
+    /* Remove any gap after hero carousel */
+    .relative.overflow-hidden {
+      margin-bottom: 0 !important;
     }
   }
