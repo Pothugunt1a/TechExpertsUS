@@ -305,14 +305,14 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block mb-2">About</span>
+              <span className="block mb-2 text-white">About</span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Tech Expertsus
               </span>
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}

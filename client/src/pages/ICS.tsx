@@ -113,14 +113,14 @@ export default function ICS() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block mb-2">Infrastructure</span>
+              <span className="block mb-2 text-white">Infrastructure</span>
               <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                 Consulting Services
               </span>
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
+              className="text-lg md:text-xl text-white mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
