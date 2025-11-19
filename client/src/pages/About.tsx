@@ -730,8 +730,8 @@ export default function About() {
               <MissionVisionCard
                 title="Our Mission"
                 icon={Target}
-                description1="Tech Expertsus focuses on high quality standards to provide professional consulting services and viable resources to our clients, ensuring complete client satisfaction and long-term commitment."
-                description2="We customize employment solutions for our customers and employees, with each unique partnership built on quality relationships and our core values."
+                description1="Tech Expertsus delivers high-quality consulting services and resources, ensuring client satisfaction and lasting partnerships. "
+                description2="We provide customized employment solutions built on strong relationships and our core values."
                 image="/assets/About7.jpg"
                 dataTestId="card-mission"
               />
