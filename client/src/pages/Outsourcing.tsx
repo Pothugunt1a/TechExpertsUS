@@ -384,27 +384,84 @@ export default function Outsourcing() {
 
           <div className="relative max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
-              {/* Left Side: Centered Image - Hidden on mobile */}
+              {/* Left Side: Large Circle with Icon - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative hidden lg:flex justify-center items-center"
+                className="relative hidden lg:flex justify-center lg:justify-end"
               >
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="w-96 h-96"
-                >
-                  <img
-                    src="/assets/Outsourcing5.png"
-                    alt="Client Challenges"
-                    className="w-full h-full object-contain"
-                  />
-                </motion.div>
+                <div className="relative h-[500px] flex items-center justify-center">
+                  {/* Main Image */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-80 h-80 z-10"
+                  >
+                    <img
+                      src="/assets/Outsourcing5.png"
+                      alt="Client Challenges"
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
+
+                  {/* Numbered circles in semi-circle */}
+                  {[
+                    { number: "01", angle: -60, delay: 0.3 },
+                    { number: "02", angle: -30, delay: 0.4 },
+                    { number: "03", angle: 0, delay: 0.5 },
+                    { number: "04", angle: 30, delay: 0.6 },
+                    { number: "05", angle: 60, delay: 0.7 },
+                  ].map((item) => {
+                    const radius = 220;
+                    const x = Math.cos((item.angle * Math.PI) / 180) * radius;
+                    const y = Math.sin((item.angle * Math.PI) / 180) * radius;
+                    
+                    return (
+                      <motion.div
+                        key={item.number}
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: item.delay, duration: 0.5 }}
+                        className="absolute z-20"
+                        style={{
+                          left: `calc(50% + ${x}px)`,
+                          top: `calc(50% + ${y}px)`,
+                          transform: 'translate(-50%, -50%)'
+                        }}
+                      >
+                        <motion.div
+                          whileHover={{ scale: 1.2 }}
+                          className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-lg cursor-pointer"
+                        >
+                          <span className="text-white font-bold text-lg">{item.number}</span>
+                        </motion.div>
+                      </motion.div>
+                    );
+                  })}
+
+                  {/* Curved connecting line */}
+                  <svg
+                    className="absolute inset-0 w-full h-full pointer-events-none"
+                    style={{ zIndex: 5 }}
+                  >
+                    <motion.path
+                      d="M 90 200 Q 250 100, 410 200"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="5,5"
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 0.3 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.5, delay: 0.8 }}
+                    />
+                  </svg>
+                </div>
               </motion.div>
 
               {/* Right Side: Challenge Descriptions */}
