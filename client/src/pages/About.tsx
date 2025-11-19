@@ -761,7 +761,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <div className="flex justify-start ml-4 md:ml-8 lg:ml-12">
+          <div className="flex justify-start ml-2 md:ml-4 lg:ml-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -772,7 +772,7 @@ export default function About() {
             </motion.p>
           </div>
 
-          <div className="flex justify-start ml-4 md:ml-8 lg:ml-12">
+          <div className="flex justify-start ml-2 md:ml-4 lg:ml-6">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl">
               {coreValues.map((value, index) => (
                 <motion.div
