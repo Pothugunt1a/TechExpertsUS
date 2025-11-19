@@ -9,7 +9,10 @@ export function HeroCarousel() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover md:object-cover object-center"
+        style={{
+          objectPosition: 'center center',
+        }}
       >
         <source src="/assets/Home.mp4" type="video/mp4" />
       </video>
