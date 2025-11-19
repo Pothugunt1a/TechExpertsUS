@@ -429,6 +429,28 @@
     background-clip: text !important;
   }
 
+  /* Light mode banner gradient overrides - reduce intensity for better text visibility */
+  .light .bg-gradient-to-b.from-background\/40,
+  .light .bg-gradient-to-b.from-background\/95,
+  .light .bg-gradient-to-br.from-background\/95 {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.75)) !important;
+  }
+
+  .light .bg-gradient-to-br.from-background\/40 {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.65)) !important;
+  }
+
+  .light .bg-background\/20 {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  /* Ensure hero text is visible in light mode */
+  .light section h1 .text-white,
+  .light section h1 span.text-white,
+  .light section p.text-white {
+    color: #1a1a1a !important;
+  }
+
   /* Specific override for gradient headings in light mode */
   .light .bg-gradient-to-r.from-white.bg-clip-text {
     background: linear-gradient(to right, #000000, hsl(var(--primary)), hsl(var(--chart-2))) !important;
