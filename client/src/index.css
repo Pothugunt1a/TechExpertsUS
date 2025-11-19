@@ -468,9 +468,9 @@
     background-clip: text !important;
   }
 
-  /* Mobile video responsiveness - use contain instead of cover */
+  /* Mobile video responsiveness - use contain instead of cover on small screens only */
   @media (max-width: 768px) {
-    .object-contain {
+    video.object-cover {
       object-fit: contain !important;
     }
     
