@@ -444,19 +444,32 @@ export default function Outsourcing() {
                     );
                   })}
 
-                  {/* Curved connecting line */}
+                  {/* Curved connecting line - Semi-circular arc */}
                   <svg
                     className="absolute inset-0 w-full h-full pointer-events-none"
                     style={{ zIndex: 5 }}
                   >
+                    {/* Main connecting arc */}
                     <motion.path
-                      d="M 90 200 Q 250 100, 410 200"
+                      d="M 90 320 A 180 180 0 0 1 410 320"
                       stroke="hsl(var(--primary))"
-                      strokeWidth="2"
+                      strokeWidth="3"
                       fill="none"
-                      strokeDasharray="5,5"
+                      strokeDasharray="8,8"
                       initial={{ pathLength: 0, opacity: 0 }}
-                      whileInView={{ pathLength: 1, opacity: 0.3 }}
+                      whileInView={{ pathLength: 1, opacity: 0.6 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.5, delay: 0.8 }}
+                    />
+                    {/* Solid background arc for better visibility */}
+                    <motion.path
+                      d="M 90 320 A 180 180 0 0 1 410 320"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth="1"
+                      fill="none"
+                      opacity="0.2"
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 1.5, delay: 0.8 }}
                     />
