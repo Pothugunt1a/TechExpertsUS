@@ -786,7 +786,7 @@ export default function DMS() {
                     <h3 className="text-xl font-bold mb-3 leading-tight">
                       {service.title}
                     </h3>
-                    <p className="text-sm md:text-lg text-gray-900 dark:text-white/80 leading-relaxed">
+                    <p className="text-sm text-gray-900 dark:text-white/80 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
