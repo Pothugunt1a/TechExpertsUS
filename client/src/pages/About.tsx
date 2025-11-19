@@ -625,7 +625,7 @@ export default function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative mt-20 p-12 md:p-16 rounded-3xl text-center overflow-hidden"
+            className="relative mt-20 p-12 md:p-16 rounded-3xl text-center overflow-hidden text-on-image"
           >
             {/* Background Image */}
             <div
@@ -635,7 +635,7 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
             <div className="relative z-10">
               <Building2 className="w-16 h-16 text-primary mx-auto mb-6" />
-              <p className="text-xl md:text-2xl text-white leading-relaxed max-w-5xl mx-auto">
+              <p className="text-xl md:text-2xl !text-white leading-relaxed max-w-5xl mx-auto">
                 Established in 2012, Tech Expertsus Technologies has grown to be
                 the preferred IT partner for industry leaders across various
                 verticals. We have an enviable reputation for delivering
