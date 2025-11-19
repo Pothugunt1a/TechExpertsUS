@@ -14,6 +14,7 @@ import {
   Target,
   Users,
   ArrowRight,
+  CheckCircle, // Added CheckCircle icon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
