@@ -9,7 +9,6 @@ import {
   Database,
   Lock,
   Shield,
-  CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
