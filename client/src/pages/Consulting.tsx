@@ -919,7 +919,7 @@ export default function Consulting() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-primary rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            className="relative bg-gradient-to-br from-primary via-chart-2 to-primary rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
             {/* Decorative dot pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -945,10 +945,10 @@ export default function Consulting() {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="text-center"
                 >
-                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold !text-white mb-2">
                     {stat.value}{stat.suffix}
                   </div>
-                  <div className="text-sm md:text-base lg:text-lg text-white/90 uppercase tracking-wide font-medium">
+                  <div className="text-sm md:text-base lg:text-lg !text-white/90 uppercase tracking-wide font-medium">
                     {stat.label}
                   </div>
                 </motion.div>
