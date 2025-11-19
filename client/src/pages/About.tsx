@@ -777,7 +777,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-start ml-8 md:ml-16 lg:ml-24">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl">
               {coreValues.map((value, index) => (
                 <motion.div
