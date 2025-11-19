@@ -1040,10 +1040,10 @@ export default function Consulting() {
 
                 {/* Content at bottom with transparent border box */}
                 <div className="absolute bottom-4 inset-x-0 p-4 text-white bg-card/10 backdrop-blur-md border border-primary/30 rounded-2xl" style={{ marginBottom: '-14px' }}>
-                  <h3 className="text-xl font-bold mb-3 leading-tight text-white">
+                  <h3 className="text-xl font-bold mb-3 leading-tight !text-white">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-white/80 leading-relaxed">
+                  <p className="text-sm !text-white/80 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
