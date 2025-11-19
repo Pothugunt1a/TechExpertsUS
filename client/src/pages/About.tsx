@@ -193,9 +193,9 @@ function MissionVisionCard({
           }}
           className="space-y-4"
         >
-          <h3 className="text-2xl font-bold text-white">{title}</h3>
-          <p className="text-gray-300 leading-relaxed">{description1}</p>
-          <p className="text-gray-300 leading-relaxed">{description2}</p>
+          <h3 className="text-2xl font-bold !text-white">{title}</h3>
+          <p className="!text-white/90 leading-relaxed">{description1}</p>
+          <p className="!text-white/90 leading-relaxed">{description2}</p>
         </motion.div>
       </motion.div>
 
@@ -602,12 +602,12 @@ export default function About() {
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <item.icon className="w-7 h-7 text-gray-900 dark:text-white" />
+                        <item.icon className="w-7 h-7 !text-white" />
                       </motion.div>
-                      <h3 className="text-2xl font-bold text-white mb-4">
+                      <h3 className="text-2xl font-bold !text-white mb-4">
                         {item.title}
                       </h3>
-                      <p className="text-gray-200 leading-relaxed">
+                      <p className="!text-white/90 leading-relaxed">
                         {item.description}
                       </p>
                     </motion.div>
