@@ -109,7 +109,7 @@ export default function Consulting() {
           Path: /assets/consulting-hero-bg.jpg or .gif
         */}
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background/95 to-chart-2/20 dark:from-primary/20 dark:via-background dark:to-chart-2/20" />
+          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
         </div>
 
         <ParticleBackground />
@@ -174,7 +174,7 @@ export default function Consulting() {
               </motion.div>
 
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}

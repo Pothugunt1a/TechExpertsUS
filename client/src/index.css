@@ -14,67 +14,67 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 0 0% 100%;
+  --background: 0 0% 98%;
 
-  --foreground: 215 25% 10%;
+  --foreground: 215 25% 15%;
 
-  --border: 215 10% 85%;
+  --border: 215 10% 88%;
 
-  --card: 0 0% 98%;
+  --card: 0 0% 96%;
 
-  --card-foreground: 215 25% 12%;
+  --card-foreground: 215 25% 18%;
 
-  --card-border: 215 8% 88%;
+  --card-border: 215 8% 90%;
 
-  --sidebar: 0 0% 96%;
+  --sidebar: 0 0% 94%;
 
-  --sidebar-foreground: 215 25% 15%;
+  --sidebar-foreground: 215 25% 20%;
 
-  --sidebar-border: 215 8% 84%;
+  --sidebar-border: 215 8% 86%;
 
-  --sidebar-primary: 190 95% 38%;
+  --sidebar-primary: 190 95% 42%;
 
-  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-primary-foreground: 190 95% 98%;
 
-  --sidebar-accent: 215 12% 90%;
+  --sidebar-accent: 215 12% 88%;
 
-  --sidebar-accent-foreground: 215 25% 20%;
+  --sidebar-accent-foreground: 215 25% 25%;
 
-  --sidebar-ring: 190 95% 38%;
+  --sidebar-ring: 190 95% 42%;
 
-  --popover: 0 0% 100%;
+  --popover: 0 0% 92%;
 
-  --popover-foreground: 215 25% 15%;
+  --popover-foreground: 215 25% 22%;
 
-  --popover-border: 215 8% 82%;
+  --popover-border: 215 8% 84%;
 
-  --primary: 190 95% 38%;
+  --primary: 190 95% 42%;
 
-  --primary-foreground: 0 0% 100%;
+  --primary-foreground: 190 95% 98%;
 
-  --secondary: 215 8% 88%;
+  --secondary: 215 8% 86%;
 
-  --secondary-foreground: 215 25% 18%;
+  --secondary-foreground: 215 25% 25%;
 
-  --muted: 215 12% 92%;
+  --muted: 215 12% 90%;
 
-  --muted-foreground: 215 20% 35%;
+  --muted-foreground: 215 20% 40%;
 
-  --accent: 215 15% 90%;
+  --accent: 215 15% 88%;
 
-  --accent-foreground: 215 25% 20%;
+  --accent-foreground: 215 25% 28%;
 
-  --destructive: 0 84% 42%;
+  --destructive: 0 84% 45%;
 
-  --destructive-foreground: 0 0% 100%;
+  --destructive-foreground: 0 84% 98%;
 
-  --input: 215 20% 65%;
-  --ring: 190 95% 38%;
-  --chart-1: 190 95% 32%;
-  --chart-2: 215 90% 45%;
-  --chart-3: 142 76% 35%;
-  --chart-4: 38 92% 38%;
-  --chart-5: 270 75% 42%;
+  --input: 215 20% 70%;
+  --ring: 190 95% 42%;
+  --chart-1: 190 95% 35%;
+  --chart-2: 215 90% 50%;
+  --chart-3: 142 76% 38%;
+  --chart-4: 38 92% 42%;
+  --chart-5: 270 75% 48%;
 
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
@@ -213,20 +213,6 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
-
-  /* Light mode specific improvements */
-  :root {
-    /* Better shadow definitions for light mode */
-    --shadow-color-light: 215 25% 15%;
-    --shadow-2xs: 0px 1px 2px 0px hsl(var(--shadow-color-light) / 0.08);
-    --shadow-xs: 0px 1px 2px 0px hsl(var(--shadow-color-light) / 0.10);
-    --shadow-sm: 0px 1px 3px 0px hsl(var(--shadow-color-light) / 0.12), 0px 1px 2px -1px hsl(var(--shadow-color-light) / 0.12);
-    --shadow: 0px 2px 4px -1px hsl(var(--shadow-color-light) / 0.10), 0px 4px 6px -1px hsl(var(--shadow-color-light) / 0.14);
-    --shadow-md: 0px 4px 6px -1px hsl(var(--shadow-color-light) / 0.12), 0px 2px 4px -2px hsl(var(--shadow-color-light) / 0.12);
-    --shadow-lg: 0px 10px 15px -3px hsl(var(--shadow-color-light) / 0.12), 0px 4px 6px -4px hsl(var(--shadow-color-light) / 0.12);
-    --shadow-xl: 0px 20px 25px -5px hsl(var(--shadow-color-light) / 0.14), 0px 8px 10px -6px hsl(var(--shadow-color-light) / 0.14);
-    --shadow-2xl: 0px 25px 50px -12px hsl(var(--shadow-color-light) / 0.25);
-  }
 }
 
 /**
@@ -338,54 +324,6 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
-  }
-
-  /* Light mode text improvements */
-  .light {
-    /* Ensure better contrast for gradient text in light mode */
-    --gradient-text-opacity: 1;
-  }
-
-  .light .bg-gradient-to-r.from-white {
-    --tw-gradient-from: hsl(215 25% 10%) !important;
-  }
-
-  /* Card improvements for light mode */
-  .light .bg-card\/50 {
-    background-color: hsl(0 0% 98% / 0.8) !important;
-  }
-
-  /* Text color utilities for sections with background images */
-  .text-on-image {
-    color: white !important;
-  }
-
-  .text-on-image h1,
-  .text-on-image h2,
-  .text-on-image h3,
-  .text-on-image h4,
-  .text-on-image h5,
-  .text-on-image h6,
-  .text-on-image p,
-  .text-on-image span,
-  .text-on-image li {
-    color: white !important;
-  }
-
-  /* Ensure proper contrast in light mode for sections without images */
-  .light .text-on-background {
-    color: hsl(215 25% 10%) !important;
-  }
-
-  .light .text-on-background h1,
-  .light .text-on-background h2,
-  .light .text-on-background h3,
-  .light .text-on-background h4,
-  .light .text-on-background h5,
-  .light .text-on-background h6,
-  .light .text-on-background p,
-  .light .text-on-background span {
-    color: hsl(215 25% 10%) !important;
   }
 
   @keyframes shimmer {
