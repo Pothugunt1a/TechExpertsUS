@@ -761,21 +761,16 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
         <div className="relative max-w-7xl mx-auto px-3 lg:px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Our Core Values
-              </span>
-            </h2>
-            <p className="text-lg text-white/90">
+          <div className="flex justify-start ml-8 md:ml-16 lg:ml-24">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-lg text-white/90 mb-8 text-left"
+            >
               Principles that guide everything we do
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
 
           <div className="flex justify-start ml-8 md:ml-16 lg:ml-24">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl">
@@ -830,7 +825,6 @@ export default function About() {
             <p className="text-xl text-muted-foreground">
               Excellence in every dimension
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-chart-2 mx-auto mt-6" />
           </motion.div>
 
           <div className="space-y-0">
