@@ -359,12 +359,6 @@
     background-color: hsl(0 0% 98% / 0.8) !important;
   }
 
-  .light .backdrop-blur-sm,
-  .light .backdrop-blur-md,
-  .light .backdrop-blur-xl {
-    background-color: hsl(0 0% 100% / 0.7);
-  }
-
   @keyframes shimmer {
     0% {
       transform: translateX(-100%);

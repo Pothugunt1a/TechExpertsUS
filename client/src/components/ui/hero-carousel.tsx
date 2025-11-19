@@ -15,7 +15,7 @@ export function HeroCarousel() {
       </video>
 
       {/* Overlay for better visibility in both modes */}
-      <div className="absolute inset-0 bg-background/10 dark:bg-background/0" />
+      <div className="absolute inset-0 bg-black/20 dark:bg-background/0" />
 
       {/* Particle Background */}
       <ParticleBackground />
