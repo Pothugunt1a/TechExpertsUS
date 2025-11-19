@@ -766,7 +766,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-lg text-white/90 mb-8 text-left"
+              className="text-lg !text-white mb-8 text-left"
             >
               Principles that guide everything we do
             </motion.p>
