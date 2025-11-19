@@ -19,42 +19,42 @@ const solutions = [
     title: "Network Management",
     description:
       "eLan Technology identifies the positives and negatives of the company network security and offers solutions in preventing frequent outages.",
-    image: "/assets/Home5.jpg",
+    image: "/assets/ICS2.jpg",
   },
   {
     icon: Monitor,
     title: "Desktop Management",
     description:
       "We offer trust worthy and reliable solutions to the corporate sectors through comprehensive desktop management services.",
-    image: "/assets/DMS2.webp",
+    image: "/assets/ICS3.jpg",
   },
   {
     icon: ServerIcon,
     title: "Server Management & Automation",
     description:
       "Tech Expertsus helps in delivering security, policy management, server compliance and standardizing your company configurations.",
-    image: "/assets/DMS4.jpg",
+    image: "/assets/ICS4.jpg",
   },
   {
     icon: Code,
     title: "DevOps: Development Operations",
     description:
       "Software development method that enables rapid evolutions of products and services while reducing risks and improving quality.",
-    image: "/assets/Home6.jpg",
+    image: "/assets/ICS5.jpg",
   },
   {
     icon: Database,
     title: "Application & Database Management",
     description:
       "We help design databases ensuring information is easily accessible and helps users with their different queries efficiently.",
-    image: "/assets/DMS5.webp",
+    image: "/assets/ICS6.jpg",
   },
   {
     icon: Lock,
     title: "Security & Compliance",
     description:
       "Ensuring your organization stays protected from security breaches with well-prepared plans and risk-focused strategies.",
-    image: "/assets/Home7.jpg",
+    image: "/assets/ICS7.jpg",
   },
 ];
 
