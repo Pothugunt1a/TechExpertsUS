@@ -122,11 +122,7 @@ A stunning modern website for Tech Experts US with **both light and dark mode** 
      - All headings, descriptions, and text content tagged
      - All images, icons, stats, badges, and cards tagged
      - Dynamic elements use indexed data-testid (e.g., `feature-process-${index}`, `card-service-${index}`)
-2. ✅ **Mobile Video Styling**: Added responsive CSS for banner section videos:
-   - Videos automatically adjust height on mobile devices (≤768px)
-   - Prevents layout issues on smaller screens
-   - Applied via `.banner-section .single-slide video { height: auto !important; }`
-3. ✅ **Redesigned Careers Page "Why Join?"** section with Bento Box layout:
+2. ✅ **Redesigned Careers Page "Why Join?"** section with Bento Box layout:
    - Asymmetric grid with varying card sizes (trending 2024-2025 design)
    - 4 stock images integrated with gradient overlays
    - Hover zoom animations on all images

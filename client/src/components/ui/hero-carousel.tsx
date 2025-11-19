@@ -2,7 +2,7 @@ import { ParticleBackground } from "./particle-background";
 
 export function HeroCarousel() {
   return (
-    <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
