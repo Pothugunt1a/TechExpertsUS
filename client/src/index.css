@@ -468,19 +468,19 @@
     background-clip: text !important;
   }
 
-  /* Mobile video responsiveness - use contain instead of cover on small screens only */
-  @media (max-width: 768px) {
+  /* Mobile and tablet video responsiveness - use contain instead of cover on small/medium screens */
+  @media (max-width: 1024px) {
     video.object-cover {
       object-fit: contain !important;
     }
     
-    /* Remove extra spacing on mobile */
+    /* Remove extra spacing on mobile and tablet */
     video {
       margin: 0;
       padding: 0;
     }
 
-    /* Minimize spacing between sections on mobile */
+    /* Minimize spacing between sections on mobile and tablet */
     section {
       padding-top: 0.5rem !important;
       padding-bottom: 0.5rem !important;
@@ -488,7 +488,7 @@
       margin-bottom: 0 !important;
     }
 
-    /* Adjust hero section height on mobile */
+    /* Adjust hero section height on mobile and tablet */
     .relative.min-h-screen {
       min-height: auto;
       margin-bottom: 0 !important;
