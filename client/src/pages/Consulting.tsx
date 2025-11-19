@@ -919,7 +919,7 @@ export default function Consulting() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-gradient-to-br from-primary via-chart-2 to-primary rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            className="relative bg-[#1e3a8a] dark:bg-[#1e3a8a] rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
             {/* Decorative dot pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
