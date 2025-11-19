@@ -226,7 +226,7 @@ export default function Home() {
                         >
                           <item.icon className="w-5 h-5 text-primary" />
                         </motion.div>
-                        <span className="text-lg text-white font-medium">{item.text}</span>
+                        <span className="text-lg !text-white font-medium">{item.text}</span>
                       </motion.li>
                     ))}
                   </ul>
