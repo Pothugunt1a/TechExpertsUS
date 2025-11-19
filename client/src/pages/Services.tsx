@@ -238,8 +238,9 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
             >
-              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
-                Technology Platforms & Solutions
+              <span className="block mb-2 text-white">Technology Platforms</span>
+              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
+                & Solutions
               </span>
             </motion.h1>
             <motion.p
