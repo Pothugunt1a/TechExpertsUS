@@ -113,12 +113,12 @@ export default function StaffingSolutions() {
           Path: /assets/staffing-hero-banner.gif or .jpg
         */}
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background/95 to-chart-2/20 dark:from-primary/20 dark:via-background dark:to-chart-2/20" />
+          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
           {
             <img
               src="/assets/Staffing2.gif"
               alt="Staffing Solutions"
-              className="w-full h-full object-cover object-center opacity-20 dark:opacity-100"
+              className="w-full h-full object-cover object-center"
             />
           }
         </div>

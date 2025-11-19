@@ -116,7 +116,7 @@ export default function Outsourcing() {
           Path: /assets/outsourcing-hero-bg.jpg or .gif
         */}
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background/95 to-chart-2/20 dark:from-primary/20 dark:via-background dark:to-chart-2/20" />
+          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
         </div>
 
         <ParticleBackground />
