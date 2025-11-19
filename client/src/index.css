@@ -433,15 +433,19 @@
   .light .bg-gradient-to-b.from-background\/40,
   .light .bg-gradient-to-b.from-background\/95,
   .light .bg-gradient-to-br.from-background\/95 {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.75)) !important;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2)) !important;
   }
 
   .light .bg-gradient-to-br.from-background\/40 {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.65)) !important;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15)) !important;
   }
 
   .light .bg-background\/20 {
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .light .bg-background\/40 {
+    background-color: rgba(255, 255, 255, 0.2) !important;
   }
 
   /* Ensure hero text is visible in light mode */
