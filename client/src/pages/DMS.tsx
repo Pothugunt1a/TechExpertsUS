@@ -407,7 +407,7 @@ export default function DMS() {
                 </h2>
               </div>
 
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Data Center Management in general the "Server Room" for all your
                 business needs plays a key and vital capacity in reaching out
                 the needs of your business. The firm or business needs to act
@@ -415,15 +415,15 @@ export default function DMS() {
                 posed in day to day competitive world.
               </p>
 
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 At Tech Expertsus we do Application Outsourcing which enables to
                 streamline your business processes and maximizes the returns of
                 your investment. Our service modules helps you to reach out all
                 your needs and business goals with your limited investments.
               </p>
 
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Tech Expertsus provides fineness and positive assurance across
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Tech Execpertsus provides fineness and positive assurance across
                 all your enterprise's IT needs through comprehensive data center
                 management.
               </p>
@@ -589,7 +589,7 @@ export default function DMS() {
                 </h2>
               </div>
 
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 We @ Tech Expertsus with years of knowledge and experience in IT
                 fields provides strategic technology directions for data center
                 assessment. We by bringing into line your infrastructure to your
@@ -597,7 +597,7 @@ export default function DMS() {
                 responsive to business needs.
               </p>
 
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 We @ Tech Expertsus offers leading technology to vitalize your
                 IT infrastructure and improve your return on assets. We helps in
                 making your IT services looks dynamic and in step with changing

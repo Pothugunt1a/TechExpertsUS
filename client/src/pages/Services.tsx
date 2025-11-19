@@ -372,7 +372,7 @@ export default function Services() {
                 Why Choose Us
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Excellence in every aspect of our service
             </p>
           </motion.div>
@@ -442,7 +442,7 @@ export default function Services() {
         </div>
       </section>
 
-      
+
 
       {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">

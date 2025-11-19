@@ -249,7 +249,7 @@ export default function ICS() {
                 Wide Range of Solutions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Comprehensive infrastructure services tailored to your business
               needs
             </p>
