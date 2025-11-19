@@ -14,6 +14,9 @@ export function HeroCarousel() {
         <source src="/assets/Home.mp4" type="video/mp4" />
       </video>
 
+      {/* Overlay for better visibility in both modes */}
+      <div className="absolute inset-0 bg-background/10 dark:bg-background/0" />
+
       {/* Particle Background */}
       <ParticleBackground />
     </div>
