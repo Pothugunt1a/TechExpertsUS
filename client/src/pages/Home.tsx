@@ -440,7 +440,7 @@ export default function Home() {
       </section>
 
       {/* Core Values Section */}
-      <section className="relative py-10 md:py-16 overflow-hidden">
+      <section className="relative py-10 md:py-16 overflow-hidden text-on-image">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
