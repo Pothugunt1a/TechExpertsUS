@@ -196,7 +196,7 @@ export default function Home() {
                 {/* Content */}
                 <div className="relative p-8">
                   <motion.h3 
-                    className="text-2xl font-semibold mb-6 bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent"
+                    className="text-2xl font-semibold mb-6 text-white"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -224,7 +224,7 @@ export default function Home() {
                           className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/30 to-chart-2/30 dark:from-primary/20 dark:to-chart-2/20 flex items-center justify-center group-hover:from-primary/40 group-hover:to-chart-2/40 dark:group-hover:from-primary/30 dark:group-hover:to-chart-2/30 transition-colors"
                           whileHover={{ scale: 1.1, rotate: 5 }}
                         >
-                          <item.icon className="w-5 h-5 text-primary" />
+                          <item.icon className="w-5 h-5 text-white" />
                         </motion.div>
                         <span className="text-lg text-white font-medium">{item.text}</span>
                       </motion.li>
