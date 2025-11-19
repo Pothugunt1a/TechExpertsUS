@@ -441,9 +441,3 @@
     -webkit-background-clip: text !important;
     background-clip: text !important;
   }
-
-  /* Service card text white in light mode */
-  .light [data-testid^="card-service-"] h3,
-  .light [data-testid^="card-service-"] p:not([data-testid^="button-see-details-"] *) {
-    color: #ffffff !important;
-  }
