@@ -406,3 +406,10 @@
 .border-variable-width-bottom::before {
   bottom: -10px;
 }
+
+/* Mobile video styling */
+@media (max-width: 768px) {
+  .banner-section .single-slide video {
+    height: auto !important;
+  }
+}
