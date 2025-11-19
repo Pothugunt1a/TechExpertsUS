@@ -406,3 +406,38 @@
 .border-variable-width-bottom::before {
   bottom: -10px;
 }
+
+/* Light mode text colors - use black for better readability */
+  .light h1:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2),
+  .light h2:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2),
+  .light h3:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2),
+  .light h4:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2),
+  .light h5:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2),
+  .light h6:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2) {
+    color: #000000 !important;
+  }
+
+  .light p:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground),
+  .light span:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.bg-clip-text) {
+    color: #000000 !important;
+  }
+
+  /* Keep gradient text visible but darker in light mode */
+  .light .bg-gradient-to-r.bg-clip-text.text-transparent {
+    background: linear-gradient(to right, #1a1a1a, hsl(var(--primary)), hsl(var(--chart-2))) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  /* Specific override for gradient headings in light mode */
+  .light .bg-gradient-to-r.from-white.bg-clip-text {
+    background: linear-gradient(to right, #000000, hsl(var(--primary)), hsl(var(--chart-2))) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  .light .bg-gradient-to-r.from-primary.bg-clip-text {
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--chart-2)), hsl(var(--primary))) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
