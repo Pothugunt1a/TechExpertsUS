@@ -104,7 +104,7 @@ export default function StaffingSolutions() {
       {/* Hero Section - Modern Animated Banner */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6"
       >
         {/*
           IMAGE PLACEHOLDER 1: Hero Background
@@ -185,19 +185,19 @@ export default function StaffingSolutions() {
               </motion.div>
 
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <span className="block mb-2">The Right People,</span>
+                <span className="block mb-1 sm:mb-2">The Right People,</span>
                 <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                   The Right Time
                 </span>
               </motion.h1>
 
               <motion.p
-                className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -446,16 +446,16 @@ export default function StaffingSolutions() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative -mx-6 lg:-mx-8"
+              className="relative mx-0 sm:-mx-6 lg:-mx-8"
               data-testid="service-component-1"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-0 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-0 overflow-hidden rounded-lg lg:rounded-none">
                 {/* Image - Left Side with Diagonal Cut */}
-                <div className="relative h-[250px] lg:h-[280px] overflow-hidden">
+                <div className="relative h-[200px] sm:h-[250px] lg:h-[280px] overflow-hidden">
                   <div
-                    className="absolute inset-0 bg-cover bg-center rounded-br"
+                    className="absolute inset-0 bg-cover bg-center lg:rounded-br"
                     style={{
-                      clipPath: "polygon(0 0, 100% 0, 75% 100%, 0 100%)",
+                      clipPath: window.innerWidth >= 1024 ? "polygon(0 0, 100% 0, 75% 100%, 0 100%)" : "none",
                       backgroundImage: "url(/assets/Staffing3.png)",
                     }}
                   />
@@ -786,11 +786,11 @@ export default function StaffingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1.5fr] gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1.5fr] gap-6 lg:gap-8 xl:gap-12 items-start">
             {/* Left Side - 3 Cards (2 in row 1, 1 centered in row 2) */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Row 1: Cards 1 and 2 */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {benefits.slice(0, 2).map((benefit, index) => (
                   <motion.div
                     key={benefit.title}
@@ -863,9 +863,9 @@ export default function StaffingSolutions() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="flex justify-center items-center h-full"
+              className="flex justify-center items-center h-full order-2 lg:order-2 my-4 lg:my-0"
             >
-              <div className="w-64 h-64 flex items-center justify-center">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 flex items-center justify-center">
                 <img
                   src="/assets/Staffing5.png"
                   alt="Partnership Handshake"
@@ -875,9 +875,9 @@ export default function StaffingSolutions() {
             </motion.div>
 
             {/* Right Side - 3 Cards (2 in row 1, 1 centered in row 2) */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6 order-3 lg:order-3">
               {/* Row 1: Cards 4 and 5 */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {benefits.slice(3, 5).map((benefit, index) => (
                   <motion.div
                     key={benefit.title}

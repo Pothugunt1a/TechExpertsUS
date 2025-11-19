@@ -107,7 +107,7 @@ export default function Outsourcing() {
       {/* Hero Section - Staffing Style */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6"
       >
         {/*
           IMAGE PLACEHOLDER 1: Hero Background
@@ -181,19 +181,19 @@ export default function Outsourcing() {
               </motion.div>
 
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <span className="block mb-2">Transform Your IT</span>
+                <span className="block mb-1 sm:mb-2">Transform Your IT</span>
                 <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
                   Into Strategic Value
                 </span>
               </motion.h1>
 
               <motion.p
-                className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -383,23 +383,23 @@ export default function Outsourcing() {
           </motion.div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
               {/* Left Side: Large Circle with Icon */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative flex justify-center lg:justify-end"
+                className="relative flex justify-center lg:justify-end order-1 lg:order-1"
               >
-                <div className="relative h-[500px] flex items-center gap-6">
+                <div className="relative h-[400px] sm:h-[450px] lg:h-[500px] flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                   {/* GIF Image on the left - Bigger */}
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-72 h-72"
+                    className="w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72"
                   >
                     <img
                       src="/assets/Outsourcing5.png"
@@ -409,13 +409,13 @@ export default function Outsourcing() {
                   </motion.div>
 
                   {/* Circle - Smaller */}
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
-                    <Target className="w-16 h-16 text-gray-900 dark:text-white" />
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center shadow-2xl">
+                    <Target className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-gray-900 dark:text-white" />
                   </div>
 
-                  {/* Curved Line (SVG) - Perfect semi-circle arc */}
+                  {/* Curved Line (SVG) - Perfect semi-circle arc - Hidden on mobile */}
                   <svg
-                    className="absolute -right-20 top-0 w-56 h-full"
+                    className="hidden lg:block absolute -right-20 top-0 w-56 h-full"
                     viewBox="0 0 180 500"
                     style={{ overflow: "visible" }}
                   >
@@ -429,14 +429,14 @@ export default function Outsourcing() {
                     />
                   </svg>
 
-                  {/* Numbered Circles along the semi-circle arc - Precisely calculated positions */}
+                  {/* Numbered Circles along the semi-circle arc - Hidden on mobile */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
                     style={{ right: "30px", top: "20px" }}
-                    className="absolute w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-white z-10"
+                    className="hidden lg:flex absolute w-16 h-16 rounded-full bg-primary items-center justify-center shadow-xl border-4 border-white z-10"
                   >
                     <span className="text-xl font-bold text-gray-900 dark:text-white">
                       01
@@ -503,7 +503,7 @@ export default function Outsourcing() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-10 pl-20"
+                className="space-y-6 sm:space-y-8 lg:space-y-10 pl-0 lg:pl-20 order-2 lg:order-2"
               >
                 {challenges.map((challenge, index) => (
                   <motion.div
