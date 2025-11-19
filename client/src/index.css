@@ -407,22 +407,22 @@
   bottom: -10px;
 }
 
-/* Light mode text colors - preserve card and gradient styling */
-  .light h1:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text):not(.shadcn-card *),
-  .light h2:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text):not(.shadcn-card *),
-  .light h3:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text):not(.shadcn-card *),
-  .light h4:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text):not(.shadcn-card *),
-  .light h5:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text):not(.shadcn-card *),
-  .light h6:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text):not(.shadcn-card *) {
+/* Light mode text colors - use black for better readability, but allow gradient text */
+  .light h1:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text),
+  .light h2:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text),
+  .light h3:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text),
+  .light h4:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text),
+  .light h5:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text),
+  .light h6:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not(.bg-clip-text) {
     color: hsl(var(--foreground)) !important;
   }
 
-  .light p:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.shadcn-card *),
-  .light span:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.bg-clip-text):not(.shadcn-card *) {
+  .light p:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground),
+  .light span:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.bg-clip-text) {
     color: hsl(var(--foreground)) !important;
   }
 
-  /* Allow gradient text to work naturally in light mode */
+  /* Keep gradient text visible in light mode - don't override */
   .light .bg-gradient-to-r.bg-clip-text.text-transparent {
-    /* Let the gradient show through naturally */
+    /* Let the original gradient show through */
   }
