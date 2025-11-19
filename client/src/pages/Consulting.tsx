@@ -437,7 +437,7 @@ export default function Consulting() {
           </motion.div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
               {/* Left Side: Large Circle with Icon - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -542,7 +542,7 @@ export default function Consulting() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-6 md:space-y-10 pl-0 lg:pl-8"
+                className="space-y-6 md:space-y-10 pl-0 lg:pl-20"
               >
                 {[
                   {
