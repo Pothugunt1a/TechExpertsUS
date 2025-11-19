@@ -395,14 +395,14 @@ export default function Contact() {
                   <h3 className="text-xl font-semibold mb-4 text-primary">
                     Business Hours
                   </h3>
-                  <div className="space-y-2 text-white">
-                    <p data-testid="text-hours-weekday">
+                  <div className="space-y-2 !text-white">
+                    <p data-testid="text-hours-weekday" className="!text-white">
                       Monday - Friday: 9:00 AM - 6:00 PM
                     </p>
-                    <p data-testid="text-hours-saturday">
+                    <p data-testid="text-hours-saturday" className="!text-white">
                       Saturday: 10:00 AM - 4:00 PM
                     </p>
-                    <p data-testid="text-hours-sunday">Sunday: Closed</p>
+                    <p data-testid="text-hours-sunday" className="!text-white">Sunday: Closed</p>
                   </div>
                 </div>
               </div>
