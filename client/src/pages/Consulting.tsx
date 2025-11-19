@@ -437,14 +437,14 @@ export default function Consulting() {
           </motion.div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-[5%] items-center">
               {/* Left Side: Large Circle with Icon - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative hidden lg:flex justify-center lg:justify-end"
+                className="relative hidden lg:flex justify-center lg:justify-end pr-[5%]"
               >
                 <div className="relative h-[500px] flex items-center gap-6">
                   {/* GIF Image on the left - Bigger */}
@@ -542,7 +542,7 @@ export default function Consulting() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-6 md:space-y-10 pl-0 lg:pl-0"
+                className="space-y-6 md:space-y-10 pl-0 lg:pl-[5%]"
               >
                 {[
                   {
