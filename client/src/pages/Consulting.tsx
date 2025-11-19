@@ -437,14 +437,14 @@ export default function Consulting() {
           </motion.div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              {/* Left Side: Large Circle with Icon */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+              {/* Left Side: Large Circle with Icon - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative flex justify-center lg:justify-end"
+                className="relative hidden lg:flex justify-center lg:justify-end"
               >
                 <div className="relative h-[500px] flex items-center gap-6">
                   {/* GIF Image on the left - Bigger */}
@@ -547,7 +547,7 @@ export default function Consulting() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-10 pl-20"
+                className="space-y-6 md:space-y-10 pl-0 lg:pl-20"
               >
                 {[
                   {
@@ -600,10 +600,10 @@ export default function Consulting() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold mb-1">
+                      <h3 className="text-base md:text-lg font-bold mb-1">
                         {challenge.title}
                       </h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         {challenge.description}
                       </p>
                     </div>
