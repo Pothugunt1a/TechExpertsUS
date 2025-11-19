@@ -599,7 +599,7 @@ export default function About() {
                       {/* Icon in top right */}
                       <motion.div
                         className="absolute top-4 right-4 w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-md border border-white/10 flex items-center justify-center"
-                        whileHover={{ rotate: 360 }}
+                        whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6 }}
                       >
                         <item.icon className="w-7 h-7 text-gray-900 dark:text-white" />
