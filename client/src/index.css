@@ -482,8 +482,10 @@
     background-clip: text !important;
   }
 
-  /* Specifically target the white gradient text pattern in light mode */
-  .light .bg-gradient-to-r.from-white.via-primary.to-chart-2.bg-clip-text.text-transparent {
+  /* Specifically target the white gradient text pattern in light mode - must override general gradient rule */
+  .light .bg-gradient-to-r.from-white.via-primary.to-chart-2.bg-clip-text.text-transparent,
+  .light h1.bg-gradient-to-r.from-white.via-primary.to-chart-2.bg-clip-text.text-transparent,
+  .light .bg-gradient-to-r.from-white.via-primary.to-chart-2.text-transparent.bg-clip-text {
     background: linear-gradient(to right, #1a1a1a, hsl(var(--primary)), hsl(var(--chart-2))) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
