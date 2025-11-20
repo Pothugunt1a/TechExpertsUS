@@ -428,7 +428,11 @@
   .light .banner-white-text h3,
   .light .banner-white-text h4,
   .light .banner-white-text h5,
-  .light .banner-white-text h6,
+  .light .banner-white-text h6 {
+    color: #ffffff !important;
+  }
+
+  /* Banner paragraphs and spans use same styling as dark mode */
   .light .banner-white-text p,
   .light .banner-white-text span:not(.bg-clip-text) {
     color: #ffffff !important;

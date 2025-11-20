@@ -122,20 +122,24 @@ export default function Contact() {
             className="text-left flex flex-col items-start justify-center w-full lg:w-1/2"
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              style={{ color: '#ffffff' }}
             >
               Let's Connect
             </motion.h1>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2" style={{ color: '#ffffff' }}>
+            <motion.p
+              className="text-lg md:text-xl mb-8 leading-relaxed"
+              style={{ color: '#ffffff' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
               Have a question or ready to start your next project?
-            </p>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl" style={{ color: '#ffffff' }}>
+              <br />
               Our team is here to help you succeed.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
