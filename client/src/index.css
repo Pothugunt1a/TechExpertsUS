@@ -443,6 +443,14 @@
     color: hsl(var(--muted-foreground)) !important;
   }
 
+  /* Banner gradient heading - uses white gradient in both light and dark modes */
+  .banner-gradient-heading {
+    background: linear-gradient(to right, #ffffff, hsl(var(--primary)), hsl(var(--chart-2))) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
   /* Keep gradient text visible but darker in light mode */
   .light .bg-gradient-to-r.bg-clip-text.text-transparent {
     background: linear-gradient(to right, #1a1a1a, hsl(var(--primary)), hsl(var(--chart-2))) !important;
