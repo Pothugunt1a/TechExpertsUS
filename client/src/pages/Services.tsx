@@ -245,7 +245,8 @@ export default function Services() {
               </span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto"
+              style={{ color: '#ffffff' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}

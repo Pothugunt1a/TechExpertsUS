@@ -266,7 +266,8 @@ export default function DMS() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto"
+              style={{ color: '#ffffff' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
