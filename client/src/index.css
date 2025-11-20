@@ -443,6 +443,12 @@
     color: hsl(var(--muted-foreground)) !important;
   }
 
+  /* Specific overrides for hero section paragraphs to ensure white text in light mode */
+  .light section[class*="banner"] p[style*="color"],
+  .light section.banner-white-text p[data-testid*="text"] {
+    color: #ffffff !important;
+  }
+
   /* Banner gradient heading - uses white gradient in both light and dark modes */
   .banner-gradient-heading {
     background: linear-gradient(to right, #ffffff, hsl(var(--primary)), hsl(var(--chart-2))) !important;

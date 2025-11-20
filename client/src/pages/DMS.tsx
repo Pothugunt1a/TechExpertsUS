@@ -112,7 +112,9 @@ export default function DMS() {
   return (
     <div className="min-h-screen overflow-hidden" ref={containerRef}>
       {/* Hero Section - Modern with Geometric Shapes */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text">
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"
+        style={{ position: 'relative' }}
+      >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
