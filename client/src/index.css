@@ -408,17 +408,17 @@
 }
 
 /* Light mode text colors - use black for better readability */
-  .light h1:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
-  .light h2:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
-  .light h3:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
-  .light h4:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
-  .light h5:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
-  .light h6:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]) {
+  .light h1:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *),
+  .light h2:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *),
+  .light h3:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *),
+  .light h4:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *),
+  .light h5:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *),
+  .light h6:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *) {
     color: #000000 !important;
   }
 
-  .light p:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not([class*="!text-white"]),
-  .light span:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.bg-clip-text):not([class*="!text-white"]) {
+  .light p:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *),
+  .light span:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.bg-clip-text):not([class*="!text-white"]):not(.banner-white-text *):not([class*="banner-white-text"] *) {
     color: #000000 !important;
   }
 
@@ -438,17 +438,32 @@
     color: #ffffff !important;
   }
 
-  /* Banner paragraphs - force white text in light mode */
+  /* Banner paragraphs - force white text in light mode with maximum specificity */
   .light .banner-white-text p,
   .light section.banner-white-text p,
   .light .banner-white-text span:not(.bg-clip-text),
-  .light section.banner-white-text span:not(.bg-clip-text) {
+  .light section.banner-white-text span:not(.bg-clip-text),
+  .light .banner-white-text p[style*="color"],
+  .light section.banner-white-text p[style*="color"],
+  .light div.banner-white-text p,
+  .light section[class*="banner-white-text"] p,
+  .light section[class*="banner-white-text"] span:not(.bg-clip-text) {
     color: #ffffff !important;
   }
 
-  /* Specific overrides for inline styled paragraphs */
+  /* Override any inline styles or computed styles */
   .light section.banner-white-text p[style],
-  .light .banner-white-text p[style] {
+  .light .banner-white-text p[style],
+  .light section.banner-white-text span[style],
+  .light .banner-white-text span[style] {
+    color: #ffffff !important;
+  }
+  
+  /* Ensure motion.p elements also get white text */
+  .light .banner-white-text [data-testid*="text"],
+  .light section.banner-white-text [data-testid*="text"],
+  .light .banner-white-text [data-testid*="description"],
+  .light section.banner-white-text [data-testid*="description"] {
     color: #ffffff !important;
   }
 
