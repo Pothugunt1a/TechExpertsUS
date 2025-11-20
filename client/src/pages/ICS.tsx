@@ -60,7 +60,7 @@ const solutions = [
 
 export default function ICS() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" data-page="ics">
       {/* Hero Section - Full Screen Banner */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text">
         {/* Background Image */}
