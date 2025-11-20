@@ -228,44 +228,45 @@ export default function Services() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center"
           >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 1 }}
-            >
-              <span className="block mb-2 text-white">Technology Platforms</span>
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                & Solutions
-              </span>
-            </motion.h1>
-            <motion.p
-              className="text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto"
-              style={{ color: '#ffffff' }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 1 }}
-            >
-              Advanced cloud, enterprise, and emerging technology platforms to
-              power your business
-            </motion.p>
             <motion.div
-              initial={{ opacity: 0, scale: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.6,
-                duration: 0.8,
-                type: "spring",
-                stiffness: 100,
-              }}
-              className="mt-8 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
-            />
-          </motion.div>
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              <motion.h1
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 1 }}
+              >
+                <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                  Technology Platforms & Solutions
+                </span>
+
+                
+              </motion.h1>
+              <motion.p
+                className="text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto"
+                style={{ color: "#ffffff" }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 1 }}
+              >
+                Advanced cloud, enterprise, and emerging technology platforms to
+                power your business
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.6,
+                  duration: 0.8,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                className="mt-8 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
 
@@ -443,8 +444,6 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
-
-
 
       {/* CTA Section */}
       <section className="relative py-10 md:py-16 overflow-hidden">

@@ -87,8 +87,9 @@ export default function PMS() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Parallax Effect */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"
-        style={{ position: 'relative' }}
+      <section
+        className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"
+        style={{ position: "relative" }}
       >
         <div className="absolute inset-0 z-0">
           <img
@@ -115,16 +116,13 @@ export default function PMS() {
               transition={{ duration: 0.8, delay: 0.2 }}
               data-testid="heading-hero"
             >
-              <span className="block mb-2 text-white">
-                Project Management
-              </span>
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent animate-gradient">
-                Solutions
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Project Management Solutions
               </span>
             </motion.h1>
             <motion.p
               className="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed"
-              style={{ color: '#ffffff' }}
+              style={{ color: "#ffffff" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -207,7 +205,9 @@ export default function PMS() {
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-base text-muted-foreground">{item}</span>
+                    <span className="text-base text-muted-foreground">
+                      {item}
+                    </span>
                   </motion.div>
                 ))}
               </div>
