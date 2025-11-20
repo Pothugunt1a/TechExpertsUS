@@ -110,7 +110,7 @@ export default function DMS() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div className="min-h-screen overflow-hidden" data-page="dms" ref={containerRef}>
+    <div className="min-h-screen overflow-hidden" ref={containerRef}>
       {/* Hero Section - Modern with Geometric Shapes */}
       <section
         className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"

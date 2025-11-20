@@ -85,7 +85,7 @@ export default function PMS() {
   ];
 
   return (
-    <div className="min-h-screen" data-page="pms">
+    <div className="min-h-screen">
       {/* Hero Section - Parallax Effect */}
       <section
         className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"

@@ -173,7 +173,7 @@ export default function Services() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    <div className="min-h-screen" data-page="services">
+    <div className="min-h-screen">
       {/* Hero Section with Parallax */}
       <section
         ref={heroRef}

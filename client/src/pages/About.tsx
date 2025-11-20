@@ -223,7 +223,7 @@ export default function About() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div className="min-h-screen overflow-x-hidden" data-page="about">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section - Matching Consulting Page Banner Style */}
       <section
         ref={heroRef}

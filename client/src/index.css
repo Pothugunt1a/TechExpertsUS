@@ -482,18 +482,6 @@
     background-clip: text !important;
   }
 
-  /* Light mode gradient headings for specific pages - matching dark mode gradient */
-  .light [data-page="about"] .bg-gradient-to-r.from-white.bg-clip-text,
-  .light [data-page="services"] .bg-gradient-to-r.from-white.bg-clip-text,
-  .light [data-page="dms"] .bg-gradient-to-r.from-white.bg-clip-text,
-  .light [data-page="ics"] .bg-gradient-to-r.from-white.bg-clip-text,
-  .light [data-page="pms"] .bg-gradient-to-r.from-white.bg-clip-text {
-    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--chart-2)), hsl(var(--primary))) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-  }
-
   /* Light mode banner gradient overrides - reduce intensity for better text visibility */
   .light .bg-gradient-to-b.from-background\/40,
   .light .bg-gradient-to-b.from-background\/95,
