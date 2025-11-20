@@ -407,22 +407,22 @@
   bottom: -10px;
 }
 
-/* Light mode text colors - use black for better readability, except banner sections */
-  .light h1:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(section.relative.h-\[90vh\] h1),
-  .light h2:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(section.relative.h-\[90vh\] h2),
-  .light h3:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(section.relative.h-\[90vh\] h3),
-  .light h4:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(section.relative.h-\[90vh\] h4),
-  .light h5:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(section.relative.h-\[90vh\] h5),
-  .light h6:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]):not(section.relative.h-\[90vh\] h6) {
+/* Light mode text colors - use black for better readability */
+  .light h1:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
+  .light h2:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
+  .light h3:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
+  .light h4:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
+  .light h5:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]),
+  .light h6:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-chart-2):not([class*="!text-white"]) {
     color: #000000 !important;
   }
 
-  .light p:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not([class*="!text-white"]):not(section.relative.h-\[90vh\] p),
-  .light span:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.bg-clip-text):not([class*="!text-white"]):not(section.relative.h-\[90vh\] span) {
+  .light p:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not([class*="!text-white"]),
+  .light span:not(.text-on-image *):not(.text-white):not(.text-primary):not(.text-muted-foreground):not(.bg-clip-text):not([class*="!text-white"]) {
     color: #000000 !important;
   }
   
-  /* Keep banner section text white in light mode */
+  /* Keep banner section text white in light mode ONLY for pages with h-[90vh] banners */
   .light section.relative.h-\[90vh\] h1,
   .light section.relative.h-\[90vh\] h2,
   .light section.relative.h-\[90vh\] h3,
@@ -431,18 +431,6 @@
   .light section.relative.h-\[90vh\] h6,
   .light section.relative.h-\[90vh\] p,
   .light section.relative.h-\[90vh\] span:not(.bg-clip-text) {
-    color: #ffffff !important;
-  }
-  
-  /* Also keep min-h-screen banner sections white */
-  .light section.relative.min-h-screen h1,
-  .light section.relative.min-h-screen h2,
-  .light section.relative.min-h-screen h3,
-  .light section.relative.min-h-screen h4,
-  .light section.relative.min-h-screen h5,
-  .light section.relative.min-h-screen h6,
-  .light section.relative.min-h-screen p,
-  .light section.relative.min-h-screen span:not(.bg-clip-text) {
     color: #ffffff !important;
   }
 
