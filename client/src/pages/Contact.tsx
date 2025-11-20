@@ -95,7 +95,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Contact Banner Background */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img

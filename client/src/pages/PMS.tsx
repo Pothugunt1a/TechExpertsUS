@@ -87,7 +87,7 @@ export default function PMS() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Parallax Effect */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text">
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/ProjectManagement-banner.jpg"

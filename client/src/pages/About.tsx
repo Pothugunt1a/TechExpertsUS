@@ -227,7 +227,7 @@ export default function About() {
       {/* Hero Section - Matching Consulting Page Banner Style */}
       <section
         ref={heroRef}
-        className="relative h-[90vh] flex items-center justify-center overflow-hidden"
+        className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">

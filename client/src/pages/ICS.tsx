@@ -62,7 +62,7 @@ export default function ICS() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Full Screen Banner */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
