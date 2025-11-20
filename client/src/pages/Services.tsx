@@ -177,17 +177,16 @@ export default function Services() {
       {/* Hero Section with Parallax */}
       <section
         ref={heroRef}
-        className="relative h-[90vh] flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/Services-banner.jpg"
-            alt="Services Banner"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-background/20" />
-        </div>
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url(/assets/Services-banner.jpg)" }}
+        />
+
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-background/40" />
 
         <ParticleBackground />
 

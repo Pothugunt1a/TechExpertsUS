@@ -88,14 +88,13 @@ export default function PMS() {
     <div className="min-h-screen">
       {/* Hero Section - Parallax Effect */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/ProjectManagement-banner.jpg"
-            alt="Project Management Banner"
-            className="w-full h-full object-cover object-center"
+        <motion.div className="absolute inset-0" style={{ y: heroY }}>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(/assets/ProjectManagement-banner.jpg)` }}
           />
-          <div className="absolute inset-0 bg-background/20" />
-        </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-primary/30" />
+        </motion.div>
 
         <motion.div
           className="relative z-10 max-w-5xl mx-auto px-3 lg:px-4 text-center"

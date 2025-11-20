@@ -95,22 +95,24 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Contact Banner Background */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/Contact.jpg"
             alt="Contact Banner"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain object-center"
           />
-          <div className="absolute inset-0 bg-background/20" />
         </div>
 
         {/* Particle Background Overlay */}
         <ParticleBackground />
 
         {/* Left-aligned Text Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 w-full flex items-center">
+        <div
+          className="relative z-10 max-w-7xl mx-auto px-3 lg:px-4 w-full flex items-center"
+          style={{ height: "85vh" }}
+        >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -120,6 +122,7 @@ export default function Contact() {
               ease: [0.25, 0.1, 0.25, 1],
             }}
             className="text-left flex flex-col items-start justify-center w-full lg:w-1/2"
+            style={{ marginTop: "-6px" }}
           >
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 !text-white"
@@ -129,10 +132,10 @@ export default function Contact() {
             >
               Let's Connect
             </motion.h1>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white mb-2">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-2">
               Have a question or ready to start your next project?
             </p>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
               Our team is here to help you succeed.
             </p>
           </motion.div>

@@ -112,7 +112,7 @@ export default function DMS() {
   return (
     <div className="min-h-screen overflow-hidden" ref={containerRef}>
       {/* Hero Section - Modern with Geometric Shapes */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -121,7 +121,7 @@ export default function DMS() {
             className="w-full h-full object-cover object-center"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-background/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         </div>
 
         {/* Particle Background Layer */}
