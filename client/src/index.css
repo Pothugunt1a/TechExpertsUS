@@ -432,10 +432,15 @@
     color: #ffffff !important;
   }
 
-  /* Banner paragraphs and spans use same styling as dark mode */
-  .light .banner-white-text p,
-  .light .banner-white-text span:not(.bg-clip-text) {
+  /* Banner paragraphs with text-muted-foreground class keep their styling in light mode */
+  .light .banner-white-text p:not(.text-muted-foreground),
+  .light .banner-white-text span:not(.bg-clip-text):not(.text-muted-foreground) {
     color: #ffffff !important;
+  }
+  
+  /* Allow text-muted-foreground to show in banner sections */
+  .light .banner-white-text .text-muted-foreground {
+    color: hsl(var(--muted-foreground)) !important;
   }
 
   /* Keep gradient text visible but darker in light mode */
