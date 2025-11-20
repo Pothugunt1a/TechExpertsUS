@@ -103,7 +103,7 @@ export default function Contact() {
             alt="Contact Banner"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-background/20" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         {/* Particle Background Overlay */}
@@ -122,17 +122,18 @@ export default function Contact() {
             className="text-left flex flex-col items-start justify-center w-full lg:w-1/2"
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 !text-white"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
+              style={{ color: '#ffffff' }}
             >
               Let's Connect
             </motion.h1>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white mb-2">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2" style={{ color: '#ffffff' }}>
               Have a question or ready to start your next project?
             </p>
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl" style={{ color: '#ffffff' }}>
               Our team is here to help you succeed.
             </p>
           </motion.div>
