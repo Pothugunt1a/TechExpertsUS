@@ -227,14 +227,14 @@ export default function About() {
       {/* Hero Section - Matching Consulting Page Banner Style */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative h-[90vh] flex items-center justify-center overflow-hidden"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/About-banner.jpg"
             alt="About Tech Expertsus"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-background/20" />
         </div>
