@@ -428,24 +428,27 @@
   .light .banner-white-text h3,
   .light .banner-white-text h4,
   .light .banner-white-text h5,
-  .light .banner-white-text h6 {
+  .light .banner-white-text h6,
+  .light section.banner-white-text h1,
+  .light section.banner-white-text h2,
+  .light section.banner-white-text h3,
+  .light section.banner-white-text h4,
+  .light section.banner-white-text h5,
+  .light section.banner-white-text h6 {
     color: #ffffff !important;
   }
 
-  /* Banner paragraphs with text-muted-foreground class keep their styling in light mode */
-  .light .banner-white-text p:not(.text-muted-foreground),
-  .light .banner-white-text span:not(.bg-clip-text):not(.text-muted-foreground) {
+  /* Banner paragraphs - force white text in light mode */
+  .light .banner-white-text p,
+  .light section.banner-white-text p,
+  .light .banner-white-text span:not(.bg-clip-text),
+  .light section.banner-white-text span:not(.bg-clip-text) {
     color: #ffffff !important;
   }
-  
-  /* Allow text-muted-foreground to show in banner sections */
-  .light .banner-white-text .text-muted-foreground {
-    color: hsl(var(--muted-foreground)) !important;
-  }
 
-  /* Specific overrides for hero section paragraphs to ensure white text in light mode */
-  .light section[class*="banner"] p[style*="color"],
-  .light section.banner-white-text p[data-testid*="text"] {
+  /* Specific overrides for inline styled paragraphs */
+  .light section.banner-white-text p[style],
+  .light .banner-white-text p[style] {
     color: #ffffff !important;
   }
 
