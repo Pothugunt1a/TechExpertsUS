@@ -112,8 +112,9 @@ export default function DMS() {
   return (
     <div className="min-h-screen overflow-hidden" ref={containerRef}>
       {/* Hero Section - Modern with Geometric Shapes */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"
-        style={{ position: 'relative' }}
+      <section
+        className="relative h-[90vh] flex items-center justify-center overflow-hidden banner-white-text"
+        style={{ position: "relative" }}
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -260,16 +261,15 @@ export default function DMS() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block mb-2 text-white">Transform Your</span>
-              <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-                Infrastructure
+              <span className="bg-gradient-to-r from-white via-primary to-chart-2 bg-clip-text text-transparent">
+                Transform Your Infrastructure
               </span>
             </motion.h1>
 
             {/* Subtitle */}
             <motion.p
               className="text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto"
-              style={{ color: '#ffffff' }}
+              style={{ color: "#ffffff" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
